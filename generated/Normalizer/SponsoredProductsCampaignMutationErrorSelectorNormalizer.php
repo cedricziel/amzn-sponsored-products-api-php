@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class;
+            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class;
+            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class === get_class($data);
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -199,12 +199,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class;
+            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class;
+            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class === get_class($data);
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
