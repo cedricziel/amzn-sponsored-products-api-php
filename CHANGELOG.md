@@ -5,6 +5,20 @@
 
 ### Features
 
+* add api spec ([865900e](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/865900e47b84444ea9269ba2c0336c97c7261001))
+* add devcontainer ([1f9f485](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/1f9f485b0f362ea8bcdff37bcfe04999687443c1))
+* gen client ([8f29e7c](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/8f29e7c1461ffc2a8f5da1d4a3016d4cdd5e28ba))
+
+
+### Bug Fixes
+
+* schema types :( ([8f26cb2](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/8f26cb205d56af14199a0b71fc8bac2988c8733e))
+
+## 1.0.0 (2024-07-14)
+
+
+### Features
+
 * add client generate ([75fa2ca](https://github.com/cedricziel/php-openapi-client-template/commit/75fa2cad310a0c6b81d853d6ecdca19e19aa720c))
 * add cs-fixer ([c722971](https://github.com/cedricziel/php-openapi-client-template/commit/c722971a3547c8e5cefea71573d8135dd655a9ad))
 * add dependably.yml ([8cf305c](https://github.com/cedricziel/php-openapi-client-template/commit/8cf305c5fc8c01b267bc9707f6ba72ec7bbd7695))
