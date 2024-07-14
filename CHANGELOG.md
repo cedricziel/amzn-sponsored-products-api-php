@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.0.0...v1.0.1) (2024-07-14)
+
+
+### Bug Fixes
+
+* set package name ([6859fa3](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/6859fa37ab144e81df6be8f1c7b5ed9bcf29f4d2))
+
 ## 1.0.0 (2024-07-14)
 
 
