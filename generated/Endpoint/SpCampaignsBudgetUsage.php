@@ -21,9 +21,9 @@ class SpCampaignsBudgetUsage extends \cedricziel\amznsponsoredproductsapiphp\Gen
      *
      * @param array $headerParameters {
      *
-     * @var mixed $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
-     * @var mixed $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
-     *            }
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
      *
      * @param array $accept Accept content header application/json|application/vnd.spcampaignbudgetusage.v1+json
      */
@@ -68,6 +68,8 @@ class SpCampaignsBudgetUsage extends \cedricziel\amznsponsoredproductsapiphp\Gen
         $optionsResolver->setDefined(['Amazon-Advertising-API-ClientId', 'Amazon-Advertising-API-Scope']);
         $optionsResolver->setRequired(['Amazon-Advertising-API-ClientId', 'Amazon-Advertising-API-Scope']);
         $optionsResolver->setDefaults([]);
+        $optionsResolver->addAllowedTypes('Amazon-Advertising-API-ClientId', ['string']);
+        $optionsResolver->addAllowedTypes('Amazon-Advertising-API-Scope', ['string']);
 
         return $optionsResolver;
     }
