@@ -8,44 +8,2341 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace myvendor\mynamespace\Generated;
+namespace cedricziel\amznsponsoredproductsapiphp\Generated;
 
 class Client extends Runtime\Client\Client
 {
     /**
+     * This API is currently available at marketplaces where SP is available. The API supports keyword, auto and product targets. The API will return a 422 response when an unsupported marketplace or target is provided. <h1> Version 4.0 </h1>  <h2> New Features </h2> Version 4.0 allows users to get theme-based bid recommendations for product targeting expressions, including PAT_ASIN, PAT_CATEGORY and PAT_CATEGORY_REFINEMENT. Version 4.0 supports keyword, auto and product targets in all marketplaces. Version 4.0 removes "impact metrics" when returning each bid suggestion. <br> Version 4.0 also allows users to get theme-based bid recommendations for keyword group targeting expressions with the type KEYWORD_GROUP. This new type is only available in US marketplace. <br>.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param mixed|null $requestBody
+     * @param array      $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header and choose profile id `profileId` from the response to pass it as input.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spthemebasedbidrecommendation.v4+json|application/vnd.spthemebasedbidrecommendation.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     */
+    public function getThemeBasedBidRecommendationForAdGroupV1($requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetThemeBasedBidRecommendationForAdGroupV1($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * The <b> POST /sp/targets/keywords/recommendations </b> endpoint returns recommended keyword targets given either A) a list of ad ASINs or B) a campaign ID and ad group ID. Please use the recommendationType field to specify if you want to use option A or option B. This endpoint will also return recommended bids along with each recommendation keyword target.<br><br> <b> Ranking </b> <br> The keyword recommendations will be ranked in descending order of clicks or impressions, depending on the <b>sortDimension</b> field provided by the user. You may also input your own keyword targets to be ranked alongside the keyword recommendations by using the <b>targets</b> array. <br><br> <b> Localization </b> <br> Use the <b> locale </b> field to get keywords in your specified locale. Supported marketplace to locale mappings can be found at the <a href='https://advertising.amazon.com/API/docs/en-us/localization/#/Keyword%20Localization'>POST /keywords/localize</a> endpoint. <h1> Version 5.0 </h1>  <h2> New Features </h2> Version 5.0 utilizes the new theme-based bid recommendations, which can be retrieved at the endpoint <b>/sp/targets/bid/recommendations</b>, to return improved bid recommendations for each keyword. Theme-based bid recommendations provide \\\"themes\\\" and \\\"impact metrics\\\" along with each bid suggestion to help you choose the right bid for your keyword target.<br><br><b>Themes</b><br> We now may return multiple bid suggestions for each keyword target. Each suggestion will have a theme to express the business objective of the bid. Available themes are: <ul> <li> CONVERSION_OPPORTUNITIES - The default theme which aims to maximize number of conversions. </li> <li> SPECIAL_DAYS - A theme available during high sales events such as Prime Day, to anticipate an increase in sales and competition.</li></ul><b>Impact Metrics</b><br>We have added impact metrics which provide insight on the number of clicks and conversions you will receive for targeting a keyword at a certain bid. <br><br><b>Bidding Strategy</b><br> You may now specify your bidding strategy in the KEYWORDS_BY_ASINS request to get bid suggestions tailored to your bidding strategy. For KEYWORDS_BY_ADGROUP requests, you will not specify a bidding strategy, because the bidding strategy of the ad group is used. The three bidding strategies are: <ul> <li> LEGACY_FOR_SALES - Dynamic bids (down only) </li> <li> AUTO_FOR_SALES - Dynamic bids (up and down) </li> <li> MANUAL - Fixed bids </li> </ul> <h3> Availability </h3> Version 5.0 is only available in the following marketplaces: US, CA, UK, DE, FR, ES, IN, JP. <h1> Version 4.0 </h1> <h2> New features </h2> Version 4.0 allows users to retrieve recommended keyword targets which are sorted in descending order of clicks or conversions. The default sort dimension, if not specified, ranks recommendations by our interal ranking mechanism. We have also added search term metrics. <b> Search term impression share </b> indicates the percentage share of all ad-attributed impressions you received on that keyword in the last 30 days. This metric helps advertisers identify potential opportunities based on their share on relevant keywords. <b> Search term impression rank </b> indicates your ranking among all advertisers for the keyword by ad impressions in a marketplace. It tells an advertiser how many advertisers had higher share of ad impressions. <i> Search term information is only available for keywords the advertiser targeted with ad impressions. </i> <h3> Availability </h3> Version 4.0 is available in all marketplaces.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param mixed|null $requestBody
+     * @param array      $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-MarketplaceId The advertiser's Marketplace ID associated with the advertiser.
+     *             account.
+     * @var string $Amazon-Advertising-API-AdvertiserId The advertiser's ID associated with the advertiser account
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spkeywordsrecommendation.v3+json|application/vnd.spkeywordsrecommendation.v5+json|application/vnd.spkeywordsrecommendation.v4+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     */
+    public function getRankedKeywordRecommendation($requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetRankedKeywordRecommendation($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * List keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spKeyword.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListSponsoredProductsKeywordsBadRequestException
+     * @throws Exception\ListSponsoredProductsKeywordsUnauthorizedException
+     * @throws Exception\ListSponsoredProductsKeywordsInternalServerErrorException
+     * @throws Exception\ListSponsoredProductsKeywordsForbiddenException
+     * @throws Exception\ListSponsoredProductsKeywordsUnsupportedMediaTypeException
+     * @throws Exception\ListSponsoredProductsKeywordsTooManyRequestsException
+     */
+    public function listSponsoredProductsKeywords(?Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListSponsoredProductsKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Delete negative keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spNegativeKeyword.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteSponsoredProductsNegativeKeywordsBadRequestException
+     * @throws Exception\DeleteSponsoredProductsNegativeKeywordsUnauthorizedException
+     * @throws Exception\DeleteSponsoredProductsNegativeKeywordsInternalServerErrorException
+     * @throws Exception\DeleteSponsoredProductsNegativeKeywordsForbiddenException
+     * @throws Exception\DeleteSponsoredProductsNegativeKeywordsUnsupportedMediaTypeException
+     * @throws Exception\DeleteSponsoredProductsNegativeKeywordsTooManyRequestsException
+     */
+    public function deleteSponsoredProductsNegativeKeywords(Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteSponsoredProductsNegativeKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Get number of targetable asins based on refinements provided by the user. Please use the GetTargetableCategories API or the GetCategoryRecommendationsForASINs API to retrieve the category ID. Please use the GetRefinementsByCategory API to retrieve refinements data for a category.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Prefer Used to indicate the behavior preferred by the client but is not required for successful completion of the request. Supported values will be updated in the future.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetTargetableASINCountsBadRequestException
+     * @throws Exception\GetTargetableASINCountsUnprocessableEntityException
+     * @throws Exception\GetTargetableASINCountsUnauthorizedException
+     * @throws Exception\GetTargetableASINCountsInternalServerErrorException
+     * @throws Exception\GetTargetableASINCountsTooManyRequestsException
+     */
+    public function getTargetableASINCounts(?Model\GetTargetableAsinCountsRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetTargetableASINCounts($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Returns all targetable categories. This API returns a large JSON string containing a tree of category nodes. Each category node has the fields - category id, category name, and child categories.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
      * @param array $queryParameters {
      *
-     * @var int $limit How many items to return at one time (max 100)
-     *          }
+     * @var string $locale The locale to which the caller wishes to translate the targetable categories to. For example, if the caller wishes to receive the targetable categories in Simplified Chinese, the locale parameter should be set to zh_CN. If no locale is provided, the returned targetable categories will be in the default language of the marketplace.
+     *             }
      *
-     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array $headerParameters {
      *
-     * @return \myvendor\mynamespace\Generated\Model\Pet[]|\myvendor\mynamespace\Generated\Model\Error|\Psr\Http\Message\ResponseInterface|null
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Prefer Used to indicate the behavior preferred by the client but is not required for successful completion of the request. Supported values will be updated in the future.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/vnd.spproducttargetingresponse.v4+json|application/vnd.spproducttargetingresponse.v5+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetTargetableCategoriesBadRequestException
+     * @throws Exception\GetTargetableCategoriesUnauthorizedException
+     * @throws Exception\GetTargetableCategoriesInternalServerErrorException
+     * @throws Exception\GetTargetableCategoriesTooManyRequestsException
      */
-    public function listPets(array $queryParameters = [], string $fetch = self::FETCH_OBJECT)
+    public function getTargetableCategories(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new Endpoint\ListPets($queryParameters), $fetch);
+        return $this->executeEndpoint(new Endpoint\GetTargetableCategories($queryParameters, $headerParameters, $accept), $fetch);
     }
 
     /**
-     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"].
      *
-     * @return Model\Error|\Psr\Http\Message\ResponseInterface|null
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateOptimizationRuleBadRequestException
+     * @throws Exception\CreateOptimizationRuleUnprocessableEntityException
+     * @throws Exception\CreateOptimizationRuleUnauthorizedException
+     * @throws Exception\CreateOptimizationRuleInternalServerErrorException
+     * @throws Exception\CreateOptimizationRuleForbiddenException
+     * @throws Exception\CreateOptimizationRuleTooManyRequestsException
      */
-    public function createPets(Model\Pet $requestBody, string $fetch = self::FETCH_OBJECT)
+    public function createOptimizationRule(Model\CreateSPCampaignOptimizationRulesRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new Endpoint\CreatePets($requestBody), $fetch);
+        return $this->executeEndpoint(new Endpoint\CreateOptimizationRule($requestBody, $headerParameters, $accept), $fetch);
     }
 
     /**
-     * @param string $petId The id of the pet to retrieve
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"].
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateOptimizationRuleBadRequestException
+     * @throws Exception\UpdateOptimizationRuleUnprocessableEntityException
+     * @throws Exception\UpdateOptimizationRuleUnauthorizedException
+     * @throws Exception\UpdateOptimizationRuleInternalServerErrorException
+     * @throws Exception\UpdateOptimizationRuleForbiddenException
+     * @throws Exception\UpdateOptimizationRuleTooManyRequestsException
+     */
+    public function updateOptimizationRule(Model\UpdateSPCampaignOptimizationRulesRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateOptimizationRule($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Authorized resource type**:
+     * Global Ad Account ID, Profile ID.
+     *
+     **Parameter name**:
+     * Amazon-Ads-AccountId
+     *
+     **Parameter in**:
+     * header
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param float $campaignId       the campaign identifier
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return Model\Pet|Model\Error|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\SPListAssociatedBudgetRulesResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListAssociatedBudgetRulesForSPCampaignsBadRequestException
+     * @throws Exception\ListAssociatedBudgetRulesForSPCampaignsUnprocessableEntityException
+     * @throws Exception\ListAssociatedBudgetRulesForSPCampaignsUnauthorizedException
+     * @throws Exception\ListAssociatedBudgetRulesForSPCampaignsInternalServerErrorException
+     * @throws Exception\ListAssociatedBudgetRulesForSPCampaignsForbiddenException
+     * @throws Exception\ListAssociatedBudgetRulesForSPCampaignsTooManyRequestsException
      */
-    public function showPetById(string $petId, string $fetch = self::FETCH_OBJECT)
+    public function listAssociatedBudgetRulesForSPCampaigns(float $campaignId, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new Endpoint\ShowPetById($petId), $fetch);
+        return $this->executeEndpoint(new Endpoint\ListAssociatedBudgetRulesForSPCampaigns($campaignId, $headerParameters), $fetch);
+    }
+
+    /**
+     * A maximum of 250 rules can be associated to a campaign. Note that the name of each rule associated to a campaign is required to be unique.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param float $campaignId       the campaign identifier
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a Login with Amazon account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return Model\CreateAssociatedBudgetRulesResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateAssociatedBudgetRulesForSPCampaignsBadRequestException
+     * @throws Exception\CreateAssociatedBudgetRulesForSPCampaignsUnprocessableEntityException
+     * @throws Exception\CreateAssociatedBudgetRulesForSPCampaignsUnauthorizedException
+     * @throws Exception\CreateAssociatedBudgetRulesForSPCampaignsInternalServerErrorException
+     * @throws Exception\CreateAssociatedBudgetRulesForSPCampaignsForbiddenException
+     * @throws Exception\CreateAssociatedBudgetRulesForSPCampaignsTooManyRequestsException
+     */
+    public function createAssociatedBudgetRulesForSPCampaigns(float $campaignId, Model\CreateAssociatedBudgetRulesRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\CreateAssociatedBudgetRulesForSPCampaigns($campaignId, $requestBody, $headerParameters), $fetch);
+    }
+
+    /**
+     * Returns up to 100 brands related to keyword input for negative targeting.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Prefer Used to indicate the behavior preferred by the client but is not required for successful completion of the request. Supported values will be updated in the future.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\SearchBrandsBadRequestException
+     * @throws Exception\SearchBrandsUnauthorizedException
+     * @throws Exception\SearchBrandsInternalServerErrorException
+     * @throws Exception\SearchBrandsTooManyRequestsException
+     */
+    public function searchBrands(?Model\SearchBrandsRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\SearchBrands($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Returns refinements according to category input.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param string $categoryId      The category ID. Please use the GetTargetableCategories API or the GetCategoriesForASINs API to retrieve categories IDs. This API does not check if the category is a valid category.
+     * @param array  $queryParameters {
+     *
+     * @var string $locale The locale to which the caller wishes to translate the refinements to. For example, if the caller wishes to receive the refinements in Simplified Chinese, the locale parameter should be set to zh_CN. If no locale is provided, the refinements will be in the default language of the marketplace.
+     *             }
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Prefer Used to indicate the behavior preferred by the client but is not required for successful completion of the request. Supported values will be updated in the future.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/vnd.spproducttargetingresponse.v4+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetRefinementsForCategoryBadRequestException
+     * @throws Exception\GetRefinementsForCategoryUnprocessableEntityException
+     * @throws Exception\GetRefinementsForCategoryUnauthorizedException
+     * @throws Exception\GetRefinementsForCategoryInternalServerErrorException
+     * @throws Exception\GetRefinementsForCategoryTooManyRequestsException
+     */
+    public function getRefinementsForCategory(string $categoryId, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetRefinementsForCategory($categoryId, $queryParameters, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"].
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetRuleNotificationBadRequestException
+     * @throws Exception\GetRuleNotificationUnprocessableEntityException
+     * @throws Exception\GetRuleNotificationUnauthorizedException
+     * @throws Exception\GetRuleNotificationInternalServerErrorException
+     * @throws Exception\GetRuleNotificationForbiddenException
+     * @throws Exception\GetRuleNotificationTooManyRequestsException
+     */
+    public function getRuleNotification(Model\SPCampaignOptimizationNotificationAPIRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetRuleNotification($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Returns the target promotion groups for an advertiser and / or adGroupId, and / or target
+     * promotion group id.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId  The identifier of a client associated with a 'Login with Amazon' account. This is a required
+     *             header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles
+     *             resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a
+     *             required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spTargetPromotionGroup.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListTargetPromotionGroupsBadRequestException
+     * @throws Exception\ListTargetPromotionGroupsUnauthorizedException
+     * @throws Exception\ListTargetPromotionGroupsInternalServerErrorException
+     * @throws Exception\ListTargetPromotionGroupsNotImplementedException
+     * @throws Exception\ListTargetPromotionGroupsForbiddenException
+     * @throws Exception\ListTargetPromotionGroupsServiceUnavailableException
+     * @throws Exception\ListTargetPromotionGroupsTooManyRequestsException
+     */
+    public function listTargetPromotionGroups(?Model\SponsoredProductsListTargetPromotionGroupsRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListTargetPromotionGroups($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * List product ads.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spProductAd.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListSponsoredProductsProductAdsBadRequestException
+     * @throws Exception\ListSponsoredProductsProductAdsUnauthorizedException
+     * @throws Exception\ListSponsoredProductsProductAdsInternalServerErrorException
+     * @throws Exception\ListSponsoredProductsProductAdsForbiddenException
+     * @throws Exception\ListSponsoredProductsProductAdsUnsupportedMediaTypeException
+     * @throws Exception\ListSponsoredProductsProductAdsTooManyRequestsException
+     */
+    public function listSponsoredProductsProductAds(?Model\SponsoredProductsListSponsoredProductsProductAdsRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListSponsoredProductsProductAds($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"].
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account.
+     *             This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account.
+     *             Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header.
+     *             This is a required header for advertisers and integrators using the Advertising API.
+     *
+     * }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spoptimizationrules.v1+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateOptimizationRulesBadRequestException
+     * @throws Exception\CreateOptimizationRulesUnauthorizedException
+     * @throws Exception\CreateOptimizationRulesInternalServerErrorException
+     * @throws Exception\CreateOptimizationRulesForbiddenException
+     */
+    public function createOptimizationRules(?Model\OptimizationRulesAPISwaggerCreateOptimizationRulesRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateOptimizationRules($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"].
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account.
+     *             This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account.
+     *             Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header.
+     *             This is a required header for advertisers and integrators using the Advertising API.
+     *
+     * }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spoptimizationrules.v1+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateOptimizationRulesBadRequestException
+     * @throws Exception\UpdateOptimizationRulesUnauthorizedException
+     * @throws Exception\UpdateOptimizationRulesInternalServerErrorException
+     * @throws Exception\UpdateOptimizationRulesForbiddenException
+     */
+    public function updateOptimizationRules(?Model\OptimizationRulesAPISwaggerUpdateOptimizationRulesRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateOptimizationRules($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Creates a target promotion group, by grouping the auto-targeting adGroupId
+     * and manual-targeting adGroups, divided by keyword targeting adGroups, and product targeting adGroups.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId  The identifier of a client associated with a 'Login with Amazon' account. This is a required
+     *             header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles
+     *             resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a
+     *             required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spTargetPromotionGroup.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateTargetPromotionGroupsBadRequestException
+     * @throws Exception\CreateTargetPromotionGroupsUnauthorizedException
+     * @throws Exception\CreateTargetPromotionGroupsInternalServerErrorException
+     * @throws Exception\CreateTargetPromotionGroupsNotImplementedException
+     * @throws Exception\CreateTargetPromotionGroupsForbiddenException
+     * @throws Exception\CreateTargetPromotionGroupsServiceUnavailableException
+     * @throws Exception\CreateTargetPromotionGroupsTooManyRequestsException
+     */
+    public function createTargetPromotionGroups(Model\SponsoredProductsCreateTargetPromotionGroupsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateTargetPromotionGroups($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Creates keyword and/or product targets in the manual adGroup that are part of the target promotion group.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId  The identifier of a client associated with a 'Login with Amazon' account. This is a required
+     *             header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles
+     *             resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a
+     *             required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spTargetPromotionGroupTarget.v1+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateTargetPromotionGroupTargetsBadRequestException
+     * @throws Exception\CreateTargetPromotionGroupTargetsUnauthorizedException
+     * @throws Exception\CreateTargetPromotionGroupTargetsInternalServerErrorException
+     * @throws Exception\CreateTargetPromotionGroupTargetsNotImplementedException
+     * @throws Exception\CreateTargetPromotionGroupTargetsForbiddenException
+     * @throws Exception\CreateTargetPromotionGroupTargetsServiceUnavailableException
+     * @throws Exception\CreateTargetPromotionGroupTargetsTooManyRequestsException
+     */
+    public function createTargetPromotionGroupTargets(Model\SponsoredProductsCreateTargetPromotionGroupTargetsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateTargetPromotionGroupTargets($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * List negative targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spNegativeTargetingClause.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListSponsoredProductsNegativeTargetingClausesBadRequestException
+     * @throws Exception\ListSponsoredProductsNegativeTargetingClausesUnauthorizedException
+     * @throws Exception\ListSponsoredProductsNegativeTargetingClausesInternalServerErrorException
+     * @throws Exception\ListSponsoredProductsNegativeTargetingClausesForbiddenException
+     * @throws Exception\ListSponsoredProductsNegativeTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\ListSponsoredProductsNegativeTargetingClausesTooManyRequestsException
+     */
+    public function listSponsoredProductsNegativeTargetingClauses(?Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListSponsoredProductsNegativeTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * This API (currently beta) recommends Keyword Group targets for a given list of Ad ASINs. Keyword Groups is a new control for Amazon Ads Sponsored Products keyword-based campaigns that enables advertisers to reach relevant audiences through a collection of keywords.
+     *
+     * Once a Keyword Group specification is created, the performance of Keyword Groups will be available in the search terms report. Keyword Groups improves campaign performance by dynamically updating the keywords within a group through the campaign lifecycle and eliminates the need for advertisers to constantly curate new keywords. Additionally, Keyword Groups can be used alongside keywords within the same ad group.
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header and choose profile id `profileId` from the response to pass it as input.
+     * @var string $locale User specified locale. If nothing is passed the default for the marketplace will be used. The value should confirm to the IETF BCP 47 standard, using language tags composed of language- and optionally region specific sub-tags (e.g., 'en-us' for American English and 'fr-CA' for Canadian French).
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     */
+    public function getKeywordGroupRecommendations(?Model\KeywordGroupsRecommendationsRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\GetKeywordGroupRecommendations($requestBody, $headerParameters), $fetch);
+    }
+
+    /**
+     * Create product ads.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spProductAd.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateSponsoredProductsProductAdsBadRequestException
+     * @throws Exception\CreateSponsoredProductsProductAdsUnauthorizedException
+     * @throws Exception\CreateSponsoredProductsProductAdsInternalServerErrorException
+     * @throws Exception\CreateSponsoredProductsProductAdsForbiddenException
+     * @throws Exception\CreateSponsoredProductsProductAdsUnsupportedMediaTypeException
+     * @throws Exception\CreateSponsoredProductsProductAdsTooManyRequestsException
+     */
+    public function createSponsoredProductsProductAds(Model\SponsoredProductsCreateSponsoredProductsProductAdsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateSponsoredProductsProductAds($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Update product ads.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spProductAd.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateSponsoredProductsProductAdsBadRequestException
+     * @throws Exception\UpdateSponsoredProductsProductAdsUnauthorizedException
+     * @throws Exception\UpdateSponsoredProductsProductAdsInternalServerErrorException
+     * @throws Exception\UpdateSponsoredProductsProductAdsForbiddenException
+     * @throws Exception\UpdateSponsoredProductsProductAdsUnsupportedMediaTypeException
+     * @throws Exception\UpdateSponsoredProductsProductAdsTooManyRequestsException
+     */
+    public function updateSponsoredProductsProductAds(Model\SponsoredProductsUpdateSponsoredProductsProductAdsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateSponsoredProductsProductAds($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * @param array $queryParameters {
+     *
+     * @var string $nextToken To retrieve the next page of results, call the same operation and specify this token in the request. If the `nextToken` field is empty, there are no further results.
+     * @var float  $pageSize Sets a limit on the number of results returned. Maximum limit of `pageSize` is 30.
+     *             }
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return Model\GetSPBudgetRulesForAdvertiserResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetSPBudgetRulesForAdvertiserBadRequestException
+     * @throws Exception\GetSPBudgetRulesForAdvertiserUnprocessableEntityException
+     * @throws Exception\GetSPBudgetRulesForAdvertiserUnauthorizedException
+     * @throws Exception\GetSPBudgetRulesForAdvertiserInternalServerErrorException
+     * @throws Exception\GetSPBudgetRulesForAdvertiserForbiddenException
+     * @throws Exception\GetSPBudgetRulesForAdvertiserTooManyRequestsException
+     */
+    public function getSPBudgetRulesForAdvertiser(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\GetSPBudgetRulesForAdvertiser($queryParameters, $headerParameters), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"].
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return Model\CreateBudgetRulesResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateBudgetRulesForSPCampaignsBadRequestException
+     * @throws Exception\CreateBudgetRulesForSPCampaignsUnprocessableEntityException
+     * @throws Exception\CreateBudgetRulesForSPCampaignsUnauthorizedException
+     * @throws Exception\CreateBudgetRulesForSPCampaignsInternalServerErrorException
+     * @throws Exception\CreateBudgetRulesForSPCampaignsForbiddenException
+     * @throws Exception\CreateBudgetRulesForSPCampaignsTooManyRequestsException
+     */
+    public function createBudgetRulesForSPCampaigns(Model\CreateSPBudgetRulesRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\CreateBudgetRulesForSPCampaigns($requestBody, $headerParameters), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"].
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return Model\UpdateBudgetRulesResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateBudgetRulesForSPCampaignsBadRequestException
+     * @throws Exception\UpdateBudgetRulesForSPCampaignsUnprocessableEntityException
+     * @throws Exception\UpdateBudgetRulesForSPCampaignsUnauthorizedException
+     * @throws Exception\UpdateBudgetRulesForSPCampaignsInternalServerErrorException
+     * @throws Exception\UpdateBudgetRulesForSPCampaignsForbiddenException
+     * @throws Exception\UpdateBudgetRulesForSPCampaignsTooManyRequestsException
+     */
+    public function updateBudgetRulesForSPCampaigns(Model\UpdateSPBudgetRulesRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateBudgetRulesForSPCampaigns($requestBody, $headerParameters), $fetch);
+    }
+
+    /**
+     * Returns a list of category recommendations for the input list of ASINs. Use this API to discover relevant categories to target. To find ASINs, either use the Product Metadata API or browse the Amazon Retail Website. <br> <ul><li>Response can be requested in different versions with the help of accept header. Please review the response mediaTypes for more information.</li><ul>.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $queryParameters {
+     *
+     * @var string $locale The locale to which the caller wishes to translate the list of category recommendations to. For example, if the caller wishes to receive a list of category recommendations in Simplified Chinese, the locale parameter should be set to zh_CN. If no locale is provided, the returned list of category recommendations will be in the default language of the marketplace.
+     *             }
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Prefer Used to indicate the behavior preferred by the client but is not required for successful completion of the request. Supported values will be updated in the future.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/vnd.spproducttargetingresponse.v4+json|application/vnd.spproducttargetingresponse.v5+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetCategoryRecommendationsForASINsBadRequestException
+     * @throws Exception\GetCategoryRecommendationsForASINsUnprocessableEntityException
+     * @throws Exception\GetCategoryRecommendationsForASINsUnauthorizedException
+     * @throws Exception\GetCategoryRecommendationsForASINsInternalServerErrorException
+     * @throws Exception\GetCategoryRecommendationsForASINsTooManyRequestsException
+     */
+    public function getCategoryRecommendationsForASINs(?Model\GetCategoryRecommendationsForAsinsRequest $requestBody = null, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetCategoryRecommendationsForASINs($requestBody, $queryParameters, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Retrieves keyword and product targets of an auto-targeting campaign as recommendations for promoting to a manual-targeting campaign. The recommendations are based on performance heuristics of the targets.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a 'Login with Amazon' account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spTargetPromotionGroupsRecommendations.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetTargetPromotionGroupsRecommendationsBadRequestException
+     * @throws Exception\GetTargetPromotionGroupsRecommendationsInternalServerErrorException
+     * @throws Exception\GetTargetPromotionGroupsRecommendationsForbiddenException
+     * @throws Exception\GetTargetPromotionGroupsRecommendationsUnsupportedMediaTypeException
+     * @throws Exception\GetTargetPromotionGroupsRecommendationsServiceUnavailableException
+     * @throws Exception\GetTargetPromotionGroupsRecommendationsTooManyRequestsException
+     */
+    public function getTargetPromotionGroupsRecommendations(?Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetTargetPromotionGroupsRecommendations($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Creates daily budget recommendation along with benchmark metrics when creating a new campaign.
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header and choose profile id `profileId` from the response to pass it as input.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     */
+    public function getBudgetRecommendation(?Model\InitialBudgetRecommendationRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\GetBudgetRecommendation($requestBody, $headerParameters), $fetch);
+    }
+
+    /**
+     * Delete campaign negative targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeTargetingClause.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeTargetingClausesBadRequestException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeTargetingClausesUnauthorizedException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeTargetingClausesInternalServerErrorException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeTargetingClausesForbiddenException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeTargetingClausesTooManyRequestsException
+     */
+    public function deleteSponsoredProductsCampaignNegativeTargetingClauses(Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteSponsoredProductsCampaignNegativeTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Delete product ads.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spProductAd.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteSponsoredProductsProductAdsBadRequestException
+     * @throws Exception\DeleteSponsoredProductsProductAdsUnauthorizedException
+     * @throws Exception\DeleteSponsoredProductsProductAdsInternalServerErrorException
+     * @throws Exception\DeleteSponsoredProductsProductAdsForbiddenException
+     * @throws Exception\DeleteSponsoredProductsProductAdsUnsupportedMediaTypeException
+     * @throws Exception\DeleteSponsoredProductsProductAdsTooManyRequestsException
+     */
+    public function deleteSponsoredProductsProductAds(Model\SponsoredProductsDeleteSponsoredProductsProductAdsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteSponsoredProductsProductAds($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Returns brands recommended for negative targeting. Only available for Sellers and Vendors. These recommendations include your own brands because targeting your own brands usually results in lower performance than targeting competitors' brands.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Prefer Used to indicate the behavior preferred by the client but is not required for successful completion of the request. Supported values will be updated in the future.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetNegativeBrandsBadRequestException
+     * @throws Exception\GetNegativeBrandsUnauthorizedException
+     * @throws Exception\GetNegativeBrandsInternalServerErrorException
+     * @throws Exception\GetNegativeBrandsForbiddenException
+     * @throws Exception\GetNegativeBrandsTooManyRequestsException
+     */
+    public function getNegativeBrands(array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetNegativeBrands($headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Given a list of campaigns as input, this API provides the following metrics -  <br> <b>1. Recommended daily budget - </b> Estimated daily budget needed to keep the campaign in budget for the full 24-hour period in a day. Consider this daily budget to minimize your campaign's chances of running out of budget. <br> <b>2. Percent time in budget </b> - Actual average percentage of time the campaign was in budget between the start and end date specified in the response. Note: value -1 means we don’t have enough information to compute the campaign’s percent time in budget. <br> <b>3. Estimated missed impressions, clicks and sales </b> - These are the estimated range of additional impressions, clicks and sales the campaign might have generated between the start and end date specified in the response had it been in budget 100% of the time. These are estimates based on historical traffic and the campaign's past performance (e.g. impressions & clicks generated) but not guaranteed.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     */
+    public function getBudgetRecommendations(Model\BudgetRecommendationRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\GetBudgetRecommendations($requestBody, $headerParameters), $fetch);
+    }
+
+    /**
+     * Create negative targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spNegativeTargetingClause.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateSponsoredProductsNegativeTargetingClausesBadRequestException
+     * @throws Exception\CreateSponsoredProductsNegativeTargetingClausesUnauthorizedException
+     * @throws Exception\CreateSponsoredProductsNegativeTargetingClausesInternalServerErrorException
+     * @throws Exception\CreateSponsoredProductsNegativeTargetingClausesForbiddenException
+     * @throws Exception\CreateSponsoredProductsNegativeTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\CreateSponsoredProductsNegativeTargetingClausesTooManyRequestsException
+     */
+    public function createSponsoredProductsNegativeTargetingClauses(Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateSponsoredProductsNegativeTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Update negative targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spNegativeTargetingClause.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateSponsoredProductsNegativeTargetingClausesBadRequestException
+     * @throws Exception\UpdateSponsoredProductsNegativeTargetingClausesUnauthorizedException
+     * @throws Exception\UpdateSponsoredProductsNegativeTargetingClausesInternalServerErrorException
+     * @throws Exception\UpdateSponsoredProductsNegativeTargetingClausesForbiddenException
+     * @throws Exception\UpdateSponsoredProductsNegativeTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\UpdateSponsoredProductsNegativeTargetingClausesTooManyRequestsException
+     */
+    public function updateSponsoredProductsNegativeTargetingClauses(Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateSponsoredProductsNegativeTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Create targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spTargetingClause.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateSponsoredProductsTargetingClausesBadRequestException
+     * @throws Exception\CreateSponsoredProductsTargetingClausesUnauthorizedException
+     * @throws Exception\CreateSponsoredProductsTargetingClausesInternalServerErrorException
+     * @throws Exception\CreateSponsoredProductsTargetingClausesForbiddenException
+     * @throws Exception\CreateSponsoredProductsTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\CreateSponsoredProductsTargetingClausesTooManyRequestsException
+     */
+    public function createSponsoredProductsTargetingClauses(Model\SponsoredProductsCreateSponsoredProductsTargetingClausesRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateSponsoredProductsTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Update targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spTargetingClause.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateSponsoredProductsTargetingClausesBadRequestException
+     * @throws Exception\UpdateSponsoredProductsTargetingClausesUnauthorizedException
+     * @throws Exception\UpdateSponsoredProductsTargetingClausesInternalServerErrorException
+     * @throws Exception\UpdateSponsoredProductsTargetingClausesForbiddenException
+     * @throws Exception\UpdateSponsoredProductsTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\UpdateSponsoredProductsTargetingClausesTooManyRequestsException
+     */
+    public function updateSponsoredProductsTargetingClauses(Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateSponsoredProductsTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * A rule enables an automatic budget increase for a specified date range or for a special event. The response also includes a suggested budget increase for each special event.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param mixed|null $requestBody
+     * @param array      $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     */
+    public function sPGetBudgetRulesRecommendation($requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\SPGetBudgetRulesRecommendation($requestBody, $headerParameters), $fetch);
+    }
+
+    /**
+     * Create campaign negative targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeTargetingClause.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeTargetingClausesBadRequestException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeTargetingClausesUnauthorizedException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeTargetingClausesInternalServerErrorException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeTargetingClausesForbiddenException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeTargetingClausesTooManyRequestsException
+     */
+    public function createSponsoredProductsCampaignNegativeTargetingClauses(Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateSponsoredProductsCampaignNegativeTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Update campaign negative targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeTargetingClause.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeTargetingClausesBadRequestException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeTargetingClausesUnauthorizedException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeTargetingClausesInternalServerErrorException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeTargetingClausesForbiddenException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeTargetingClausesTooManyRequestsException
+     */
+    public function updateSponsoredProductsCampaignNegativeTargetingClauses(Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateSponsoredProductsCampaignNegativeTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Create keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spKeyword.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateSponsoredProductsKeywordsBadRequestException
+     * @throws Exception\CreateSponsoredProductsKeywordsUnauthorizedException
+     * @throws Exception\CreateSponsoredProductsKeywordsInternalServerErrorException
+     * @throws Exception\CreateSponsoredProductsKeywordsForbiddenException
+     * @throws Exception\CreateSponsoredProductsKeywordsUnsupportedMediaTypeException
+     * @throws Exception\CreateSponsoredProductsKeywordsTooManyRequestsException
+     */
+    public function createSponsoredProductsKeywords(Model\SponsoredProductsCreateSponsoredProductsKeywordsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateSponsoredProductsKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Update keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spKeyword.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateSponsoredProductsKeywordsBadRequestException
+     * @throws Exception\UpdateSponsoredProductsKeywordsUnauthorizedException
+     * @throws Exception\UpdateSponsoredProductsKeywordsInternalServerErrorException
+     * @throws Exception\UpdateSponsoredProductsKeywordsForbiddenException
+     * @throws Exception\UpdateSponsoredProductsKeywordsUnsupportedMediaTypeException
+     * @throws Exception\UpdateSponsoredProductsKeywordsTooManyRequestsException
+     */
+    public function updateSponsoredProductsKeywords(Model\SponsoredProductsUpdateSponsoredProductsKeywordsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateSponsoredProductsKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * List campaign negative targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spCampaignNegativeTargetingClause.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListSponsoredProductsCampaignNegativeTargetingClausesBadRequestException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeTargetingClausesUnauthorizedException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeTargetingClausesInternalServerErrorException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeTargetingClausesForbiddenException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeTargetingClausesTooManyRequestsException
+     */
+    public function listSponsoredProductsCampaignNegativeTargetingClauses(?Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListSponsoredProductsCampaignNegativeTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Delete targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spTargetingClause.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteSponsoredProductsTargetingClausesBadRequestException
+     * @throws Exception\DeleteSponsoredProductsTargetingClausesUnauthorizedException
+     * @throws Exception\DeleteSponsoredProductsTargetingClausesInternalServerErrorException
+     * @throws Exception\DeleteSponsoredProductsTargetingClausesForbiddenException
+     * @throws Exception\DeleteSponsoredProductsTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\DeleteSponsoredProductsTargetingClausesTooManyRequestsException
+     */
+    public function deleteSponsoredProductsTargetingClauses(Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteSponsoredProductsTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"].
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account.
+     *             This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account.
+     *             Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header.
+     *             This is a required header for advertisers and integrators using the Advertising API.
+     *
+     * }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spoptimizationrules.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\SearchOptimizationRulesBadRequestException
+     * @throws Exception\SearchOptimizationRulesUnauthorizedException
+     * @throws Exception\SearchOptimizationRulesInternalServerErrorException
+     * @throws Exception\SearchOptimizationRulesForbiddenException
+     */
+    public function searchOptimizationRules(?Model\OptimizationRulesAPISwaggerSearchOptimizationRulesRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\SearchOptimizationRules($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Create campaigns.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spCampaign.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateSponsoredProductsCampaignsBadRequestException
+     * @throws Exception\CreateSponsoredProductsCampaignsUnauthorizedException
+     * @throws Exception\CreateSponsoredProductsCampaignsInternalServerErrorException
+     * @throws Exception\CreateSponsoredProductsCampaignsForbiddenException
+     * @throws Exception\CreateSponsoredProductsCampaignsUnsupportedMediaTypeException
+     * @throws Exception\CreateSponsoredProductsCampaignsTooManyRequestsException
+     */
+    public function createSponsoredProductsCampaigns(Model\SponsoredProductsCreateSponsoredProductsCampaignsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateSponsoredProductsCampaigns($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Update campaigns.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spCampaign.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateSponsoredProductsCampaignsBadRequestException
+     * @throws Exception\UpdateSponsoredProductsCampaignsUnauthorizedException
+     * @throws Exception\UpdateSponsoredProductsCampaignsInternalServerErrorException
+     * @throws Exception\UpdateSponsoredProductsCampaignsForbiddenException
+     * @throws Exception\UpdateSponsoredProductsCampaignsUnsupportedMediaTypeException
+     * @throws Exception\UpdateSponsoredProductsCampaignsTooManyRequestsException
+     */
+    public function updateSponsoredProductsCampaigns(Model\SponsoredProductsUpdateSponsoredProductsCampaignsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateSponsoredProductsCampaigns($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * List ad groups.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spAdGroup.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListSponsoredProductsAdGroupsBadRequestException
+     * @throws Exception\ListSponsoredProductsAdGroupsUnauthorizedException
+     * @throws Exception\ListSponsoredProductsAdGroupsInternalServerErrorException
+     * @throws Exception\ListSponsoredProductsAdGroupsForbiddenException
+     * @throws Exception\ListSponsoredProductsAdGroupsUnsupportedMediaTypeException
+     * @throws Exception\ListSponsoredProductsAdGroupsTooManyRequestsException
+     */
+    public function listSponsoredProductsAdGroups(?Model\SponsoredProductsListSponsoredProductsAdGroupsRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListSponsoredProductsAdGroups($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Delete ad groups.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spAdGroup.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteSponsoredProductsAdGroupsBadRequestException
+     * @throws Exception\DeleteSponsoredProductsAdGroupsUnauthorizedException
+     * @throws Exception\DeleteSponsoredProductsAdGroupsInternalServerErrorException
+     * @throws Exception\DeleteSponsoredProductsAdGroupsForbiddenException
+     * @throws Exception\DeleteSponsoredProductsAdGroupsUnsupportedMediaTypeException
+     * @throws Exception\DeleteSponsoredProductsAdGroupsTooManyRequestsException
+     */
+    public function deleteSponsoredProductsAdGroups(Model\SponsoredProductsDeleteSponsoredProductsAdGroupsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteSponsoredProductsAdGroups($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Gets the top consolidated recommendations across bid, budget, targeting for SP campaigns given an advertiser profile id. The recommendations are refreshed everyday.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_view","advertiser_campaign_edit"]
+     *
+     * @param array $queryParameters {
+     *
+     * @var string $nextToken Optional. Token to retrieve subsequent page of results.
+     * @var string $maxResults Optional. Limits the number of items to return in the response.
+     *             }
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header and choose profile id `profileId` from the response to pass it as input.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     */
+    public function getCampaignRecommendations(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\GetCampaignRecommendations($queryParameters, $headerParameters), $fetch);
+    }
+
+    /**
+     * Delete campaign negative keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeKeyword.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeKeywordsBadRequestException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeKeywordsInternalServerErrorException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeKeywordsForbiddenException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeKeywordsUnsupportedMediaTypeException
+     * @throws Exception\DeleteSponsoredProductsCampaignNegativeKeywordsTooManyRequestsException
+     */
+    public function deleteSponsoredProductsCampaignNegativeKeywords(Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteSponsoredProductsCampaignNegativeKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"].
+     *
+     * @param string $campaignId       the sp campaign identifier
+     * @param array  $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account.
+     *             This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account.
+     *             Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header.
+     *             This is a required header for advertisers and integrators using the Advertising API.
+     *
+     * }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spoptimizationrules.v1+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\AssociateOptimizationRulesToCampaignBadRequestException
+     * @throws Exception\AssociateOptimizationRulesToCampaignUnauthorizedException
+     * @throws Exception\AssociateOptimizationRulesToCampaignInternalServerErrorException
+     * @throws Exception\AssociateOptimizationRulesToCampaignForbiddenException
+     */
+    public function associateOptimizationRulesToCampaign(string $campaignId, ?Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\AssociateOptimizationRulesToCampaign($campaignId, $requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * List campaign negative keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spCampaignNegativeKeyword.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListSponsoredProductsCampaignNegativeKeywordsBadRequestException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeKeywordsInternalServerErrorException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeKeywordsForbiddenException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeKeywordsUnsupportedMediaTypeException
+     * @throws Exception\ListSponsoredProductsCampaignNegativeKeywordsTooManyRequestsException
+     */
+    public function listSponsoredProductsCampaignNegativeKeywords(?Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListSponsoredProductsCampaignNegativeKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Delete campaigns.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spCampaign.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteSponsoredProductsCampaignsBadRequestException
+     * @throws Exception\DeleteSponsoredProductsCampaignsUnauthorizedException
+     * @throws Exception\DeleteSponsoredProductsCampaignsInternalServerErrorException
+     * @throws Exception\DeleteSponsoredProductsCampaignsForbiddenException
+     * @throws Exception\DeleteSponsoredProductsCampaignsUnsupportedMediaTypeException
+     * @throws Exception\DeleteSponsoredProductsCampaignsTooManyRequestsException
+     */
+    public function deleteSponsoredProductsCampaigns(Model\SponsoredProductsDeleteSponsoredProductsCampaignsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteSponsoredProductsCampaigns($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * List campaigns.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spCampaign.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListSponsoredProductsCampaignsBadRequestException
+     * @throws Exception\ListSponsoredProductsCampaignsUnauthorizedException
+     * @throws Exception\ListSponsoredProductsCampaignsInternalServerErrorException
+     * @throws Exception\ListSponsoredProductsCampaignsForbiddenException
+     * @throws Exception\ListSponsoredProductsCampaignsUnsupportedMediaTypeException
+     * @throws Exception\ListSponsoredProductsCampaignsTooManyRequestsException
+     */
+    public function listSponsoredProductsCampaigns(?Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListSponsoredProductsCampaigns($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * @param string $budgetRuleId    the budget rule identifier
+     * @param array  $queryParameters {
+     *
+     * @var string $nextToken To retrieve the next page of results, call the same operation and specify this token in the request. If the `nextToken` field is empty, there are no further results.
+     * @var float  $pageSize Sets a limit on the number of results returned. Maximum limit of `pageSize` is 30.
+     *             }
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return Model\SPGetAssociatedCampaignsResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetCampaignsAssociatedWithSPBudgetRuleBadRequestException
+     * @throws Exception\GetCampaignsAssociatedWithSPBudgetRuleUnprocessableEntityException
+     * @throws Exception\GetCampaignsAssociatedWithSPBudgetRuleUnauthorizedException
+     * @throws Exception\GetCampaignsAssociatedWithSPBudgetRuleInternalServerErrorException
+     * @throws Exception\GetCampaignsAssociatedWithSPBudgetRuleForbiddenException
+     * @throws Exception\GetCampaignsAssociatedWithSPBudgetRuleTooManyRequestsException
+     */
+    public function getCampaignsAssociatedWithSPBudgetRule(string $budgetRuleId, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\GetCampaignsAssociatedWithSPBudgetRule($budgetRuleId, $queryParameters, $headerParameters), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"].
+     *
+     * @param float  $campaignId       the campaign identifier
+     * @param string $budgetRuleId     the budget rule identifier
+     * @param array  $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DisassociateAssociatedBudgetRuleForSPCampaignsBadRequestException
+     * @throws Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnprocessableEntityException
+     * @throws Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnauthorizedException
+     * @throws Exception\DisassociateAssociatedBudgetRuleForSPCampaignsInternalServerErrorException
+     * @throws Exception\DisassociateAssociatedBudgetRuleForSPCampaignsForbiddenException
+     * @throws Exception\DisassociateAssociatedBudgetRuleForSPCampaignsTooManyRequestsException
+     */
+    public function disassociateAssociatedBudgetRuleForSPCampaigns(float $campaignId, string $budgetRuleId, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\DisassociateAssociatedBudgetRuleForSPCampaigns($campaignId, $budgetRuleId, $headerParameters), $fetch);
+    }
+
+    /**
+     * Create ad groups.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spAdGroup.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateSponsoredProductsAdGroupsBadRequestException
+     * @throws Exception\CreateSponsoredProductsAdGroupsUnauthorizedException
+     * @throws Exception\CreateSponsoredProductsAdGroupsInternalServerErrorException
+     * @throws Exception\CreateSponsoredProductsAdGroupsForbiddenException
+     * @throws Exception\CreateSponsoredProductsAdGroupsUnsupportedMediaTypeException
+     * @throws Exception\CreateSponsoredProductsAdGroupsTooManyRequestsException
+     */
+    public function createSponsoredProductsAdGroups(Model\SponsoredProductsCreateSponsoredProductsAdGroupsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateSponsoredProductsAdGroups($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Update ad groups.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spAdGroup.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateSponsoredProductsAdGroupsBadRequestException
+     * @throws Exception\UpdateSponsoredProductsAdGroupsUnauthorizedException
+     * @throws Exception\UpdateSponsoredProductsAdGroupsInternalServerErrorException
+     * @throws Exception\UpdateSponsoredProductsAdGroupsForbiddenException
+     * @throws Exception\UpdateSponsoredProductsAdGroupsUnsupportedMediaTypeException
+     * @throws Exception\UpdateSponsoredProductsAdGroupsTooManyRequestsException
+     */
+    public function updateSponsoredProductsAdGroups(Model\SponsoredProductsUpdateSponsoredProductsAdGroupsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateSponsoredProductsAdGroups($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Given an advertised ASIN as input, this API returns suggested ASINs to target in a product targeting campaign. We use various methods to generate these suggestions. These include using historical performance of your ad, items that shoppers they frequently view and purchase together, etc. The suggested targets can be retrieved either as a single list, or grouped by ‘theme' – i.e. an accompanying context for why we recommend the items. You can pick the desired format using the Accepts header, please see the response mediaTypes for more information. </br>
+     * <h4>Pagination Behavior</h4> The API supports cursor based pagination using encoded cursor values to return next set of records or previously served records. The <b>count</b> parameter in the request body will be used to determine the size of results when requesting the previous page or next page. If no value for <b>count</b> is passed in the request, a default value is assumed. Please refer the range and defaults for these values in the request schema under GetProductRecommendationsRequest. </br> <i><b>Note:</b> The clients should never cache pagination cursor values locally as these values will expire after a certain time period. However a cursor value can be reused to perform retries in case of failures as long as the value has not expired.
+     * </br></br> <h4>Themes </h4> Themes provide additional context for why we are recommending a product as a target. See below for an overall list of themes currently available –  </br><b>- Top converting targets</b> – These ASINs generated conversions for the input ASIN in the past 30 days (e.g. your product appeared as an ad on the detail page of these items, and a shopper clicked and purchased your item). The suggested ASINs under this theme are sorted in decreasing order of sales generated for your promoted item. </br><b>- Similar items (frequently viewed together)</b> – Items that shoppers frequently view and click along with your advertised item during a shopping session.
+     * </br><b>- Complements</b> – Items that are frequently purchased together as complements. For example, if you are promoting a tennis racquet, you may see tennis balls recommended under this theme.
+     * </br><b>- Similar items with low ratings and reviews</b> – Subset of the ‘similar items’ theme containing items that are rated lower than 3 stars and/or with fewer than 5 reviews.
+     * </br><b>- Other books read by your readers</b> – Items that shoppers frequently view and click along with your advertised item during a shopping session. </br></br><i><b>Note:</b> Availability of themes differs by input ASIN - some ASINs may not have all above themes available</i>.
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-AdvertiserId The Advertiser ID associated with the advertiser account
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spproductrecommendationresponse.themes.v3+json|application/vnd.spproductrecommendationresponse.asins.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetProductRecommendationsBadRequestException
+     * @throws Exception\GetProductRecommendationsUnprocessableEntityException
+     * @throws Exception\GetProductRecommendationsInternalServerErrorException
+     * @throws Exception\GetProductRecommendationsTooManyRequestsException
+     */
+    public function getProductRecommendations(?Model\GetProductRecommendationsRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetProductRecommendations($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Delete negative targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spNegativeTargetingClause.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteSponsoredProductsNegativeTargetingClausesBadRequestException
+     * @throws Exception\DeleteSponsoredProductsNegativeTargetingClausesUnauthorizedException
+     * @throws Exception\DeleteSponsoredProductsNegativeTargetingClausesInternalServerErrorException
+     * @throws Exception\DeleteSponsoredProductsNegativeTargetingClausesForbiddenException
+     * @throws Exception\DeleteSponsoredProductsNegativeTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\DeleteSponsoredProductsNegativeTargetingClausesTooManyRequestsException
+     */
+    public function deleteSponsoredProductsNegativeTargetingClauses(Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteSponsoredProductsNegativeTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Delete keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spKeyword.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteSponsoredProductsKeywordsBadRequestException
+     * @throws Exception\DeleteSponsoredProductsKeywordsUnauthorizedException
+     * @throws Exception\DeleteSponsoredProductsKeywordsInternalServerErrorException
+     * @throws Exception\DeleteSponsoredProductsKeywordsForbiddenException
+     * @throws Exception\DeleteSponsoredProductsKeywordsUnsupportedMediaTypeException
+     * @throws Exception\DeleteSponsoredProductsKeywordsTooManyRequestsException
+     */
+    public function deleteSponsoredProductsKeywords(Model\SponsoredProductsDeleteSponsoredProductsKeywordsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteSponsoredProductsKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"].
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetOptimizationRuleEligibilityBadRequestException
+     * @throws Exception\GetOptimizationRuleEligibilityUnprocessableEntityException
+     * @throws Exception\GetOptimizationRuleEligibilityUnauthorizedException
+     * @throws Exception\GetOptimizationRuleEligibilityInternalServerErrorException
+     * @throws Exception\GetOptimizationRuleEligibilityForbiddenException
+     * @throws Exception\GetOptimizationRuleEligibilityTooManyRequestsException
+     */
+    public function getOptimizationRuleEligibility(Model\SPCampaignOptimizationRecommendationsAPIRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetOptimizationRuleEligibility($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Authorized resource type**:
+     * Global Ad Account ID, Profile ID.
+     *
+     **Parameter name**:
+     * Amazon-Ads-AccountId
+     *
+     **Parameter in**:
+     * header
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param string $budgetRuleId     the budget rule identifier
+     * @param array  $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return Model\GetSPBudgetRuleResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetBudgetRuleByRuleIdForSPCampaignsBadRequestException
+     * @throws Exception\GetBudgetRuleByRuleIdForSPCampaignsUnprocessableEntityException
+     * @throws Exception\GetBudgetRuleByRuleIdForSPCampaignsUnauthorizedException
+     * @throws Exception\GetBudgetRuleByRuleIdForSPCampaignsInternalServerErrorException
+     * @throws Exception\GetBudgetRuleByRuleIdForSPCampaignsForbiddenException
+     * @throws Exception\GetBudgetRuleByRuleIdForSPCampaignsTooManyRequestsException
+     */
+    public function getBudgetRuleByRuleIdForSPCampaigns(string $budgetRuleId, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\GetBudgetRuleByRuleIdForSPCampaigns($budgetRuleId, $headerParameters), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"].
+     *
+     * @param string $campaignOptimizationId the sp campaign optimization rule identifier
+     * @param array  $headerParameters       {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\DeleteCampaignOptimizationRuleBadRequestException
+     * @throws Exception\DeleteCampaignOptimizationRuleUnprocessableEntityException
+     * @throws Exception\DeleteCampaignOptimizationRuleUnauthorizedException
+     * @throws Exception\DeleteCampaignOptimizationRuleInternalServerErrorException
+     * @throws Exception\DeleteCampaignOptimizationRuleForbiddenException
+     * @throws Exception\DeleteCampaignOptimizationRuleNotFoundException
+     * @throws Exception\DeleteCampaignOptimizationRuleTooManyRequestsException
+     */
+    public function deleteCampaignOptimizationRule(string $campaignOptimizationId, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\DeleteCampaignOptimizationRule($campaignOptimizationId, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"].
+     *
+     * @param string $campaignOptimizationId the sp campaign optimization rule identifier
+     * @param array  $headerParameters       {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetCampaignOptimizationRuleBadRequestException
+     * @throws Exception\GetCampaignOptimizationRuleUnprocessableEntityException
+     * @throws Exception\GetCampaignOptimizationRuleUnauthorizedException
+     * @throws Exception\GetCampaignOptimizationRuleInternalServerErrorException
+     * @throws Exception\GetCampaignOptimizationRuleForbiddenException
+     * @throws Exception\GetCampaignOptimizationRuleNotFoundException
+     * @throws Exception\GetCampaignOptimizationRuleTooManyRequestsException
+     */
+    public function getCampaignOptimizationRule(string $campaignOptimizationId, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetCampaignOptimizationRule($campaignOptimizationId, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Create campaign negative keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeKeyword.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeKeywordsBadRequestException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeKeywordsInternalServerErrorException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeKeywordsForbiddenException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnsupportedMediaTypeException
+     * @throws Exception\CreateSponsoredProductsCampaignNegativeKeywordsTooManyRequestsException
+     */
+    public function createSponsoredProductsCampaignNegativeKeywords(Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateSponsoredProductsCampaignNegativeKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Update campaign negative keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeKeyword.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeKeywordsBadRequestException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeKeywordsInternalServerErrorException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeKeywordsForbiddenException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeKeywordsUnsupportedMediaTypeException
+     * @throws Exception\UpdateSponsoredProductsCampaignNegativeKeywordsTooManyRequestsException
+     */
+    public function updateSponsoredProductsCampaignNegativeKeywords(Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateSponsoredProductsCampaignNegativeKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Returns the targets created through target promotion groups for an advertiser and / or given target promotion group.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId  The identifier of a client associated with a 'Login with Amazon' account. This is a required
+     *             header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles
+     *             resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a
+     *             required header for advertisers and integrators using the Advertising API.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spTargetPromotionGroupTarget.v1+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListTargetPromotionGroupTargetsBadRequestException
+     * @throws Exception\ListTargetPromotionGroupTargetsUnauthorizedException
+     * @throws Exception\ListTargetPromotionGroupTargetsInternalServerErrorException
+     * @throws Exception\ListTargetPromotionGroupTargetsNotImplementedException
+     * @throws Exception\ListTargetPromotionGroupTargetsForbiddenException
+     * @throws Exception\ListTargetPromotionGroupTargetsServiceUnavailableException
+     * @throws Exception\ListTargetPromotionGroupTargetsTooManyRequestsException
+     */
+    public function listTargetPromotionGroupTargets(?Model\SponsoredProductsListTargetPromotionGroupTargetsRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListTargetPromotionGroupTargets($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * List targeting clauses.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spTargetingClause.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListSponsoredProductsTargetingClausesBadRequestException
+     * @throws Exception\ListSponsoredProductsTargetingClausesUnauthorizedException
+     * @throws Exception\ListSponsoredProductsTargetingClausesInternalServerErrorException
+     * @throws Exception\ListSponsoredProductsTargetingClausesForbiddenException
+     * @throws Exception\ListSponsoredProductsTargetingClausesUnsupportedMediaTypeException
+     * @throws Exception\ListSponsoredProductsTargetingClausesTooManyRequestsException
+     */
+    public function listSponsoredProductsTargetingClauses(?Model\SponsoredProductsListSponsoredProductsTargetingClausesRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListSponsoredProductsTargetingClauses($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * List negative keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spNegativeKeyword.v3+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\ListSponsoredProductsNegativeKeywordsBadRequestException
+     * @throws Exception\ListSponsoredProductsNegativeKeywordsUnauthorizedException
+     * @throws Exception\ListSponsoredProductsNegativeKeywordsInternalServerErrorException
+     * @throws Exception\ListSponsoredProductsNegativeKeywordsForbiddenException
+     * @throws Exception\ListSponsoredProductsNegativeKeywordsUnsupportedMediaTypeException
+     * @throws Exception\ListSponsoredProductsNegativeKeywordsTooManyRequestsException
+     */
+    public function listSponsoredProductsNegativeKeywords(?Model\SponsoredProductsListSponsoredProductsNegativeKeywordsRequestContent $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\ListSponsoredProductsNegativeKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * The <b> POST /sp/global/targets/keywords/recommendations/list </b> endpoint returns recommended keyword targets for a list of countries given either A) a list of ad ASINs per target country or B) a global campaign ID and ad group ID. Please use the recommendationType field to specify if you want to use option A or option B. This endpoint will also return recommended bids along with each recommendation keyword target.<br><br> <b> CountryCodes</b> <br>Global API endpoint accepts <b>countryCodes</b> dictionary. Key is the 2-letter country code. Value is an object with two arrays <b>asins</b> and <b>targets</b>. Each country will be processed in parallel according to rules of <a href="https://advertising.amazon.com/API/docs/en-us/sponsored-products/3-0/openapi/prod#tag/Keyword-Targets:~:text=keywords/localize%20endpoint.-,Version%205.0,-New%20Features">version 5</a> recommendation API.<h3> Availability </h3> Global keyword recommendation API is available in all the marketplaces.
+     *
+     * @param mixed|null $requestBody
+     * @param array      $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-MarketplaceId The advertiser's Marketplace ID associated with the advertiser account to support single marketplace request. Will not be used if global account id is provided.
+     * @var string $Amazon-Advertising-API-AdvertiserId The advertiser's ID associated with the advertiser account to support single marketplace request. Will not be used if global account id is provided.
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     * @var string $Amazon-Ads-AccountId The identifier of a profile associated with the advertiser account. Used for authentication of Global Account.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/vnd.spkeywordsrecommendation.v5+json|application/json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetGlobalRankedKeywordRecommendationBadRequestException
+     * @throws Exception\GetGlobalRankedKeywordRecommendationUnprocessableEntityException
+     * @throws Exception\GetGlobalRankedKeywordRecommendationUnauthorizedException
+     * @throws Exception\GetGlobalRankedKeywordRecommendationInternalServerErrorException
+     * @throws Exception\GetGlobalRankedKeywordRecommendationUnsupportedMediaTypeException
+     * @throws Exception\GetGlobalRankedKeywordRecommendationServiceUnavailableException
+     * @throws Exception\GetGlobalRankedKeywordRecommendationTooManyRequestsException
+     */
+    public function getGlobalRankedKeywordRecommendation($requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\GetGlobalRankedKeywordRecommendation($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Create negative keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spNegativeKeyword.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\CreateSponsoredProductsNegativeKeywordsBadRequestException
+     * @throws Exception\CreateSponsoredProductsNegativeKeywordsUnauthorizedException
+     * @throws Exception\CreateSponsoredProductsNegativeKeywordsInternalServerErrorException
+     * @throws Exception\CreateSponsoredProductsNegativeKeywordsForbiddenException
+     * @throws Exception\CreateSponsoredProductsNegativeKeywordsUnsupportedMediaTypeException
+     * @throws Exception\CreateSponsoredProductsNegativeKeywordsTooManyRequestsException
+     */
+    public function createSponsoredProductsNegativeKeywords(Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\CreateSponsoredProductsNegativeKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * Update negative keywords.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use GET method on Profiles resource to list
+     *             profiles associated with the access token passed in the HTTP Authorization header.
+     * @var string $Prefer The "Prefer" header, as defined in [RFC7240], allows clients to request certain behavior from the service.
+     *             The service ignores preference values that are either not supported or not known by the service.
+     *             Either multiple Prefer headers are passed or single one with comma separated values, both forms are equivalent
+     *             Supported preferences:
+     *             return=representation - return the full object when doing create/update/delete operations instead of ids.
+     *             Please note that the extendedData field will be part of the full object for /list endpoints only.
+     *             }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spNegativeKeyword.v3+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\UpdateSponsoredProductsNegativeKeywordsBadRequestException
+     * @throws Exception\UpdateSponsoredProductsNegativeKeywordsUnauthorizedException
+     * @throws Exception\UpdateSponsoredProductsNegativeKeywordsInternalServerErrorException
+     * @throws Exception\UpdateSponsoredProductsNegativeKeywordsForbiddenException
+     * @throws Exception\UpdateSponsoredProductsNegativeKeywordsUnsupportedMediaTypeException
+     * @throws Exception\UpdateSponsoredProductsNegativeKeywordsTooManyRequestsException
+     */
+    public function updateSponsoredProductsNegativeKeywords(Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsRequestContent $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\UpdateSponsoredProductsNegativeKeywords($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"].
+     *
+     * @param array $headerParameters {
+     *
+     * @var mixed $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account. This is a required header for advertisers and integrators using the Advertising API.
+     * @var mixed $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header. This is a required header for advertisers and integrators using the Advertising API.
+     *            }
+     *
+     * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
+     * @param array  $accept Accept content header application/json|application/vnd.spcampaignbudgetusage.v1+json
+     *
+     * @return \Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\SpCampaignsBudgetUsageBadRequestException
+     * @throws Exception\SpCampaignsBudgetUsageUnprocessableEntityException
+     * @throws Exception\SpCampaignsBudgetUsageUnauthorizedException
+     * @throws Exception\SpCampaignsBudgetUsageInternalServerErrorException
+     * @throws Exception\SpCampaignsBudgetUsageForbiddenException
+     * @throws Exception\SpCampaignsBudgetUsageTooManyRequestsException
+     */
+    public function spCampaignsBudgetUsage(Model\BudgetUsageCampaignRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    {
+        return $this->executeEndpoint(new Endpoint\SpCampaignsBudgetUsage($requestBody, $headerParameters, $accept), $fetch);
+    }
+
+    /**
+     * A rule enables an automatic budget increase for a specified date range or for a special event. The response includes the suggested date range for each special event.
+     *
+     **Requires one of these permissions**:
+     * ["advertiser_campaign_edit","advertiser_campaign_view"]
+     *
+     * @param array $headerParameters {
+     *
+     * @var string $Amazon-Advertising-API-ClientId The identifier of a client associated with a "Login with Amazon" account
+     * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header.
+     *             }
+     *
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return Model\SPGetAllRuleEventResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\SPGetAllRuleEventsBadRequestException
+     * @throws Exception\SPGetAllRuleEventsInternalServerErrorException
+     * @throws Exception\SPGetAllRuleEventsTooManyRequestsException
+     */
+    public function sPGetAllRuleEvents(?Model\SPGetAllRuleEventRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new Endpoint\SPGetAllRuleEvents($requestBody, $headerParameters), $fetch);
     }
 
     public static function create($httpClient = null, array $additionalPlugins = [], array $additionalNormalizers = [])
@@ -53,9 +2350,6 @@ class Client extends Runtime\Client\Client
         if (null === $httpClient) {
             $httpClient = \Http\Discovery\Psr18ClientDiscovery::find();
             $plugins = [];
-            $uri = \Http\Discovery\Psr17FactoryDiscovery::findUriFactory()->createUri('http://petstore.swagger.io/v1');
-            $plugins[] = new \Http\Client\Common\Plugin\AddHostPlugin($uri);
-            $plugins[] = new \Http\Client\Common\Plugin\AddPathPlugin($uri);
             if (count($additionalPlugins) > 0) {
                 $plugins = array_merge($plugins, $additionalPlugins);
             }

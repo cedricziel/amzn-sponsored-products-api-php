@@ -8,10 +8,10 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace myvendor\mynamespace\Generated\Normalizer;
+namespace cedricziel\amznsponsoredproductsapiphp\Generated\Normalizer;
 
-use myvendor\mynamespace\Generated\Runtime\Normalizer\CheckArray;
-use myvendor\mynamespace\Generated\Runtime\Normalizer\ValidatorTrait;
+use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\CheckArray;
+use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -28,11 +28,1801 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use CheckArray;
         use ValidatorTrait;
         protected $normalizers = [
-            \myvendor\mynamespace\Generated\Model\Pet::class => PetNormalizer::class,
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAsinOwnershipError::class => SponsoredProductsAsinOwnershipErrorNormalizer::class,
 
-            \myvendor\mynamespace\Generated\Model\Error::class => ErrorNormalizer::class,
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsResponseContentNormalizer::class,
 
-            \Jane\Component\JsonSchemaRuntime\Reference::class => \myvendor\mynamespace\Generated\Runtime\Normalizer\ReferenceNormalizer::class,
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeyword::class => SponsoredProductsDraftNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BrandLoP::class => BrandLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetTargetableAsinCountsRequest::class => GetTargetableAsinCountsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalTargetingExpression::class => GlobalTargetingExpressionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPCampaignOptimizationRulesRequest::class => UpdateSPCampaignOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordFailureResponseItem::class => SponsoredProductsDraftCampaignNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSBudgetRuleDetails::class => RMSBudgetRuleDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessError::class => SponsoredProductsDraftAdGroupAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalErrorResponseContent::class => SponsoredProductsInternalErrorResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestV4::class => AsinsThemeBasedBidRecommendationRequestV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestV4Bidding::class => AsinsThemeBasedBidRecommendationRequestV4BiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSGetAssociatedCampaignsResponse::class => RMSGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationError::class => SponsoredProductsDraftAdGroupMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceTargetingClauseServingStatus::class => SponsoredProductsMarketplaceTargetingClauseServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftProductAdsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalStoreSetting::class => SponsoredProductsGlobalStoreSettingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseFailureResponseItem::class => SponsoredProductsCampaignNegativeTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent::class => SponsoredProductsNegativeKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteAllSPTargetsRequestContent::class => SponsoredProductsDeleteAllSPTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationExceptionResponseContent::class => SponsoredProductsDraftKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationError::class => SponsoredProductsProductAdMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationError::class => GlobalBudgetRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponseWithError::class => RankedTargetWithThemedBidsResponseWithErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetRequest::class => SponsoredProductsDeleteTargetRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkTargetingClauseOperationResponse::class => SponsoredProductsBulkTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsForbiddenResponseContent::class => SponsoredProductsForbiddenResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessErrorSelector::class => SponsoredProductsKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewRequestContent::class => SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBids::class => RankedTargetWithThemedBidsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsBidInfoItem::class => RankedTargetWithThemedBidsBidInfoItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroup::class => SponsoredProductsGlobalAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleFilter::class => OptimizationRulesAPISwaggerOptimizationRuleFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsResponseContent::class => SponsoredProductsGetTargetPromotionGroupsRecommendationsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent::class => SponsoredProductsSchemaValidationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException::class => InternalServerExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsBasedRequest::class => AsinsBasedRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsDraftKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupThemeBasedBidRecommendationRequestV4::class => AdGroupThemeBasedBidRecommendationRequestV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalTargetingClause::class => SponsoredProductsUpdateGlobalTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListMatchedAdGroupsRequestContent::class => SponsoredProductsListMatchedAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalAdGroup::class => GlobalAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceAdGroupServingStatus::class => SponsoredProductsMarketplaceAdGroupServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingExpression::class => TargetingExpressionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPCampaignOptimizationRulesRequest::class => CreateSPCampaignOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent::class => SponsoredProductsUnauthorizedExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Clicks::class => ClicksNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseSuccessResponseItem::class => SponsoredProductsGlobalTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationErrorSelector::class => SponsoredProductsDraftAdGroupMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalCampaign::class => SponsoredProductsCreateGlobalCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupExtendedData::class => SponsoredProductsDraftAdGroupExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequest::class => OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordExtendedData::class => SponsoredProductsDraftNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkProductAdOperationResponse::class => SponsoredProductsBulkProductAdOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAd::class => SponsoredProductsGlobalProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseExtendedData::class => SponsoredProductsTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsApplicableMarketplacesError::class => SponsoredProductsApplicableMarketplacesErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationErrorSelector::class => SponsoredProductsCampaignNegativeTargetsMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRule::class => SBBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Brand::class => BrandNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClause::class => SponsoredProductsDraftTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetRMSBudgetRuleResponse::class => GetRMSBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkKeywordOperationResponse::class => SponsoredProductsBulkKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessError::class => SponsoredProductsCampaignNegativeKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ValidationException::class => ValidationExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSBBudgetRulesForAdvertiserResponse::class => GetSBBudgetRulesForAdvertiserResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsUpdateSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent::class => SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetPromotionGroup::class => SponsoredProductsTargetPromotionGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsInternalResponseContent::class => SponsoredProductsCreateTargetPromotionGroupTargetsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBudgetError::class => SponsoredProductsBudgetErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargets::class => SponsoredProductsAllTargetsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationSuccessResponseItem::class => SponsoredProductsCampaignMutationSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftProductAdsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationError::class => SponsoredProductsDraftCampaignMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsProductAdsResponseContent::class => SponsoredProductsUpdateSponsoredProductsProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessExceptionResponseContent::class => SponsoredProductsProductAdAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdExtendedData::class => SponsoredProductsGlobalProductAdExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateBudgetRulesResponse::class => UpdateBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationError::class => SponsoredProductsAdGroupMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordFailureResponseItem::class => SponsoredProductsDraftNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftProductAd::class => SponsoredProductsCreateDraftProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEvent::class => SPBudgetRulesRecommendationEventNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecommendation::class => OptimizationRulesAPISwaggerRuleRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessError::class => SponsoredProductsNegativeKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAsinFilter::class => SponsoredProductsAsinFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftCampaign::class => SponsoredProductsCreateDraftCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBadRequestResponseContent::class => SponsoredProductsBadRequestResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignDynamicBidding::class => SponsoredProductsDraftCampaignDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordExtendedData::class => SponsoredProductsGlobalCampaignNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalAdGroupsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsProductAdsResponseContent::class => SponsoredProductsDeleteSponsoredProductsProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Values::class => ValuesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaign::class => SponsoredProductsGlobalCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError::class => CampaignOptimizationRuleErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RangeMetricValue::class => RangeMetricValueNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationError::class => SponsoredProductsCampaignMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordServingStatusDetail::class => SponsoredProductsKeywordServingStatusDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationResponse::class => InitialBudgetRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordFailureResponseItem::class => SponsoredProductsKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalProductAdsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkAdGroupOperationResponse::class => SponsoredProductsBulkAdGroupOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdExtendedData::class => SponsoredProductsProductAdExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingExpressionPredicate::class => SponsoredProductsNegativeTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsRequestContent::class => SponsoredProductsCreateTargetPromotionGroupTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationRequest::class => InitialBudgetRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClause::class => SponsoredProductsNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftTargetingClause::class => SponsoredProductsCreateDraftTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessExceptionResponseContent::class => SponsoredProductsDraftAdGroupAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdSuccessResponseItem::class => SponsoredProductsProductAdSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysEstimatedOpportunities::class => SevenDaysEstimatedOpportunitiesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftNegativeTargetingClauseOperationResponse::class => SponsoredProductsBulkDraftNegativeTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignBudget::class => SponsoredProductsDraftCampaignBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent::class => SponsoredProductsNegativeKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftCampaignNegativeKeywordOperationResponse::class => SponsoredProductsBulkDraftCampaignNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseFailureResponseItem::class => SponsoredProductsGlobalTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalAdGroupOperationResponse::class => SponsoredProductsBulkGlobalAdGroupOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessError::class => SponsoredProductsAdGroupAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalTargetingClauseOperationResponse::class => SponsoredProductsBulkGlobalTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent::class => SponsoredProductsTargetAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRuleDetails::class => SPBudgetRuleDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendation::class => ProductRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSBudgetRule::class => RMSBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsErrorCause::class => SponsoredProductsErrorCauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMalformedValueError::class => SponsoredProductsMalformedValueErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError::class => BudgetUsageErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleRecommendation::class => BudgetRuleRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsDraftTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalProductAd::class => SponsoredProductsUpdateGlobalProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewResponseContent::class => SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceProductAdServingStatus::class => SponsoredProductsMarketplaceProductAdServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalProductAdsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventResponse::class => GlobalBudgetRulesRecommendationEventResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessExceptionResponseContent::class => SponsoredProductsDraftCampaignAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignsResponseContent::class => SponsoredProductsUpdateSponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupBasedRequest::class => AdGroupBasedRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdExtendedData::class => SponsoredProductsDraftProductAdExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponseV4::class => ThemeBasedBidRecommendationResponseV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent::class => SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessErrorSelector::class => SponsoredProductsDraftNegativeKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordSuccessResponseItem::class => SponsoredProductsDraftKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedKeywordTargetsForAsinsRequest::class => RankedKeywordTargetsForAsinsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewResponseContent::class => SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordExtendedData::class => SponsoredProductsDraftKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordFailureResponseItem::class => SponsoredProductsGlobalKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseFailureResponseItem::class => SponsoredProductsGlobalNegativeTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsResponseContent::class => SponsoredProductsCopySponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent::class => SponsoredProductsProductAdMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroupsRecommendationsRequest::class => KeywordGroupsRecommendationsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRecommendedTarget::class => SponsoredProductsRecommendedTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingExpressionPredicate::class => SponsoredProductsGlobalTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsAdGroupsRequestContent::class => SponsoredProductsDeleteSponsoredProductsAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRecommendationStatusUpdate::class => OptimizationRulesAPISwaggerRecommendationStatusUpdateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignExtendedData::class => SponsoredProductsCampaignExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsReducedObjectIdFilter::class => SponsoredProductsReducedObjectIdFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetPromotionGroupsInternalRequestContent::class => SponsoredProductsDeleteTargetPromotionGroupsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationError::class => SponsoredProductsDraftKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessErrorSelector::class => SponsoredProductsDraftAdGroupAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryBudgetRecommendation::class => CountryBudgetRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessErrorSelector::class => SponsoredProductsDraftNegativeTargetAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationError::class => SponsoredProductsCampaignNegativeKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessError::class => SponsoredProductsTargetAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftAdGroupOperationResponse::class => SponsoredProductsBulkDraftAdGroupOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent::class => SponsoredProductsNotImplementedExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError::class => OptimizationRulesAPISwaggerOptimizationRulesErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBillingError::class => SponsoredProductsBillingErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException::class => BudgetRecommendationNewCampaignsExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecKeywordTarget::class => RecKeywordTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecKeywordTargetBidInfoItem::class => RecKeywordTargetBidInfoItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInvalidInputError::class => SponsoredProductsInvalidInputErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductCategoryTargetDetails::class => SponsoredProductsSPProductCategoryTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignTaskDetails::class => SponsoredProductsCopyCampaignTaskDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDListAssociatedBudgetRulesResponse::class => SDListAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationErrorSelector::class => SponsoredProductsDraftCampaignNegativeKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftAdGroupsResponseContent::class => SponsoredProductsListSponsoredProductsDraftAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNameFilter::class => SponsoredProductsNameFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsSuccessResponseItem::class => SponsoredProductsCreateTargetPromotionGroupTargetsSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateNegativeTargetingClause::class => SponsoredProductsCreateNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordSuccessResponseItem::class => SponsoredProductsDraftCampaignNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponse::class => RankedTargetResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponseKeywordTargetListItem::class => RankedTargetResponseKeywordTargetListItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllSPTargetsResponseContent::class => SponsoredProductsCreateAllSPTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsResponseContent::class => SponsoredProductsCreateTargetPromotionGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityNotFoundError::class => SponsoredProductsEntityNotFoundErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateRMSBudgetRulesRequest::class => UpdateRMSBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalProductAdsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalNegativeKeyword::class => SponsoredProductsUpdateGlobalNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdFailureResponseItem::class => SponsoredProductsProductAdFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsInternalRequestContent::class => SponsoredProductsCreateTargetPromotionGroupsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductTargetDetails::class => SponsoredProductsSPProductTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottledError::class => SponsoredProductsThrottledErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationErrorSelector::class => SponsoredProductsCampaignNegativeKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class => SponsoredProductsUpdateGlobalKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateBudgetRulesResponse::class => CreateBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponse::class => RankedTargetWithThemedBidsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignResponse::class => SponsoredProductsCopyCampaignResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeRecommendation::class => ThemeRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceLevelProductIdentifier::class => SponsoredProductsMarketplaceLevelProductIdentifierNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeyword::class => SponsoredProductsGlobalNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftKeywordOperationResponse::class => SponsoredProductsBulkDraftKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessExceptionResponseContent::class => SponsoredProductsDraftNegativeKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordExtendedData::class => SponsoredProductsGlobalNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftKeyword::class => SponsoredProductsCreateDraftKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPromoteSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsPromoteSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTarget::class => SponsoredProductsCreateTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordText::class => SponsoredProductsGlobalKeywordTextNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessError::class => SponsoredProductsDraftCampaignAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventRequest::class => SPBudgetRulesRecommendationEventRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordFailureResponseItem::class => SponsoredProductsDraftKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSearchOptimizationRulesResponse::class => OptimizationRulesAPISwaggerSearchOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseErrorItem::class => OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseErrorItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationV4::class => ThemeBasedBidRecommendationV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalBudget::class => SponsoredProductsGlobalBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AgeRange::class => AgeRangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignServingStatus::class => SponsoredProductsGlobalCampaignServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysMissedOpportunities::class => SevenDaysMissedOpportunitiesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationErrorSelector::class => SponsoredProductsKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioResponse::class => BudgetUsagePortfolioResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRuleResponse::class => GetSPBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationNewCampaignsError::class => GlobalBudgetRecommendationNewCampaignsErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkNegativeTargetingClauseOperationResponse::class => SponsoredProductsBulkNegativeTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalCampaignNegativeKeyword::class => SponsoredProductsUpdateGlobalCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesPreviewResponseContent::class => SponsoredProductsListSponsoredProductsTargetingClausesPreviewResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdSuccessResponseItem::class => SponsoredProductsGlobalProductAdSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsObjectIdFilter::class => SponsoredProductsObjectIdFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignsRequestContent::class => SponsoredProductsUpdateSponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftAdGroupsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent::class => SponsoredProductsThrottlingExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationExceptionResponseContent::class => SponsoredProductsDraftCampaignMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItem::class => CategoryItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClause::class => SponsoredProductsGlobalTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupFailureResponseItem::class => SponsoredProductsDraftAdGroupFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialGlobalBudgetRecommendationRequest::class => InitialGlobalBudgetRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseSuccessResponseItem::class => SponsoredProductsCampaignNegativeTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDGetAssociatedCampaignsResponse::class => SDGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent::class => SponsoredProductsAdGroupMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateOptimizationRulesRequest::class => OptimizationRulesAPISwaggerUpdateOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupFailureResponseItem::class => SponsoredProductsGlobalAdGroupFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsProductAdsResponseContent::class => SponsoredProductsListSponsoredProductsProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventResponse::class => SPBudgetRulesRecommendationEventResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignRequest::class => OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendation::class => BudgetRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseServingStatus::class => SponsoredProductsGlobalTargetingClauseServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordFailureResponseItem::class => SponsoredProductsNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAudienceSegment::class => SponsoredProductsAudienceSegmentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftTargetingClauseOperationResponse::class => SponsoredProductsBulkDraftTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedKeywordTargetsForAsinsRequest::class => GlobalRankedKeywordTargetsForAsinsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalProductAd::class => SponsoredProductsCreateGlobalProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceBid::class => SponsoredProductsMarketplaceBidNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsProductAdsRequestContent::class => SponsoredProductsCreateSponsoredProductsProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessErrorSelector::class => SponsoredProductsDraftProductAdAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdServingStatus::class => SponsoredProductsGlobalProductAdServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GenreLoP::class => GenreLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClause::class => SponsoredProductsGlobalNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseFailureResponseItem::class => SponsoredProductsDraftTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError::class => BidRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordSuccessResponseItem::class => SponsoredProductsKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSDBudgetRulesRequest::class => UpdateSDBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTarget::class => KeywordTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetingRecommendation::class => KeywordTargetingRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPListAssociatedBudgetRulesResponse::class => SPListAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetPromotionGroupTargetsInternalRequestContent::class => SponsoredProductsDeleteTargetPromotionGroupTargetsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignMutationFailureResponseItem::class => SponsoredProductsGlobalCampaignMutationFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroup::class => AdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetMutationErrorSelector::class => SponsoredProductsDraftTargetMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseErrorItem::class => OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseErrorItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAssociatedCampaignsResponse::class => SPGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseFailureResponseItem::class => SponsoredProductsNegativeTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsInternalRequestContent::class => SponsoredProductsListTargetPromotionGroupsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationError::class => SponsoredProductsTargetMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalAdGroupsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessErrorSelector::class => SponsoredProductsCampaignNegativeTargetsAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesPreviewRequestContent::class => SponsoredProductsListSponsoredProductsTargetingClausesPreviewRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessError::class => SponsoredProductsDraftKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class => ImpactMetricsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent::class => SponsoredProductsUnsupportedMediaTypeExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBatchResponseError::class => SponsoredProductsBatchResponseErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessError::class => SponsoredProductsProductAdAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleWithoutRuleId::class => OptimizationRulesAPISwaggerOptimizationRuleWithoutRuleIdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateTargetingClause::class => SponsoredProductsUpdateTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTarget::class => SponsoredProductsTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingExpressionV4::class => TargetingExpressionV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class => SponsoredProductsCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftProductAdsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRulesForAdvertiserResponse::class => GetSPBudgetRulesForAdvertiserResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetingExpressionPredicate::class => SponsoredProductsCreateTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsInternalResponseContent::class => SponsoredProductsListTargetPromotionGroupTargetsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleCampaignRuleAssociationStatus::class => OptimizationRulesAPISwaggerSingleCampaignRuleAssociationStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdSuccessResponseItem::class => SponsoredProductsDraftProductAdSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerActionDetails::class => OptimizationRulesAPISwaggerActionDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityQuotaError::class => SponsoredProductsEntityQuotaErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsPreviewRequestContent::class => SponsoredProductsListSponsoredProductsKeywordsPreviewRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationNotificationAPIRequest::class => SPCampaignOptimizationNotificationAPIRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTooManyRequestsResponseContent::class => SponsoredProductsTooManyRequestsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaignNegativeTargetingClause::class => SponsoredProductsUpdateCampaignNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationExceptionResponseContent::class => SponsoredProductsDraftNegativeTargetMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AgeRangeLoP::class => AgeRangeLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioBatchError::class => BudgetUsagePortfolioBatchErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessErrorSelector::class => SponsoredProductsDraftKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListAllSPTargetsResponseContent::class => SponsoredProductsListAllSPTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPIndividualEvent::class => SPIndividualEventNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllTargets::class => SponsoredProductsCreateAllTargetsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleResponse::class => BudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateRMSBudgetRulesRequest::class => CreateRMSBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalKeyword::class => SponsoredProductsCreateGlobalKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategoriesLoP::class => TargetableCategoriesLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaignNegativeTargetingClause::class => SponsoredProductsCreateCampaignNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetErrorSelector::class => SponsoredProductsCreateTargetErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalNegativeTargetingClause::class => SponsoredProductsCreateGlobalNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableAsinCounts::class => TargetableAsinCountsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsInternalRequestContent::class => SponsoredProductsListTargetPromotionGroupTargetsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessError::class => SponsoredProductsCampaignNegativeTargetsAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationErrorSelector::class => SponsoredProductsDraftNegativeKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent::class => SponsoredProductsListSponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RatingRange::class => RatingRangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusResponseContent::class => SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCreateOptimizationRulesRequest::class => OptimizationRulesAPISwaggerCreateOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent::class => SponsoredProductsAccessDeniedExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BiddingStrategyRecommendation::class => BiddingStrategyRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeyword::class => SponsoredProductsGlobalKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateProductAd::class => SponsoredProductsCreateProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateAssociatedBudgetRulesRequest::class => CreateAssociatedBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidValues::class => BidValuesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPlacementBidding::class => SponsoredProductsDraftCampaignPlacementBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsRequestContent::class => SponsoredProductsListSponsoredProductsAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClause::class => SponsoredProductsCampaignNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationRequest::class => BudgetRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBid::class => SponsoredProductsBidNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignsRequestContent::class => SponsoredProductsCreateSponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceState::class => SponsoredProductsMarketplaceStateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class => SponsoredProductsUpdateDraftCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent::class => SponsoredProductsNegativeTargetAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessExceptionResponseContent::class => SponsoredProductsCampaignNegativeTargetsAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDraftCampaignDynamicBidding::class => SponsoredProductsCreateOrUpdateDraftCampaignDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItemWithAsinCounts::class => CategoryItemWithAsinCountsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignServingStatusDetail::class => SponsoredProductsCampaignServingStatusDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationResponse::class => GlobalBudgetRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignExtendedData::class => SponsoredProductsDraftCampaignExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseExtendedData::class => SponsoredProductsNegativeTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupFailureResponseItem::class => SponsoredProductsAdGroupFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseErrorItem::class => OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseErrorItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError::class => SPBudgetRulesRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\DateRangeTypeRuleDuration::class => DateRangeTypeRuleDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseFailureResponseItem::class => SponsoredProductsTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationFailureResponseItem::class => SponsoredProductsCampaignMutationFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordFailureResponseItem::class => SponsoredProductsCampaignNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalAdGroupsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceCampaignServingStatus::class => SponsoredProductsMarketplaceCampaignServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessErrorSelector::class => SponsoredProductsDraftCampaignAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemedBid::class => ThemedBidNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClause::class => SponsoredProductsDraftNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationPerTargetingExpressionV4::class => BidRecommendationPerTargetingExpressionV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBudget::class => SponsoredProductsBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordExtendedData::class => SponsoredProductsGlobalKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBRuleDuration::class => SBRuleDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateNegativeTargetingClause::class => SponsoredProductsUpdateNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesResponse::class => OptimizationRulesAPISwaggerOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetRuleRecommendationsResponse::class => OptimizationRulesAPISwaggerGetRuleRecommendationsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSBBudgetRuleResponse::class => GetSBBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AssociatedBudgetRuleResponse::class => AssociatedBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSListAssociatedBudgetRulesResponse::class => RMSListAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationExceptionResponseContent::class => SponsoredProductsDraftAdGroupMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationError::class => SponsoredProductsDraftNegativeKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsProductAdsResponseContent::class => SponsoredProductsCreateSponsoredProductsProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftProductAdsRequestContent::class => SponsoredProductsListSponsoredProductsDraftProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponse::class => OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetDetails::class => SponsoredProductsTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGroupedEvent::class => SPGroupedEventNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\DeleteSPCampaignOptimizationRuleResponse::class => DeleteSPCampaignOptimizationRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent::class => SponsoredProductsServiceUnavailableExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExistingCampaignDetails::class => SponsoredProductsExistingCampaignDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaign::class => BudgetUsageCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeyword::class => SponsoredProductsDraftKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerEntityFieldFilter::class => OptimizationRulesAPISwaggerEntityFieldFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRule::class => OptimizationRulesAPISwaggerOptimizationRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsOtherError::class => SponsoredProductsOtherErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationError::class => SponsoredProductsKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSBBudgetRulesRequest::class => UpdateSBBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsProductAdsRequestContent::class => SponsoredProductsListSponsoredProductsProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPBudgetRulesRequest::class => UpdateSPBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationError::class => SponsoredProductsDraftNegativeTargetMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PlacementAdjustment::class => PlacementAdjustmentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalCampaignOperationResponse::class => SponsoredProductsBulkGlobalCampaignOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroup::class => SponsoredProductsAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllSPTargetsRequestContent::class => SponsoredProductsCreateAllSPTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationExceptionResponseContent::class => SponsoredProductsDraftCampaignNegativeKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSearchOptimizationRulesRequest::class => OptimizationRulesAPISwaggerSearchOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialGlobalBudgetRecommendationResponse::class => InitialGlobalBudgetRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignNegativeKeywordOperationResponse::class => SponsoredProductsBulkCampaignNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsKeywordTargetRankRecommendationRequest::class => AsinsKeywordTargetRankRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDBudgetRule::class => SDBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordExtendedData::class => SponsoredProductsKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsResponseContent::class => SponsoredProductsCreateTargetPromotionGroupTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetric::class => ImpactMetricNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBGetAssociatedCampaignsResponse::class => SBGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRangeError::class => SponsoredProductsRangeErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\EventTypeRuleDuration::class => EventTypeRuleDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargetsSuccessResponseItem::class => SponsoredProductsAllTargetsSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationErrorSelector::class => SponsoredProductsDraftCampaignMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessErrorSelector::class => SponsoredProductsNegativeTargetAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordBidInfo::class => KeywordBidInfoNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupSuccessResponseItem::class => SponsoredProductsDraftAdGroupSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAdGroup::class => SponsoredProductsCreateAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecommendationOptions::class => RecommendationOptionsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeyword::class => SponsoredProductsCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPBudgetRulesRequest::class => CreateSPBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCurrencyError::class => SponsoredProductsCurrencyErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseExtendedData::class => SponsoredProductsCampaignNegativeTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateNegativeKeyword::class => SponsoredProductsCreateNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordExtendedData::class => SponsoredProductsCampaignNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteAllSPTargetsResponseContent::class => SponsoredProductsDeleteAllSPTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdFailureResponseItem::class => SponsoredProductsDraftProductAdFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftAdGroupsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetingClause::class => SponsoredProductsCreateTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeyword::class => SponsoredProductsKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicateMarketValue::class => SponsoredProductsTargetingExpressionPredicateMarketValueNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupKeywordTargetRankRecommendationRequest::class => AdGroupKeywordTargetRankRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupExtendedData::class => SponsoredProductsAdGroupExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalCampaignNegativeKeywordOperationResponse::class => SponsoredProductsBulkGlobalCampaignNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendationsByASIN::class => ProductRecommendationsByASINNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignDetails::class => SponsoredProductsNewCampaignDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetRMSBudgetRulesForAdvertiserResponse::class => GetRMSBudgetRulesForAdvertiserResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessError::class => SponsoredProductsDraftNegativeKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsGlobalTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateGlobalEntityState::class => SponsoredProductsCreateOrUpdateGlobalEntityStateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessExceptionResponseContent::class => SponsoredProductsDraftProductAdAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsListSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponse::class => OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolio::class => BudgetUsagePortfolioNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExpressionTypeFilter::class => SponsoredProductsExpressionTypeFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendationError::class => RuleRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListAllSPTargetsRequestContent::class => SponsoredProductsListAllSPTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationResult::class => GlobalBudgetRecommendationResultNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordFailureResponseItem::class => SponsoredProductsGlobalCampaignNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBListAssociatedBudgetRulesResponse::class => SBListAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationNewCampaignsException::class => GlobalBudgetRecommendationNewCampaignsExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class => SponsoredProductsGlobalProductIdentifiersNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsDraftNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupServingStatusDetail::class => SponsoredProductsAdGroupServingStatusDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessError::class => SponsoredProductsDraftCampaignNegativeKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalProductAdsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class => SponsoredProductsDraftCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGatewayTimeoutResponseContent::class => SponsoredProductsGatewayTimeoutResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCampaignFilter::class => OptimizationRulesAPISwaggerCampaignFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedKeywordTargetsForAdGroupRequest::class => GlobalRankedKeywordTargetsForAdGroupRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsProductAdsRequestContent::class => SponsoredProductsUpdateSponsoredProductsProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent::class => SponsoredProductsListSponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidValue::class => BidValueNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationErrorSelector::class => SponsoredProductsAdGroupMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseExtendedData::class => SponsoredProductsGlobalTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleNotification::class => RuleNotificationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationRecommendationAPIResponse::class => SPCampaignOptimizationRecommendationAPIResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupThemeBasedBidRecommendationRequest::class => AdGroupThemeBasedBidRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeyword::class => SponsoredProductsGlobalCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationError::class => SponsoredProductsCampaignNegativeTargetsMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsAdGroupsRequestContent::class => SponsoredProductsUpdateSponsoredProductsAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsRequestContent::class => SponsoredProductsListTargetPromotionGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseExtendedData::class => SponsoredProductsGlobalNegativeTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusRequestContent::class => SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleAction::class => OptimizationRulesAPISwaggerRuleActionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionStatus::class => SponsoredProductsDraftCampaignPromotionStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent::class => SponsoredProductsCampaignMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupServingStatus::class => SponsoredProductsGlobalAdGroupServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRecommendationReason::class => SponsoredProductsRecommendationReasonNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponse::class => ThemeBasedBidRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleBatchSubError::class => OptimizationRulesAPISwaggerOptimizationRuleBatchSubErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationExceptionResponseContent::class => SponsoredProductsDraftNegativeKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateBudget::class => SponsoredProductsCreateOrUpdateBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPCampaignOptimizationRulesResponse::class => CreateSPCampaignOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessExceptionResponseContent::class => SponsoredProductsDraftCampaignNegativeKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkNegativeKeywordOperationResponse::class => SponsoredProductsBulkNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListMatchedAdGroupsResponseContent::class => SponsoredProductsListMatchedAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextFilter::class => SponsoredProductsKeywordTextFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessError::class => SponsoredProductsDraftNegativeTargetAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRangeTypeRuleCriteria::class => OptimizationRulesAPISwaggerRangeTypeRuleCriteriaNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExpressionTypeError::class => SponsoredProductsExpressionTypeErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalNegativeKeywordOperationResponse::class => SponsoredProductsBulkGlobalNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalAdGroupsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllTargets::class => SponsoredProductsUpdateAllTargetsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignBudget::class => SponsoredProductsNewCampaignBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsAdGroupsRequestContent::class => SponsoredProductsCreateSponsoredProductsAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingGroupBidRecommendation::class => TargetingGroupBidRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateKeyword::class => SponsoredProductsCreateKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftAdGroupsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessExceptionResponseContent::class => SponsoredProductsDraftKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDBudgetRuleDetails::class => SDBudgetRuleDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRule::class => CampaignOptimizationRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetError::class => SponsoredProductsCreateTargetErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseSuccessResponseItem::class => SponsoredProductsNegativeTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateProductAd::class => SponsoredProductsUpdateProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPCampaignOptimizationRuleResponse::class => UpdateSPCampaignOptimizationRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationError::class => GlobalBudgetRulesRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessError::class => SponsoredProductsDraftProductAdAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendationMetrics::class => RuleRecommendationMetricsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationErrorSelector::class => SponsoredProductsProductAdMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateFilter::class => SponsoredProductsEntityStateFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCampaignRecommendationsResponse::class => GetCampaignRecommendationsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationForExistingCampaign::class => BudgetRecommendationForExistingCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdFailureResponseItem::class => SponsoredProductsGlobalProductAdFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignBatchError::class => BudgetUsageCampaignBatchErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftNegativeTargetingClause::class => SponsoredProductsCreateDraftNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Impressions::class => ImpressionsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalCampaign::class => SponsoredProductsUpdateGlobalCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleCondition::class => OptimizationRulesAPISwaggerRuleConditionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSDBudgetRulesRequest::class => CreateSDBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Adjustment::class => AdjustmentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationErrorSelector::class => SponsoredProductsNegativeKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftProductAdOperationResponse::class => SponsoredProductsBulkDraftProductAdOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalProductAdsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignPlacementBidding::class => SponsoredProductsNewCampaignPlacementBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent::class => SponsoredProductsCampaignAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDuplicateValueError::class => SponsoredProductsDuplicateValueErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetCampaignAttributes::class => SponsoredProductsTargetCampaignAttributesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException::class => ThrottlingExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsResponseContent::class => SponsoredProductsListTargetPromotionGroupTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordSuccessResponseItem::class => SponsoredProductsGlobalCampaignNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSDBudgetRuleResponse::class => GetSDBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetRankRecommendationRequest::class => KeywordTargetRankRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessErrorSelector::class => SponsoredProductsCampaignNegativeKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationErrorSelector::class => SponsoredProductsDraftProductAdMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetAssociatedCampaignsResponse::class => OptimizationRulesAPISwaggerGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalProductAdsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllSPTargetsRequestContent::class => SponsoredProductsUpdateAllSPTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDuration::class => OptimizationRulesAPISwaggerDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsUpdateSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationFailureResponseItem::class => SponsoredProductsDraftCampaignMutationFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseFailureResponseItem::class => SponsoredProductsDraftNegativeTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordRankedTargetsResponse::class => KeywordRankedTargetsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItemWithAsinCountsLoP::class => CategoryItemWithAsinCountsLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsRequestContent::class => SponsoredProductsCreateTargetPromotionGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCategoryRecommendationsForAsinsRequest::class => GetCategoryRecommendationsForAsinsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignsResponseContent::class => SponsoredProductsCreateSponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignDynamicBidding::class => SponsoredProductsNewCampaignDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessError::class => SponsoredProductsNegativeTargetAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsDraftNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalTargetingClause::class => SponsoredProductsCreateGlobalTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategories::class => TargetableCategoriesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSDBudgetRulesForAdvertiserResponse::class => GetSDBudgetRulesForAdvertiserResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetRuleRecommendationsRequest::class => OptimizationRulesAPISwaggerGetRuleRecommendationsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateKeyword::class => SponsoredProductsUpdateKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationResponse::class => BudgetRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordFailureResponseItem::class => SponsoredProductsGlobalNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Genre::class => GenreNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SpecialEvent::class => SpecialEventNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateNegativeKeyword::class => SponsoredProductsUpdateNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerValueTypeRuleCriteria::class => OptimizationRulesAPISwaggerValueTypeRuleCriteriaNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationErrorSelector::class => SponsoredProductsNegativeTargetMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPKeywordTargetDetails::class => SponsoredProductsSPKeywordTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class => OptimizationRulesAPISwaggerRuleRecurrenceNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrenceTimesOfDayItem::class => OptimizationRulesAPISwaggerRuleRecurrenceTimesOfDayItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendation::class => RuleRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsAdGroupsResponseContent::class => SponsoredProductsCreateSponsoredProductsAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllSPTargetsResponseContent::class => SponsoredProductsUpdateAllSPTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException::class => UnprocessableEntityExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBadGatewayResponseContent::class => SponsoredProductsBadGatewayResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordSuccessResponseItem::class => SponsoredProductsGlobalKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftProductAdsResponseContent::class => SponsoredProductsListSponsoredProductsDraftProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsDraftTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDateError::class => SponsoredProductsDateErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Range::class => RangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewRequestContent::class => SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalProductAdsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseSuccessItem::class => OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseSuccessItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SearchBrandsRequest::class => SearchBrandsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalNegativeTargetingClauseOperationResponse::class => SponsoredProductsBulkGlobalNegativeTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordServingStatus::class => SponsoredProductsGlobalKeywordServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAdGroup::class => SponsoredProductsUpdateAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessErrorSelector::class => SponsoredProductsNegativeKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessErrorSelector::class => SponsoredProductsAdGroupAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureConditionForSB::class => PerformanceMeasureConditionForSBNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent::class => SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetMutationError::class => SponsoredProductsDraftTargetMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicate::class => SponsoredProductsTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseSuccessItem::class => OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseSuccessItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateMarketplaceState::class => SponsoredProductsCreateOrUpdateMarketplaceStateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateError::class => SponsoredProductsEntityStateErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftAdGroupsRequestContent::class => SponsoredProductsListSponsoredProductsDraftAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseExtendedData::class => SponsoredProductsDraftNegativeTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponse::class => OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent::class => SponsoredProductsInternalServerExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationPerTargetingExpression::class => BidRecommendationPerTargetingExpressionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignOperationResponse::class => SponsoredProductsBulkCampaignOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRule::class => SPBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError::class => SPTargetingErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsRequestContent::class => SponsoredProductsListTargetPromotionGroupTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsException::class => SPKeywordGroupsExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsExceptionErrorsItem::class => SPKeywordGroupsExceptionErrorsItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesRequest::class => OptimizationRulesAPISwaggerDeleteOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftAdGroupsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClause::class => SponsoredProductsTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignShopperCohortBidding::class => SponsoredProductsDraftCampaignShopperCohortBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AssociatedCampaign::class => AssociatedCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException::class => BadRequestExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalAdGroup::class => SponsoredProductsUpdateGlobalAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseSetupError::class => SponsoredProductsTargetingClauseSetupErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class => SponsoredProductsCampaignMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseExtendedData::class => SponsoredProductsDraftTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextMarketplaceSettings::class => SponsoredProductsKeywordTextMarketplaceSettingsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaign::class => SponsoredProductsCreateCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateOptimizationRulesResponse::class => OptimizationRulesAPISwaggerUpdateOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationSuccessResponseItem::class => SponsoredProductsDraftCampaignMutationSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeyword::class => SponsoredProductsNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordSuccessResponseItem::class => SponsoredProductsDraftNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordSuccessResponseItem::class => SponsoredProductsGlobalNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Refinements::class => RefinementsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class => SponsoredProductsCreateOrUpdateTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationError::class => SponsoredProductsDraftCampaignNegativeKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseSuccessResponseItem::class => SponsoredProductsGlobalNegativeTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TimeOfDay::class => TimeOfDayNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class => CampaignRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationNotificationAPIResponse::class => SPCampaignOptimizationNotificationAPIResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RefinementsLoP::class => RefinementsLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAllRuleEventRequest::class => SPGetAllRuleEventRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignErrorDetail::class => SponsoredProductsCopyCampaignErrorDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationErrorSelector::class => SponsoredProductsDraftKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroup::class => SponsoredProductsDraftAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAd::class => SponsoredProductsProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleDuration::class => RuleDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsDraftKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordExtendedData::class => SponsoredProductsNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaignNegativeKeyword::class => SponsoredProductsCreateCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleOptimizationRuleAssociationResponse::class => OptimizationRulesAPISwaggerSingleOptimizationRuleAssociationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsInternalResponseContent::class => SponsoredProductsCreateTargetPromotionGroupsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsGlobalTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent::class => SponsoredProductsKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsLocaleError::class => SponsoredProductsLocaleErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionErrorSelector::class => SponsoredProductsDraftCampaignPromotionErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDynamicBidding::class => SponsoredProductsDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationError::class => SponsoredProductsNegativeKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationErrorSelector::class => SponsoredProductsTargetMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordExtendedData::class => SponsoredProductsDraftCampaignNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalNegativeTargetingClause::class => SponsoredProductsUpdateGlobalNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessError::class => SponsoredProductsKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseSuccessResponseItem::class => SponsoredProductsDraftNegativeTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceLevelKeywordServingStatus::class => SponsoredProductsMarketplaceLevelKeywordServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupExtendedData::class => SponsoredProductsGlobalAdGroupExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessExceptionResponseContent::class => SponsoredProductsAdGroupAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftNegativeKeyword::class => SponsoredProductsCreateDraftNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryWithTargetsAndAsins::class => CountryWithTargetsAndAsinsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordText::class => SponsoredProductsGlobalNegativeKeywordTextNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsInternalResponseContent::class => SponsoredProductsListTargetPromotionGroupsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsShopperCohortBidding::class => SponsoredProductsShopperCohortBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetProductRecommendationsRequest::class => GetProductRecommendationsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationRecommendationsAPIRequest::class => SPCampaignOptimizationRecommendationsAPIRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalProductAdsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignNegativeTargetingClauseOperationResponse::class => SponsoredProductsBulkCampaignNegativeTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationExceptionResponseContent::class => SponsoredProductsKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateNegativeTargetingExpressionPredicate::class => SponsoredProductsCreateOrUpdateNegativeTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendations::class => CategoryRecommendationsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequest::class => AsinsThemeBasedBidRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestBidding::class => AsinsThemeBasedBidRecommendationRequestBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCountsLoP::class => CategoryRecommendationsWithAsinCountsLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetRequest::class => SponsoredProductsCreateTargetRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsPreviewResponseContent::class => SponsoredProductsListSponsoredProductsKeywordsPreviewResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetRuleEventError::class => SPGetRuleEventErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdServingStatusDetail::class => SponsoredProductsAdServingStatusDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationException::class => GlobalBudgetRecommendationExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessError::class => SponsoredProductsCampaignAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordSuccessResponseItem::class => SponsoredProductsCampaignNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedOperationError::class => SponsoredProductsUnsupportedOperationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent::class => SponsoredProductsNegativeTargetMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsAdGroupsResponseContent::class => SponsoredProductsUpdateSponsoredProductsAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargetsFailureResponseItem::class => SponsoredProductsAllTargetsFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsRequestContent::class => SponsoredProductsCopySponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPAutoTargetDetails::class => SponsoredProductsSPAutoTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleCondition::class => RuleConditionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalBid::class => SponsoredProductsGlobalBidNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent::class => SponsoredProductsUnauthenticatedExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftCampaignOperationResponse::class => SponsoredProductsBulkDraftCampaignOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMissingValueError::class => SponsoredProductsMissingValueErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignsRequestContent::class => SponsoredProductsDeleteSponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsFailureResponseItem::class => SponsoredProductsCreateTargetPromotionGroupTargetsFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleOptimizationRuleResponse::class => OptimizationRulesAPISwaggerSingleOptimizationRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftNegativeKeywordOperationResponse::class => SponsoredProductsBulkDraftNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCounts::class => CategoryRecommendationsWithAsinCountsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsResponseContent::class => SponsoredProductsListSponsoredProductsAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerError::class => SponsoredProductsInternalServerErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedResponseContent::class => SponsoredProductsUnauthorizedResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusRequest::class => OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsRequestContent::class => SponsoredProductsGetTargetPromotionGroupsRecommendationsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalNegativeKeyword::class => SponsoredProductsCreateGlobalNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationError::class => BudgetRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAllRuleEventResponse::class => SPGetAllRuleEventResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleNotificationError::class => RuleNotificationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioRequest::class => BudgetUsagePortfolioRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCreateOptimizationRulesResponse::class => OptimizationRulesAPISwaggerCreateOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseSuccessItem::class => OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseSuccessItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsResponseContent::class => SponsoredProductsListTargetPromotionGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAd::class => SponsoredProductsDraftProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Conversions::class => ConversionsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignsResponseContent::class => SponsoredProductsDeleteSponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignRequest::class => BudgetUsageCampaignRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftProductAdsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureCondition::class => PerformanceMeasureConditionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroupsRecommendationsResponse::class => KeywordGroupsRecommendationsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseSuccessResponseItem::class => SponsoredProductsTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessErrorSelector::class => SponsoredProductsTargetAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationExceptionResponseContent::class => SponsoredProductsDraftProductAdMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessExceptionResponseContent::class => SponsoredProductsDraftNegativeTargetAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupSuccessResponseItem::class => SponsoredProductsAdGroupSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PriceRange::class => PriceRangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalEntityState::class => SponsoredProductsGlobalEntityStateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBiddingError::class => SponsoredProductsBiddingErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetIncreaseBy::class => BudgetIncreaseByNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException::class => UnauthorizedExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedTargetWithThemedBidsResponse::class => GlobalRankedTargetWithThemedBidsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\IntegerRange::class => IntegerRangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Bidding::class => BiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent::class => SponsoredProductsTargetMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsListSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnavailableResponseContent::class => SponsoredProductsUnavailableResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetResponse::class => KeywordTargetResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryWithTargets::class => CountryWithTargetsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessErrorSelector::class => SponsoredProductsProductAdAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPlacementBidding::class => SponsoredProductsPlacementBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class => ThemeBasedBidRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalAdGroup::class => SponsoredProductsCreateGlobalAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBCampaignBudgetRule::class => SBCampaignBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalProductAdOperationResponse::class => SponsoredProductsBulkGlobalProductAdOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsAdGroupsResponseContent::class => SponsoredProductsDeleteSponsoredProductsAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationError::class => SponsoredProductsDraftProductAdMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Recurrence::class => RecurrenceNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroup::class => KeywordGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AccessDeniedException::class => AccessDeniedExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationRequest::class => GlobalBudgetRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDraftCampaignBudget::class => SponsoredProductsCreateOrUpdateDraftCampaignBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError::class => SPTORBudgetRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdEligibilityError::class => SponsoredProductsAdEligibilityErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaignNegativeKeyword::class => SponsoredProductsUpdateCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicateWithoutOther::class => SponsoredProductsTargetingExpressionPredicateWithoutOtherNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRequestFilter::class => OptimizationRulesAPISwaggerRequestFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalResponseContent::class => SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaign::class => SponsoredProductsCopyCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponse::class => OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignExtendedData::class => SponsoredProductsGlobalCampaignExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventRequest::class => GlobalBudgetRulesRecommendationEventRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsInternalRequestContent::class => SponsoredProductsCreateTargetPromotionGroupTargetsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionError::class => SponsoredProductsDraftCampaignPromotionErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignResponse::class => BudgetUsageCampaignResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class => SBBudgetRuleDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Benchmark::class => BenchmarkNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalKeywordOperationResponse::class => SponsoredProductsBulkGlobalKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductIdentifierError::class => SponsoredProductsProductIdentifierErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftAdGroup::class => SponsoredProductsCreateDraftAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventException::class => GlobalBudgetRulesRecommendationEventExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeyword::class => SponsoredProductsDraftCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalRequestContent::class => SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessErrorSelector::class => SponsoredProductsDraftCampaignNegativeKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsApiGatewayContext::class => SponsoredProductsApiGatewayContextNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationError::class => SponsoredProductsNegativeTargetMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMatchedAdGroup::class => SponsoredProductsMatchedAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSBBudgetRulesRequest::class => CreateSBBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalCampaignNegativeKeyword::class => SponsoredProductsCreateGlobalCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class => SponsoredProductsCampaignAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPCampaignOptimizationRuleResponse::class => GetSPCampaignOptimizationRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignBudgetRule::class => SPCampaignBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationErrorSelector::class => SponsoredProductsDraftNegativeTargetMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordSuccessResponseItem::class => SponsoredProductsNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaign::class => SponsoredProductsUpdateCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupSuccessResponseItem::class => SponsoredProductsGlobalAdGroupSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPromoteSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsPromoteSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateAssociatedBudgetRulesResponse::class => CreateAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError::class => BudgetRuleErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendationsByTheme::class => ProductRecommendationsByThemeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidSuggestion::class => BidSuggestionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignMutationSuccessResponseItem::class => SponsoredProductsGlobalCampaignMutationSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedKeywordTargetsForAdGroupRequest::class => RankedKeywordTargetsForAdGroupRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDynamicBidding::class => SponsoredProductsCreateOrUpdateDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsProductAdsRequestContent::class => SponsoredProductsDeleteSponsoredProductsProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceBudget::class => SponsoredProductsMarketplaceBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsParentEntityError::class => SponsoredProductsParentEntityErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseSuccessResponseItem::class => SponsoredProductsDraftTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsStatusResponseContent::class => SponsoredProductsCopySponsoredProductsCampaignsStatusResponseContentNormalizer::class,
+
+            \Jane\Component\JsonSchemaRuntime\Reference::class => \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\ReferenceNormalizer::class,
         ];
         protected $normalizersCache = [];
 
@@ -79,7 +1869,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\myvendor\mynamespace\Generated\Model\Pet::class => false, \myvendor\mynamespace\Generated\Model\Error::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
+            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAsinOwnershipError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BrandLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetTargetableAsinCountsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalTargetingExpression::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPCampaignOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSBudgetRuleDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalErrorResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestV4Bidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceTargetingClauseServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalStoreSetting::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteAllSPTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponseWithError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsForbiddenResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBids::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsBidInfoItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsBasedRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupThemeBasedBidRecommendationRequestV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListMatchedAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceAdGroupServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingExpression::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPCampaignOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Clicks::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkProductAdOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsApplicableMarketplacesError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Brand::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetRMSBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ValidationException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSBBudgetRulesForAdvertiserResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetPromotionGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBudgetError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargets::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEvent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAsinFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBadRequestResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Values::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RangeMetricValue::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordServingStatusDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkAdGroupOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysEstimatedOpportunities::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftNegativeTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftCampaignNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalAdGroupOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRuleDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsErrorCause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMalformedValueError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceProductAdServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupBasedRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponseV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedKeywordTargetsForAsinsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroupsRecommendationsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRecommendedTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRecommendationStatusUpdate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsReducedObjectIdFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetPromotionGroupsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryBudgetRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftAdGroupOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBillingError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecKeywordTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecKeywordTargetBidInfoItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInvalidInputError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductCategoryTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignTaskDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDListAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNameFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponseKeywordTargetListItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllSPTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityNotFoundError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateRMSBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottledError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceLevelProductIdentifier::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPromoteSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordText::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSearchOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseErrorItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AgeRange::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysMissedOpportunities::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationNewCampaignsError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkNegativeTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesPreviewResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsObjectIdFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialGlobalBudgetRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAudienceSegment::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedKeywordTargetsForAsinsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceBid::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GenreLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSDBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetingRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPListAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetPromotionGroupTargetsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignMutationFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseErrorItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesPreviewRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBatchResponseError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleWithoutRuleId::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingExpressionV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRulesForAdvertiserResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleCampaignRuleAssociationStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerActionDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityQuotaError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsPreviewRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationNotificationAPIRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTooManyRequestsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaignNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AgeRangeLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioBatchError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListAllSPTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPIndividualEvent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllTargets::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateRMSBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategoriesLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaignNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableAsinCounts::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RatingRange::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCreateOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BiddingStrategyRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateAssociatedBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidValues::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPlacementBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBid::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceState::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDraftCampaignDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItemWithAsinCounts::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignServingStatusDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseErrorItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\DateRangeTypeRuleDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceCampaignServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemedBid::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationPerTargetingExpressionV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBRuleDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetRuleRecommendationsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSBBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AssociatedBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSListAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGroupedEvent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\DeleteSPCampaignOptimizationRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExistingCampaignDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerEntityFieldFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsOtherError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSBBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PlacementAdjustment::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalCampaignOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllSPTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSearchOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialGlobalBudgetRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsKeywordTargetRankRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetric::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRangeError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\EventTypeRuleDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargetsSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordBidInfo::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecommendationOptions::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCurrencyError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteAllSPTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicateMarketValue::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupKeywordTargetRankRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalCampaignNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendationsByASIN::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetRMSBudgetRulesForAdvertiserResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateGlobalEntityState::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolio::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExpressionTypeFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListAllSPTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationResult::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBListAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationNewCampaignsException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupServingStatusDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGatewayTimeoutResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCampaignFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedKeywordTargetsForAdGroupRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidValue::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleNotification::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationRecommendationAPIResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupThemeBasedBidRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleAction::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRecommendationReason::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleBatchSubError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPCampaignOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListMatchedAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRangeTypeRuleCriteria::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExpressionTypeError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllTargets::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingGroupBidRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDBudgetRuleDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPCampaignOptimizationRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendationMetrics::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCampaignRecommendationsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationForExistingCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignBatchError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Impressions::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleCondition::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSDBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Adjustment::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftProductAdOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignPlacementBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDuplicateValueError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetCampaignAttributes::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSDBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetRankRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllSPTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordRankedTargetsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItemWithAsinCountsLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCategoryRecommendationsForAsinsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategories::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSDBudgetRulesForAdvertiserResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetRuleRecommendationsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Genre::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SpecialEvent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerValueTypeRuleCriteria::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPKeywordTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrenceTimesOfDayItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllSPTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBadGatewayResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDateError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Range::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseSuccessItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SearchBrandsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalNegativeTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureConditionForSB::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseSuccessItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateMarketplaceState::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationPerTargetingExpression::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsExceptionErrorsItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignShopperCohortBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AssociatedCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseSetupError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextMarketplaceSettings::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Refinements::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TimeOfDay::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationNotificationAPIResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RefinementsLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAllRuleEventRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignErrorDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleOptimizationRuleAssociationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsLocaleError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceLevelKeywordServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryWithTargetsAndAsins::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordText::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsShopperCohortBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetProductRecommendationsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationRecommendationsAPIRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignNegativeTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateNegativeTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendations::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCountsLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsPreviewResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetRuleEventError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdServingStatusDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedOperationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargetsFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPAutoTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleCondition::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalBid::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftCampaignOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMissingValueError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleOptimizationRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCounts::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAllRuleEventResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleNotificationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCreateOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseSuccessItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Conversions::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureCondition::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroupsRecommendationsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PriceRange::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalEntityState::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBiddingError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetIncreaseBy::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedTargetWithThemedBidsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\IntegerRange::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Bidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnavailableResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryWithTargets::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPlacementBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBCampaignBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalProductAdOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Recurrence::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AccessDeniedException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDraftCampaignBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdEligibilityError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicateWithoutOther::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRequestFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Benchmark::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductIdentifierError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsApiGatewayContext::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMatchedAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSBBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPCampaignOptimizationRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPromoteSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendationsByTheme::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidSuggestion::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignMutationSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedKeywordTargetsForAdGroupRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsParentEntityError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsStatusResponseContent::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
         }
     }
 } else {
@@ -90,11 +1880,1801 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         use CheckArray;
         use ValidatorTrait;
         protected $normalizers = [
-            \myvendor\mynamespace\Generated\Model\Pet::class => PetNormalizer::class,
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAsinOwnershipError::class => SponsoredProductsAsinOwnershipErrorNormalizer::class,
 
-            \myvendor\mynamespace\Generated\Model\Error::class => ErrorNormalizer::class,
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsResponseContentNormalizer::class,
 
-            \Jane\Component\JsonSchemaRuntime\Reference::class => \myvendor\mynamespace\Generated\Runtime\Normalizer\ReferenceNormalizer::class,
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeyword::class => SponsoredProductsDraftNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BrandLoP::class => BrandLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetTargetableAsinCountsRequest::class => GetTargetableAsinCountsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalTargetingExpression::class => GlobalTargetingExpressionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPCampaignOptimizationRulesRequest::class => UpdateSPCampaignOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordFailureResponseItem::class => SponsoredProductsDraftCampaignNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSBudgetRuleDetails::class => RMSBudgetRuleDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessError::class => SponsoredProductsDraftAdGroupAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalErrorResponseContent::class => SponsoredProductsInternalErrorResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestV4::class => AsinsThemeBasedBidRecommendationRequestV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestV4Bidding::class => AsinsThemeBasedBidRecommendationRequestV4BiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSGetAssociatedCampaignsResponse::class => RMSGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationError::class => SponsoredProductsDraftAdGroupMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceTargetingClauseServingStatus::class => SponsoredProductsMarketplaceTargetingClauseServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftProductAdsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalStoreSetting::class => SponsoredProductsGlobalStoreSettingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseFailureResponseItem::class => SponsoredProductsCampaignNegativeTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent::class => SponsoredProductsNegativeKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteAllSPTargetsRequestContent::class => SponsoredProductsDeleteAllSPTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationExceptionResponseContent::class => SponsoredProductsDraftKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationError::class => SponsoredProductsProductAdMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationError::class => GlobalBudgetRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponseWithError::class => RankedTargetWithThemedBidsResponseWithErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetRequest::class => SponsoredProductsDeleteTargetRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkTargetingClauseOperationResponse::class => SponsoredProductsBulkTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsForbiddenResponseContent::class => SponsoredProductsForbiddenResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessErrorSelector::class => SponsoredProductsKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewRequestContent::class => SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBids::class => RankedTargetWithThemedBidsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsBidInfoItem::class => RankedTargetWithThemedBidsBidInfoItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroup::class => SponsoredProductsGlobalAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleFilter::class => OptimizationRulesAPISwaggerOptimizationRuleFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsResponseContent::class => SponsoredProductsGetTargetPromotionGroupsRecommendationsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent::class => SponsoredProductsSchemaValidationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException::class => InternalServerExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsBasedRequest::class => AsinsBasedRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsDraftKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupThemeBasedBidRecommendationRequestV4::class => AdGroupThemeBasedBidRecommendationRequestV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalTargetingClause::class => SponsoredProductsUpdateGlobalTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListMatchedAdGroupsRequestContent::class => SponsoredProductsListMatchedAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalAdGroup::class => GlobalAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceAdGroupServingStatus::class => SponsoredProductsMarketplaceAdGroupServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingExpression::class => TargetingExpressionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPCampaignOptimizationRulesRequest::class => CreateSPCampaignOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent::class => SponsoredProductsUnauthorizedExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Clicks::class => ClicksNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseSuccessResponseItem::class => SponsoredProductsGlobalTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationErrorSelector::class => SponsoredProductsDraftAdGroupMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalCampaign::class => SponsoredProductsCreateGlobalCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupExtendedData::class => SponsoredProductsDraftAdGroupExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequest::class => OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordExtendedData::class => SponsoredProductsDraftNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkProductAdOperationResponse::class => SponsoredProductsBulkProductAdOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAd::class => SponsoredProductsGlobalProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseExtendedData::class => SponsoredProductsTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsApplicableMarketplacesError::class => SponsoredProductsApplicableMarketplacesErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationErrorSelector::class => SponsoredProductsCampaignNegativeTargetsMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRule::class => SBBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Brand::class => BrandNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClause::class => SponsoredProductsDraftTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetRMSBudgetRuleResponse::class => GetRMSBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkKeywordOperationResponse::class => SponsoredProductsBulkKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessError::class => SponsoredProductsCampaignNegativeKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ValidationException::class => ValidationExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSBBudgetRulesForAdvertiserResponse::class => GetSBBudgetRulesForAdvertiserResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsUpdateSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent::class => SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetPromotionGroup::class => SponsoredProductsTargetPromotionGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsInternalResponseContent::class => SponsoredProductsCreateTargetPromotionGroupTargetsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBudgetError::class => SponsoredProductsBudgetErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargets::class => SponsoredProductsAllTargetsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationSuccessResponseItem::class => SponsoredProductsCampaignMutationSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftProductAdsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationError::class => SponsoredProductsDraftCampaignMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsProductAdsResponseContent::class => SponsoredProductsUpdateSponsoredProductsProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessExceptionResponseContent::class => SponsoredProductsProductAdAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdExtendedData::class => SponsoredProductsGlobalProductAdExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateBudgetRulesResponse::class => UpdateBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationError::class => SponsoredProductsAdGroupMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordFailureResponseItem::class => SponsoredProductsDraftNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftProductAd::class => SponsoredProductsCreateDraftProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEvent::class => SPBudgetRulesRecommendationEventNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecommendation::class => OptimizationRulesAPISwaggerRuleRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessError::class => SponsoredProductsNegativeKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAsinFilter::class => SponsoredProductsAsinFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftCampaign::class => SponsoredProductsCreateDraftCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBadRequestResponseContent::class => SponsoredProductsBadRequestResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignDynamicBidding::class => SponsoredProductsDraftCampaignDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordExtendedData::class => SponsoredProductsGlobalCampaignNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalAdGroupsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsProductAdsResponseContent::class => SponsoredProductsDeleteSponsoredProductsProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Values::class => ValuesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaign::class => SponsoredProductsGlobalCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError::class => CampaignOptimizationRuleErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RangeMetricValue::class => RangeMetricValueNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationError::class => SponsoredProductsCampaignMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordServingStatusDetail::class => SponsoredProductsKeywordServingStatusDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationResponse::class => InitialBudgetRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordFailureResponseItem::class => SponsoredProductsKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalProductAdsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkAdGroupOperationResponse::class => SponsoredProductsBulkAdGroupOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdExtendedData::class => SponsoredProductsProductAdExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingExpressionPredicate::class => SponsoredProductsNegativeTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsRequestContent::class => SponsoredProductsCreateTargetPromotionGroupTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationRequest::class => InitialBudgetRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClause::class => SponsoredProductsNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftTargetingClause::class => SponsoredProductsCreateDraftTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessExceptionResponseContent::class => SponsoredProductsDraftAdGroupAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdSuccessResponseItem::class => SponsoredProductsProductAdSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysEstimatedOpportunities::class => SevenDaysEstimatedOpportunitiesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftNegativeTargetingClauseOperationResponse::class => SponsoredProductsBulkDraftNegativeTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignBudget::class => SponsoredProductsDraftCampaignBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent::class => SponsoredProductsNegativeKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftCampaignNegativeKeywordOperationResponse::class => SponsoredProductsBulkDraftCampaignNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseFailureResponseItem::class => SponsoredProductsGlobalTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalAdGroupOperationResponse::class => SponsoredProductsBulkGlobalAdGroupOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessError::class => SponsoredProductsAdGroupAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalTargetingClauseOperationResponse::class => SponsoredProductsBulkGlobalTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent::class => SponsoredProductsTargetAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRuleDetails::class => SPBudgetRuleDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendation::class => ProductRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSBudgetRule::class => RMSBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsErrorCause::class => SponsoredProductsErrorCauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMalformedValueError::class => SponsoredProductsMalformedValueErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError::class => BudgetUsageErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleRecommendation::class => BudgetRuleRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsDraftTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalProductAd::class => SponsoredProductsUpdateGlobalProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewResponseContent::class => SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceProductAdServingStatus::class => SponsoredProductsMarketplaceProductAdServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalProductAdsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventResponse::class => GlobalBudgetRulesRecommendationEventResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessExceptionResponseContent::class => SponsoredProductsDraftCampaignAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignsResponseContent::class => SponsoredProductsUpdateSponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupBasedRequest::class => AdGroupBasedRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdExtendedData::class => SponsoredProductsDraftProductAdExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponseV4::class => ThemeBasedBidRecommendationResponseV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent::class => SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessErrorSelector::class => SponsoredProductsDraftNegativeKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordSuccessResponseItem::class => SponsoredProductsDraftKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedKeywordTargetsForAsinsRequest::class => RankedKeywordTargetsForAsinsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewResponseContent::class => SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordExtendedData::class => SponsoredProductsDraftKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordFailureResponseItem::class => SponsoredProductsGlobalKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseFailureResponseItem::class => SponsoredProductsGlobalNegativeTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsResponseContent::class => SponsoredProductsCopySponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent::class => SponsoredProductsProductAdMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroupsRecommendationsRequest::class => KeywordGroupsRecommendationsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRecommendedTarget::class => SponsoredProductsRecommendedTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingExpressionPredicate::class => SponsoredProductsGlobalTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsAdGroupsRequestContent::class => SponsoredProductsDeleteSponsoredProductsAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRecommendationStatusUpdate::class => OptimizationRulesAPISwaggerRecommendationStatusUpdateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignExtendedData::class => SponsoredProductsCampaignExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsReducedObjectIdFilter::class => SponsoredProductsReducedObjectIdFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetPromotionGroupsInternalRequestContent::class => SponsoredProductsDeleteTargetPromotionGroupsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationError::class => SponsoredProductsDraftKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessErrorSelector::class => SponsoredProductsDraftAdGroupAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryBudgetRecommendation::class => CountryBudgetRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessErrorSelector::class => SponsoredProductsDraftNegativeTargetAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationError::class => SponsoredProductsCampaignNegativeKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessError::class => SponsoredProductsTargetAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftAdGroupOperationResponse::class => SponsoredProductsBulkDraftAdGroupOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent::class => SponsoredProductsNotImplementedExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError::class => OptimizationRulesAPISwaggerOptimizationRulesErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBillingError::class => SponsoredProductsBillingErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException::class => BudgetRecommendationNewCampaignsExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecKeywordTarget::class => RecKeywordTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecKeywordTargetBidInfoItem::class => RecKeywordTargetBidInfoItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInvalidInputError::class => SponsoredProductsInvalidInputErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductCategoryTargetDetails::class => SponsoredProductsSPProductCategoryTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignTaskDetails::class => SponsoredProductsCopyCampaignTaskDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDListAssociatedBudgetRulesResponse::class => SDListAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationErrorSelector::class => SponsoredProductsDraftCampaignNegativeKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftAdGroupsResponseContent::class => SponsoredProductsListSponsoredProductsDraftAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNameFilter::class => SponsoredProductsNameFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsSuccessResponseItem::class => SponsoredProductsCreateTargetPromotionGroupTargetsSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateNegativeTargetingClause::class => SponsoredProductsCreateNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordSuccessResponseItem::class => SponsoredProductsDraftCampaignNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponse::class => RankedTargetResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponseKeywordTargetListItem::class => RankedTargetResponseKeywordTargetListItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllSPTargetsResponseContent::class => SponsoredProductsCreateAllSPTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsResponseContent::class => SponsoredProductsCreateTargetPromotionGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityNotFoundError::class => SponsoredProductsEntityNotFoundErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateRMSBudgetRulesRequest::class => UpdateRMSBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalProductAdsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalNegativeKeyword::class => SponsoredProductsUpdateGlobalNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdFailureResponseItem::class => SponsoredProductsProductAdFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsInternalRequestContent::class => SponsoredProductsCreateTargetPromotionGroupsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductTargetDetails::class => SponsoredProductsSPProductTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottledError::class => SponsoredProductsThrottledErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationErrorSelector::class => SponsoredProductsCampaignNegativeKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class => SponsoredProductsUpdateGlobalKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateBudgetRulesResponse::class => CreateBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponse::class => RankedTargetWithThemedBidsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignResponse::class => SponsoredProductsCopyCampaignResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeRecommendation::class => ThemeRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceLevelProductIdentifier::class => SponsoredProductsMarketplaceLevelProductIdentifierNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeyword::class => SponsoredProductsGlobalNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftKeywordOperationResponse::class => SponsoredProductsBulkDraftKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessExceptionResponseContent::class => SponsoredProductsDraftNegativeKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordExtendedData::class => SponsoredProductsGlobalNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftKeyword::class => SponsoredProductsCreateDraftKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPromoteSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsPromoteSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTarget::class => SponsoredProductsCreateTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordText::class => SponsoredProductsGlobalKeywordTextNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessError::class => SponsoredProductsDraftCampaignAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventRequest::class => SPBudgetRulesRecommendationEventRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordFailureResponseItem::class => SponsoredProductsDraftKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSearchOptimizationRulesResponse::class => OptimizationRulesAPISwaggerSearchOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseErrorItem::class => OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseErrorItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationV4::class => ThemeBasedBidRecommendationV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalBudget::class => SponsoredProductsGlobalBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AgeRange::class => AgeRangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignServingStatus::class => SponsoredProductsGlobalCampaignServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysMissedOpportunities::class => SevenDaysMissedOpportunitiesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationErrorSelector::class => SponsoredProductsKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioResponse::class => BudgetUsagePortfolioResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRuleResponse::class => GetSPBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationNewCampaignsError::class => GlobalBudgetRecommendationNewCampaignsErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkNegativeTargetingClauseOperationResponse::class => SponsoredProductsBulkNegativeTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalCampaignNegativeKeyword::class => SponsoredProductsUpdateGlobalCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesPreviewResponseContent::class => SponsoredProductsListSponsoredProductsTargetingClausesPreviewResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdSuccessResponseItem::class => SponsoredProductsGlobalProductAdSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsObjectIdFilter::class => SponsoredProductsObjectIdFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignsRequestContent::class => SponsoredProductsUpdateSponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftAdGroupsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent::class => SponsoredProductsThrottlingExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationExceptionResponseContent::class => SponsoredProductsDraftCampaignMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItem::class => CategoryItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClause::class => SponsoredProductsGlobalTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupFailureResponseItem::class => SponsoredProductsDraftAdGroupFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialGlobalBudgetRecommendationRequest::class => InitialGlobalBudgetRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseSuccessResponseItem::class => SponsoredProductsCampaignNegativeTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDGetAssociatedCampaignsResponse::class => SDGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent::class => SponsoredProductsAdGroupMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateOptimizationRulesRequest::class => OptimizationRulesAPISwaggerUpdateOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupFailureResponseItem::class => SponsoredProductsGlobalAdGroupFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsProductAdsResponseContent::class => SponsoredProductsListSponsoredProductsProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventResponse::class => SPBudgetRulesRecommendationEventResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignRequest::class => OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendation::class => BudgetRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseServingStatus::class => SponsoredProductsGlobalTargetingClauseServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordFailureResponseItem::class => SponsoredProductsNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAudienceSegment::class => SponsoredProductsAudienceSegmentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftTargetingClauseOperationResponse::class => SponsoredProductsBulkDraftTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedKeywordTargetsForAsinsRequest::class => GlobalRankedKeywordTargetsForAsinsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalProductAd::class => SponsoredProductsCreateGlobalProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceBid::class => SponsoredProductsMarketplaceBidNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsProductAdsRequestContent::class => SponsoredProductsCreateSponsoredProductsProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessErrorSelector::class => SponsoredProductsDraftProductAdAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdServingStatus::class => SponsoredProductsGlobalProductAdServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GenreLoP::class => GenreLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClause::class => SponsoredProductsGlobalNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseFailureResponseItem::class => SponsoredProductsDraftTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError::class => BidRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordSuccessResponseItem::class => SponsoredProductsKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSDBudgetRulesRequest::class => UpdateSDBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTarget::class => KeywordTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetingRecommendation::class => KeywordTargetingRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPListAssociatedBudgetRulesResponse::class => SPListAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetPromotionGroupTargetsInternalRequestContent::class => SponsoredProductsDeleteTargetPromotionGroupTargetsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignMutationFailureResponseItem::class => SponsoredProductsGlobalCampaignMutationFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroup::class => AdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetMutationErrorSelector::class => SponsoredProductsDraftTargetMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseErrorItem::class => OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseErrorItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAssociatedCampaignsResponse::class => SPGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseFailureResponseItem::class => SponsoredProductsNegativeTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsInternalRequestContent::class => SponsoredProductsListTargetPromotionGroupsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationError::class => SponsoredProductsTargetMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalAdGroupsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessErrorSelector::class => SponsoredProductsCampaignNegativeTargetsAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesPreviewRequestContent::class => SponsoredProductsListSponsoredProductsTargetingClausesPreviewRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessError::class => SponsoredProductsDraftKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class => ImpactMetricsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent::class => SponsoredProductsUnsupportedMediaTypeExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBatchResponseError::class => SponsoredProductsBatchResponseErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessError::class => SponsoredProductsProductAdAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleWithoutRuleId::class => OptimizationRulesAPISwaggerOptimizationRuleWithoutRuleIdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateTargetingClause::class => SponsoredProductsUpdateTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTarget::class => SponsoredProductsTargetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingExpressionV4::class => TargetingExpressionV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class => SponsoredProductsCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftProductAdsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRulesForAdvertiserResponse::class => GetSPBudgetRulesForAdvertiserResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetingExpressionPredicate::class => SponsoredProductsCreateTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsInternalResponseContent::class => SponsoredProductsListTargetPromotionGroupTargetsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleCampaignRuleAssociationStatus::class => OptimizationRulesAPISwaggerSingleCampaignRuleAssociationStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdSuccessResponseItem::class => SponsoredProductsDraftProductAdSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerActionDetails::class => OptimizationRulesAPISwaggerActionDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityQuotaError::class => SponsoredProductsEntityQuotaErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsPreviewRequestContent::class => SponsoredProductsListSponsoredProductsKeywordsPreviewRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationNotificationAPIRequest::class => SPCampaignOptimizationNotificationAPIRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTooManyRequestsResponseContent::class => SponsoredProductsTooManyRequestsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaignNegativeTargetingClause::class => SponsoredProductsUpdateCampaignNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationExceptionResponseContent::class => SponsoredProductsDraftNegativeTargetMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AgeRangeLoP::class => AgeRangeLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioBatchError::class => BudgetUsagePortfolioBatchErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessErrorSelector::class => SponsoredProductsDraftKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListAllSPTargetsResponseContent::class => SponsoredProductsListAllSPTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPIndividualEvent::class => SPIndividualEventNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllTargets::class => SponsoredProductsCreateAllTargetsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleResponse::class => BudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateRMSBudgetRulesRequest::class => CreateRMSBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalKeyword::class => SponsoredProductsCreateGlobalKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategoriesLoP::class => TargetableCategoriesLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaignNegativeTargetingClause::class => SponsoredProductsCreateCampaignNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetErrorSelector::class => SponsoredProductsCreateTargetErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalNegativeTargetingClause::class => SponsoredProductsCreateGlobalNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableAsinCounts::class => TargetableAsinCountsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsInternalRequestContent::class => SponsoredProductsListTargetPromotionGroupTargetsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessError::class => SponsoredProductsCampaignNegativeTargetsAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationErrorSelector::class => SponsoredProductsDraftNegativeKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent::class => SponsoredProductsListSponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RatingRange::class => RatingRangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusResponseContent::class => SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCreateOptimizationRulesRequest::class => OptimizationRulesAPISwaggerCreateOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent::class => SponsoredProductsAccessDeniedExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BiddingStrategyRecommendation::class => BiddingStrategyRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeyword::class => SponsoredProductsGlobalKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateProductAd::class => SponsoredProductsCreateProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateAssociatedBudgetRulesRequest::class => CreateAssociatedBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidValues::class => BidValuesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPlacementBidding::class => SponsoredProductsDraftCampaignPlacementBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsRequestContent::class => SponsoredProductsListSponsoredProductsAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClause::class => SponsoredProductsCampaignNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationRequest::class => BudgetRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBid::class => SponsoredProductsBidNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignsRequestContent::class => SponsoredProductsCreateSponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceState::class => SponsoredProductsMarketplaceStateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class => SponsoredProductsUpdateDraftCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent::class => SponsoredProductsNegativeTargetAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessExceptionResponseContent::class => SponsoredProductsCampaignNegativeTargetsAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDraftCampaignDynamicBidding::class => SponsoredProductsCreateOrUpdateDraftCampaignDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItemWithAsinCounts::class => CategoryItemWithAsinCountsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignServingStatusDetail::class => SponsoredProductsCampaignServingStatusDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationResponse::class => GlobalBudgetRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignExtendedData::class => SponsoredProductsDraftCampaignExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseExtendedData::class => SponsoredProductsNegativeTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupFailureResponseItem::class => SponsoredProductsAdGroupFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseErrorItem::class => OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseErrorItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError::class => SPBudgetRulesRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\DateRangeTypeRuleDuration::class => DateRangeTypeRuleDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseFailureResponseItem::class => SponsoredProductsTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationFailureResponseItem::class => SponsoredProductsCampaignMutationFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordFailureResponseItem::class => SponsoredProductsCampaignNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalAdGroupsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceCampaignServingStatus::class => SponsoredProductsMarketplaceCampaignServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessErrorSelector::class => SponsoredProductsDraftCampaignAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemedBid::class => ThemedBidNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClause::class => SponsoredProductsDraftNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationPerTargetingExpressionV4::class => BidRecommendationPerTargetingExpressionV4Normalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBudget::class => SponsoredProductsBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordExtendedData::class => SponsoredProductsGlobalKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBRuleDuration::class => SBRuleDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateNegativeTargetingClause::class => SponsoredProductsUpdateNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesResponse::class => OptimizationRulesAPISwaggerOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetRuleRecommendationsResponse::class => OptimizationRulesAPISwaggerGetRuleRecommendationsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSBBudgetRuleResponse::class => GetSBBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AssociatedBudgetRuleResponse::class => AssociatedBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSListAssociatedBudgetRulesResponse::class => RMSListAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationExceptionResponseContent::class => SponsoredProductsDraftAdGroupMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationError::class => SponsoredProductsDraftNegativeKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsProductAdsResponseContent::class => SponsoredProductsCreateSponsoredProductsProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftProductAdsRequestContent::class => SponsoredProductsListSponsoredProductsDraftProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponse::class => OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetDetails::class => SponsoredProductsTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGroupedEvent::class => SPGroupedEventNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\DeleteSPCampaignOptimizationRuleResponse::class => DeleteSPCampaignOptimizationRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent::class => SponsoredProductsServiceUnavailableExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExistingCampaignDetails::class => SponsoredProductsExistingCampaignDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaign::class => BudgetUsageCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeyword::class => SponsoredProductsDraftKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerEntityFieldFilter::class => OptimizationRulesAPISwaggerEntityFieldFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRule::class => OptimizationRulesAPISwaggerOptimizationRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsOtherError::class => SponsoredProductsOtherErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationError::class => SponsoredProductsKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSBBudgetRulesRequest::class => UpdateSBBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsProductAdsRequestContent::class => SponsoredProductsListSponsoredProductsProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPBudgetRulesRequest::class => UpdateSPBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationError::class => SponsoredProductsDraftNegativeTargetMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PlacementAdjustment::class => PlacementAdjustmentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalCampaignOperationResponse::class => SponsoredProductsBulkGlobalCampaignOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroup::class => SponsoredProductsAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllSPTargetsRequestContent::class => SponsoredProductsCreateAllSPTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationExceptionResponseContent::class => SponsoredProductsDraftCampaignNegativeKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSearchOptimizationRulesRequest::class => OptimizationRulesAPISwaggerSearchOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialGlobalBudgetRecommendationResponse::class => InitialGlobalBudgetRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignNegativeKeywordOperationResponse::class => SponsoredProductsBulkCampaignNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsKeywordTargetRankRecommendationRequest::class => AsinsKeywordTargetRankRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDBudgetRule::class => SDBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordExtendedData::class => SponsoredProductsKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsResponseContent::class => SponsoredProductsCreateTargetPromotionGroupTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetric::class => ImpactMetricNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBGetAssociatedCampaignsResponse::class => SBGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRangeError::class => SponsoredProductsRangeErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\EventTypeRuleDuration::class => EventTypeRuleDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargetsSuccessResponseItem::class => SponsoredProductsAllTargetsSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationErrorSelector::class => SponsoredProductsDraftCampaignMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessErrorSelector::class => SponsoredProductsNegativeTargetAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordBidInfo::class => KeywordBidInfoNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupSuccessResponseItem::class => SponsoredProductsDraftAdGroupSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAdGroup::class => SponsoredProductsCreateAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecommendationOptions::class => RecommendationOptionsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeyword::class => SponsoredProductsCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPBudgetRulesRequest::class => CreateSPBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCurrencyError::class => SponsoredProductsCurrencyErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseExtendedData::class => SponsoredProductsCampaignNegativeTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateNegativeKeyword::class => SponsoredProductsCreateNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordExtendedData::class => SponsoredProductsCampaignNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteAllSPTargetsResponseContent::class => SponsoredProductsDeleteAllSPTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdFailureResponseItem::class => SponsoredProductsDraftProductAdFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftAdGroupsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetingClause::class => SponsoredProductsCreateTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeyword::class => SponsoredProductsKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicateMarketValue::class => SponsoredProductsTargetingExpressionPredicateMarketValueNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupKeywordTargetRankRecommendationRequest::class => AdGroupKeywordTargetRankRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupExtendedData::class => SponsoredProductsAdGroupExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalCampaignNegativeKeywordOperationResponse::class => SponsoredProductsBulkGlobalCampaignNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendationsByASIN::class => ProductRecommendationsByASINNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignDetails::class => SponsoredProductsNewCampaignDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetRMSBudgetRulesForAdvertiserResponse::class => GetRMSBudgetRulesForAdvertiserResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessError::class => SponsoredProductsDraftNegativeKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsGlobalTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateGlobalEntityState::class => SponsoredProductsCreateOrUpdateGlobalEntityStateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessExceptionResponseContent::class => SponsoredProductsDraftProductAdAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsListSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponse::class => OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolio::class => BudgetUsagePortfolioNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExpressionTypeFilter::class => SponsoredProductsExpressionTypeFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendationError::class => RuleRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListAllSPTargetsRequestContent::class => SponsoredProductsListAllSPTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationResult::class => GlobalBudgetRecommendationResultNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordFailureResponseItem::class => SponsoredProductsGlobalCampaignNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBListAssociatedBudgetRulesResponse::class => SBListAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationNewCampaignsException::class => GlobalBudgetRecommendationNewCampaignsExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class => SponsoredProductsGlobalProductIdentifiersNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsDraftNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupServingStatusDetail::class => SponsoredProductsAdGroupServingStatusDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessError::class => SponsoredProductsDraftCampaignNegativeKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalProductAdsRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class => SponsoredProductsDraftCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGatewayTimeoutResponseContent::class => SponsoredProductsGatewayTimeoutResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCampaignFilter::class => OptimizationRulesAPISwaggerCampaignFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedKeywordTargetsForAdGroupRequest::class => GlobalRankedKeywordTargetsForAdGroupRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsProductAdsRequestContent::class => SponsoredProductsUpdateSponsoredProductsProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent::class => SponsoredProductsListSponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidValue::class => BidValueNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationErrorSelector::class => SponsoredProductsAdGroupMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseExtendedData::class => SponsoredProductsGlobalTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleNotification::class => RuleNotificationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationRecommendationAPIResponse::class => SPCampaignOptimizationRecommendationAPIResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupThemeBasedBidRecommendationRequest::class => AdGroupThemeBasedBidRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeyword::class => SponsoredProductsGlobalCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationError::class => SponsoredProductsCampaignNegativeTargetsMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsAdGroupsRequestContent::class => SponsoredProductsUpdateSponsoredProductsAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsRequestContent::class => SponsoredProductsListTargetPromotionGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseExtendedData::class => SponsoredProductsGlobalNegativeTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusRequestContent::class => SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleAction::class => OptimizationRulesAPISwaggerRuleActionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionStatus::class => SponsoredProductsDraftCampaignPromotionStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent::class => SponsoredProductsCampaignMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupServingStatus::class => SponsoredProductsGlobalAdGroupServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRecommendationReason::class => SponsoredProductsRecommendationReasonNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponse::class => ThemeBasedBidRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleBatchSubError::class => OptimizationRulesAPISwaggerOptimizationRuleBatchSubErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationExceptionResponseContent::class => SponsoredProductsDraftNegativeKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateBudget::class => SponsoredProductsCreateOrUpdateBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPCampaignOptimizationRulesResponse::class => CreateSPCampaignOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessExceptionResponseContent::class => SponsoredProductsDraftCampaignNegativeKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkNegativeKeywordOperationResponse::class => SponsoredProductsBulkNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListMatchedAdGroupsResponseContent::class => SponsoredProductsListMatchedAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextFilter::class => SponsoredProductsKeywordTextFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessError::class => SponsoredProductsDraftNegativeTargetAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRangeTypeRuleCriteria::class => OptimizationRulesAPISwaggerRangeTypeRuleCriteriaNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExpressionTypeError::class => SponsoredProductsExpressionTypeErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalNegativeKeywordOperationResponse::class => SponsoredProductsBulkGlobalNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalAdGroupsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllTargets::class => SponsoredProductsUpdateAllTargetsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignBudget::class => SponsoredProductsNewCampaignBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsAdGroupsRequestContent::class => SponsoredProductsCreateSponsoredProductsAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingGroupBidRecommendation::class => TargetingGroupBidRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateKeyword::class => SponsoredProductsCreateKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftAdGroupsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessExceptionResponseContent::class => SponsoredProductsDraftKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDBudgetRuleDetails::class => SDBudgetRuleDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRule::class => CampaignOptimizationRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetError::class => SponsoredProductsCreateTargetErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsResponseContent::class => SponsoredProductsCreateSponsoredProductsNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseSuccessResponseItem::class => SponsoredProductsNegativeTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateProductAd::class => SponsoredProductsUpdateProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPCampaignOptimizationRuleResponse::class => UpdateSPCampaignOptimizationRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationError::class => GlobalBudgetRulesRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessError::class => SponsoredProductsDraftProductAdAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendationMetrics::class => RuleRecommendationMetricsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationErrorSelector::class => SponsoredProductsProductAdMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateFilter::class => SponsoredProductsEntityStateFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCampaignRecommendationsResponse::class => GetCampaignRecommendationsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationForExistingCampaign::class => BudgetRecommendationForExistingCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdFailureResponseItem::class => SponsoredProductsGlobalProductAdFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignBatchError::class => BudgetUsageCampaignBatchErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftNegativeTargetingClause::class => SponsoredProductsCreateDraftNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Impressions::class => ImpressionsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalCampaign::class => SponsoredProductsUpdateGlobalCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleCondition::class => OptimizationRulesAPISwaggerRuleConditionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSDBudgetRulesRequest::class => CreateSDBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Adjustment::class => AdjustmentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationErrorSelector::class => SponsoredProductsNegativeKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftProductAdOperationResponse::class => SponsoredProductsBulkDraftProductAdOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalProductAdsResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignPlacementBidding::class => SponsoredProductsNewCampaignPlacementBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent::class => SponsoredProductsCampaignAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDuplicateValueError::class => SponsoredProductsDuplicateValueErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetCampaignAttributes::class => SponsoredProductsTargetCampaignAttributesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException::class => ThrottlingExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsResponseContent::class => SponsoredProductsListTargetPromotionGroupTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordSuccessResponseItem::class => SponsoredProductsGlobalCampaignNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSDBudgetRuleResponse::class => GetSDBudgetRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetRankRecommendationRequest::class => KeywordTargetRankRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessErrorSelector::class => SponsoredProductsCampaignNegativeKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationErrorSelector::class => SponsoredProductsDraftProductAdMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetAssociatedCampaignsResponse::class => OptimizationRulesAPISwaggerGetAssociatedCampaignsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalProductAdsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllSPTargetsRequestContent::class => SponsoredProductsUpdateAllSPTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDuration::class => OptimizationRulesAPISwaggerDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsUpdateSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationFailureResponseItem::class => SponsoredProductsDraftCampaignMutationFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseFailureResponseItem::class => SponsoredProductsDraftNegativeTargetingClauseFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordRankedTargetsResponse::class => KeywordRankedTargetsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItemWithAsinCountsLoP::class => CategoryItemWithAsinCountsLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsRequestContent::class => SponsoredProductsCreateTargetPromotionGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCategoryRecommendationsForAsinsRequest::class => GetCategoryRecommendationsForAsinsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignsResponseContent::class => SponsoredProductsCreateSponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignDynamicBidding::class => SponsoredProductsNewCampaignDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessError::class => SponsoredProductsNegativeTargetAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsDraftNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalTargetingClause::class => SponsoredProductsCreateGlobalTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategories::class => TargetableCategoriesNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSDBudgetRulesForAdvertiserResponse::class => GetSDBudgetRulesForAdvertiserResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetRuleRecommendationsRequest::class => OptimizationRulesAPISwaggerGetRuleRecommendationsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateKeyword::class => SponsoredProductsUpdateKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationResponse::class => BudgetRecommendationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordFailureResponseItem::class => SponsoredProductsGlobalNegativeKeywordFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Genre::class => GenreNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SpecialEvent::class => SpecialEventNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateNegativeKeyword::class => SponsoredProductsUpdateNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerValueTypeRuleCriteria::class => OptimizationRulesAPISwaggerValueTypeRuleCriteriaNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationErrorSelector::class => SponsoredProductsNegativeTargetMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPKeywordTargetDetails::class => SponsoredProductsSPKeywordTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class => OptimizationRulesAPISwaggerRuleRecurrenceNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrenceTimesOfDayItem::class => OptimizationRulesAPISwaggerRuleRecurrenceTimesOfDayItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendation::class => RuleRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsAdGroupsResponseContent::class => SponsoredProductsCreateSponsoredProductsAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllSPTargetsResponseContent::class => SponsoredProductsUpdateAllSPTargetsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException::class => UnprocessableEntityExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBadGatewayResponseContent::class => SponsoredProductsBadGatewayResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordSuccessResponseItem::class => SponsoredProductsGlobalKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftProductAdsResponseContent::class => SponsoredProductsListSponsoredProductsDraftProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsDraftTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDateError::class => SponsoredProductsDateErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Range::class => RangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewRequestContent::class => SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalProductAdsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseSuccessItem::class => OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseSuccessItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SearchBrandsRequest::class => SearchBrandsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalNegativeTargetingClauseOperationResponse::class => SponsoredProductsBulkGlobalNegativeTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordServingStatus::class => SponsoredProductsGlobalKeywordServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAdGroup::class => SponsoredProductsUpdateAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessErrorSelector::class => SponsoredProductsNegativeKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessErrorSelector::class => SponsoredProductsAdGroupAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureConditionForSB::class => PerformanceMeasureConditionForSBNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent::class => SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetMutationError::class => SponsoredProductsDraftTargetMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicate::class => SponsoredProductsTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseSuccessItem::class => OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseSuccessItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateMarketplaceState::class => SponsoredProductsCreateOrUpdateMarketplaceStateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateError::class => SponsoredProductsEntityStateErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftAdGroupsRequestContent::class => SponsoredProductsListSponsoredProductsDraftAdGroupsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseExtendedData::class => SponsoredProductsDraftNegativeTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponse::class => OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent::class => SponsoredProductsInternalServerExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationPerTargetingExpression::class => BidRecommendationPerTargetingExpressionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignOperationResponse::class => SponsoredProductsBulkCampaignOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRule::class => SPBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError::class => SPTargetingErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsRequestContent::class => SponsoredProductsListTargetPromotionGroupTargetsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsException::class => SPKeywordGroupsExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsExceptionErrorsItem::class => SPKeywordGroupsExceptionErrorsItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesRequest::class => OptimizationRulesAPISwaggerDeleteOptimizationRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftAdGroupsResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClause::class => SponsoredProductsTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignShopperCohortBidding::class => SponsoredProductsDraftCampaignShopperCohortBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AssociatedCampaign::class => AssociatedCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException::class => BadRequestExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalAdGroup::class => SponsoredProductsUpdateGlobalAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseSetupError::class => SponsoredProductsTargetingClauseSetupErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class => SponsoredProductsCampaignMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseExtendedData::class => SponsoredProductsDraftTargetingClauseExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextMarketplaceSettings::class => SponsoredProductsKeywordTextMarketplaceSettingsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaign::class => SponsoredProductsCreateCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateOptimizationRulesResponse::class => OptimizationRulesAPISwaggerUpdateOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationSuccessResponseItem::class => SponsoredProductsDraftCampaignMutationSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeyword::class => SponsoredProductsNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordSuccessResponseItem::class => SponsoredProductsDraftNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordSuccessResponseItem::class => SponsoredProductsGlobalNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Refinements::class => RefinementsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class => SponsoredProductsCreateOrUpdateTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationError::class => SponsoredProductsDraftCampaignNegativeKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseSuccessResponseItem::class => SponsoredProductsGlobalNegativeTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TimeOfDay::class => TimeOfDayNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class => CampaignRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationNotificationAPIResponse::class => SPCampaignOptimizationNotificationAPIResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RefinementsLoP::class => RefinementsLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAllRuleEventRequest::class => SPGetAllRuleEventRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignErrorDetail::class => SponsoredProductsCopyCampaignErrorDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationErrorSelector::class => SponsoredProductsDraftKeywordMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroup::class => SponsoredProductsDraftAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAd::class => SponsoredProductsProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleDuration::class => RuleDurationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftKeywordsResponseContent::class => SponsoredProductsListSponsoredProductsDraftKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordExtendedData::class => SponsoredProductsNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaignNegativeKeyword::class => SponsoredProductsCreateCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleOptimizationRuleAssociationResponse::class => OptimizationRulesAPISwaggerSingleOptimizationRuleAssociationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsInternalResponseContent::class => SponsoredProductsCreateTargetPromotionGroupsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsGlobalTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent::class => SponsoredProductsKeywordAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsLocaleError::class => SponsoredProductsLocaleErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionErrorSelector::class => SponsoredProductsDraftCampaignPromotionErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDynamicBidding::class => SponsoredProductsDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationError::class => SponsoredProductsNegativeKeywordMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationErrorSelector::class => SponsoredProductsTargetMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordExtendedData::class => SponsoredProductsDraftCampaignNegativeKeywordExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalNegativeTargetingClause::class => SponsoredProductsUpdateGlobalNegativeTargetingClauseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessError::class => SponsoredProductsKeywordAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseSuccessResponseItem::class => SponsoredProductsDraftNegativeTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceLevelKeywordServingStatus::class => SponsoredProductsMarketplaceLevelKeywordServingStatusNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupExtendedData::class => SponsoredProductsGlobalAdGroupExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessExceptionResponseContent::class => SponsoredProductsAdGroupAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesResponseContent::class => SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftNegativeKeyword::class => SponsoredProductsCreateDraftNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryWithTargetsAndAsins::class => CountryWithTargetsAndAsinsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordText::class => SponsoredProductsGlobalNegativeKeywordTextNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsRequestContent::class => SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsInternalResponseContent::class => SponsoredProductsListTargetPromotionGroupsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsShopperCohortBidding::class => SponsoredProductsShopperCohortBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetProductRecommendationsRequest::class => GetProductRecommendationsRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationRecommendationsAPIRequest::class => SPCampaignOptimizationRecommendationsAPIRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalProductAdsRequestContent::class => SponsoredProductsCreateSponsoredProductsGlobalProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignNegativeTargetingClauseOperationResponse::class => SponsoredProductsBulkCampaignNegativeTargetingClauseOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationExceptionResponseContent::class => SponsoredProductsKeywordMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateNegativeTargetingExpressionPredicate::class => SponsoredProductsCreateOrUpdateNegativeTargetingExpressionPredicateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendations::class => CategoryRecommendationsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequest::class => AsinsThemeBasedBidRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestBidding::class => AsinsThemeBasedBidRecommendationRequestBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCountsLoP::class => CategoryRecommendationsWithAsinCountsLoPNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetRequest::class => SponsoredProductsCreateTargetRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsPreviewResponseContent::class => SponsoredProductsListSponsoredProductsKeywordsPreviewResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetRuleEventError::class => SPGetRuleEventErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdServingStatusDetail::class => SponsoredProductsAdServingStatusDetailNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationException::class => GlobalBudgetRecommendationExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessError::class => SponsoredProductsCampaignAccessErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordSuccessResponseItem::class => SponsoredProductsCampaignNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedOperationError::class => SponsoredProductsUnsupportedOperationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent::class => SponsoredProductsNegativeTargetMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsAdGroupsResponseContent::class => SponsoredProductsUpdateSponsoredProductsAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargetsFailureResponseItem::class => SponsoredProductsAllTargetsFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsRequestContent::class => SponsoredProductsCopySponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPAutoTargetDetails::class => SponsoredProductsSPAutoTargetDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleCondition::class => RuleConditionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalBid::class => SponsoredProductsGlobalBidNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent::class => SponsoredProductsUnauthenticatedExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftCampaignOperationResponse::class => SponsoredProductsBulkDraftCampaignOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMissingValueError::class => SponsoredProductsMissingValueErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignsRequestContent::class => SponsoredProductsDeleteSponsoredProductsCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsFailureResponseItem::class => SponsoredProductsCreateTargetPromotionGroupTargetsFailureResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleOptimizationRuleResponse::class => OptimizationRulesAPISwaggerSingleOptimizationRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftNegativeKeywordOperationResponse::class => SponsoredProductsBulkDraftNegativeKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCounts::class => CategoryRecommendationsWithAsinCountsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsResponseContent::class => SponsoredProductsListSponsoredProductsAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerError::class => SponsoredProductsInternalServerErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedResponseContent::class => SponsoredProductsUnauthorizedResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusRequest::class => OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsRequestContent::class => SponsoredProductsGetTargetPromotionGroupsRecommendationsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalNegativeKeyword::class => SponsoredProductsCreateGlobalNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationError::class => BudgetRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAllRuleEventResponse::class => SPGetAllRuleEventResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleNotificationError::class => RuleNotificationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioRequest::class => BudgetUsagePortfolioRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCreateOptimizationRulesResponse::class => OptimizationRulesAPISwaggerCreateOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseSuccessItem::class => OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseSuccessItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsResponseContent::class => SponsoredProductsListTargetPromotionGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAd::class => SponsoredProductsDraftProductAdNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Conversions::class => ConversionsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignsResponseContent::class => SponsoredProductsDeleteSponsoredProductsCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsKeywordsRequestContent::class => SponsoredProductsUpdateSponsoredProductsKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignRequest::class => BudgetUsageCampaignRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftProductAdsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftProductAdsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureCondition::class => PerformanceMeasureConditionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroupsRecommendationsResponse::class => KeywordGroupsRecommendationsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseSuccessResponseItem::class => SponsoredProductsTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessErrorSelector::class => SponsoredProductsTargetAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesRequestContent::class => SponsoredProductsListSponsoredProductsNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationExceptionResponseContent::class => SponsoredProductsDraftProductAdMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessExceptionResponseContent::class => SponsoredProductsDraftNegativeTargetAccessExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupSuccessResponseItem::class => SponsoredProductsAdGroupSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PriceRange::class => PriceRangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalEntityState::class => SponsoredProductsGlobalEntityStateNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBiddingError::class => SponsoredProductsBiddingErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetIncreaseBy::class => BudgetIncreaseByNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException::class => UnauthorizedExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedTargetWithThemedBidsResponse::class => GlobalRankedTargetWithThemedBidsResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\IntegerRange::class => IntegerRangeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Bidding::class => BiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent::class => SponsoredProductsTargetMutationExceptionResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsListSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnavailableResponseContent::class => SponsoredProductsUnavailableResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetResponse::class => KeywordTargetResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryWithTargets::class => CountryWithTargetsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessErrorSelector::class => SponsoredProductsProductAdAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPlacementBidding::class => SponsoredProductsPlacementBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class => ThemeBasedBidRecommendationNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalAdGroup::class => SponsoredProductsCreateGlobalAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBCampaignBudgetRule::class => SBCampaignBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalProductAdOperationResponse::class => SponsoredProductsBulkGlobalProductAdOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsAdGroupsResponseContent::class => SponsoredProductsDeleteSponsoredProductsAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationError::class => SponsoredProductsDraftProductAdMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Recurrence::class => RecurrenceNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroup::class => KeywordGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AccessDeniedException::class => AccessDeniedExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationRequest::class => GlobalBudgetRecommendationRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDraftCampaignBudget::class => SponsoredProductsCreateOrUpdateDraftCampaignBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError::class => SPTORBudgetRecommendationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdEligibilityError::class => SponsoredProductsAdEligibilityErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaignNegativeKeyword::class => SponsoredProductsUpdateCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicateWithoutOther::class => SponsoredProductsTargetingExpressionPredicateWithoutOtherNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRequestFilter::class => OptimizationRulesAPISwaggerRequestFilterNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalResponseContent::class => SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaign::class => SponsoredProductsCopyCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponse::class => OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignExtendedData::class => SponsoredProductsGlobalCampaignExtendedDataNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventRequest::class => GlobalBudgetRulesRecommendationEventRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsInternalRequestContent::class => SponsoredProductsCreateTargetPromotionGroupTargetsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionError::class => SponsoredProductsDraftCampaignPromotionErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignResponse::class => BudgetUsageCampaignResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class => SBBudgetRuleDetailsNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Benchmark::class => BenchmarkNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalKeywordOperationResponse::class => SponsoredProductsBulkGlobalKeywordOperationResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductIdentifierError::class => SponsoredProductsProductIdentifierErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftAdGroup::class => SponsoredProductsCreateDraftAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventException::class => GlobalBudgetRulesRecommendationEventExceptionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesRequestContent::class => SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsResponseContent::class => SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeyword::class => SponsoredProductsDraftCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalRequestContent::class => SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftKeywordsRequestContent::class => SponsoredProductsCreateSponsoredProductsDraftKeywordsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessErrorSelector::class => SponsoredProductsDraftCampaignNegativeKeywordAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsApiGatewayContext::class => SponsoredProductsApiGatewayContextNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftTargetingClausesResponseContent::class => SponsoredProductsCreateSponsoredProductsDraftTargetingClausesResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationError::class => SponsoredProductsNegativeTargetMutationErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMatchedAdGroup::class => SponsoredProductsMatchedAdGroupNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSBBudgetRulesRequest::class => CreateSBBudgetRulesRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalCampaignNegativeKeyword::class => SponsoredProductsCreateGlobalCampaignNegativeKeywordNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class => SponsoredProductsCampaignAccessErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPCampaignOptimizationRuleResponse::class => GetSPCampaignOptimizationRuleResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignBudgetRule::class => SPCampaignBudgetRuleNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignsResponseContent::class => SponsoredProductsDeleteSponsoredProductsDraftCampaignsResponseContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationErrorSelector::class => SponsoredProductsDraftNegativeTargetMutationErrorSelectorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordSuccessResponseItem::class => SponsoredProductsNegativeKeywordSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaign::class => SponsoredProductsUpdateCampaignNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupSuccessResponseItem::class => SponsoredProductsGlobalAdGroupSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPromoteSponsoredProductsDraftCampaignsRequestContent::class => SponsoredProductsPromoteSponsoredProductsDraftCampaignsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateAssociatedBudgetRulesResponse::class => CreateAssociatedBudgetRulesResponseNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError::class => BudgetRuleErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendationsByTheme::class => ProductRecommendationsByThemeNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidSuggestion::class => BidSuggestionNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignMutationSuccessResponseItem::class => SponsoredProductsGlobalCampaignMutationSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedKeywordTargetsForAdGroupRequest::class => RankedKeywordTargetsForAdGroupRequestNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDynamicBidding::class => SponsoredProductsCreateOrUpdateDynamicBiddingNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsProductAdsRequestContent::class => SponsoredProductsDeleteSponsoredProductsProductAdsRequestContentNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceBudget::class => SponsoredProductsMarketplaceBudgetNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsParentEntityError::class => SponsoredProductsParentEntityErrorNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseSuccessResponseItem::class => SponsoredProductsDraftTargetingClauseSuccessResponseItemNormalizer::class,
+
+            \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsStatusResponseContent::class => SponsoredProductsCopySponsoredProductsCampaignsStatusResponseContentNormalizer::class,
+
+            \Jane\Component\JsonSchemaRuntime\Reference::class => \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\ReferenceNormalizer::class,
         ];
         protected $normalizersCache = [];
 
@@ -144,7 +3724,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\myvendor\mynamespace\Generated\Model\Pet::class => false, \myvendor\mynamespace\Generated\Model\Error::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
+            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAsinOwnershipError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BrandLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetTargetableAsinCountsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalTargetingExpression::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPCampaignOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSBudgetRuleDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalErrorResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestV4Bidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceTargetingClauseServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalStoreSetting::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteAllSPTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponseWithError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsForbiddenResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBids::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsBidInfoItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsBasedRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupThemeBasedBidRecommendationRequestV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListMatchedAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceAdGroupServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingExpression::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPCampaignOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Clicks::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkProductAdOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsApplicableMarketplacesError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Brand::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetRMSBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ValidationException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSBBudgetRulesForAdvertiserResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetPromotionGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBudgetError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargets::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEvent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAsinFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBadRequestResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Values::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RangeMetricValue::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordServingStatusDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkAdGroupOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysEstimatedOpportunities::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftNegativeTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftCampaignNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalAdGroupOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRuleDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsErrorCause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMalformedValueError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceProductAdServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupBasedRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponseV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedKeywordTargetsForAsinsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsPreviewResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroupsRecommendationsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRecommendedTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRecommendationStatusUpdate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsReducedObjectIdFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetPromotionGroupsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryBudgetRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftAdGroupOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBillingError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecKeywordTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecKeywordTargetBidInfoItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInvalidInputError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductCategoryTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignTaskDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDListAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNameFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponseKeywordTargetListItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllSPTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityNotFoundError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateRMSBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottledError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceLevelProductIdentifier::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPromoteSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordText::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSearchOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseErrorItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AgeRange::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysMissedOpportunities::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationNewCampaignsError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkNegativeTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesPreviewResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsObjectIdFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialGlobalBudgetRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAudienceSegment::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedKeywordTargetsForAsinsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceBid::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GenreLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSDBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetingRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPListAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteTargetPromotionGroupTargetsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignMutationFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseErrorItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesPreviewRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBatchResponseError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleWithoutRuleId::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTarget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingExpressionV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRulesForAdvertiserResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleCampaignRuleAssociationStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerActionDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityQuotaError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsPreviewRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationNotificationAPIRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTooManyRequestsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaignNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AgeRangeLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioBatchError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListAllSPTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPIndividualEvent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllTargets::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateRMSBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategoriesLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaignNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableAsinCounts::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RatingRange::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCreateOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BiddingStrategyRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateAssociatedBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidValues::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPlacementBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBid::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceState::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDraftCampaignDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItemWithAsinCounts::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignServingStatusDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseErrorItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\DateRangeTypeRuleDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceCampaignServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemedBid::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationPerTargetingExpressionV4::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBRuleDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetRuleRecommendationsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSBBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AssociatedBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RMSListAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGroupedEvent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\DeleteSPCampaignOptimizationRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExistingCampaignDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerEntityFieldFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsOtherError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSBBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PlacementAdjustment::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalCampaignOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAllSPTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSearchOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialGlobalBudgetRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsKeywordTargetRankRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetric::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRangeError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\EventTypeRuleDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargetsSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordBidInfo::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroupSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RecommendationOptions::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCurrencyError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteAllSPTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicateMarketValue::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupKeywordTargetRankRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalCampaignNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendationsByASIN::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetRMSBudgetRulesForAdvertiserResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateGlobalEntityState::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolio::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExpressionTypeFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListAllSPTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationResult::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBListAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationNewCampaignsException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupServingStatusDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGatewayTimeoutResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCampaignFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedKeywordTargetsForAdGroupRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidValue::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleNotification::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationRecommendationAPIResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AdGroupThemeBasedBidRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsPromotionStatusRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleAction::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsRecommendationReason::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRuleBatchSubError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSPCampaignOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListMatchedAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRangeTypeRuleCriteria::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsExpressionTypeError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllTargets::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingGroupBidRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SDBudgetRuleDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UpdateSPCampaignOptimizationRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendationMetrics::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCampaignRecommendationsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationForExistingCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalProductAdFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignBatchError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Impressions::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleCondition::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSDBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Adjustment::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftProductAdOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignPlacementBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDuplicateValueError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetCampaignAttributes::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSDBudgetRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetRankRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetAssociatedCampaignsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllSPTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordRankedTargetsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryItemWithAsinCountsLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCategoryRecommendationsForAsinsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNewCampaignDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategories::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSDBudgetRulesForAdvertiserResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerGetRuleRecommendationsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Genre::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SpecialEvent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerValueTypeRuleCriteria::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPKeywordTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrenceTimesOfDayItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAllSPTargetsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBadGatewayResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDateError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Range::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesPreviewRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDisassociateOptimizationRulesFromCampaignResponseSuccessItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SearchBrandsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalNegativeTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalKeywordServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureConditionForSB::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponseSuccessItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateMarketplaceState::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftAdGroupsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationPerTargetingExpression::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupTargetsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsExceptionErrorsItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignShopperCohortBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AssociatedCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseSetupError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextMarketplaceSettings::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignMutationSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Refinements::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TimeOfDay::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationNotificationAPIResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RefinementsLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAllRuleEventRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaignErrorDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftKeywordMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleDuration::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleOptimizationRuleAssociationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsLocaleError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateGlobalNegativeTargetingClause::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceLevelKeywordServingStatus::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryWithTargetsAndAsins::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalNegativeKeywordText::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsShopperCohortBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetProductRecommendationsRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignOptimizationRecommendationsAPIRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsGlobalProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkCampaignNegativeTargetingClauseOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateNegativeTargetingExpressionPredicate::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendations::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AsinsThemeBasedBidRecommendationRequestBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCountsLoP::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsPreviewResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetRuleEventError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdServingStatusDetail::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedOperationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAllTargetsFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPAutoTargetDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleCondition::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalBid::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftCampaignOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMissingValueError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsFailureResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerSingleOptimizationRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkDraftNegativeKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCounts::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetAllRuleEventResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleNotificationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsagePortfolioRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerCreateOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerUpdateRuleRecommendationStatusResponseSuccessItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListTargetPromotionGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAd::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Conversions::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftProductAdsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureCondition::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroupsRecommendationsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetAccessExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PriceRange::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalEntityState::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBiddingError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetIncreaseBy::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedTargetWithThemedBidsResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\IntegerRange::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Bidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnavailableResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CountryWithTargets::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPlacementBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBCampaignBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalProductAdOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftProductAdMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Recurrence::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AccessDeniedException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRecommendationRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDraftCampaignBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdEligibilityError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetingExpressionPredicateWithoutOther::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerRequestFilter::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopyCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerDeleteOptimizationRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignExtendedData::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateTargetPromotionGroupTargetsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignPromotionError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsGlobalCampaignNegativeKeywordsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Benchmark::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsBulkGlobalKeywordOperationResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsDraftNegativeTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductIdentifierError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateDraftAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalBudgetRulesRecommendationEventException::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalAdGroupsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsInternalRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftKeywordsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignNegativeKeywordAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsApiGatewayContext::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsDraftTargetingClausesResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMatchedAdGroup::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateSBBudgetRulesRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateGlobalCampaignNegativeKeyword::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsGlobalNegativeTargetingClausesRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPCampaignOptimizationRuleResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPCampaignBudgetRule::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsDraftCampaignsResponseContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftNegativeTargetMutationErrorSelector::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateCampaign::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalAdGroupSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsPromoteSponsoredProductsDraftCampaignsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CreateAssociatedBudgetRulesResponse::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ProductRecommendationsByTheme::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidSuggestion::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsGlobalCampaignMutationSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedKeywordTargetsForAdGroupRequest::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateDynamicBidding::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDeleteSponsoredProductsProductAdsRequestContent::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsMarketplaceBudget::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsParentEntityError::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftTargetingClauseSuccessResponseItem::class => false, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCopySponsoredProductsCampaignsStatusResponseContent::class => false, \Jane\Component\JsonSchemaRuntime\Reference::class => false];
         }
     }
 }
