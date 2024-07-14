@@ -1,5 +1,5 @@
 {
-    "name": "amzn-sponsored-products-api-php/amznsponsoredproductsapiphp",
+    "name": "cedricziel/amznsponsoredproductsapiphp",
     "description": "An API client",
     "type": "library",
     "license": "MIT",
