@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class === $type;
+            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class === get_class($data);
+            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class;
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -51,16 +51,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
-            if (\array_key_exists('portfolioId', $data) && null !== $data['portfolioId']) {
+            if (\array_key_exists('portfolioId', $data) && $data['portfolioId'] !== null) {
                 $object->setPortfolioId($data['portfolioId']);
                 unset($data['portfolioId']);
-            } elseif (\array_key_exists('portfolioId', $data) && null === $data['portfolioId']) {
+            } elseif (\array_key_exists('portfolioId', $data) && $data['portfolioId'] === null) {
                 $object->setPortfolioId(null);
             }
-            if (\array_key_exists('endDate', $data) && null !== $data['endDate']) {
+            if (\array_key_exists('endDate', $data) && $data['endDate'] !== null) {
                 $object->setEndDate(\DateTime::createFromFormat('Y-m-d', $data['endDate'])->setTime(0, 0, 0));
                 unset($data['endDate']);
-            } elseif (\array_key_exists('endDate', $data) && null === $data['endDate']) {
+            } elseif (\array_key_exists('endDate', $data) && $data['endDate'] === null) {
                 $object->setEndDate(null);
             }
             if (\array_key_exists('campaignId', $data)) {
@@ -160,12 +160,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class === $type;
+            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class === get_class($data);
+            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateDraftCampaign::class;
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
@@ -180,16 +180,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
-            if (\array_key_exists('portfolioId', $data) && null !== $data['portfolioId']) {
+            if (\array_key_exists('portfolioId', $data) && $data['portfolioId'] !== null) {
                 $object->setPortfolioId($data['portfolioId']);
                 unset($data['portfolioId']);
-            } elseif (\array_key_exists('portfolioId', $data) && null === $data['portfolioId']) {
+            } elseif (\array_key_exists('portfolioId', $data) && $data['portfolioId'] === null) {
                 $object->setPortfolioId(null);
             }
-            if (\array_key_exists('endDate', $data) && null !== $data['endDate']) {
+            if (\array_key_exists('endDate', $data) && $data['endDate'] !== null) {
                 $object->setEndDate(\DateTime::createFromFormat('Y-m-d', $data['endDate'])->setTime(0, 0, 0));
                 unset($data['endDate']);
-            } elseif (\array_key_exists('endDate', $data) && null === $data['endDate']) {
+            } elseif (\array_key_exists('endDate', $data) && $data['endDate'] === null) {
                 $object->setEndDate(null);
             }
             if (\array_key_exists('campaignId', $data)) {

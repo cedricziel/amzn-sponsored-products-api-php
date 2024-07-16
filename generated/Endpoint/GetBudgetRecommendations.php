@@ -69,27 +69,43 @@ class GetBudgetRecommendations extends \cedricziel\amznsponsoredproductsapiphp\G
     }
 
     /**
-     * @return null
+     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationResponse|null
+     *
+     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsBadRequestException
+     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsUnprocessableEntityException
+     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsUnauthorizedException
+     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsInternalServerErrorException
+     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsForbiddenException
+     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsUnsupportedMediaTypeException
+     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (200 === $status) {
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/vnd.budgetrecommendation.v3+json') !== false)) {
+            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationResponse', 'json');
         }
-        if (400 === $status) {
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/vnd.budgetrecommendation.v3+json') !== false)) {
+            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError', 'json'), $response);
         }
-        if (422 === $status) {
+        if (is_null($contentType) === false && (422 === $status && mb_strpos($contentType, 'application/vnd.budgetrecommendation.v3+json') !== false)) {
+            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError', 'json'), $response);
         }
-        if (401 === $status) {
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/vnd.budgetrecommendation.v3+json') !== false)) {
+            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError', 'json'), $response);
         }
-        if (500 === $status) {
+        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/vnd.budgetrecommendation.v3+json') !== false)) {
+            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError', 'json'), $response);
         }
-        if (403 === $status) {
+        if (is_null($contentType) === false && (403 === $status && mb_strpos($contentType, 'application/vnd.budgetrecommendation.v3+json') !== false)) {
+            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError', 'json'), $response);
         }
-        if (415 === $status) {
+        if (is_null($contentType) === false && (415 === $status && mb_strpos($contentType, 'application/vnd.budgetrecommendation.v3+json') !== false)) {
+            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsUnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError', 'json'), $response);
         }
-        if (429 === $status) {
+        if (is_null($contentType) === false && (429 === $status && mb_strpos($contentType, 'application/vnd.budgetrecommendation.v3+json') !== false)) {
+            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationsTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError', 'json'), $response);
         }
     }
 

@@ -79,7 +79,7 @@ class UpdateOptimizationRules extends \cedricziel\amznsponsoredproductsapiphp\Ge
     }
 
     /**
-     * @return null
+     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesResponse|null
      *
      * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateOptimizationRulesBadRequestException
      * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateOptimizationRulesUnauthorizedException
@@ -90,19 +90,20 @@ class UpdateOptimizationRules extends \cedricziel\amznsponsoredproductsapiphp\Ge
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateOptimizationRulesBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
         }
-        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateOptimizationRulesUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
         }
-        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateOptimizationRulesInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
         }
-        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (403 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateOptimizationRulesForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
         }
-        if (207 === $status) {
+        if (is_null($contentType) === false && (207 === $status && mb_strpos($contentType, 'application/vnd.spoptimizationrules.v1+json') !== false)) {
+            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesResponse', 'json');
         }
     }
 

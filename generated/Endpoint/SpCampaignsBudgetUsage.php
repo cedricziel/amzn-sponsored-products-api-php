@@ -75,7 +75,7 @@ class SpCampaignsBudgetUsage extends \cedricziel\amznsponsoredproductsapiphp\Gen
     }
 
     /**
-     * @return null
+     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignResponse|null
      *
      * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SpCampaignsBudgetUsageBadRequestException
      * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SpCampaignsBudgetUsageUnprocessableEntityException
@@ -88,24 +88,25 @@ class SpCampaignsBudgetUsage extends \cedricziel\amznsponsoredproductsapiphp\Gen
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SpCampaignsBudgetUsageBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError', 'json'), $response);
         }
-        if (false === is_null($contentType) && (422 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (422 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SpCampaignsBudgetUsageUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError', 'json'), $response);
         }
-        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SpCampaignsBudgetUsageUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError', 'json'), $response);
         }
-        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SpCampaignsBudgetUsageInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError', 'json'), $response);
         }
-        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (403 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SpCampaignsBudgetUsageForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError', 'json'), $response);
         }
-        if (207 === $status) {
+        if (is_null($contentType) === false && (207 === $status && mb_strpos($contentType, 'application/vnd.spcampaignbudgetusage.v1+json') !== false)) {
+            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageCampaignResponse', 'json');
         }
-        if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (429 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SpCampaignsBudgetUsageTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError', 'json'), $response);
         }
     }

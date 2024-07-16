@@ -96,7 +96,7 @@ class GetCategoryRecommendationsForASINs extends \cedricziel\amznsponsoredproduc
     }
 
     /**
-     * @return null
+     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendations|\cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCounts|\cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCountsLoP|null
      *
      * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsBadRequestException
      * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsUnprocessableEntityException
@@ -109,20 +109,29 @@ class GetCategoryRecommendationsForASINs extends \cedricziel\amznsponsoredproduc
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (200 === $status) {
+            if (mb_strpos($contentType, 'application/vnd.spproducttargetingresponse.v3+json') !== false) {
+                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendations', 'json');
+            }
+            if (mb_strpos($contentType, 'application/vnd.spproducttargetingresponse.v4+json') !== false) {
+                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCounts', 'json');
+            }
+            if (mb_strpos($contentType, 'application/vnd.spproducttargetingresponse.v5+json') !== false) {
+                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCountsLoP', 'json');
+            }
         }
-        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (422 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (422 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
+        if (is_null($contentType) === false && (429 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException', 'json'), $response);
         }
     }

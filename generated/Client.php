@@ -28,7 +28,16 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spthemebasedbidrecommendation.v4+json|application/vnd.spthemebasedbidrecommendation.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\ThemeBasedBidRecommendationResponseV4|Model\ThemeBasedBidRecommendationResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetThemeBasedBidRecommendationForAdGroupV1BadRequestException
+     * @throws Exception\GetThemeBasedBidRecommendationForAdGroupV1UnprocessableEntityException
+     * @throws Exception\GetThemeBasedBidRecommendationForAdGroupV1UnauthorizedException
+     * @throws Exception\GetThemeBasedBidRecommendationForAdGroupV1InternalServerErrorException
+     * @throws Exception\GetThemeBasedBidRecommendationForAdGroupV1UnsupportedMediaTypeException
+     * @throws Exception\GetThemeBasedBidRecommendationForAdGroupV1MethodNotAllowedException
+     * @throws Exception\GetThemeBasedBidRecommendationForAdGroupV1NotAcceptableException
+     * @throws Exception\GetThemeBasedBidRecommendationForAdGroupV1TooManyRequestsException
      */
     public function getThemeBasedBidRecommendationForAdGroupV1($requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
@@ -54,7 +63,15 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spkeywordsrecommendation.v3+json|application/vnd.spkeywordsrecommendation.v5+json|application/vnd.spkeywordsrecommendation.v4+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\KeywordTargetResponse|Model\RankedTargetWithThemedBidsResponse|Model\RankedTargetResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetRankedKeywordRecommendationBadRequestException
+     * @throws Exception\GetRankedKeywordRecommendationUnprocessableEntityException
+     * @throws Exception\GetRankedKeywordRecommendationUnauthorizedException
+     * @throws Exception\GetRankedKeywordRecommendationInternalServerErrorException
+     * @throws Exception\GetRankedKeywordRecommendationUnsupportedMediaTypeException
+     * @throws Exception\GetRankedKeywordRecommendationServiceUnavailableException
+     * @throws Exception\GetRankedKeywordRecommendationTooManyRequestsException
      */
     public function getRankedKeywordRecommendation($requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
@@ -77,7 +94,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spKeyword.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListSponsoredProductsKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListSponsoredProductsKeywordsBadRequestException
      * @throws Exception\ListSponsoredProductsKeywordsUnauthorizedException
@@ -107,7 +124,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spNegativeKeyword.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsDeleteSponsoredProductsNegativeKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteSponsoredProductsNegativeKeywordsBadRequestException
      * @throws Exception\DeleteSponsoredProductsNegativeKeywordsUnauthorizedException
@@ -137,7 +154,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\TargetableAsinCounts|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetTargetableASINCountsBadRequestException
      * @throws Exception\GetTargetableASINCountsUnprocessableEntityException
@@ -171,7 +188,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/vnd.spproducttargetingresponse.v4+json|application/vnd.spproducttargetingresponse.v5+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\TargetableCategories|Model\TargetableCategoriesLoP|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetTargetableCategoriesBadRequestException
      * @throws Exception\GetTargetableCategoriesUnauthorizedException
@@ -196,7 +213,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\CreateSPCampaignOptimizationRulesResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateOptimizationRuleBadRequestException
      * @throws Exception\CreateOptimizationRuleUnprocessableEntityException
@@ -223,7 +240,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\UpdateSPCampaignOptimizationRuleResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateOptimizationRuleBadRequestException
      * @throws Exception\UpdateOptimizationRuleUnprocessableEntityException
@@ -318,7 +335,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\SearchBrandsBadRequestException
      * @throws Exception\SearchBrandsUnauthorizedException
@@ -352,7 +369,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/vnd.spproducttargetingresponse.v4+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\Refinements|Model\RefinementsLoP|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetRefinementsForCategoryBadRequestException
      * @throws Exception\GetRefinementsForCategoryUnprocessableEntityException
@@ -378,7 +395,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SPCampaignOptimizationNotificationAPIResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetRuleNotificationBadRequestException
      * @throws Exception\GetRuleNotificationUnprocessableEntityException
@@ -411,7 +428,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spTargetPromotionGroup.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListTargetPromotionGroupsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListTargetPromotionGroupsBadRequestException
      * @throws Exception\ListTargetPromotionGroupsUnauthorizedException
@@ -442,7 +459,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spProductAd.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListSponsoredProductsProductAdsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListSponsoredProductsProductAdsBadRequestException
      * @throws Exception\ListSponsoredProductsProductAdsUnauthorizedException
@@ -473,7 +490,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spoptimizationrules.v1+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\OptimizationRulesAPISwaggerOptimizationRulesResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateOptimizationRulesBadRequestException
      * @throws Exception\CreateOptimizationRulesUnauthorizedException
@@ -502,7 +519,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spoptimizationrules.v1+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\OptimizationRulesAPISwaggerOptimizationRulesResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateOptimizationRulesBadRequestException
      * @throws Exception\UpdateOptimizationRulesUnauthorizedException
@@ -533,7 +550,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spTargetPromotionGroup.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateTargetPromotionGroupsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateTargetPromotionGroupsBadRequestException
      * @throws Exception\CreateTargetPromotionGroupsUnauthorizedException
@@ -566,7 +583,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spTargetPromotionGroupTarget.v1+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateTargetPromotionGroupTargetsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateTargetPromotionGroupTargetsBadRequestException
      * @throws Exception\CreateTargetPromotionGroupTargetsUnauthorizedException
@@ -597,7 +614,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spNegativeTargetingClause.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListSponsoredProductsNegativeTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListSponsoredProductsNegativeTargetingClausesBadRequestException
      * @throws Exception\ListSponsoredProductsNegativeTargetingClausesUnauthorizedException
@@ -625,7 +642,17 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\KeywordGroupsRecommendationsResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetKeywordGroupRecommendationsBadRequestException
+     * @throws Exception\GetKeywordGroupRecommendationsUnauthorizedException
+     * @throws Exception\GetKeywordGroupRecommendationsInternalServerErrorException
+     * @throws Exception\GetKeywordGroupRecommendationsFailedDependencyException
+     * @throws Exception\GetKeywordGroupRecommendationsForbiddenException
+     * @throws Exception\GetKeywordGroupRecommendationsNotFoundException
+     * @throws Exception\GetKeywordGroupRecommendationsUnsupportedMediaTypeException
+     * @throws Exception\GetKeywordGroupRecommendationsServiceUnavailableException
+     * @throws Exception\GetKeywordGroupRecommendationsTooManyRequestsException
      */
     public function getKeywordGroupRecommendations(?Model\KeywordGroupsRecommendationsRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
@@ -654,7 +681,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spProductAd.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateSponsoredProductsProductAdsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateSponsoredProductsProductAdsBadRequestException
      * @throws Exception\CreateSponsoredProductsProductAdsUnauthorizedException
@@ -690,7 +717,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spProductAd.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsUpdateSponsoredProductsProductAdsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateSponsoredProductsProductAdsBadRequestException
      * @throws Exception\UpdateSponsoredProductsProductAdsUnauthorizedException
@@ -806,7 +833,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/vnd.spproducttargetingresponse.v4+json|application/vnd.spproducttargetingresponse.v5+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\CategoryRecommendations|Model\CategoryRecommendationsWithAsinCounts|Model\CategoryRecommendationsWithAsinCountsLoP|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetCategoryRecommendationsForASINsBadRequestException
      * @throws Exception\GetCategoryRecommendationsForASINsUnprocessableEntityException
@@ -834,7 +861,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spTargetPromotionGroupsRecommendations.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetTargetPromotionGroupsRecommendationsBadRequestException
      * @throws Exception\GetTargetPromotionGroupsRecommendationsInternalServerErrorException
@@ -859,7 +886,14 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\InitialBudgetRecommendationResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetBudgetRecommendationBadRequestException
+     * @throws Exception\GetBudgetRecommendationUnauthorizedException
+     * @throws Exception\GetBudgetRecommendationInternalServerErrorException
+     * @throws Exception\GetBudgetRecommendationForbiddenException
+     * @throws Exception\GetBudgetRecommendationUnsupportedMediaTypeException
+     * @throws Exception\GetBudgetRecommendationTooManyRequestsException
      */
     public function getBudgetRecommendation(?Model\InitialBudgetRecommendationRequest $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
@@ -882,7 +916,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeTargetingClause.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteSponsoredProductsCampaignNegativeTargetingClausesBadRequestException
      * @throws Exception\DeleteSponsoredProductsCampaignNegativeTargetingClausesUnauthorizedException
@@ -912,7 +946,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spProductAd.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsDeleteSponsoredProductsProductAdsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteSponsoredProductsProductAdsBadRequestException
      * @throws Exception\DeleteSponsoredProductsProductAdsUnauthorizedException
@@ -942,7 +976,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetNegativeBrandsBadRequestException
      * @throws Exception\GetNegativeBrandsUnauthorizedException
@@ -969,7 +1003,15 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\BudgetRecommendationResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetBudgetRecommendationsBadRequestException
+     * @throws Exception\GetBudgetRecommendationsUnprocessableEntityException
+     * @throws Exception\GetBudgetRecommendationsUnauthorizedException
+     * @throws Exception\GetBudgetRecommendationsInternalServerErrorException
+     * @throws Exception\GetBudgetRecommendationsForbiddenException
+     * @throws Exception\GetBudgetRecommendationsUnsupportedMediaTypeException
+     * @throws Exception\GetBudgetRecommendationsTooManyRequestsException
      */
     public function getBudgetRecommendations(Model\BudgetRecommendationRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
@@ -998,7 +1040,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spNegativeTargetingClause.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateSponsoredProductsNegativeTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateSponsoredProductsNegativeTargetingClausesBadRequestException
      * @throws Exception\CreateSponsoredProductsNegativeTargetingClausesUnauthorizedException
@@ -1034,7 +1076,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spNegativeTargetingClause.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsUpdateSponsoredProductsNegativeTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateSponsoredProductsNegativeTargetingClausesBadRequestException
      * @throws Exception\UpdateSponsoredProductsNegativeTargetingClausesUnauthorizedException
@@ -1070,7 +1112,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spTargetingClause.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateSponsoredProductsTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateSponsoredProductsTargetingClausesBadRequestException
      * @throws Exception\CreateSponsoredProductsTargetingClausesUnauthorizedException
@@ -1106,7 +1148,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spTargetingClause.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateSponsoredProductsTargetingClausesBadRequestException
      * @throws Exception\UpdateSponsoredProductsTargetingClausesUnauthorizedException
@@ -1135,7 +1177,11 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SPBudgetRulesRecommendationEventResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\SPGetBudgetRulesRecommendationBadRequestException
+     * @throws Exception\SPGetBudgetRulesRecommendationInternalServerErrorException
+     * @throws Exception\SPGetBudgetRulesRecommendationTooManyRequestsException
      */
     public function sPGetBudgetRulesRecommendation($requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
@@ -1164,7 +1210,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeTargetingClause.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateSponsoredProductsCampaignNegativeTargetingClausesBadRequestException
      * @throws Exception\CreateSponsoredProductsCampaignNegativeTargetingClausesUnauthorizedException
@@ -1200,7 +1246,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeTargetingClause.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateSponsoredProductsCampaignNegativeTargetingClausesBadRequestException
      * @throws Exception\UpdateSponsoredProductsCampaignNegativeTargetingClausesUnauthorizedException
@@ -1236,7 +1282,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spKeyword.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateSponsoredProductsKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateSponsoredProductsKeywordsBadRequestException
      * @throws Exception\CreateSponsoredProductsKeywordsUnauthorizedException
@@ -1272,7 +1318,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spKeyword.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsUpdateSponsoredProductsKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateSponsoredProductsKeywordsBadRequestException
      * @throws Exception\UpdateSponsoredProductsKeywordsUnauthorizedException
@@ -1302,7 +1348,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spCampaignNegativeTargetingClause.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListSponsoredProductsCampaignNegativeTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListSponsoredProductsCampaignNegativeTargetingClausesBadRequestException
      * @throws Exception\ListSponsoredProductsCampaignNegativeTargetingClausesUnauthorizedException
@@ -1332,7 +1378,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spTargetingClause.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteSponsoredProductsTargetingClausesBadRequestException
      * @throws Exception\DeleteSponsoredProductsTargetingClausesUnauthorizedException
@@ -1363,7 +1409,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spoptimizationrules.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\OptimizationRulesAPISwaggerSearchOptimizationRulesResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\SearchOptimizationRulesBadRequestException
      * @throws Exception\SearchOptimizationRulesUnauthorizedException
@@ -1397,7 +1443,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spCampaign.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateSponsoredProductsCampaignsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateSponsoredProductsCampaignsBadRequestException
      * @throws Exception\CreateSponsoredProductsCampaignsUnauthorizedException
@@ -1433,7 +1479,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spCampaign.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsUpdateSponsoredProductsCampaignsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateSponsoredProductsCampaignsBadRequestException
      * @throws Exception\UpdateSponsoredProductsCampaignsUnauthorizedException
@@ -1463,7 +1509,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spAdGroup.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListSponsoredProductsAdGroupsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListSponsoredProductsAdGroupsBadRequestException
      * @throws Exception\ListSponsoredProductsAdGroupsUnauthorizedException
@@ -1493,7 +1539,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spAdGroup.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsDeleteSponsoredProductsAdGroupsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteSponsoredProductsAdGroupsBadRequestException
      * @throws Exception\DeleteSponsoredProductsAdGroupsUnauthorizedException
@@ -1527,7 +1573,14 @@ class Client extends Runtime\Client\Client
      *
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\GetCampaignRecommendationsResponse|\Psr\Http\Message\ResponseInterface|null
+     *
+     * @throws Exception\GetCampaignRecommendationsBadRequestException
+     * @throws Exception\GetCampaignRecommendationsUnprocessableEntityException
+     * @throws Exception\GetCampaignRecommendationsUnauthorizedException
+     * @throws Exception\GetCampaignRecommendationsInternalServerErrorException
+     * @throws Exception\GetCampaignRecommendationsForbiddenException
+     * @throws Exception\GetCampaignRecommendationsTooManyRequestsException
      */
     public function getCampaignRecommendations(array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
@@ -1550,7 +1603,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeKeyword.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsDeleteSponsoredProductsCampaignNegativeKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteSponsoredProductsCampaignNegativeKeywordsBadRequestException
      * @throws Exception\DeleteSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
@@ -1582,7 +1635,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spoptimizationrules.v1+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\AssociateOptimizationRulesToCampaignBadRequestException
      * @throws Exception\AssociateOptimizationRulesToCampaignUnauthorizedException
@@ -1610,7 +1663,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spCampaignNegativeKeyword.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListSponsoredProductsCampaignNegativeKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListSponsoredProductsCampaignNegativeKeywordsBadRequestException
      * @throws Exception\ListSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
@@ -1640,7 +1693,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spCampaign.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsDeleteSponsoredProductsCampaignsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteSponsoredProductsCampaignsBadRequestException
      * @throws Exception\DeleteSponsoredProductsCampaignsUnauthorizedException
@@ -1670,7 +1723,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spCampaign.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListSponsoredProductsCampaignsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListSponsoredProductsCampaignsBadRequestException
      * @throws Exception\ListSponsoredProductsCampaignsUnauthorizedException
@@ -1764,7 +1817,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spAdGroup.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateSponsoredProductsAdGroupsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateSponsoredProductsAdGroupsBadRequestException
      * @throws Exception\CreateSponsoredProductsAdGroupsUnauthorizedException
@@ -1800,7 +1853,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spAdGroup.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsUpdateSponsoredProductsAdGroupsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateSponsoredProductsAdGroupsBadRequestException
      * @throws Exception\UpdateSponsoredProductsAdGroupsUnauthorizedException
@@ -1832,7 +1885,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproductrecommendationresponse.themes.v3+json|application/vnd.spproductrecommendationresponse.asins.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\ProductRecommendationsByTheme|Model\ProductRecommendationsByASIN|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetProductRecommendationsBadRequestException
      * @throws Exception\GetProductRecommendationsUnprocessableEntityException
@@ -1860,7 +1913,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spNegativeTargetingClause.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsDeleteSponsoredProductsNegativeTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteSponsoredProductsNegativeTargetingClausesBadRequestException
      * @throws Exception\DeleteSponsoredProductsNegativeTargetingClausesUnauthorizedException
@@ -1890,7 +1943,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spKeyword.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsDeleteSponsoredProductsKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteSponsoredProductsKeywordsBadRequestException
      * @throws Exception\DeleteSponsoredProductsKeywordsUnauthorizedException
@@ -1917,7 +1970,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SPCampaignOptimizationRecommendationAPIResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetOptimizationRuleEligibilityBadRequestException
      * @throws Exception\GetOptimizationRuleEligibilityUnprocessableEntityException
@@ -1981,7 +2034,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\DeleteSPCampaignOptimizationRuleResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\DeleteCampaignOptimizationRuleBadRequestException
      * @throws Exception\DeleteCampaignOptimizationRuleUnprocessableEntityException
@@ -2010,7 +2063,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.optimizationrules.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\GetSPCampaignOptimizationRuleResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetCampaignOptimizationRuleBadRequestException
      * @throws Exception\GetCampaignOptimizationRuleUnprocessableEntityException
@@ -2047,7 +2100,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeKeyword.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateSponsoredProductsCampaignNegativeKeywordsBadRequestException
      * @throws Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
@@ -2083,7 +2136,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spCampaignNegativeKeyword.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateSponsoredProductsCampaignNegativeKeywordsBadRequestException
      * @throws Exception\UpdateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
@@ -2115,7 +2168,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spTargetPromotionGroupTarget.v1+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListTargetPromotionGroupTargetsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListTargetPromotionGroupTargetsBadRequestException
      * @throws Exception\ListTargetPromotionGroupTargetsUnauthorizedException
@@ -2146,7 +2199,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spTargetingClause.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListSponsoredProductsTargetingClausesResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListSponsoredProductsTargetingClausesBadRequestException
      * @throws Exception\ListSponsoredProductsTargetingClausesUnauthorizedException
@@ -2176,7 +2229,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spNegativeKeyword.v3+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsListSponsoredProductsNegativeKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\ListSponsoredProductsNegativeKeywordsBadRequestException
      * @throws Exception\ListSponsoredProductsNegativeKeywordsUnauthorizedException
@@ -2206,7 +2259,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spkeywordsrecommendation.v5+json|application/json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\GlobalRankedTargetWithThemedBidsResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetGlobalRankedKeywordRecommendationBadRequestException
      * @throws Exception\GetGlobalRankedKeywordRecommendationUnprocessableEntityException
@@ -2243,7 +2296,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spNegativeKeyword.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsCreateSponsoredProductsNegativeKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\CreateSponsoredProductsNegativeKeywordsBadRequestException
      * @throws Exception\CreateSponsoredProductsNegativeKeywordsUnauthorizedException
@@ -2279,7 +2332,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spNegativeKeyword.v3+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\SponsoredProductsUpdateSponsoredProductsNegativeKeywordsResponseContent|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\UpdateSponsoredProductsNegativeKeywordsBadRequestException
      * @throws Exception\UpdateSponsoredProductsNegativeKeywordsUnauthorizedException
@@ -2306,7 +2359,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/json|application/vnd.spcampaignbudgetusage.v1+json
      *
-     * @return \Psr\Http\Message\ResponseInterface|null
+     * @return Model\BudgetUsageCampaignResponse|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\SpCampaignsBudgetUsageBadRequestException
      * @throws Exception\SpCampaignsBudgetUsageUnprocessableEntityException

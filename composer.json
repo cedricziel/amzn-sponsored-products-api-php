@@ -16,7 +16,7 @@
         }
     ],
     "require-dev": {
-        "jane-php/open-api-3": "^7.8",
+        "jane-php/jane-php": "dev-vnd-plus-json as 7.8.0",
         "friendsofphp/php-cs-fixer": "^3.59"
     },
     "config": {
@@ -26,11 +26,18 @@
     },
     "require": {
         "php": "^8.3",
-        "jane-php/open-api-runtime": "^7.8"
+        "jane-php/open-api-runtime": "^7.8",
+        "nyholm/psr7": "^1.8"
     },
     "extra": {
         "symfony": {
             "allow-contrib": "true"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/cedricziel/janephp.git"
+        }
+    ]
 }
