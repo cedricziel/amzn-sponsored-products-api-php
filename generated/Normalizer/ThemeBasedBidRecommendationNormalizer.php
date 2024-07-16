@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class;
+            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class;
+            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class === get_class($data);
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -63,10 +63,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setBidRecommendationsForTargetingExpressions($values);
                 unset($data['bidRecommendationsForTargetingExpressions']);
             }
-            if (\array_key_exists('impactMetrics', $data) && $data['impactMetrics'] !== null) {
+            if (\array_key_exists('impactMetrics', $data) && null !== $data['impactMetrics']) {
                 $object->setImpactMetrics($this->denormalizer->denormalize($data['impactMetrics'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class, 'json', $context));
                 unset($data['impactMetrics']);
-            } elseif (\array_key_exists('impactMetrics', $data) && $data['impactMetrics'] === null) {
+            } elseif (\array_key_exists('impactMetrics', $data) && null === $data['impactMetrics']) {
                 $object->setImpactMetrics(null);
             }
             foreach ($data as $key => $value_1) {
@@ -114,12 +114,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class;
+            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class;
+            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendation::class === get_class($data);
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
@@ -146,10 +146,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setBidRecommendationsForTargetingExpressions($values);
                 unset($data['bidRecommendationsForTargetingExpressions']);
             }
-            if (\array_key_exists('impactMetrics', $data) && $data['impactMetrics'] !== null) {
+            if (\array_key_exists('impactMetrics', $data) && null !== $data['impactMetrics']) {
                 $object->setImpactMetrics($this->denormalizer->denormalize($data['impactMetrics'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class, 'json', $context));
                 unset($data['impactMetrics']);
-            } elseif (\array_key_exists('impactMetrics', $data) && $data['impactMetrics'] === null) {
+            } elseif (\array_key_exists('impactMetrics', $data) && null === $data['impactMetrics']) {
                 $object->setImpactMetrics(null);
             }
             foreach ($data as $key => $value_1) {

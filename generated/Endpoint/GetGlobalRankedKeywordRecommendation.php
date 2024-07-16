@@ -95,28 +95,28 @@ class GetGlobalRankedKeywordRecommendation extends \cedricziel\amznsponsoredprod
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json') !== false)) {
+        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json'))) {
             return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\GlobalRankedTargetWithThemedBidsResponse', 'json');
         }
-        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetGlobalRankedKeywordRecommendationBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
         }
-        if (is_null($contentType) === false && (422 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+        if (false === is_null($contentType) && (422 === $status && false !== mb_strpos($contentType, 'application/json'))) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetGlobalRankedKeywordRecommendationUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
         }
-        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetGlobalRankedKeywordRecommendationUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
         }
-        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetGlobalRankedKeywordRecommendationInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
         }
-        if (is_null($contentType) === false && (415 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+        if (false === is_null($contentType) && (415 === $status && false !== mb_strpos($contentType, 'application/json'))) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetGlobalRankedKeywordRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
         }
-        if (is_null($contentType) === false && (503 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+        if (false === is_null($contentType) && (503 === $status && false !== mb_strpos($contentType, 'application/json'))) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetGlobalRankedKeywordRecommendationServiceUnavailableException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
         }
-        if (is_null($contentType) === false && (429 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+        if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
             throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetGlobalRankedKeywordRecommendationTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
         }
     }
