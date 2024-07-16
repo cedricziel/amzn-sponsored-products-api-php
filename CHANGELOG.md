@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.0.1...v1.1.0) (2024-07-16)
+
+
+### Features
+
+* use jane-dev to use +json content-type ([2d0a559](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/2d0a559440abab26a49646eb51262c6e63178fab))
+
 ## [1.0.1](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.0.0...v1.0.1) (2024-07-14)
 
 
