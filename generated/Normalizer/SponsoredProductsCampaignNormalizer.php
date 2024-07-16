@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class;
+            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class;
+            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class === get_class($data);
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -55,10 +55,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setPortfolioId($data['portfolioId']);
                 unset($data['portfolioId']);
             }
-            if (\array_key_exists('endDate', $data) && $data['endDate'] !== null) {
+            if (\array_key_exists('endDate', $data) && null !== $data['endDate']) {
                 $object->setEndDate(\DateTime::createFromFormat('Y-m-d', $data['endDate'])->setTime(0, 0, 0));
                 unset($data['endDate']);
-            } elseif (\array_key_exists('endDate', $data) && $data['endDate'] === null) {
+            } elseif (\array_key_exists('endDate', $data) && null === $data['endDate']) {
                 $object->setEndDate(null);
             }
             if (\array_key_exists('campaignId', $data)) {
@@ -162,12 +162,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class;
+            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class;
+            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaign::class === get_class($data);
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
@@ -186,10 +186,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setPortfolioId($data['portfolioId']);
                 unset($data['portfolioId']);
             }
-            if (\array_key_exists('endDate', $data) && $data['endDate'] !== null) {
+            if (\array_key_exists('endDate', $data) && null !== $data['endDate']) {
                 $object->setEndDate(\DateTime::createFromFormat('Y-m-d', $data['endDate'])->setTime(0, 0, 0));
                 unset($data['endDate']);
-            } elseif (\array_key_exists('endDate', $data) && $data['endDate'] === null) {
+            } elseif (\array_key_exists('endDate', $data) && null === $data['endDate']) {
                 $object->setEndDate(null);
             }
             if (\array_key_exists('campaignId', $data)) {

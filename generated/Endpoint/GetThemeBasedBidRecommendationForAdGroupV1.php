@@ -97,74 +97,74 @@ class GetThemeBasedBidRecommendationForAdGroupV1 extends \cedricziel\amznsponsor
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (200 === $status) {
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json')) {
                 return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponseV4', 'json');
             }
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json')) {
                 return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThemeBasedBidRecommendationResponse', 'json');
             }
         }
         if (400 === $status) {
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1BadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1BadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
         }
         if (422 === $status) {
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1UnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1UnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
         }
         if (401 === $status) {
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1UnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1UnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
         }
         if (500 === $status) {
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1InternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1InternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
         }
         if (415 === $status) {
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1UnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1UnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
         }
         if (405 === $status) {
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1MethodNotAllowedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1MethodNotAllowedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
         }
         if (406 === $status) {
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1NotAcceptableException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1NotAcceptableException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
         }
         if (429 === $status) {
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v4+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1TooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
-            if (mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json') !== false) {
+            if (false !== mb_strpos($contentType, 'application/vnd.spthemebasedbidrecommendation.v3+json')) {
                 throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetThemeBasedBidRecommendationForAdGroupV1TooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError', 'json'), $response);
             }
         }

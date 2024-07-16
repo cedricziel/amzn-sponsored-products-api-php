@@ -1,6 +1,6 @@
 <?php
 
-require_once __FILE__ . "../vendor/autoload.php";
+require_once __FILE__.'../vendor/autoload.php';
 
 use cedricziel\amznsponsoredproductsapiphp\Generated\Client;
 use cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent;

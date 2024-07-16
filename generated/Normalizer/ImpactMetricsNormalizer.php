@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class;
+            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class;
+            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class === get_class($data);
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -51,16 +51,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
-            if (\array_key_exists('clicks', $data) && $data['clicks'] !== null) {
+            if (\array_key_exists('clicks', $data) && null !== $data['clicks']) {
                 $object->setClicks($this->denormalizer->denormalize($data['clicks'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetric::class, 'json', $context));
                 unset($data['clicks']);
-            } elseif (\array_key_exists('clicks', $data) && $data['clicks'] === null) {
+            } elseif (\array_key_exists('clicks', $data) && null === $data['clicks']) {
                 $object->setClicks(null);
             }
-            if (\array_key_exists('orders', $data) && $data['orders'] !== null) {
+            if (\array_key_exists('orders', $data) && null !== $data['orders']) {
                 $object->setOrders($this->denormalizer->denormalize($data['orders'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetric::class, 'json', $context));
                 unset($data['orders']);
-            } elseif (\array_key_exists('orders', $data) && $data['orders'] === null) {
+            } elseif (\array_key_exists('orders', $data) && null === $data['orders']) {
                 $object->setOrders(null);
             }
             foreach ($data as $key => $value) {
@@ -105,12 +105,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return $type === \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class;
+            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && get_class($data) === cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class;
+            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetrics::class === get_class($data);
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
@@ -125,16 +125,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
-            if (\array_key_exists('clicks', $data) && $data['clicks'] !== null) {
+            if (\array_key_exists('clicks', $data) && null !== $data['clicks']) {
                 $object->setClicks($this->denormalizer->denormalize($data['clicks'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetric::class, 'json', $context));
                 unset($data['clicks']);
-            } elseif (\array_key_exists('clicks', $data) && $data['clicks'] === null) {
+            } elseif (\array_key_exists('clicks', $data) && null === $data['clicks']) {
                 $object->setClicks(null);
             }
-            if (\array_key_exists('orders', $data) && $data['orders'] !== null) {
+            if (\array_key_exists('orders', $data) && null !== $data['orders']) {
                 $object->setOrders($this->denormalizer->denormalize($data['orders'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ImpactMetric::class, 'json', $context));
                 unset($data['orders']);
-            } elseif (\array_key_exists('orders', $data) && $data['orders'] === null) {
+            } elseif (\array_key_exists('orders', $data) && null === $data['orders']) {
                 $object->setOrders(null);
             }
             foreach ($data as $key => $value) {
