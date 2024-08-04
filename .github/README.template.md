@@ -13,20 +13,21 @@ composer require cedricziel/amznsponsoredproductsapiphp
 Instantiate a client, configure your secrets and continue to use:
 
 ```php
-// You need to obtain a token via the Amazon LwA workflow
-$token = '..';
+use CedricZiel\AmznSponsoredProductsApiPHP\Endpoint;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent;
+use CedricZiel\AmznSponsoredProductsApiPHP\Header;
+use CedricZiel\AmznSponsoredProductsApiPHP\SponsoredProductsApiClient;
 
-$client = \CedricZiel\AmznSponsoredProductsApiPHP\Client::create(
-    null, // or provide your own client
-    [
-        // set the API endpoint to use, see the Amazon documentation
-        new AddHostPlugin(new Uri('https://advertising-api-eu.amazon.com'));
-        new BearerAuthAuthentication($token),
-    ]
-);
+// You need to obtain a token via the Amazon LwA workflow
+$accessToken = '...';
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 
 // execute the endpoint of choice, see below ...
-$client->listSponsoredProductsCampaigns();
+$body = new SponsoredProductsListSponsoredProductsCampaignsRequestContent();
+$res = $client->listSponsoredProductsCampaigns($body, [
+    Header::AmazonAdvertisingApiClientId->value => '...',
+    Header::AmazonAdvertisingApiScope->value => '...',
+]);
 ```
 
 ### docs ###

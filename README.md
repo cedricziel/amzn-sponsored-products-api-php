@@ -13,20 +13,21 @@ composer require cedricziel/amznsponsoredproductsapiphp
 Instantiate a client, configure your secrets and continue to use:
 
 ```php
-// You need to obtain a token via the Amazon LwA workflow
-$token = '..';
+use CedricZiel\AmznSponsoredProductsApiPHP\Endpoint;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent;
+use CedricZiel\AmznSponsoredProductsApiPHP\Header;
+use CedricZiel\AmznSponsoredProductsApiPHP\SponsoredProductsApiClient;
 
-$client = \CedricZiel\AmznSponsoredProductsApiPHP\Client::create(
-    null, // or provide your own client
-    [
-        // set the API endpoint to use, see the Amazon documentation
-        new AddHostPlugin(new Uri('https://advertising-api-eu.amazon.com'));
-        new BearerAuthAuthentication($token),
-    ]
-);
+// You need to obtain a token via the Amazon LwA workflow
+$accessToken = '...';
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 
 // execute the endpoint of choice, see below ...
-$client->listSponsoredProductsCampaigns();
+$body = new SponsoredProductsListSponsoredProductsCampaignsRequestContent();
+$res = $client->listSponsoredProductsCampaigns($body, [
+    Header::AmazonAdvertisingApiClientId->value => '...',
+    Header::AmazonAdvertisingApiScope->value => '...',
+]);
 ```
 
 ### GetThemeBasedBidRecommendationForAdGroup_v1 - post /sp/targets/bid/recommendations
@@ -39,7 +40,7 @@ This API is currently available at marketplaces where SP is available. The API s
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getThemeBasedBidRecommendationForAdGroupV1();
 ```
 
@@ -53,7 +54,7 @@ The <b> POST /sp/targets/keywords/recommendations </b> endpoint returns recommen
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getRankedKeywordRecommendation();
 ```
 
@@ -67,7 +68,7 @@ List keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listSponsoredProductsKeywords();
 ```
 
@@ -81,7 +82,7 @@ Delete negative keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteSponsoredProductsNegativeKeywords();
 ```
 
@@ -95,7 +96,7 @@ Get number of targetable asins based on refinements provided by the user. Please
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getTargetableASINCounts();
 ```
 
@@ -109,7 +110,7 @@ Returns all targetable categories. This API returns a large JSON string containi
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getTargetableCategories();
 ```
 
@@ -123,7 +124,7 @@ Creates a campaign optimization rule.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createOptimizationRule();
 ```
 
@@ -137,7 +138,7 @@ Updates a campaign optimization rule.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateOptimizationRule();
 ```
 
@@ -151,7 +152,7 @@ A maximum of 250 rules can be associated to a campaign. Note that the name of ea
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createAssociatedBudgetRulesForSPCampaigns();
 ```
 
@@ -174,7 +175,7 @@ header
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listAssociatedBudgetRulesForSPCampaigns();
 ```
 
@@ -188,7 +189,7 @@ Returns up to 100 brands related to keyword input for negative targeting.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->searchBrands();
 ```
 
@@ -202,7 +203,7 @@ Returns refinements according to category input.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getRefinementsForCategory();
 ```
 
@@ -216,7 +217,7 @@ Gets campaign optimization rule state. Recommended refresh frequency is once a d
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getRuleNotification();
 ```
 
@@ -231,7 +232,7 @@ promotion group id.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listTargetPromotionGroups();
 ```
 
@@ -245,7 +246,7 @@ List product ads
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listSponsoredProductsProductAds();
 ```
 
@@ -260,7 +261,7 @@ Creates one or more optimization rules.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createOptimizationRules();
 ```
 
@@ -275,7 +276,7 @@ Updates one or more optimization rules.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateOptimizationRules();
 ```
 
@@ -290,7 +291,7 @@ and manual-targeting adGroups, divided by keyword targeting adGroups, and produc
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createTargetPromotionGroups();
 ```
 
@@ -304,7 +305,7 @@ Creates keyword and/or product targets in the manual adGroup that are part of th
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createTargetPromotionGroupTargets();
 ```
 
@@ -318,7 +319,7 @@ List negative targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listSponsoredProductsNegativeTargetingClauses();
 ```
 
@@ -332,7 +333,7 @@ Once a Keyword Group specification is created, the performance of Keyword Groups
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getKeywordGroupRecommendations();
 ```
 
@@ -346,7 +347,7 @@ Create product ads
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createSponsoredProductsProductAds();
 ```
 
@@ -360,7 +361,7 @@ Update product ads
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateSponsoredProductsProductAds();
 ```
 
@@ -374,7 +375,7 @@ Creates one or more budget rules.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createBudgetRulesForSPCampaigns();
 ```
 
@@ -385,7 +386,7 @@ Get all budget rules created by an advertiser
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getSPBudgetRulesForAdvertiser();
 ```
 
@@ -399,7 +400,7 @@ Updates one or more budget rules.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateBudgetRulesForSPCampaigns();
 ```
 
@@ -413,7 +414,7 @@ Returns a list of category recommendations for the input list of ASINs. Use this
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getCategoryRecommendationsForASINs();
 ```
 
@@ -427,7 +428,7 @@ Retrieves keyword and product targets of an auto-targeting campaign as recommend
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getTargetPromotionGroupsRecommendations();
 ```
 
@@ -438,7 +439,7 @@ Creates daily budget recommendation along with benchmark metrics when creating a
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getBudgetRecommendation();
 ```
 
@@ -452,7 +453,7 @@ Delete campaign negative targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteSponsoredProductsCampaignNegativeTargetingClauses();
 ```
 
@@ -466,7 +467,7 @@ Delete product ads
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteSponsoredProductsProductAds();
 ```
 
@@ -480,7 +481,7 @@ Returns brands recommended for negative targeting. Only available for Sellers an
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getNegativeBrands();
 ```
 
@@ -494,7 +495,7 @@ Given a list of campaigns as input, this API provides the following metrics -  <
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getBudgetRecommendations();
 ```
 
@@ -508,7 +509,7 @@ Create negative targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createSponsoredProductsNegativeTargetingClauses();
 ```
 
@@ -522,7 +523,7 @@ Update negative targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateSponsoredProductsNegativeTargetingClauses();
 ```
 
@@ -536,7 +537,7 @@ Create targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createSponsoredProductsTargetingClauses();
 ```
 
@@ -550,7 +551,7 @@ Update targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateSponsoredProductsTargetingClauses();
 ```
 
@@ -564,7 +565,7 @@ A rule enables an automatic budget increase for a specified date range or for a 
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->sPGetBudgetRulesRecommendation();
 ```
 
@@ -578,7 +579,7 @@ Create campaign negative targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createSponsoredProductsCampaignNegativeTargetingClauses();
 ```
 
@@ -592,7 +593,7 @@ Update campaign negative targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateSponsoredProductsCampaignNegativeTargetingClauses();
 ```
 
@@ -606,7 +607,7 @@ Create keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createSponsoredProductsKeywords();
 ```
 
@@ -620,7 +621,7 @@ Update keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateSponsoredProductsKeywords();
 ```
 
@@ -634,7 +635,7 @@ List campaign negative targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listSponsoredProductsCampaignNegativeTargetingClauses();
 ```
 
@@ -648,7 +649,7 @@ Delete targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteSponsoredProductsTargetingClauses();
 ```
 
@@ -663,7 +664,7 @@ Searches optimization rules based on optional filters.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->searchOptimizationRules();
 ```
 
@@ -677,7 +678,7 @@ Create campaigns
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createSponsoredProductsCampaigns();
 ```
 
@@ -691,7 +692,7 @@ Update campaigns
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateSponsoredProductsCampaigns();
 ```
 
@@ -705,7 +706,7 @@ List ad groups
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listSponsoredProductsAdGroups();
 ```
 
@@ -719,7 +720,7 @@ Delete ad groups
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteSponsoredProductsAdGroups();
 ```
 
@@ -733,7 +734,7 @@ Gets the top consolidated recommendations across bid, budget, targeting for SP c
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getCampaignRecommendations();
 ```
 
@@ -747,7 +748,7 @@ Delete campaign negative keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteSponsoredProductsCampaignNegativeKeywords();
 ```
 
@@ -762,7 +763,7 @@ Associates one or multiple optimization rules with a campaign.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->associateOptimizationRulesToCampaign();
 ```
 
@@ -776,7 +777,7 @@ List campaign negative keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listSponsoredProductsCampaignNegativeKeywords();
 ```
 
@@ -790,7 +791,7 @@ Delete campaigns
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteSponsoredProductsCampaigns();
 ```
 
@@ -804,7 +805,7 @@ List campaigns
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listSponsoredProductsCampaigns();
 ```
 
@@ -815,7 +816,7 @@ Gets all the campaigns associated with a budget rule
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getCampaignsAssociatedWithSPBudgetRule();
 ```
 
@@ -829,7 +830,7 @@ Disassociates a budget rule specified by identifier from a campaign specified by
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->disassociateAssociatedBudgetRuleForSPCampaigns();
 ```
 
@@ -843,7 +844,7 @@ Create ad groups
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createSponsoredProductsAdGroups();
 ```
 
@@ -857,7 +858,7 @@ Update ad groups
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateSponsoredProductsAdGroups();
 ```
 
@@ -874,7 +875,7 @@ Given an advertised ASIN as input, this API returns suggested ASINs to target in
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getProductRecommendations();
 ```
 
@@ -888,7 +889,7 @@ Delete negative targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteSponsoredProductsNegativeTargetingClauses();
 ```
 
@@ -902,7 +903,7 @@ Delete keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteSponsoredProductsKeywords();
 ```
 
@@ -916,7 +917,7 @@ Gets a campaign optimization rule recommendation for SP campaigns.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getOptimizationRuleEligibility();
 ```
 
@@ -939,7 +940,7 @@ header
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getBudgetRuleByRuleIdForSPCampaigns();
 ```
 
@@ -953,7 +954,7 @@ Gets a campaign optimization rule specified by identifier.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getCampaignOptimizationRule();
 ```
 
@@ -967,7 +968,7 @@ Deletes a campaign optimization rule specified by identifier.
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->deleteCampaignOptimizationRule();
 ```
 
@@ -981,7 +982,7 @@ Create campaign negative keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createSponsoredProductsCampaignNegativeKeywords();
 ```
 
@@ -995,7 +996,7 @@ Update campaign negative keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateSponsoredProductsCampaignNegativeKeywords();
 ```
 
@@ -1009,7 +1010,7 @@ Returns the targets created through target promotion groups for an advertiser an
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listTargetPromotionGroupTargets();
 ```
 
@@ -1023,7 +1024,7 @@ List targeting clauses
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listSponsoredProductsTargetingClauses();
 ```
 
@@ -1037,7 +1038,7 @@ List negative keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->listSponsoredProductsNegativeKeywords();
 ```
 
@@ -1048,7 +1049,7 @@ The <b> POST /sp/global/targets/keywords/recommendations/list </b> endpoint retu
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->getGlobalRankedKeywordRecommendation();
 ```
 
@@ -1062,7 +1063,7 @@ Create negative keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->createSponsoredProductsNegativeKeywords();
 ```
 
@@ -1076,7 +1077,7 @@ Update negative keywords
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->updateSponsoredProductsNegativeKeywords();
 ```
 
@@ -1090,7 +1091,7 @@ Budget usage API for SP campaigns
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->spCampaignsBudgetUsage();
 ```
 
@@ -1104,7 +1105,7 @@ A rule enables an automatic budget increase for a specified date range or for a 
 
 ```php
 // see above how to create a client
-$client = \CedricZiel\\AmznSponsoredProductsApiPHP\Generated\Client::create();
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 $client->sPGetAllRuleEvents();
 ```
 
