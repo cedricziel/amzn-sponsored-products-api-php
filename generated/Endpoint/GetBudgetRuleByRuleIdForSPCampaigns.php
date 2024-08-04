@@ -112,6 +112,6 @@ class GetBudgetRuleByRuleIdForSPCampaigns extends \cedricziel\amznsponsoredprodu
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

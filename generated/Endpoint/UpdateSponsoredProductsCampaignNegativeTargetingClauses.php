@@ -123,6 +123,6 @@ class UpdateSponsoredProductsCampaignNegativeTargetingClauses extends \cedriczie
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

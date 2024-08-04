@@ -116,6 +116,6 @@ class ListSponsoredProductsCampaigns extends \cedricziel\amznsponsoredproductsap
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

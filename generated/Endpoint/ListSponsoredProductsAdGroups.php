@@ -116,6 +116,6 @@ class ListSponsoredProductsAdGroups extends \cedricziel\amznsponsoredproductsapi
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

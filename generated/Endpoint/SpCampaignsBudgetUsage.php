@@ -113,6 +113,6 @@ class SpCampaignsBudgetUsage extends \cedricziel\amznsponsoredproductsapiphp\Gen
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

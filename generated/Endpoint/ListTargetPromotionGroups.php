@@ -123,6 +123,6 @@ class ListTargetPromotionGroups extends \cedricziel\amznsponsoredproductsapiphp\
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

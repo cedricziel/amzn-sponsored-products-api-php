@@ -116,6 +116,6 @@ class ListSponsoredProductsNegativeTargetingClauses extends \cedricziel\amznspon
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

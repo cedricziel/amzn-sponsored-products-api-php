@@ -95,6 +95,6 @@ class SPGetAllRuleEvents extends \cedricziel\amznsponsoredproductsapiphp\Generat
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }
