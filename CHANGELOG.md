@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.1.0...v1.2.0) (2024-08-04)
+
+
+### Features
+
+* Add bearer auth ([863f8ff](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/863f8ff249642a4978462531c591852e2f06dd2c))
+
+
+### Bug Fixes
+
+* set global auth scheme ([c595e22](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/c595e220c66bac9291306f64eb28095fcb988ce7))
+
 ## [1.1.0](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.0.1...v1.1.0) (2024-07-16)
 
 
