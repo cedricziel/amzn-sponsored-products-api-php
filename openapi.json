@@ -4,7 +4,6 @@
         "title": "Sponsored Products",
         "version": "3.0"
     },
-    
     "paths": {
         "/sp/targets/bid/recommendations": {
             "post": {
@@ -31907,5 +31906,11 @@
         },
         "parameters": {}
     },
-    "openapi": "3.0.1"
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ],
+    "openapi": "3.0.1",
+    "$schema": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.json"
 }
