@@ -1,11 +1,17 @@
 <?php
 
-require_once __FILE__.'../vendor/autoload.php';
+use CedricZiel\AmznSponsoredProductsApiPHP\Endpoint;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent;
+use CedricZiel\AmznSponsoredProductsApiPHP\Header;
+use CedricZiel\AmznSponsoredProductsApiPHP\SponsoredProductsApiClient;
 
-use cedricziel\amznsponsoredproductsapiphp\Generated\Client;
-use cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsCampaignsRequestContent;
+require_once __DIR__.'/../vendor/autoload.php';
 
-$client = Client::create(null);
+$accessToken = '...';
+$client = SponsoredProductsApiClient::createFor(Endpoint::Europe, $accessToken);
 
-$params = new SponsoredProductsListSponsoredProductsCampaignsRequestContent();
-$res = $client->listSponsoredProductsCampaigns();
+$body = new SponsoredProductsListSponsoredProductsCampaignsRequestContent();
+$res = $client->listSponsoredProductsCampaigns($body, [
+    Header::AmazonAdvertisingApiClientId->value => '...',
+    Header::AmazonAdvertisingApiScope->value => '...',
+]);
