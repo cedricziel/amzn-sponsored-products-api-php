@@ -4,6 +4,7 @@
         "title": "Sponsored Products",
         "version": "3.0"
     },
+    
     "paths": {
         "/sp/targets/bid/recommendations": {
             "post": {
@@ -31898,7 +31899,12 @@
         "responses": {},
         "callbacks": {},
         "links": {},
-        "securitySchemes": {},
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        },
         "parameters": {}
     },
     "openapi": "3.0.1"
