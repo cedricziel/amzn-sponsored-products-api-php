@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class GetTargetableCategories extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class GetTargetableCategories extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
     protected $accept;
 
     /**
@@ -91,12 +91,12 @@ class GetTargetableCategories extends \cedricziel\amznsponsoredproductsapiphp\Ge
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategories|\cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategoriesLoP|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\TargetableCategories|\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\TargetableCategoriesLoP|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetTargetableCategoriesBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetTargetableCategoriesUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetTargetableCategoriesInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetTargetableCategoriesTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetTargetableCategoriesBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetTargetableCategoriesUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetTargetableCategoriesInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetTargetableCategoriesTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -104,26 +104,26 @@ class GetTargetableCategories extends \cedricziel\amznsponsoredproductsapiphp\Ge
         $body = (string) $response->getBody();
         if (200 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spproducttargetingresponse.v3+json')) {
-                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategories', 'json');
+                return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\TargetableCategories', 'json');
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spproducttargetingresponse.v4+json')) {
-                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategories', 'json');
+                return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\TargetableCategories', 'json');
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spproducttargetingresponse.v5+json')) {
-                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetableCategoriesLoP', 'json');
+                return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\TargetableCategoriesLoP', 'json');
             }
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetTargetableCategoriesBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetTargetableCategoriesBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BadRequestException', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetTargetableCategoriesUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetTargetableCategoriesUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnauthorizedException', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetTargetableCategoriesInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetTargetableCategoriesInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InternalServerException', 'json'), $response);
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetTargetableCategoriesTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetTargetableCategoriesTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ThrottlingException', 'json'), $response);
         }
     }
 

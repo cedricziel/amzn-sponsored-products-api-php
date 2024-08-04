@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetRuleNotificationTooManyRequestsException extends TooManyRequestsException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError
      */
     private $campaignOptimizationRuleError;
     /**
@@ -21,14 +21,14 @@ class GetRuleNotificationTooManyRequestsException extends TooManyRequestsExcepti
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError $campaignOptimizationRuleError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError $campaignOptimizationRuleError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Too Many Requests. The request was rate-limited. Retry later.');
         $this->campaignOptimizationRuleError = $campaignOptimizationRuleError;
         $this->response = $response;
     }
 
-    public function getCampaignOptimizationRuleError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError
+    public function getCampaignOptimizationRuleError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError
     {
         return $this->campaignOptimizationRuleError;
     }

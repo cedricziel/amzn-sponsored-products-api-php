@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class SpCampaignsBudgetUsageTooManyRequestsException extends TooManyRequestsException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsageError
      */
     private $budgetUsageError;
     /**
@@ -21,14 +21,14 @@ class SpCampaignsBudgetUsageTooManyRequestsException extends TooManyRequestsExce
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError $budgetUsageError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsageError $budgetUsageError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Too Many Requests. The request was rate-limited. Retry later.');
         $this->budgetUsageError = $budgetUsageError;
         $this->response = $response;
     }
 
-    public function getBudgetUsageError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError
+    public function getBudgetUsageError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsageError
     {
         return $this->budgetUsageError;
     }

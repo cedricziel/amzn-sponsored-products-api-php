@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class SPGetAllRuleEventsInternalServerErrorException extends InternalServerErrorException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetRuleEventError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPGetRuleEventError
      */
     private $sPGetRuleEventError;
     /**
@@ -21,14 +21,14 @@ class SPGetAllRuleEventsInternalServerErrorException extends InternalServerError
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetRuleEventError $sPGetRuleEventError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPGetRuleEventError $sPGetRuleEventError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Internal Server Error. Something went wrong on the server.');
         $this->sPGetRuleEventError = $sPGetRuleEventError;
         $this->response = $response;
     }
 
-    public function getSPGetRuleEventError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPGetRuleEventError
+    public function getSPGetRuleEventError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPGetRuleEventError
     {
         return $this->sPGetRuleEventError;
     }

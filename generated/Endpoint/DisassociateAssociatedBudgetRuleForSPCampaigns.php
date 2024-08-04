@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class DisassociateAssociatedBudgetRuleForSPCampaigns extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class DisassociateAssociatedBudgetRuleForSPCampaigns extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
     protected $campaignId;
     protected $budgetRuleId;
 
@@ -70,12 +70,12 @@ class DisassociateAssociatedBudgetRuleForSPCampaigns extends \cedricziel\amznspo
     /**
      * @return null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnprocessableEntityException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsForbiddenException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnprocessableEntityException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsForbiddenException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -85,22 +85,22 @@ class DisassociateAssociatedBudgetRuleForSPCampaigns extends \cedricziel\amznspo
             return json_decode($body);
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (422 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnprocessableEntityException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DisassociateAssociatedBudgetRuleForSPCampaignsTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
     }
 

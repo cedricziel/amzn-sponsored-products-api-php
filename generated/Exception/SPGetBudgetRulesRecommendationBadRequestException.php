@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class SPGetBudgetRulesRecommendationBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPBudgetRulesRecommendationError
      */
     private $sPBudgetRulesRecommendationError;
     /**
@@ -21,14 +21,14 @@ class SPGetBudgetRulesRecommendationBadRequestException extends BadRequestExcept
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError $sPBudgetRulesRecommendationError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPBudgetRulesRecommendationError $sPBudgetRulesRecommendationError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Bad Request.');
         $this->sPBudgetRulesRecommendationError = $sPBudgetRulesRecommendationError;
         $this->response = $response;
     }
 
-    public function getSPBudgetRulesRecommendationError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError
+    public function getSPBudgetRulesRecommendationError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPBudgetRulesRecommendationError
     {
         return $this->sPBudgetRulesRecommendationError;
     }

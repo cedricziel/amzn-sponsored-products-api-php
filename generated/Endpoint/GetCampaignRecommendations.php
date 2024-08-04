@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class GetCampaignRecommendations extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class GetCampaignRecommendations extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
 
     /**
      * Gets the top consolidated recommendations across bid, budget, targeting for SP campaigns given an advertiser profile id. The recommendations are refreshed everyday.
@@ -83,39 +83,39 @@ class GetCampaignRecommendations extends \cedricziel\amznsponsoredproductsapiphp
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCampaignRecommendationsResponse|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GetCampaignRecommendationsResponse|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsUnprocessableEntityException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsForbiddenException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsUnprocessableEntityException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsForbiddenException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
-            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCampaignRecommendationsResponse', 'json');
+            return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GetCampaignRecommendationsResponse', 'json');
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\ValidationException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ValidationException', 'json'), $response);
         }
         if (false === is_null($contentType) && (422 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsUnprocessableEntityException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnprocessableEntityException', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnauthorizedException', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InternalServerException', 'json'), $response);
         }
         if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\AccessDeniedException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\AccessDeniedException', 'json'), $response);
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCampaignRecommendationsTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ThrottlingException', 'json'), $response);
         }
     }
 

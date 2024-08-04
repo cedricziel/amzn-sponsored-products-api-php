@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class ListSponsoredProductsAdGroups extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class ListSponsoredProductsAdGroups extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
     protected $accept;
 
     /**
@@ -30,7 +30,7 @@ class ListSponsoredProductsAdGroups extends \cedricziel\amznsponsoredproductsapi
      *
      * @param array $accept Accept content header application/vnd.spAdGroup.v3+json|application/json
      */
-    public function __construct(?\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsRequestContent $requestBody = null, array $headerParameters = [], array $accept = [])
+    public function __construct(?\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsRequestContent $requestBody = null, array $headerParameters = [], array $accept = [])
     {
         $this->body = $requestBody;
         $this->headerParameters = $headerParameters;
@@ -49,7 +49,7 @@ class ListSponsoredProductsAdGroups extends \cedricziel\amznsponsoredproductsapi
 
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsRequestContent) {
+        if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsRequestContent) {
             return [['Content-Type' => ['application/vnd.spAdGroup.v3+json']], $this->body];
         }
 
@@ -78,39 +78,39 @@ class ListSponsoredProductsAdGroups extends \cedricziel\amznsponsoredproductsapi
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsResponseContent|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsResponseContent|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsForbiddenException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsUnsupportedMediaTypeException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsForbiddenException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsUnsupportedMediaTypeException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/vnd.spAdGroup.v3+json'))) {
-            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsResponseContent', 'json');
+            return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsAdGroupsResponseContent', 'json');
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupAccessExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAdGroupAccessExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (415 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsUnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsUnsupportedMediaTypeException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\ListSponsoredProductsAdGroupsTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\ListSponsoredProductsAdGroupsTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent', 'json'), $response);
         }
     }
 

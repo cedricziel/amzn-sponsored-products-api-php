@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetKeywordGroupRecommendationsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsException
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException
      */
     private $sPKeywordGroupsException;
     /**
@@ -21,14 +21,14 @@ class GetKeywordGroupRecommendationsBadRequestException extends BadRequestExcept
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsException $sPKeywordGroupsException, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException $sPKeywordGroupsException, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Bad Request.');
         $this->sPKeywordGroupsException = $sPKeywordGroupsException;
         $this->response = $response;
     }
 
-    public function getSPKeywordGroupsException(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPKeywordGroupsException
+    public function getSPKeywordGroupsException(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException
     {
         return $this->sPKeywordGroupsException;
     }

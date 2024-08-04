@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetCampaignRecommendationsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ValidationException
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ValidationException
      */
     private $validationException;
     /**
@@ -21,14 +21,14 @@ class GetCampaignRecommendationsBadRequestException extends BadRequestException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\ValidationException $validationException, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ValidationException $validationException, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Invalid Request - The input fails to satisfy the constraints of the API.');
         $this->validationException = $validationException;
         $this->response = $response;
     }
 
-    public function getValidationException(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ValidationException
+    public function getValidationException(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ValidationException
     {
         return $this->validationException;
     }

@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class UpdateSponsoredProductsTargetingClauses extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class UpdateSponsoredProductsTargetingClauses extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
     protected $accept;
 
     /**
@@ -36,7 +36,7 @@ class UpdateSponsoredProductsTargetingClauses extends \cedricziel\amznsponsoredp
      *
      * @param array $accept Accept content header application/json|application/vnd.spTargetingClause.v3+json
      */
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContent $requestBody, array $headerParameters = [], array $accept = [])
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContent $requestBody, array $headerParameters = [], array $accept = [])
     {
         $this->body = $requestBody;
         $this->headerParameters = $headerParameters;
@@ -55,7 +55,7 @@ class UpdateSponsoredProductsTargetingClauses extends \cedricziel\amznsponsoredp
 
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContent) {
+        if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesRequestContent) {
             return [['Content-Type' => ['application/vnd.spTargetingClause.v3+json']], $this->body];
         }
 
@@ -85,39 +85,39 @@ class UpdateSponsoredProductsTargetingClauses extends \cedricziel\amznsponsoredp
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContent|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContent|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesForbiddenException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesUnsupportedMediaTypeException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesForbiddenException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesUnsupportedMediaTypeException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (415 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesUnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesUnsupportedMediaTypeException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (207 === $status && false !== mb_strpos($contentType, 'application/vnd.spTargetingClause.v3+json'))) {
-            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContent', 'json');
+            return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateSponsoredProductsTargetingClausesResponseContent', 'json');
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\UpdateSponsoredProductsTargetingClausesTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\UpdateSponsoredProductsTargetingClausesTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent', 'json'), $response);
         }
     }
 

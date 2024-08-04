@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class CreateSponsoredProductsCampaignNegativeKeywords extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class CreateSponsoredProductsCampaignNegativeKeywords extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
     protected $accept;
 
     /**
@@ -36,7 +36,7 @@ class CreateSponsoredProductsCampaignNegativeKeywords extends \cedricziel\amznsp
      *
      * @param array $accept Accept content header application/json|application/vnd.spCampaignNegativeKeyword.v3+json
      */
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContent $requestBody, array $headerParameters = [], array $accept = [])
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContent $requestBody, array $headerParameters = [], array $accept = [])
     {
         $this->body = $requestBody;
         $this->headerParameters = $headerParameters;
@@ -55,7 +55,7 @@ class CreateSponsoredProductsCampaignNegativeKeywords extends \cedricziel\amznsp
 
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContent) {
+        if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsRequestContent) {
             return [['Content-Type' => ['application/vnd.spCampaignNegativeKeyword.v3+json']], $this->body];
         }
 
@@ -85,39 +85,39 @@ class CreateSponsoredProductsCampaignNegativeKeywords extends \cedricziel\amznsp
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContent|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContent|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsForbiddenException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnsupportedMediaTypeException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsForbiddenException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnsupportedMediaTypeException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (415 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsUnsupportedMediaTypeException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent', 'json'), $response);
         }
         if (false === is_null($contentType) && (207 === $status && false !== mb_strpos($contentType, 'application/vnd.spCampaignNegativeKeyword.v3+json'))) {
-            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContent', 'json');
+            return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateSponsoredProductsCampaignNegativeKeywordsResponseContent', 'json');
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\CreateSponsoredProductsCampaignNegativeKeywordsTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent', 'json'), $response);
         }
     }
 

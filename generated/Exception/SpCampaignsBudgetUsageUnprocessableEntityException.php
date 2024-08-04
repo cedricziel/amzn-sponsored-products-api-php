@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class SpCampaignsBudgetUsageUnprocessableEntityException extends UnprocessableEntityException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsageError
      */
     private $budgetUsageError;
     /**
@@ -21,14 +21,14 @@ class SpCampaignsBudgetUsageUnprocessableEntityException extends UnprocessableEn
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError $budgetUsageError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsageError $budgetUsageError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Unprocessable entity. The server understood the request, but was unable to process the instruction.');
         $this->budgetUsageError = $budgetUsageError;
         $this->response = $response;
     }
 
-    public function getBudgetUsageError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetUsageError
+    public function getBudgetUsageError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsageError
     {
         return $this->budgetUsageError;
     }

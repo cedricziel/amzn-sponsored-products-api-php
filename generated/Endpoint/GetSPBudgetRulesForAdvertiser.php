@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class GetSPBudgetRulesForAdvertiser extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class GetSPBudgetRulesForAdvertiser extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
 
     /**
      * @param array $queryParameters {
@@ -78,39 +78,39 @@ class GetSPBudgetRulesForAdvertiser extends \cedricziel\amznsponsoredproductsapi
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRulesForAdvertiserResponse|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GetSPBudgetRulesForAdvertiserResponse|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserUnprocessableEntityException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserForbiddenException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserUnprocessableEntityException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserForbiddenException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetSPBudgetRulesForAdvertiserResponse', 'json');
+            return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GetSPBudgetRulesForAdvertiserResponse', 'json');
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (422 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserUnprocessableEntityException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetSPBudgetRulesForAdvertiserTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetSPBudgetRulesForAdvertiserTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError', 'json'), $response);
         }
     }
 

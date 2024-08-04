@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class DeleteSponsoredProductsAdGroupsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent
      */
     private $sponsoredProductsAdGroupMutationExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class DeleteSponsoredProductsAdGroupsBadRequestException extends BadRequestExcep
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent $sponsoredProductsAdGroupMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent $sponsoredProductsAdGroupMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('AdGroupMutationException 400 response');
         $this->sponsoredProductsAdGroupMutationExceptionResponseContent = $sponsoredProductsAdGroupMutationExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsAdGroupMutationExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent
+    public function getSponsoredProductsAdGroupMutationExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAdGroupMutationExceptionResponseContent
     {
         return $this->sponsoredProductsAdGroupMutationExceptionResponseContent;
     }

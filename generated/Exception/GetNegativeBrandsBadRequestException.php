@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetNegativeBrandsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BadRequestException
      */
     private $badRequestException;
     /**
@@ -21,14 +21,14 @@ class GetNegativeBrandsBadRequestException extends BadRequestException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException $badRequestException, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BadRequestException $badRequestException, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Bad Request - The input fails to satisfy the constraints of the API.');
         $this->badRequestException = $badRequestException;
         $this->response = $response;
     }
 
-    public function getBadRequestException(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException
+    public function getBadRequestException(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BadRequestException
     {
         return $this->badRequestException;
     }

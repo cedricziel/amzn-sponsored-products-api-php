@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetCampaignRecommendationsUnauthorizedException extends UnauthorizedException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnauthorizedException
      */
     private $unauthorizedException;
     /**
@@ -21,14 +21,14 @@ class GetCampaignRecommendationsUnauthorizedException extends UnauthorizedExcept
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException $unauthorizedException, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnauthorizedException $unauthorizedException, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Unauthorized - Request failed because user is not authenticated.');
         $this->unauthorizedException = $unauthorizedException;
         $this->response = $response;
     }
 
-    public function getUnauthorizedException(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException
+    public function getUnauthorizedException(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnauthorizedException
     {
         return $this->unauthorizedException;
     }

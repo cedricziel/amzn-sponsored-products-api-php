@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class ListSponsoredProductsNegativeKeywordsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent
      */
     private $sponsoredProductsNegativeKeywordAccessExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class ListSponsoredProductsNegativeKeywordsBadRequestException extends BadReques
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent $sponsoredProductsNegativeKeywordAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent $sponsoredProductsNegativeKeywordAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('NegativeKeywordAccessException 400 response');
         $this->sponsoredProductsNegativeKeywordAccessExceptionResponseContent = $sponsoredProductsNegativeKeywordAccessExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsNegativeKeywordAccessExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent
+    public function getSponsoredProductsNegativeKeywordAccessExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeKeywordAccessExceptionResponseContent
     {
         return $this->sponsoredProductsNegativeKeywordAccessExceptionResponseContent;
     }

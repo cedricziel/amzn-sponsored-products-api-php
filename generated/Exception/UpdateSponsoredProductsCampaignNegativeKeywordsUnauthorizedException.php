@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class UpdateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException extends UnauthorizedException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent
      */
     private $sponsoredProductsUnauthorizedExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class UpdateSponsoredProductsCampaignNegativeKeywordsUnauthorizedException exten
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent $sponsoredProductsUnauthorizedExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent $sponsoredProductsUnauthorizedExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('UnauthorizedException 401 response');
         $this->sponsoredProductsUnauthorizedExceptionResponseContent = $sponsoredProductsUnauthorizedExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsUnauthorizedExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent
+    public function getSponsoredProductsUnauthorizedExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnauthorizedExceptionResponseContent
     {
         return $this->sponsoredProductsUnauthorizedExceptionResponseContent;
     }

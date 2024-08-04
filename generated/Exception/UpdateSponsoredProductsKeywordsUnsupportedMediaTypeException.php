@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class UpdateSponsoredProductsKeywordsUnsupportedMediaTypeException extends UnsupportedMediaTypeException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent
      */
     private $sponsoredProductsUnsupportedMediaTypeExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class UpdateSponsoredProductsKeywordsUnsupportedMediaTypeException extends Unsup
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent $sponsoredProductsUnsupportedMediaTypeExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent $sponsoredProductsUnsupportedMediaTypeExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('UnsupportedMediaTypeException 415 response');
         $this->sponsoredProductsUnsupportedMediaTypeExceptionResponseContent = $sponsoredProductsUnsupportedMediaTypeExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsUnsupportedMediaTypeExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent
+    public function getSponsoredProductsUnsupportedMediaTypeExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnsupportedMediaTypeExceptionResponseContent
     {
         return $this->sponsoredProductsUnsupportedMediaTypeExceptionResponseContent;
     }

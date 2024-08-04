@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class DeleteSponsoredProductsCampaignNegativeTargetingClausesTooManyRequestsException extends TooManyRequestsException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent
      */
     private $sponsoredProductsThrottlingExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class DeleteSponsoredProductsCampaignNegativeTargetingClausesTooManyRequestsExce
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent $sponsoredProductsThrottlingExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent $sponsoredProductsThrottlingExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('ThrottlingException 429 response');
         $this->sponsoredProductsThrottlingExceptionResponseContent = $sponsoredProductsThrottlingExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsThrottlingExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent
+    public function getSponsoredProductsThrottlingExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsThrottlingExceptionResponseContent
     {
         return $this->sponsoredProductsThrottlingExceptionResponseContent;
     }

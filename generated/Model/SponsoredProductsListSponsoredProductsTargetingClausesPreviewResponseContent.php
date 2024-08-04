@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Model;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model;
 
 class SponsoredProductsListSponsoredProductsTargetingClausesPreviewResponseContent extends \ArrayObject
 {

@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetBudgetRecommendationsUnauthorizedException extends UnauthorizedException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTORBudgetRecommendationError
      */
     private $sPTORBudgetRecommendationError;
     /**
@@ -21,14 +21,14 @@ class GetBudgetRecommendationsUnauthorizedException extends UnauthorizedExceptio
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError $sPTORBudgetRecommendationError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTORBudgetRecommendationError $sPTORBudgetRecommendationError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Unauthorized - Request failed because user is not authenticated or is not allowed to invoke the operation.');
         $this->sPTORBudgetRecommendationError = $sPTORBudgetRecommendationError;
         $this->response = $response;
     }
 
-    public function getSPTORBudgetRecommendationError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError
+    public function getSPTORBudgetRecommendationError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTORBudgetRecommendationError
     {
         return $this->sPTORBudgetRecommendationError;
     }

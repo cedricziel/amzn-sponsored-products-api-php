@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class CreateSponsoredProductsProductAdsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent
      */
     private $sponsoredProductsProductAdMutationExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class CreateSponsoredProductsProductAdsBadRequestException extends BadRequestExc
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent $sponsoredProductsProductAdMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent $sponsoredProductsProductAdMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('ProductAdMutationException 400 response');
         $this->sponsoredProductsProductAdMutationExceptionResponseContent = $sponsoredProductsProductAdMutationExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsProductAdMutationExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent
+    public function getSponsoredProductsProductAdMutationExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsProductAdMutationExceptionResponseContent
     {
         return $this->sponsoredProductsProductAdMutationExceptionResponseContent;
     }

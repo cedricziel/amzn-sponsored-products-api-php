@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class DeleteSponsoredProductsCampaignNegativeTargetingClausesBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent
      */
     private $sponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class DeleteSponsoredProductsCampaignNegativeTargetingClausesBadRequestException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent $sponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent $sponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('CampaignNegativeTargetsMutationException 400 response');
         $this->sponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent = $sponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent
+    public function getSponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent
     {
         return $this->sponsoredProductsCampaignNegativeTargetsMutationExceptionResponseContent;
     }

@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetRankedKeywordRecommendationServiceUnavailableException extends ServiceUnavailableException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError
      */
     private $sPTargetingError;
     /**
@@ -21,7 +21,7 @@ class GetRankedKeywordRecommendationServiceUnavailableException extends ServiceU
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError $sPTargetingError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError $sPTargetingError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Service Unavailable due to transient error or dependent service failure - Something went wrong on the server. Retry
 later and report an error if unresolved.');
@@ -29,7 +29,7 @@ later and report an error if unresolved.');
         $this->response = $response;
     }
 
-    public function getSPTargetingError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError
+    public function getSPTargetingError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError
     {
         return $this->sPTargetingError;
     }

@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetBudgetRecommendationsInternalServerErrorException extends InternalServerErrorException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTORBudgetRecommendationError
      */
     private $sPTORBudgetRecommendationError;
     /**
@@ -21,14 +21,14 @@ class GetBudgetRecommendationsInternalServerErrorException extends InternalServe
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError $sPTORBudgetRecommendationError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTORBudgetRecommendationError $sPTORBudgetRecommendationError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Internal Server DBCError - something went wrong on the server. Retry later and report a DBCError if unresolved.');
         $this->sPTORBudgetRecommendationError = $sPTORBudgetRecommendationError;
         $this->response = $response;
     }
 
-    public function getSPTORBudgetRecommendationError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError
+    public function getSPTORBudgetRecommendationError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTORBudgetRecommendationError
     {
         return $this->sPTORBudgetRecommendationError;
     }

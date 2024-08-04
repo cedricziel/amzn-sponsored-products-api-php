@@ -8,10 +8,10 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Normalizer;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\CheckArray;
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\ValidatorTrait;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaign::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaign::class === get_class($data);
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -47,7 +47,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaign();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
@@ -74,7 +74,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['targetingType']);
             }
             if (\array_key_exists('dynamicBidding', $data)) {
-                $object->setDynamicBidding($this->denormalizer->denormalize($data['dynamicBidding'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignDynamicBidding::class, 'json', $context));
+                $object->setDynamicBidding($this->denormalizer->denormalize($data['dynamicBidding'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaignDynamicBidding::class, 'json', $context));
                 unset($data['dynamicBidding']);
             }
             if (\array_key_exists('startDate', $data)) {
@@ -82,7 +82,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['startDate']);
             }
             if (\array_key_exists('budget', $data)) {
-                $object->setBudget($this->denormalizer->denormalize($data['budget'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignBudget::class, 'json', $context));
+                $object->setBudget($this->denormalizer->denormalize($data['budget'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaignBudget::class, 'json', $context));
                 unset($data['budget']);
             }
             if (\array_key_exists('tags', $data)) {
@@ -94,7 +94,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['tags']);
             }
             if (\array_key_exists('extendedData', $data)) {
-                $object->setExtendedData($this->denormalizer->denormalize($data['extendedData'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignExtendedData::class, 'json', $context));
+                $object->setExtendedData($this->denormalizer->denormalize($data['extendedData'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaignExtendedData::class, 'json', $context));
                 unset($data['extendedData']);
             }
             foreach ($data as $key_1 => $value_1) {
@@ -146,7 +146,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaign::class => false];
         }
     }
 } else {
@@ -159,12 +159,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaign::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaign::class === get_class($data);
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
@@ -175,7 +175,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaign();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
@@ -202,7 +202,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['targetingType']);
             }
             if (\array_key_exists('dynamicBidding', $data)) {
-                $object->setDynamicBidding($this->denormalizer->denormalize($data['dynamicBidding'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignDynamicBidding::class, 'json', $context));
+                $object->setDynamicBidding($this->denormalizer->denormalize($data['dynamicBidding'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaignDynamicBidding::class, 'json', $context));
                 unset($data['dynamicBidding']);
             }
             if (\array_key_exists('startDate', $data)) {
@@ -210,7 +210,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['startDate']);
             }
             if (\array_key_exists('budget', $data)) {
-                $object->setBudget($this->denormalizer->denormalize($data['budget'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignBudget::class, 'json', $context));
+                $object->setBudget($this->denormalizer->denormalize($data['budget'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaignBudget::class, 'json', $context));
                 unset($data['budget']);
             }
             if (\array_key_exists('tags', $data)) {
@@ -222,7 +222,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['tags']);
             }
             if (\array_key_exists('extendedData', $data)) {
-                $object->setExtendedData($this->denormalizer->denormalize($data['extendedData'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaignExtendedData::class, 'json', $context));
+                $object->setExtendedData($this->denormalizer->denormalize($data['extendedData'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaignExtendedData::class, 'json', $context));
                 unset($data['extendedData']);
             }
             foreach ($data as $key_1 => $value_1) {
@@ -277,7 +277,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsDraftCampaign::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDraftCampaign::class => false];
         }
     }
 }

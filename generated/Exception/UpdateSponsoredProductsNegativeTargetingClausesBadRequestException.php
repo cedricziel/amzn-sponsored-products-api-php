@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class UpdateSponsoredProductsNegativeTargetingClausesBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent
      */
     private $sponsoredProductsNegativeTargetMutationExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class UpdateSponsoredProductsNegativeTargetingClausesBadRequestException extends
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent $sponsoredProductsNegativeTargetMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent $sponsoredProductsNegativeTargetMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('NegativeTargetMutationException 400 response');
         $this->sponsoredProductsNegativeTargetMutationExceptionResponseContent = $sponsoredProductsNegativeTargetMutationExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsNegativeTargetMutationExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent
+    public function getSponsoredProductsNegativeTargetMutationExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeTargetMutationExceptionResponseContent
     {
         return $this->sponsoredProductsNegativeTargetMutationExceptionResponseContent;
     }

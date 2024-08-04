@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class SPGetBudgetRulesRecommendation extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class SPGetBudgetRulesRecommendation extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
 
     /**
      * A rule enables an automatic budget increase for a specified date range or for a special event. The response also includes a suggested budget increase for each special event.
@@ -70,27 +70,27 @@ class SPGetBudgetRulesRecommendation extends \cedricziel\amznsponsoredproductsap
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventResponse|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPBudgetRulesRecommendationEventResponse|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SPGetBudgetRulesRecommendationBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SPGetBudgetRulesRecommendationInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SPGetBudgetRulesRecommendationTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\SPGetBudgetRulesRecommendationBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\SPGetBudgetRulesRecommendationInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\SPGetBudgetRulesRecommendationTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/vnd.spbudgetrulesrecommendation.v3+json'))) {
-            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationEventResponse', 'json');
+            return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPBudgetRulesRecommendationEventResponse', 'json');
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/vnd.spbudgetrulesrecommendation.v3+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SPGetBudgetRulesRecommendationBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\SPGetBudgetRulesRecommendationBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPBudgetRulesRecommendationError', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/vnd.spbudgetrulesrecommendation.v3+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SPGetBudgetRulesRecommendationInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\SPGetBudgetRulesRecommendationInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPBudgetRulesRecommendationError', 'json'), $response);
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/vnd.spbudgetrulesrecommendation.v3+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\SPGetBudgetRulesRecommendationTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPBudgetRulesRecommendationError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\SPGetBudgetRulesRecommendationTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPBudgetRulesRecommendationError', 'json'), $response);
         }
     }
 

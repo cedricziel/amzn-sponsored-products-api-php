@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class DeleteCampaignOptimizationRule extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class DeleteCampaignOptimizationRule extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
     protected $campaignOptimizationId;
     protected $accept;
 
@@ -73,43 +73,43 @@ class DeleteCampaignOptimizationRule extends \cedricziel\amznsponsoredproductsap
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\DeleteSPCampaignOptimizationRuleResponse|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\DeleteSPCampaignOptimizationRuleResponse|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleUnprocessableEntityException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleForbiddenException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleNotFoundException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleUnprocessableEntityException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleForbiddenException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleNotFoundException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/vnd.optimizationrules.v1+json'))) {
-            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\DeleteSPCampaignOptimizationRuleResponse', 'json');
+            return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\DeleteSPCampaignOptimizationRuleResponse', 'json');
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (422 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleUnprocessableEntityException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (404 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleNotFoundException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleNotFoundException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\DeleteCampaignOptimizationRuleTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\DeleteCampaignOptimizationRuleTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError', 'json'), $response);
         }
     }
 

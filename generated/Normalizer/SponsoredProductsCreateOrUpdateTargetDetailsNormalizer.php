@@ -8,10 +8,10 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Normalizer;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\CheckArray;
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\ValidatorTrait;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class === get_class($data);
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -47,20 +47,20 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
             if (\array_key_exists('keywordTarget', $data)) {
-                $object->setKeywordTarget($this->denormalizer->denormalize($data['keywordTarget'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPKeywordTargetDetails::class, 'json', $context));
+                $object->setKeywordTarget($this->denormalizer->denormalize($data['keywordTarget'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsSPKeywordTargetDetails::class, 'json', $context));
                 unset($data['keywordTarget']);
             }
             if (\array_key_exists('productCategoryTarget', $data)) {
-                $object->setProductCategoryTarget($this->denormalizer->denormalize($data['productCategoryTarget'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductCategoryTargetDetails::class, 'json', $context));
+                $object->setProductCategoryTarget($this->denormalizer->denormalize($data['productCategoryTarget'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsSPProductCategoryTargetDetails::class, 'json', $context));
                 unset($data['productCategoryTarget']);
             }
             if (\array_key_exists('productTarget', $data)) {
-                $object->setProductTarget($this->denormalizer->denormalize($data['productTarget'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductTargetDetails::class, 'json', $context));
+                $object->setProductTarget($this->denormalizer->denormalize($data['productTarget'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsSPProductTargetDetails::class, 'json', $context));
                 unset($data['productTarget']);
             }
             foreach ($data as $key => $value) {
@@ -95,7 +95,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class => false];
         }
     }
 } else {
@@ -108,12 +108,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class === get_class($data);
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
@@ -124,20 +124,20 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
             if (\array_key_exists('keywordTarget', $data)) {
-                $object->setKeywordTarget($this->denormalizer->denormalize($data['keywordTarget'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPKeywordTargetDetails::class, 'json', $context));
+                $object->setKeywordTarget($this->denormalizer->denormalize($data['keywordTarget'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsSPKeywordTargetDetails::class, 'json', $context));
                 unset($data['keywordTarget']);
             }
             if (\array_key_exists('productCategoryTarget', $data)) {
-                $object->setProductCategoryTarget($this->denormalizer->denormalize($data['productCategoryTarget'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductCategoryTargetDetails::class, 'json', $context));
+                $object->setProductCategoryTarget($this->denormalizer->denormalize($data['productCategoryTarget'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsSPProductCategoryTargetDetails::class, 'json', $context));
                 unset($data['productCategoryTarget']);
             }
             if (\array_key_exists('productTarget', $data)) {
-                $object->setProductTarget($this->denormalizer->denormalize($data['productTarget'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSPProductTargetDetails::class, 'json', $context));
+                $object->setProductTarget($this->denormalizer->denormalize($data['productTarget'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsSPProductTargetDetails::class, 'json', $context));
                 unset($data['productTarget']);
             }
             foreach ($data as $key => $value) {
@@ -175,7 +175,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateTargetDetails::class => false];
         }
     }
 }

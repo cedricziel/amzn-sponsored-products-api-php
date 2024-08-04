@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetCampaignsAssociatedWithSPBudgetRuleUnauthorizedException extends UnauthorizedException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError
      */
     private $budgetRuleError;
     /**
@@ -21,14 +21,14 @@ class GetCampaignsAssociatedWithSPBudgetRuleUnauthorizedException extends Unauth
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError $budgetRuleError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError $budgetRuleError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Unauthorized. The request failed because the user is not authenticated or is not allowed to invoke the operation.');
         $this->budgetRuleError = $budgetRuleError;
         $this->response = $response;
     }
 
-    public function getBudgetRuleError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRuleError
+    public function getBudgetRuleError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRuleError
     {
         return $this->budgetRuleError;
     }

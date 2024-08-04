@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetCampaignRecommendationsForbiddenException extends ForbiddenException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AccessDeniedException
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\AccessDeniedException
      */
     private $accessDeniedException;
     /**
@@ -21,14 +21,14 @@ class GetCampaignRecommendationsForbiddenException extends ForbiddenException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\AccessDeniedException $accessDeniedException, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\AccessDeniedException $accessDeniedException, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Access Denied - Request failed because the user is not allowed to invoke the operation.');
         $this->accessDeniedException = $accessDeniedException;
         $this->response = $response;
     }
 
-    public function getAccessDeniedException(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\AccessDeniedException
+    public function getAccessDeniedException(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\AccessDeniedException
     {
         return $this->accessDeniedException;
     }

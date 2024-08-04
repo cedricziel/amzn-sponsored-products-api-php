@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class CreateSponsoredProductsTargetingClausesBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent
      */
     private $sponsoredProductsTargetMutationExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class CreateSponsoredProductsTargetingClausesBadRequestException extends BadRequ
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent $sponsoredProductsTargetMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent $sponsoredProductsTargetMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('TargetMutationException 400 response');
         $this->sponsoredProductsTargetMutationExceptionResponseContent = $sponsoredProductsTargetMutationExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsTargetMutationExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent
+    public function getSponsoredProductsTargetMutationExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetMutationExceptionResponseContent
     {
         return $this->sponsoredProductsTargetMutationExceptionResponseContent;
     }

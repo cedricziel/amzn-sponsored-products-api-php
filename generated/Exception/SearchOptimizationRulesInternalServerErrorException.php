@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class SearchOptimizationRulesInternalServerErrorException extends InternalServerErrorException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError
      */
     private $optimizationRulesAPISwaggerOptimizationRulesError;
     /**
@@ -21,14 +21,14 @@ class SearchOptimizationRulesInternalServerErrorException extends InternalServer
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError $optimizationRulesAPISwaggerOptimizationRulesError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError $optimizationRulesAPISwaggerOptimizationRulesError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Internal Server Error. Something went wrong on the server.');
         $this->optimizationRulesAPISwaggerOptimizationRulesError = $optimizationRulesAPISwaggerOptimizationRulesError;
         $this->response = $response;
     }
 
-    public function getOptimizationRulesAPISwaggerOptimizationRulesError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError
+    public function getOptimizationRulesAPISwaggerOptimizationRulesError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError
     {
         return $this->optimizationRulesAPISwaggerOptimizationRulesError;
     }

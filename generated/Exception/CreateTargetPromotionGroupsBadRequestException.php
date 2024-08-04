@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class CreateTargetPromotionGroupsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent
      */
     private $sponsoredProductsSchemaValidationExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class CreateTargetPromotionGroupsBadRequestException extends BadRequestException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent $sponsoredProductsSchemaValidationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent $sponsoredProductsSchemaValidationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('SchemaValidationException 400 response');
         $this->sponsoredProductsSchemaValidationExceptionResponseContent = $sponsoredProductsSchemaValidationExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsSchemaValidationExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent
+    public function getSponsoredProductsSchemaValidationExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsSchemaValidationExceptionResponseContent
     {
         return $this->sponsoredProductsSchemaValidationExceptionResponseContent;
     }

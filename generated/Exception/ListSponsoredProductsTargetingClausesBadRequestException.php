@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class ListSponsoredProductsTargetingClausesBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent
      */
     private $sponsoredProductsTargetAccessExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class ListSponsoredProductsTargetingClausesBadRequestException extends BadReques
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent $sponsoredProductsTargetAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent $sponsoredProductsTargetAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('TargetAccessException 400 response');
         $this->sponsoredProductsTargetAccessExceptionResponseContent = $sponsoredProductsTargetAccessExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsTargetAccessExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent
+    public function getSponsoredProductsTargetAccessExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetAccessExceptionResponseContent
     {
         return $this->sponsoredProductsTargetAccessExceptionResponseContent;
     }
