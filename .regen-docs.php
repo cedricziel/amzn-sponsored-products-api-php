@@ -29,7 +29,7 @@ foreach ($json['paths'] as $pathName => $path) {
         $doc .= $method['description'] ?? '';
         $doc .= "\n\n";
         $doc .= '```php'."\n";
-        $doc .= "// see above how to create a client\n"
+        $doc .= "// see above how to create a client\n";
         $doc .= '$client = \\CedricZiel\\\AmznSponsoredProductsApiPHP\Generated\\Client::create();'."\n";
         $doc .= '$client->'."{$methodName}();\n";
         $doc .= '```'."\n";
