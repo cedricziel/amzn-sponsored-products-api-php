@@ -1,6 +1,6 @@
 {
     "name": "cedricziel/amznsponsoredproductsapiphp",
-    "description": "An API client",
+    "description": "An API client for the Amazon Sponsored Products API",
     "type": "library",
     "license": "MIT",
     "autoload": {
