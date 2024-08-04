@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.2.0...v1.3.0) (2024-08-04)
+
+
+### Features
+
+* wrap client ([#7](https://github.com/cedricziel/amzn-sponsored-products-api-php/issues/7)) ([6561479](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/6561479438dac1b7d97878434b814b6a6df29e66))
+
 ## [1.2.0](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.1.0...v1.2.0) (2024-08-04)
 
 
