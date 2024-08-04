@@ -8,10 +8,10 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Normalizer;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\CheckArray;
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\ValidatorTrait;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class === get_class($data);
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -47,16 +47,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
             if (\array_key_exists('campaignIdFilter', $data)) {
-                $object->setCampaignIdFilter($this->denormalizer->denormalize($data['campaignIdFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsReducedObjectIdFilter::class, 'json', $context));
+                $object->setCampaignIdFilter($this->denormalizer->denormalize($data['campaignIdFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsReducedObjectIdFilter::class, 'json', $context));
                 unset($data['campaignIdFilter']);
             }
             if (\array_key_exists('stateFilter', $data)) {
-                $object->setStateFilter($this->denormalizer->denormalize($data['stateFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateFilter::class, 'json', $context));
+                $object->setStateFilter($this->denormalizer->denormalize($data['stateFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsEntityStateFilter::class, 'json', $context));
                 unset($data['stateFilter']);
             }
             if (\array_key_exists('maxResults', $data)) {
@@ -68,7 +68,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['nextToken']);
             }
             if (\array_key_exists('adGroupIdFilter', $data)) {
-                $object->setAdGroupIdFilter($this->denormalizer->denormalize($data['adGroupIdFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsReducedObjectIdFilter::class, 'json', $context));
+                $object->setAdGroupIdFilter($this->denormalizer->denormalize($data['adGroupIdFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsReducedObjectIdFilter::class, 'json', $context));
                 unset($data['adGroupIdFilter']);
             }
             if (\array_key_exists('includeExtendedDataFields', $data)) {
@@ -80,11 +80,11 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['locale']);
             }
             if (\array_key_exists('keywordTextFilter', $data)) {
-                $object->setKeywordTextFilter($this->denormalizer->denormalize($data['keywordTextFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextFilter::class, 'json', $context));
+                $object->setKeywordTextFilter($this->denormalizer->denormalize($data['keywordTextFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsKeywordTextFilter::class, 'json', $context));
                 unset($data['keywordTextFilter']);
             }
             if (\array_key_exists('keywordIdFilter', $data)) {
-                $object->setKeywordIdFilter($this->denormalizer->denormalize($data['keywordIdFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsObjectIdFilter::class, 'json', $context));
+                $object->setKeywordIdFilter($this->denormalizer->denormalize($data['keywordIdFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsObjectIdFilter::class, 'json', $context));
                 unset($data['keywordIdFilter']);
             }
             if (\array_key_exists('matchTypeFilter', $data)) {
@@ -152,7 +152,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class => false];
         }
     }
 } else {
@@ -165,12 +165,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class === get_class($data);
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
@@ -181,16 +181,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
             if (\array_key_exists('campaignIdFilter', $data)) {
-                $object->setCampaignIdFilter($this->denormalizer->denormalize($data['campaignIdFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsReducedObjectIdFilter::class, 'json', $context));
+                $object->setCampaignIdFilter($this->denormalizer->denormalize($data['campaignIdFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsReducedObjectIdFilter::class, 'json', $context));
                 unset($data['campaignIdFilter']);
             }
             if (\array_key_exists('stateFilter', $data)) {
-                $object->setStateFilter($this->denormalizer->denormalize($data['stateFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsEntityStateFilter::class, 'json', $context));
+                $object->setStateFilter($this->denormalizer->denormalize($data['stateFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsEntityStateFilter::class, 'json', $context));
                 unset($data['stateFilter']);
             }
             if (\array_key_exists('maxResults', $data)) {
@@ -202,7 +202,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['nextToken']);
             }
             if (\array_key_exists('adGroupIdFilter', $data)) {
-                $object->setAdGroupIdFilter($this->denormalizer->denormalize($data['adGroupIdFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsReducedObjectIdFilter::class, 'json', $context));
+                $object->setAdGroupIdFilter($this->denormalizer->denormalize($data['adGroupIdFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsReducedObjectIdFilter::class, 'json', $context));
                 unset($data['adGroupIdFilter']);
             }
             if (\array_key_exists('includeExtendedDataFields', $data)) {
@@ -214,11 +214,11 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['locale']);
             }
             if (\array_key_exists('keywordTextFilter', $data)) {
-                $object->setKeywordTextFilter($this->denormalizer->denormalize($data['keywordTextFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordTextFilter::class, 'json', $context));
+                $object->setKeywordTextFilter($this->denormalizer->denormalize($data['keywordTextFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsKeywordTextFilter::class, 'json', $context));
                 unset($data['keywordTextFilter']);
             }
             if (\array_key_exists('keywordIdFilter', $data)) {
-                $object->setKeywordIdFilter($this->denormalizer->denormalize($data['keywordIdFilter'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsObjectIdFilter::class, 'json', $context));
+                $object->setKeywordIdFilter($this->denormalizer->denormalize($data['keywordIdFilter'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsObjectIdFilter::class, 'json', $context));
                 unset($data['keywordIdFilter']);
             }
             if (\array_key_exists('matchTypeFilter', $data)) {
@@ -289,7 +289,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsListSponsoredProductsKeywordsRequestContent::class => false];
         }
     }
 }

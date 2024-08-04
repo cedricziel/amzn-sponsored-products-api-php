@@ -8,7 +8,7 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated;
 
 class Client extends Runtime\Client\Client
 {
@@ -335,7 +335,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
      *
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\SearchBrandsBadRequestException
      * @throws Exception\SearchBrandsUnauthorizedException
@@ -976,7 +976,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
      *
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetNegativeBrandsBadRequestException
      * @throws Exception\GetNegativeBrandsUnauthorizedException

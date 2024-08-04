@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetTargetableCategoriesInternalServerErrorException extends InternalServerErrorException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InternalServerException
      */
     private $internalServerException;
     /**
@@ -21,7 +21,7 @@ class GetTargetableCategoriesInternalServerErrorException extends InternalServer
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException $internalServerException, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InternalServerException $internalServerException, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Internal Server Error - Something went wrong on the server. Retry
 later and report an error if unresolved.');
@@ -29,7 +29,7 @@ later and report an error if unresolved.');
         $this->response = $response;
     }
 
-    public function getInternalServerException(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException
+    public function getInternalServerException(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InternalServerException
     {
         return $this->internalServerException;
     }

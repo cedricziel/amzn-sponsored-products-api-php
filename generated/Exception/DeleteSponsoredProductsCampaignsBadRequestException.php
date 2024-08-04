@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class DeleteSponsoredProductsCampaignsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent
      */
     private $sponsoredProductsCampaignMutationExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class DeleteSponsoredProductsCampaignsBadRequestException extends BadRequestExce
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent $sponsoredProductsCampaignMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent $sponsoredProductsCampaignMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('CampaignMutationException 400 response');
         $this->sponsoredProductsCampaignMutationExceptionResponseContent = $sponsoredProductsCampaignMutationExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsCampaignMutationExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent
+    public function getSponsoredProductsCampaignMutationExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignMutationExceptionResponseContent
     {
         return $this->sponsoredProductsCampaignMutationExceptionResponseContent;
     }

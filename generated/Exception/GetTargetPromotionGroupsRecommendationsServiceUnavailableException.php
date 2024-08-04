@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetTargetPromotionGroupsRecommendationsServiceUnavailableException extends ServiceUnavailableException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent
      */
     private $sponsoredProductsServiceUnavailableExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class GetTargetPromotionGroupsRecommendationsServiceUnavailableException extends
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent $sponsoredProductsServiceUnavailableExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent $sponsoredProductsServiceUnavailableExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('ServiceUnavailableException 503 response');
         $this->sponsoredProductsServiceUnavailableExceptionResponseContent = $sponsoredProductsServiceUnavailableExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsServiceUnavailableExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent
+    public function getSponsoredProductsServiceUnavailableExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsServiceUnavailableExceptionResponseContent
     {
         return $this->sponsoredProductsServiceUnavailableExceptionResponseContent;
     }

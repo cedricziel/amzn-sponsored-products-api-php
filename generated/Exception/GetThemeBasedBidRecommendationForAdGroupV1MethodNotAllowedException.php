@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetThemeBasedBidRecommendationForAdGroupV1MethodNotAllowedException extends MethodNotAllowedException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidRecommendationError
      */
     private $bidRecommendationError;
     /**
@@ -21,14 +21,14 @@ class GetThemeBasedBidRecommendationForAdGroupV1MethodNotAllowedException extend
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError $bidRecommendationError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidRecommendationError $bidRecommendationError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Method Not Allowed. Request failed because the request HTTP method is not supported.');
         $this->bidRecommendationError = $bidRecommendationError;
         $this->response = $response;
     }
 
-    public function getBidRecommendationError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BidRecommendationError
+    public function getBidRecommendationError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidRecommendationError
     {
         return $this->bidRecommendationError;
     }

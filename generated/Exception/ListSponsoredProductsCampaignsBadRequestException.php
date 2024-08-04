@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class ListSponsoredProductsCampaignsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent
      */
     private $sponsoredProductsCampaignAccessExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class ListSponsoredProductsCampaignsBadRequestException extends BadRequestExcept
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent $sponsoredProductsCampaignAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent $sponsoredProductsCampaignAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('CampaignAccessException 400 response');
         $this->sponsoredProductsCampaignAccessExceptionResponseContent = $sponsoredProductsCampaignAccessExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsCampaignAccessExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent
+    public function getSponsoredProductsCampaignAccessExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessExceptionResponseContent
     {
         return $this->sponsoredProductsCampaignAccessExceptionResponseContent;
     }

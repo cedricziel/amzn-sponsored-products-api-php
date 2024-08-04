@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class SearchBrandsTooManyRequestsException extends TooManyRequestsException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ThrottlingException
      */
     private $throttlingException;
     /**
@@ -21,14 +21,14 @@ class SearchBrandsTooManyRequestsException extends TooManyRequestsException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException $throttlingException, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ThrottlingException $throttlingException, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Too Many Requests - Request was rate-limited. Retry later.');
         $this->throttlingException = $throttlingException;
         $this->response = $response;
     }
 
-    public function getThrottlingException(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException
+    public function getThrottlingException(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ThrottlingException
     {
         return $this->throttlingException;
     }

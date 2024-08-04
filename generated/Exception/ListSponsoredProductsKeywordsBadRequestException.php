@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class ListSponsoredProductsKeywordsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent
      */
     private $sponsoredProductsKeywordAccessExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class ListSponsoredProductsKeywordsBadRequestException extends BadRequestExcepti
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent $sponsoredProductsKeywordAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent $sponsoredProductsKeywordAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('KeywordAccessException 400 response');
         $this->sponsoredProductsKeywordAccessExceptionResponseContent = $sponsoredProductsKeywordAccessExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsKeywordAccessExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent
+    public function getSponsoredProductsKeywordAccessExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsKeywordAccessExceptionResponseContent
     {
         return $this->sponsoredProductsKeywordAccessExceptionResponseContent;
     }

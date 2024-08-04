@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetBudgetRecommendationsForbiddenException extends ForbiddenException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTORBudgetRecommendationError
      */
     private $sPTORBudgetRecommendationError;
     /**
@@ -21,14 +21,14 @@ class GetBudgetRecommendationsForbiddenException extends ForbiddenException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError $sPTORBudgetRecommendationError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTORBudgetRecommendationError $sPTORBudgetRecommendationError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Forbidden - access to the requested resource is forbidden');
         $this->sPTORBudgetRecommendationError = $sPTORBudgetRecommendationError;
         $this->response = $response;
     }
 
-    public function getSPTORBudgetRecommendationError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTORBudgetRecommendationError
+    public function getSPTORBudgetRecommendationError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTORBudgetRecommendationError
     {
         return $this->sPTORBudgetRecommendationError;
     }

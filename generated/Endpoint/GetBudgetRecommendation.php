@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class GetBudgetRecommendation extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class GetBudgetRecommendation extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
 
     /**
      * Creates daily budget recommendation along with benchmark metrics when creating a new campaign.
@@ -23,7 +23,7 @@ class GetBudgetRecommendation extends \cedricziel\amznsponsoredproductsapiphp\Ge
      * @var string $Amazon-Advertising-API-Scope The identifier of a profile associated with the advertiser account. Use `GET` method on Profiles resource to list profiles associated with the access token passed in the HTTP Authorization header and choose profile id `profileId` from the response to pass it as input.
      *             }
      */
-    public function __construct(?\cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationRequest $requestBody = null, array $headerParameters = [])
+    public function __construct(?\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialBudgetRecommendationRequest $requestBody = null, array $headerParameters = [])
     {
         $this->body = $requestBody;
         $this->headerParameters = $headerParameters;
@@ -41,7 +41,7 @@ class GetBudgetRecommendation extends \cedricziel\amznsponsoredproductsapiphp\Ge
 
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationRequest) {
+        if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialBudgetRecommendationRequest) {
             return [['Content-Type' => ['application/vnd.spinitialbudgetrecommendation.v3.4+json']], $this->body];
         }
 
@@ -66,39 +66,39 @@ class GetBudgetRecommendation extends \cedricziel\amznsponsoredproductsapiphp\Ge
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationResponse|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialBudgetRecommendationResponse|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationForbiddenException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationUnsupportedMediaTypeException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationForbiddenException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationUnsupportedMediaTypeException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
-            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\InitialBudgetRecommendationResponse', 'json');
+            return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialBudgetRecommendationResponse', 'json');
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
         if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
         if (false === is_null($contentType) && (415 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetBudgetRecommendationTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
     }
 

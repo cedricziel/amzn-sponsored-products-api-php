@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class CreateTargetPromotionGroupTargetsUnauthorizedException extends UnauthorizedException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent
      */
     private $sponsoredProductsUnauthenticatedExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class CreateTargetPromotionGroupTargetsUnauthorizedException extends Unauthorize
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent $sponsoredProductsUnauthenticatedExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent $sponsoredProductsUnauthenticatedExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('UnauthenticatedException 401 response');
         $this->sponsoredProductsUnauthenticatedExceptionResponseContent = $sponsoredProductsUnauthenticatedExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsUnauthenticatedExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent
+    public function getSponsoredProductsUnauthenticatedExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUnauthenticatedExceptionResponseContent
     {
         return $this->sponsoredProductsUnauthenticatedExceptionResponseContent;
     }

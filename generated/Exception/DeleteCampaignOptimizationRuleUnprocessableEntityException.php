@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class DeleteCampaignOptimizationRuleUnprocessableEntityException extends UnprocessableEntityException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError
      */
     private $campaignOptimizationRuleError;
     /**
@@ -21,14 +21,14 @@ class DeleteCampaignOptimizationRuleUnprocessableEntityException extends Unproce
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError $campaignOptimizationRuleError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError $campaignOptimizationRuleError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Unprocessable entity. The server understood the request, but was unable to process the instruction.');
         $this->campaignOptimizationRuleError = $campaignOptimizationRuleError;
         $this->response = $response;
     }
 
-    public function getCampaignOptimizationRuleError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError
+    public function getCampaignOptimizationRuleError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError
     {
         return $this->campaignOptimizationRuleError;
     }

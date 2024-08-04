@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class GetRankedKeywordRecommendation extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class GetRankedKeywordRecommendation extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
     protected $accept;
 
     /**
@@ -89,15 +89,15 @@ class GetRankedKeywordRecommendation extends \cedricziel\amznsponsoredproductsap
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetResponse|\cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponse|\cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponse|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\KeywordTargetResponse|\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedTargetWithThemedBidsResponse|\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedTargetResponse|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnprocessableEntityException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnsupportedMediaTypeException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationServiceUnavailableException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnprocessableEntityException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnsupportedMediaTypeException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationServiceUnavailableException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -105,90 +105,90 @@ class GetRankedKeywordRecommendation extends \cedricziel\amznsponsoredproductsap
         $body = (string) $response->getBody();
         if (200 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v3+json')) {
-                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetResponse', 'json');
+                return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\KeywordTargetResponse', 'json');
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json')) {
-                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetWithThemedBidsResponse', 'json');
+                return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedTargetWithThemedBidsResponse', 'json');
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v4+json')) {
-                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\RankedTargetResponse', 'json');
+                return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedTargetResponse', 'json');
             }
         }
         if (400 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v3+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v4+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
         }
         if (422 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v3+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnprocessableEntityException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnprocessableEntityException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v4+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnprocessableEntityException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
         }
         if (401 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v3+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v4+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
         }
         if (500 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v3+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v4+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
         }
         if (415 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v3+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v4+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
         }
         if (503 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v3+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationServiceUnavailableException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationServiceUnavailableException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationServiceUnavailableException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationServiceUnavailableException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v4+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationServiceUnavailableException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationServiceUnavailableException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
         }
         if (429 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v3+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v5+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spkeywordsrecommendation.v4+json')) {
-                throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetRankedKeywordRecommendationTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\SPTargetingError', 'json'), $response);
+                throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetRankedKeywordRecommendationTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPTargetingError', 'json'), $response);
             }
         }
     }

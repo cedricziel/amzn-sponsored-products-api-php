@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetBudgetRecommendationForbiddenException extends ForbiddenException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException
      */
     private $budgetRecommendationNewCampaignsException;
     /**
@@ -21,14 +21,14 @@ class GetBudgetRecommendationForbiddenException extends ForbiddenException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException $budgetRecommendationNewCampaignsException, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException $budgetRecommendationNewCampaignsException, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('403 response.');
         $this->budgetRecommendationNewCampaignsException = $budgetRecommendationNewCampaignsException;
         $this->response = $response;
     }
 
-    public function getBudgetRecommendationNewCampaignsException(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendationNewCampaignsException
+    public function getBudgetRecommendationNewCampaignsException(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException
     {
         return $this->budgetRecommendationNewCampaignsException;
     }

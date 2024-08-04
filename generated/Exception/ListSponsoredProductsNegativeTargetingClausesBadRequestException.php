@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class ListSponsoredProductsNegativeTargetingClausesBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent
      */
     private $sponsoredProductsNegativeTargetAccessExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class ListSponsoredProductsNegativeTargetingClausesBadRequestException extends B
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent $sponsoredProductsNegativeTargetAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent $sponsoredProductsNegativeTargetAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('NegativeTargetAccessException 400 response');
         $this->sponsoredProductsNegativeTargetAccessExceptionResponseContent = $sponsoredProductsNegativeTargetAccessExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsNegativeTargetAccessExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent
+    public function getSponsoredProductsNegativeTargetAccessExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeTargetAccessExceptionResponseContent
     {
         return $this->sponsoredProductsNegativeTargetAccessExceptionResponseContent;
     }

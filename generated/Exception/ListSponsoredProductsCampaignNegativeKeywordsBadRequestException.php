@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class ListSponsoredProductsCampaignNegativeKeywordsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent
      */
     private $sponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class ListSponsoredProductsCampaignNegativeKeywordsBadRequestException extends B
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent $sponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent $sponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('CampaignNegativeKeywordAccessException 400 response');
         $this->sponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent = $sponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent
+    public function getSponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent
     {
         return $this->sponsoredProductsCampaignNegativeKeywordAccessExceptionResponseContent;
     }

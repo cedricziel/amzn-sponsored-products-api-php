@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetRuleNotificationBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError
      */
     private $campaignOptimizationRuleError;
     /**
@@ -21,14 +21,14 @@ class GetRuleNotificationBadRequestException extends BadRequestException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError $campaignOptimizationRuleError, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError $campaignOptimizationRuleError, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Bad Request.');
         $this->campaignOptimizationRuleError = $campaignOptimizationRuleError;
         $this->response = $response;
     }
 
-    public function getCampaignOptimizationRuleError(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignOptimizationRuleError
+    public function getCampaignOptimizationRuleError(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignOptimizationRuleError
     {
         return $this->campaignOptimizationRuleError;
     }

@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class AssociateOptimizationRulesToCampaign extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class AssociateOptimizationRulesToCampaign extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
     protected $campaignId;
     protected $accept;
 
@@ -33,7 +33,7 @@ class AssociateOptimizationRulesToCampaign extends \cedricziel\amznsponsoredprod
      *
      * @param array $accept Accept content header application/json|application/vnd.spoptimizationrules.v1+json
      */
-    public function __construct(string $campaignId, ?\cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequest $requestBody = null, array $headerParameters = [], array $accept = [])
+    public function __construct(string $campaignId, ?\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequest $requestBody = null, array $headerParameters = [], array $accept = [])
     {
         $this->campaignId = $campaignId;
         $this->body = $requestBody;
@@ -53,7 +53,7 @@ class AssociateOptimizationRulesToCampaign extends \cedricziel\amznsponsoredprod
 
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequest) {
+        if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignRequest) {
             return [['Content-Type' => ['application/vnd.spoptimizationrules.v1+json']], $this->body];
         }
 
@@ -82,31 +82,31 @@ class AssociateOptimizationRulesToCampaign extends \cedricziel\amznsponsoredprod
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponse|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponse|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\AssociateOptimizationRulesToCampaignBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\AssociateOptimizationRulesToCampaignUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\AssociateOptimizationRulesToCampaignInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\AssociateOptimizationRulesToCampaignForbiddenException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\AssociateOptimizationRulesToCampaignBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\AssociateOptimizationRulesToCampaignUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\AssociateOptimizationRulesToCampaignInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\AssociateOptimizationRulesToCampaignForbiddenException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\AssociateOptimizationRulesToCampaignBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\AssociateOptimizationRulesToCampaignBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\AssociateOptimizationRulesToCampaignUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\AssociateOptimizationRulesToCampaignUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\AssociateOptimizationRulesToCampaignInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\AssociateOptimizationRulesToCampaignInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
         }
         if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\AssociateOptimizationRulesToCampaignForbiddenException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\AssociateOptimizationRulesToCampaignForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerOptimizationRulesError', 'json'), $response);
         }
         if (false === is_null($contentType) && (207 === $status && false !== mb_strpos($contentType, 'application/vnd.spoptimizationrules.v1+json'))) {
-            return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponse', 'json');
+            return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerAssociateOptimizationRulesToCampaignResponse', 'json');
         }
     }
 

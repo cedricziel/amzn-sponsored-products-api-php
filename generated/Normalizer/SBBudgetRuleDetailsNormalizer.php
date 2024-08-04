@@ -8,10 +8,10 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Normalizer;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\CheckArray;
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\ValidatorTrait;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SBBudgetRuleDetails::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SBBudgetRuleDetails::class === get_class($data);
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -47,16 +47,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SBBudgetRuleDetails();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
             if (\array_key_exists('duration', $data)) {
-                $object->setDuration($this->denormalizer->denormalize($data['duration'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleDuration::class, 'json', $context));
+                $object->setDuration($this->denormalizer->denormalize($data['duration'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RuleDuration::class, 'json', $context));
                 unset($data['duration']);
             }
             if (\array_key_exists('recurrence', $data)) {
-                $object->setRecurrence($this->denormalizer->denormalize($data['recurrence'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Recurrence::class, 'json', $context));
+                $object->setRecurrence($this->denormalizer->denormalize($data['recurrence'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Recurrence::class, 'json', $context));
                 unset($data['recurrence']);
             }
             if (\array_key_exists('ruleType', $data)) {
@@ -64,7 +64,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['ruleType']);
             }
             if (\array_key_exists('budgetIncreaseBy', $data)) {
-                $object->setBudgetIncreaseBy($this->denormalizer->denormalize($data['budgetIncreaseBy'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetIncreaseBy::class, 'json', $context));
+                $object->setBudgetIncreaseBy($this->denormalizer->denormalize($data['budgetIncreaseBy'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetIncreaseBy::class, 'json', $context));
                 unset($data['budgetIncreaseBy']);
             }
             if (\array_key_exists('name', $data)) {
@@ -72,7 +72,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['name']);
             }
             if (\array_key_exists('performanceMeasureCondition', $data)) {
-                $object->setPerformanceMeasureCondition($this->denormalizer->denormalize($data['performanceMeasureCondition'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureConditionForSB::class, 'json', $context));
+                $object->setPerformanceMeasureCondition($this->denormalizer->denormalize($data['performanceMeasureCondition'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\PerformanceMeasureConditionForSB::class, 'json', $context));
                 unset($data['performanceMeasureCondition']);
             }
             foreach ($data as $key => $value) {
@@ -116,7 +116,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SBBudgetRuleDetails::class => false];
         }
     }
 } else {
@@ -129,12 +129,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SBBudgetRuleDetails::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SBBudgetRuleDetails::class === get_class($data);
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
@@ -145,16 +145,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SBBudgetRuleDetails();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
             if (\array_key_exists('duration', $data)) {
-                $object->setDuration($this->denormalizer->denormalize($data['duration'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\RuleDuration::class, 'json', $context));
+                $object->setDuration($this->denormalizer->denormalize($data['duration'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RuleDuration::class, 'json', $context));
                 unset($data['duration']);
             }
             if (\array_key_exists('recurrence', $data)) {
-                $object->setRecurrence($this->denormalizer->denormalize($data['recurrence'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\Recurrence::class, 'json', $context));
+                $object->setRecurrence($this->denormalizer->denormalize($data['recurrence'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Recurrence::class, 'json', $context));
                 unset($data['recurrence']);
             }
             if (\array_key_exists('ruleType', $data)) {
@@ -162,7 +162,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['ruleType']);
             }
             if (\array_key_exists('budgetIncreaseBy', $data)) {
-                $object->setBudgetIncreaseBy($this->denormalizer->denormalize($data['budgetIncreaseBy'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetIncreaseBy::class, 'json', $context));
+                $object->setBudgetIncreaseBy($this->denormalizer->denormalize($data['budgetIncreaseBy'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetIncreaseBy::class, 'json', $context));
                 unset($data['budgetIncreaseBy']);
             }
             if (\array_key_exists('name', $data)) {
@@ -170,7 +170,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 unset($data['name']);
             }
             if (\array_key_exists('performanceMeasureCondition', $data)) {
-                $object->setPerformanceMeasureCondition($this->denormalizer->denormalize($data['performanceMeasureCondition'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\PerformanceMeasureConditionForSB::class, 'json', $context));
+                $object->setPerformanceMeasureCondition($this->denormalizer->denormalize($data['performanceMeasureCondition'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\PerformanceMeasureConditionForSB::class, 'json', $context));
                 unset($data['performanceMeasureCondition']);
             }
             foreach ($data as $key => $value) {
@@ -217,7 +217,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SBBudgetRuleDetails::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SBBudgetRuleDetails::class => false];
         }
     }
 }

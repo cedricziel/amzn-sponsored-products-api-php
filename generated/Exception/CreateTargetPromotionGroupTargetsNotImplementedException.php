@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class CreateTargetPromotionGroupTargetsNotImplementedException extends NotImplementedException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent
      */
     private $sponsoredProductsNotImplementedExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class CreateTargetPromotionGroupTargetsNotImplementedException extends NotImplem
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent $sponsoredProductsNotImplementedExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent $sponsoredProductsNotImplementedExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('NotImplementedException 501 response');
         $this->sponsoredProductsNotImplementedExceptionResponseContent = $sponsoredProductsNotImplementedExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsNotImplementedExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent
+    public function getSponsoredProductsNotImplementedExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNotImplementedExceptionResponseContent
     {
         return $this->sponsoredProductsNotImplementedExceptionResponseContent;
     }

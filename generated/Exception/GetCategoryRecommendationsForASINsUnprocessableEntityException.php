@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class GetCategoryRecommendationsForASINsUnprocessableEntityException extends UnprocessableEntityException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnprocessableEntityException
      */
     private $unprocessableEntityException;
     /**
@@ -21,14 +21,14 @@ class GetCategoryRecommendationsForASINsUnprocessableEntityException extends Unp
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException $unprocessableEntityException, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnprocessableEntityException $unprocessableEntityException, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Unprocessable entity - Failed due to invalid parameters.');
         $this->unprocessableEntityException = $unprocessableEntityException;
         $this->response = $response;
     }
 
-    public function getUnprocessableEntityException(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException
+    public function getUnprocessableEntityException(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnprocessableEntityException
     {
         return $this->unprocessableEntityException;
     }

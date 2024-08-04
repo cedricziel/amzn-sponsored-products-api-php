@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class DeleteSponsoredProductsNegativeKeywordsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent
      */
     private $sponsoredProductsNegativeKeywordMutationExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class DeleteSponsoredProductsNegativeKeywordsBadRequestException extends BadRequ
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent $sponsoredProductsNegativeKeywordMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent $sponsoredProductsNegativeKeywordMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('NegativeKeywordMutationException 400 response');
         $this->sponsoredProductsNegativeKeywordMutationExceptionResponseContent = $sponsoredProductsNegativeKeywordMutationExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsNegativeKeywordMutationExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent
+    public function getSponsoredProductsNegativeKeywordMutationExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsNegativeKeywordMutationExceptionResponseContent
     {
         return $this->sponsoredProductsNegativeKeywordMutationExceptionResponseContent;
     }

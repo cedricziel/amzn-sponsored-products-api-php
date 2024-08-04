@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class ListSponsoredProductsKeywordsForbiddenException extends ForbiddenException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent
      */
     private $sponsoredProductsAccessDeniedExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class ListSponsoredProductsKeywordsForbiddenException extends ForbiddenException
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent $sponsoredProductsAccessDeniedExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent $sponsoredProductsAccessDeniedExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('AccessDeniedException 403 response');
         $this->sponsoredProductsAccessDeniedExceptionResponseContent = $sponsoredProductsAccessDeniedExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsAccessDeniedExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent
+    public function getSponsoredProductsAccessDeniedExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAccessDeniedExceptionResponseContent
     {
         return $this->sponsoredProductsAccessDeniedExceptionResponseContent;
     }

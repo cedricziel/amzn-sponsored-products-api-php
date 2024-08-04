@@ -8,10 +8,10 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Normalizer;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\CheckArray;
-use cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Normalizer\ValidatorTrait;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
+use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
@@ -31,12 +31,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignRecommendation::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignRecommendation::class === get_class($data);
         }
 
         public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
@@ -47,16 +47,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignRecommendation();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
             if (\array_key_exists('sevenDaysEstimatedOpportunities', $data)) {
-                $object->setSevenDaysEstimatedOpportunities($this->denormalizer->denormalize($data['sevenDaysEstimatedOpportunities'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysEstimatedOpportunities::class, 'json', $context));
+                $object->setSevenDaysEstimatedOpportunities($this->denormalizer->denormalize($data['sevenDaysEstimatedOpportunities'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysEstimatedOpportunities::class, 'json', $context));
                 unset($data['sevenDaysEstimatedOpportunities']);
             }
             if (\array_key_exists('biddingStrategyRecommendation', $data)) {
-                $object->setBiddingStrategyRecommendation($this->denormalizer->denormalize($data['biddingStrategyRecommendation'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BiddingStrategyRecommendation::class, 'json', $context));
+                $object->setBiddingStrategyRecommendation($this->denormalizer->denormalize($data['biddingStrategyRecommendation'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BiddingStrategyRecommendation::class, 'json', $context));
                 unset($data['biddingStrategyRecommendation']);
             }
             if (\array_key_exists('campaignId', $data)) {
@@ -66,19 +66,19 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('keywordTargetingRecommendations', $data)) {
                 $values = [];
                 foreach ($data['keywordTargetingRecommendations'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetingRecommendation::class, 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\KeywordTargetingRecommendation::class, 'json', $context);
                 }
                 $object->setKeywordTargetingRecommendations($values);
                 unset($data['keywordTargetingRecommendations']);
             }
             if (\array_key_exists('budgetRecommendation', $data)) {
-                $object->setBudgetRecommendation($this->denormalizer->denormalize($data['budgetRecommendation'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendation::class, 'json', $context));
+                $object->setBudgetRecommendation($this->denormalizer->denormalize($data['budgetRecommendation'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendation::class, 'json', $context));
                 unset($data['budgetRecommendation']);
             }
             if (\array_key_exists('targetingGroupBidRecommendations', $data)) {
                 $values_1 = [];
                 foreach ($data['targetingGroupBidRecommendations'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingGroupBidRecommendation::class, 'json', $context);
+                    $values_1[] = $this->denormalizer->denormalize($value_1, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\TargetingGroupBidRecommendation::class, 'json', $context);
                 }
                 $object->setTargetingGroupBidRecommendations($values_1);
                 unset($data['targetingGroupBidRecommendations']);
@@ -132,7 +132,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignRecommendation::class => false];
         }
     }
 } else {
@@ -145,12 +145,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
         {
-            return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class === $type;
+            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignRecommendation::class === $type;
         }
 
         public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
         {
-            return is_object($data) && cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class === get_class($data);
+            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignRecommendation::class === get_class($data);
         }
 
         public function denormalize($data, $type, $format = null, array $context = [])
@@ -161,16 +161,16 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (isset($data['$recursiveRef'])) {
                 return new Reference($data['$recursiveRef'], $context['document-origin']);
             }
-            $object = new \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation();
+            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignRecommendation();
             if (null === $data || false === \is_array($data)) {
                 return $object;
             }
             if (\array_key_exists('sevenDaysEstimatedOpportunities', $data)) {
-                $object->setSevenDaysEstimatedOpportunities($this->denormalizer->denormalize($data['sevenDaysEstimatedOpportunities'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SevenDaysEstimatedOpportunities::class, 'json', $context));
+                $object->setSevenDaysEstimatedOpportunities($this->denormalizer->denormalize($data['sevenDaysEstimatedOpportunities'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysEstimatedOpportunities::class, 'json', $context));
                 unset($data['sevenDaysEstimatedOpportunities']);
             }
             if (\array_key_exists('biddingStrategyRecommendation', $data)) {
-                $object->setBiddingStrategyRecommendation($this->denormalizer->denormalize($data['biddingStrategyRecommendation'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BiddingStrategyRecommendation::class, 'json', $context));
+                $object->setBiddingStrategyRecommendation($this->denormalizer->denormalize($data['biddingStrategyRecommendation'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BiddingStrategyRecommendation::class, 'json', $context));
                 unset($data['biddingStrategyRecommendation']);
             }
             if (\array_key_exists('campaignId', $data)) {
@@ -180,19 +180,19 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             if (\array_key_exists('keywordTargetingRecommendations', $data)) {
                 $values = [];
                 foreach ($data['keywordTargetingRecommendations'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\KeywordTargetingRecommendation::class, 'json', $context);
+                    $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\KeywordTargetingRecommendation::class, 'json', $context);
                 }
                 $object->setKeywordTargetingRecommendations($values);
                 unset($data['keywordTargetingRecommendations']);
             }
             if (\array_key_exists('budgetRecommendation', $data)) {
-                $object->setBudgetRecommendation($this->denormalizer->denormalize($data['budgetRecommendation'], \cedricziel\amznsponsoredproductsapiphp\Generated\Model\BudgetRecommendation::class, 'json', $context));
+                $object->setBudgetRecommendation($this->denormalizer->denormalize($data['budgetRecommendation'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendation::class, 'json', $context));
                 unset($data['budgetRecommendation']);
             }
             if (\array_key_exists('targetingGroupBidRecommendations', $data)) {
                 $values_1 = [];
                 foreach ($data['targetingGroupBidRecommendations'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, \cedricziel\amznsponsoredproductsapiphp\Generated\Model\TargetingGroupBidRecommendation::class, 'json', $context);
+                    $values_1[] = $this->denormalizer->denormalize($value_1, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\TargetingGroupBidRecommendation::class, 'json', $context);
                 }
                 $object->setTargetingGroupBidRecommendations($values_1);
                 unset($data['targetingGroupBidRecommendations']);
@@ -249,7 +249,7 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
 
         public function getSupportedTypes(?string $format = null): array
         {
-            return [\cedricziel\amznsponsoredproductsapiphp\Generated\Model\CampaignRecommendation::class => false];
+            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CampaignRecommendation::class => false];
         }
     }
 }

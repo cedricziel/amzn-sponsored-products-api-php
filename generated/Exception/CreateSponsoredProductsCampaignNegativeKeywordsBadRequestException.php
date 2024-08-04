@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class CreateSponsoredProductsCampaignNegativeKeywordsBadRequestException extends BadRequestException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent
      */
     private $sponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class CreateSponsoredProductsCampaignNegativeKeywordsBadRequestException extends
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent $sponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent $sponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('CampaignNegativeKeywordMutationException 400 response');
         $this->sponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent = $sponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent
+    public function getSponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent
     {
         return $this->sponsoredProductsCampaignNegativeKeywordMutationExceptionResponseContent;
     }

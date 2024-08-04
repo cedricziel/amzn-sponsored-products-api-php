@@ -8,11 +8,11 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Endpoint;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Endpoint;
 
-class GetCategoryRecommendationsForASINs extends \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\BaseEndpoint implements \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\Endpoint
+class GetCategoryRecommendationsForASINs extends \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\BaseEndpoint implements \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\Endpoint
 {
-    use \cedricziel\amznsponsoredproductsapiphp\Generated\Runtime\Client\EndpointTrait;
+    use \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Client\EndpointTrait;
     protected $accept;
 
     /**
@@ -35,7 +35,7 @@ class GetCategoryRecommendationsForASINs extends \cedricziel\amznsponsoredproduc
      *
      * @param array $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/vnd.spproducttargetingresponse.v4+json|application/vnd.spproducttargetingresponse.v5+json|application/json
      */
-    public function __construct(?\cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCategoryRecommendationsForAsinsRequest $requestBody = null, array $queryParameters = [], array $headerParameters = [], array $accept = [])
+    public function __construct(?\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GetCategoryRecommendationsForAsinsRequest $requestBody = null, array $queryParameters = [], array $headerParameters = [], array $accept = [])
     {
         $this->body = $requestBody;
         $this->queryParameters = $queryParameters;
@@ -55,7 +55,7 @@ class GetCategoryRecommendationsForASINs extends \cedricziel\amznsponsoredproduc
 
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \cedricziel\amznsponsoredproductsapiphp\Generated\Model\GetCategoryRecommendationsForAsinsRequest) {
+        if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GetCategoryRecommendationsForAsinsRequest) {
             return [['Content-Type' => ['application/vnd.spproducttargeting.v3+json']], $this->body];
         }
 
@@ -96,13 +96,13 @@ class GetCategoryRecommendationsForASINs extends \cedricziel\amznsponsoredproduc
     }
 
     /**
-     * @return \cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendations|\cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCounts|\cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCountsLoP|null
+     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryRecommendations|\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryRecommendationsWithAsinCounts|\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryRecommendationsWithAsinCountsLoP|null
      *
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsBadRequestException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsUnprocessableEntityException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsUnauthorizedException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsInternalServerErrorException
-     * @throws \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsTooManyRequestsException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsBadRequestException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsUnprocessableEntityException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsUnauthorizedException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsInternalServerErrorException
+     * @throws \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsTooManyRequestsException
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -110,29 +110,29 @@ class GetCategoryRecommendationsForASINs extends \cedricziel\amznsponsoredproduc
         $body = (string) $response->getBody();
         if (200 === $status) {
             if (false !== mb_strpos($contentType, 'application/vnd.spproducttargetingresponse.v3+json')) {
-                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendations', 'json');
+                return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryRecommendations', 'json');
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spproducttargetingresponse.v4+json')) {
-                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCounts', 'json');
+                return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryRecommendationsWithAsinCounts', 'json');
             }
             if (false !== mb_strpos($contentType, 'application/vnd.spproducttargetingresponse.v5+json')) {
-                return $serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\CategoryRecommendationsWithAsinCountsLoP', 'json');
+                return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryRecommendationsWithAsinCountsLoP', 'json');
             }
         }
         if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsBadRequestException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\BadRequestException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BadRequestException', 'json'), $response);
         }
         if (false === is_null($contentType) && (422 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsUnprocessableEntityException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnprocessableEntityException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsUnprocessableEntityException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnprocessableEntityException', 'json'), $response);
         }
         if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsUnauthorizedException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\UnauthorizedException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnauthorizedException', 'json'), $response);
         }
         if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsInternalServerErrorException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\InternalServerException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InternalServerException', 'json'), $response);
         }
         if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/json'))) {
-            throw new \cedricziel\amznsponsoredproductsapiphp\Generated\Exception\GetCategoryRecommendationsForASINsTooManyRequestsException($serializer->deserialize($body, 'cedricziel\amznsponsoredproductsapiphp\Generated\Model\ThrottlingException', 'json'), $response);
+            throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCategoryRecommendationsForASINsTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ThrottlingException', 'json'), $response);
         }
     }
 

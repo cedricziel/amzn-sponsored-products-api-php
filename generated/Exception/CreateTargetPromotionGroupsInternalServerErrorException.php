@@ -8,12 +8,12 @@ declare(strict_types=1);
  * Do no edit it directly.
  */
 
-namespace cedricziel\amznsponsoredproductsapiphp\Generated\Exception;
+namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception;
 
 class CreateTargetPromotionGroupsInternalServerErrorException extends InternalServerErrorException
 {
     /**
-     * @var \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent
+     * @var \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent
      */
     private $sponsoredProductsInternalServerExceptionResponseContent;
     /**
@@ -21,14 +21,14 @@ class CreateTargetPromotionGroupsInternalServerErrorException extends InternalSe
      */
     private $response;
 
-    public function __construct(\cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent $sponsoredProductsInternalServerExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent $sponsoredProductsInternalServerExceptionResponseContent, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('InternalServerException 500 response');
         $this->sponsoredProductsInternalServerExceptionResponseContent = $sponsoredProductsInternalServerExceptionResponseContent;
         $this->response = $response;
     }
 
-    public function getSponsoredProductsInternalServerExceptionResponseContent(): \cedricziel\amznsponsoredproductsapiphp\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent
+    public function getSponsoredProductsInternalServerExceptionResponseContent(): \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInternalServerExceptionResponseContent
     {
         return $this->sponsoredProductsInternalServerExceptionResponseContent;
     }
