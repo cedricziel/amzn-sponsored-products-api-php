@@ -123,6 +123,6 @@ class UpdateSponsoredProductsAdGroups extends \cedricziel\amznsponsoredproductsa
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

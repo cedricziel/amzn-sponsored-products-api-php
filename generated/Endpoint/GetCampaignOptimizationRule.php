@@ -115,6 +115,6 @@ class GetCampaignOptimizationRule extends \cedricziel\amznsponsoredproductsapiph
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

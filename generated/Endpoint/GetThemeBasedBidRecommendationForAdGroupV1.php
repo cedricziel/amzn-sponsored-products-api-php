@@ -172,6 +172,6 @@ class GetThemeBasedBidRecommendationForAdGroupV1 extends \cedricziel\amznsponsor
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

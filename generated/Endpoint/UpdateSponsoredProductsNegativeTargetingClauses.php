@@ -123,6 +123,6 @@ class UpdateSponsoredProductsNegativeTargetingClauses extends \cedricziel\amznsp
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

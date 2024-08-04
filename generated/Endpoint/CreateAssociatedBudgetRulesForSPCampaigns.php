@@ -110,6 +110,6 @@ class CreateAssociatedBudgetRulesForSPCampaigns extends \cedricziel\amznsponsore
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

@@ -112,6 +112,6 @@ class AssociateOptimizationRulesToCampaign extends \cedricziel\amznsponsoredprod
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

@@ -113,6 +113,6 @@ class GetRuleNotification extends \cedricziel\amznsponsoredproductsapiphp\Genera
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

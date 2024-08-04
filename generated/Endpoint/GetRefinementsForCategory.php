@@ -133,6 +133,6 @@ class GetRefinementsForCategory extends \cedricziel\amznsponsoredproductsapiphp\
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

@@ -109,6 +109,6 @@ class SearchBrands extends \cedricziel\amznsponsoredproductsapiphp\Generated\Run
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

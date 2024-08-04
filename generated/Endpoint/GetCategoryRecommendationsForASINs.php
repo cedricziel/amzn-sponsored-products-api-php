@@ -138,6 +138,6 @@ class GetCategoryRecommendationsForASINs extends \cedricziel\amznsponsoredproduc
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

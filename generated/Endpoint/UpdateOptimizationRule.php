@@ -113,6 +113,6 @@ class UpdateOptimizationRule extends \cedricziel\amznsponsoredproductsapiphp\Gen
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

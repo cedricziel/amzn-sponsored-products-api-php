@@ -116,6 +116,6 @@ class DeleteSponsoredProductsNegativeKeywords extends \cedricziel\amznsponsoredp
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

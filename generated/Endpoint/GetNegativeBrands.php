@@ -108,6 +108,6 @@ class GetNegativeBrands extends \cedricziel\amznsponsoredproductsapiphp\Generate
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

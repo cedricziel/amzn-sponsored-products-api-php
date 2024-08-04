@@ -111,6 +111,6 @@ class GetBudgetRecommendations extends \cedricziel\amznsponsoredproductsapiphp\G
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

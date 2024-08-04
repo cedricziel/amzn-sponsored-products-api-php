@@ -31898,8 +31898,19 @@
         "responses": {},
         "callbacks": {},
         "links": {},
-        "securitySchemes": {},
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        },
         "parameters": {}
     },
-    "openapi": "3.0.1"
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ],
+    "openapi": "3.0.1",
+    "$schema": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.json"
 }

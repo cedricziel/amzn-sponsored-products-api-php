@@ -106,6 +106,6 @@ class DisassociateAssociatedBudgetRuleForSPCampaigns extends \cedricziel\amznspo
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }

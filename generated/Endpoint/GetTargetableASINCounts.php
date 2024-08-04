@@ -113,6 +113,6 @@ class GetTargetableASINCounts extends \cedricziel\amznsponsoredproductsapiphp\Ge
 
     public function getAuthenticationScopes(): array
     {
-        return [];
+        return ['bearerAuth'];
     }
 }
