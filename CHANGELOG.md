@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.3.1...v1.3.2) (2024-08-06)
+
+
+### Bug Fixes
+
+* correctly supply custom client with plugins ([#11](https://github.com/cedricziel/amzn-sponsored-products-api-php/issues/11)) ([4ec0d20](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/4ec0d20cff83db732b4a0bd548b8d54716266829))
+
 ## [1.3.1](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.3.0...v1.3.1) (2024-08-06)
 
 
