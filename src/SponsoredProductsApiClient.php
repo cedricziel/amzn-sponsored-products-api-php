@@ -5,7 +5,7 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Authentication\BearerAuthAuthentication;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Client;
 use Http\Client\Common\Plugin\AddHostPlugin;
-use Http\Client\Common\Plugin\AddHostPlugin;
+use Http\Client\Common\PluginClient;
 use Jane\Component\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
 use Nyholm\Psr7\Uri;
 
