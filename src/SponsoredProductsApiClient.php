@@ -18,7 +18,7 @@ class SponsoredProductsApiClient extends Client
             new AuthenticationRegistry([new BearerAuthAuthentication($accessToken)]),
         ];
 
-        if ($httpClient !== null) {
+        if (null !== $httpClient) {
             return parent::create(new PluginClient($httpClient, $plugins));
         }
 
