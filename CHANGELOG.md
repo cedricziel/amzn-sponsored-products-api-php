@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.3.0...v1.3.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* use auth plugin correctly ([#9](https://github.com/cedricziel/amzn-sponsored-products-api-php/issues/9)) ([5053e76](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/5053e76d8c8fb661d68376b5e1cfb6b2079d194e))
+
 ## [1.3.0](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.2.0...v1.3.0) (2024-08-04)
 
 
