@@ -5,6 +5,7 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Authentication\BearerAuthAuthentication;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Client;
 use Http\Client\Common\Plugin\AddHostPlugin;
+use Http\Client\Common\Plugin\AddHostPlugin;
 use Jane\Component\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
 use Nyholm\Psr7\Uri;
 
@@ -16,6 +17,10 @@ class SponsoredProductsApiClient extends Client
             new AddHostPlugin(new Uri($endpoint->value)),
             new AuthenticationRegistry([new BearerAuthAuthentication($accessToken)]),
         ];
+
+        if ($httpClient !== null) {
+            return parent::create(new PluginClient($httpClient, $plugins));
+        }
 
         return parent::create($client, $plugins);
     }
