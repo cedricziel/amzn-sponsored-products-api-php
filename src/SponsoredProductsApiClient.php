@@ -11,7 +11,7 @@ use Nyholm\Psr7\Uri;
 
 class SponsoredProductsApiClient extends Client
 {
-    public static function createFor(Endpoint $endpoint, string $accessToken, $client = null): SponsoredProductsApiClient
+    public static function createFor(Endpoint $endpoint, string $accessToken, $httpClient = null): SponsoredProductsApiClient
     {
         $plugins = [
             new AddHostPlugin(new Uri($endpoint->value)),
@@ -22,6 +22,6 @@ class SponsoredProductsApiClient extends Client
             return parent::create(new PluginClient($httpClient, $plugins));
         }
 
-        return parent::create($client, $plugins);
+        return parent::create($httpClient, $plugins);
     }
 }
