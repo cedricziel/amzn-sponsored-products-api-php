@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.3.2...v1.3.3) (2024-08-07)
+
+
+### Bug Fixes
+
+* use correct variable ([#13](https://github.com/cedricziel/amzn-sponsored-products-api-php/issues/13)) ([d5fd1f7](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/d5fd1f728a5937f7de8a3caaa9191a48797456eb))
+
 ## [1.3.2](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.3.1...v1.3.2) (2024-08-06)
 
 
