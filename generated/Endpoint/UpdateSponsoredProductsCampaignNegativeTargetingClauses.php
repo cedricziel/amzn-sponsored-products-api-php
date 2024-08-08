@@ -56,7 +56,7 @@ class UpdateSponsoredProductsCampaignNegativeTargetingClauses extends \CedricZie
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateSponsoredProductsCampaignNegativeTargetingClausesRequestContent) {
-            return [['Content-Type' => ['application/vnd.spCampaignNegativeTargetingClause.v3+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spCampaignNegativeTargetingClause.v3+json']], $serializer->serialize($this->body, 'json')];
         }
 
         return [[], null];

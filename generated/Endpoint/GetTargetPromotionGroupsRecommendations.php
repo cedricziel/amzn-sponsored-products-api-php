@@ -49,7 +49,7 @@ class GetTargetPromotionGroupsRecommendations extends \CedricZiel\AmznSponsoredP
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGetTargetPromotionGroupsRecommendationsRequestContent) {
-            return [['Content-Type' => ['application/vnd.spTargetPromotionGroupsRecommendations.v1+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spTargetPromotionGroupsRecommendations.v1+json']], $serializer->serialize($this->body, 'json')];
         }
 
         return [[], null];

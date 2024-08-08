@@ -46,7 +46,7 @@ class SPGetBudgetRulesRecommendation extends \CedricZiel\AmznSponsoredProductsAp
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if (isset($this->body)) {
-            return [['Content-Type' => ['application/vnd.spbudgetrulesrecommendation.v3+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spbudgetrulesrecommendation.v3+json']], json_encode($this->body)];
         }
 
         return [[], null];

@@ -50,7 +50,7 @@ class DeleteSponsoredProductsTargetingClauses extends \CedricZiel\AmznSponsoredP
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDeleteSponsoredProductsTargetingClausesRequestContent) {
-            return [['Content-Type' => ['application/vnd.spTargetingClause.v3+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spTargetingClause.v3+json']], $serializer->serialize($this->body, 'json')];
         }
 
         return [[], null];

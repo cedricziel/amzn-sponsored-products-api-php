@@ -45,7 +45,7 @@ class GetBudgetRecommendations extends \CedricZiel\AmznSponsoredProductsApiPHP\G
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationRequest) {
-            return [['Content-Type' => ['application/vnd.budgetrecommendation.v3+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.budgetrecommendation.v3+json']], $serializer->serialize($this->body, 'json')];
         }
 
         return [[], null];
