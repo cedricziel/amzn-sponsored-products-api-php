@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.5](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.3.4...v1.3.5) (2024-08-08)
+
+
+### Bug Fixes
+
+* update jane for correct comparison of http headers ([#17](https://github.com/cedricziel/amzn-sponsored-products-api-php/issues/17)) ([8ec236e](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/8ec236ef14562e21810ce4e14c224c5ccf6f474c))
+
 ## [1.3.4](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.3.3...v1.3.4) (2024-08-08)
 
 
