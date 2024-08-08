@@ -86,34 +86,34 @@ class GetKeywordGroupRecommendations extends \CedricZiel\AmznSponsoredProductsAp
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\KeywordGroupsRecommendationsResponse', 'json');
         }
-        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetKeywordGroupRecommendationsBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetKeywordGroupRecommendationsUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetKeywordGroupRecommendationsInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (424 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (424 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetKeywordGroupRecommendationsFailedDependencyException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetKeywordGroupRecommendationsForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (404 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (404 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetKeywordGroupRecommendationsNotFoundException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (415 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (415 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetKeywordGroupRecommendationsUnsupportedMediaTypeException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (503 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (503 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetKeywordGroupRecommendationsServiceUnavailableException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
+        if (false === is_null($contentType) && (429 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spkeywordgroupsrecommendations.v1.0+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetKeywordGroupRecommendationsTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPKeywordGroupsException', 'json'), $response);
         }
     }

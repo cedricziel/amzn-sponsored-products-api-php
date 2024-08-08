@@ -96,25 +96,25 @@ class GetCampaignRecommendations extends \CedricZiel\AmznSponsoredProductsApiPHP
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
+        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
             return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GetCampaignRecommendationsResponse', 'json');
         }
-        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
+        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ValidationException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (422 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
+        if (false === is_null($contentType) && (422 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsUnprocessableEntityException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnprocessableEntityException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
+        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\UnauthorizedException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
+        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InternalServerException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
+        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\AccessDeniedException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
+        if (false === is_null($contentType) && (429 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spgetcampaignrecommendationsresponse.v1+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetCampaignRecommendationsTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\ThrottlingException', 'json'), $response);
         }
     }

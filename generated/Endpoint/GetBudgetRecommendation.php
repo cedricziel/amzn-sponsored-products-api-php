@@ -79,25 +79,25 @@ class GetBudgetRecommendation extends \CedricZiel\AmznSponsoredProductsApiPHP\Ge
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
-        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
+        if (false === is_null($contentType) && (200 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
             return $serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialBudgetRecommendationResponse', 'json');
         }
-        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
+        if (false === is_null($contentType) && (400 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationBadRequestException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
+        if (false === is_null($contentType) && (401 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationUnauthorizedException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
+        if (false === is_null($contentType) && (500 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationInternalServerErrorException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
+        if (false === is_null($contentType) && (403 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationForbiddenException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (415 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
+        if (false === is_null($contentType) && (415 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationUnsupportedMediaTypeException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
-        if (false === is_null($contentType) && (429 === $status && false !== mb_strpos($contentType, 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
+        if (false === is_null($contentType) && (429 === $status && false !== mb_strpos(strtolower($contentType), 'application/vnd.spinitialbudgetrecommendation.v3.4+json'))) {
             throw new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Exception\GetBudgetRecommendationTooManyRequestsException($serializer->deserialize($body, 'CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetRecommendationNewCampaignsException', 'json'), $response);
         }
     }
