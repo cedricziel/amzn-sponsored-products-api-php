@@ -51,7 +51,7 @@ class CreateOptimizationRules extends \CedricZiel\AmznSponsoredProductsApiPHP\Ge
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerCreateOptimizationRulesRequest) {
-            return [['Content-Type' => ['application/vnd.spoptimizationrules.v1+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spoptimizationrules.v1+json']], $serializer->serialize($this->body, 'json')];
         }
 
         return [[], null];

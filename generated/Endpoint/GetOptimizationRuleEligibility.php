@@ -47,7 +47,7 @@ class GetOptimizationRuleEligibility extends \CedricZiel\AmznSponsoredProductsAp
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPCampaignOptimizationRecommendationsAPIRequest) {
-            return [['Content-Type' => ['application/vnd.optimizationrules.v1+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.optimizationrules.v1+json']], $serializer->serialize($this->body, 'json')];
         }
 
         return [[], null];

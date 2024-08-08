@@ -53,13 +53,13 @@ class GetRankedKeywordRecommendation extends \CedricZiel\AmznSponsoredProductsAp
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if (isset($this->body)) {
-            return [['Content-Type' => ['application/vnd.spkeywordsrecommendation.v3+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spkeywordsrecommendation.v3+json']], json_encode($this->body)];
         }
         if (isset($this->body)) {
-            return [['Content-Type' => ['application/vnd.spkeywordsrecommendation.v5+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spkeywordsrecommendation.v5+json']], json_encode($this->body)];
         }
         if (isset($this->body)) {
-            return [['Content-Type' => ['application/vnd.spkeywordsrecommendation.v4+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spkeywordsrecommendation.v4+json']], json_encode($this->body)];
         }
 
         return [[], null];

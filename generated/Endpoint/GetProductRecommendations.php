@@ -52,7 +52,7 @@ class GetProductRecommendations extends \CedricZiel\AmznSponsoredProductsApiPHP\
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if ($this->body instanceof \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GetProductRecommendationsRequest) {
-            return [['Content-Type' => ['application/vnd.spproductrecommendation.v3+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spproductrecommendation.v3+json']], $serializer->serialize($this->body, 'json')];
         }
 
         return [[], null];

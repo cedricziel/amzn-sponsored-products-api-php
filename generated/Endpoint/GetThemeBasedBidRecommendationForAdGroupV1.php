@@ -50,10 +50,10 @@ class GetThemeBasedBidRecommendationForAdGroupV1 extends \CedricZiel\AmznSponsor
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         if (isset($this->body)) {
-            return [['Content-Type' => ['application/vnd.spthemebasedbidrecommendation.v4+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spthemebasedbidrecommendation.v4+json']], json_encode($this->body)];
         }
         if (isset($this->body)) {
-            return [['Content-Type' => ['application/vnd.spthemebasedbidrecommendation.v3+json']], $this->body];
+            return [['Content-Type' => ['application/vnd.spthemebasedbidrecommendation.v3+json']], json_encode($this->body)];
         }
 
         return [[], null];
