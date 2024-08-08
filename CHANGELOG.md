@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.4](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.3.3...v1.3.4) (2024-08-08)
+
+
+### Bug Fixes
+
+* update jane for correct serialization of vnd+json ([#15](https://github.com/cedricziel/amzn-sponsored-products-api-php/issues/15)) ([1a5ff0c](https://github.com/cedricziel/amzn-sponsored-products-api-php/commit/1a5ff0c381cc07c8c7f13f60c06b888d3d411dd3))
+
 ## [1.3.3](https://github.com/cedricziel/amzn-sponsored-products-api-php/compare/v1.3.2...v1.3.3) (2024-08-07)
 
 
