@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,225 +20,111 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class SponsoredProductsRangeErrorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class SponsoredProductsRangeErrorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('reason', $data)) {
-                $object->setReason($data['reason']);
-                unset($data['reason']);
-            }
-            if (\array_key_exists('marketplace', $data)) {
-                $object->setMarketplace($data['marketplace']);
-                unset($data['marketplace']);
-            }
-            if (\array_key_exists('allowed', $data)) {
-                $values = [];
-                foreach ($data['allowed'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setAllowed($values);
-                unset($data['allowed']);
-            }
-            if (\array_key_exists('cause', $data)) {
-                $object->setCause($this->denormalizer->denormalize($data['cause'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsErrorCause::class, 'json', $context));
-                unset($data['cause']);
-            }
-            if (\array_key_exists('upperLimit', $data)) {
-                $object->setUpperLimit($data['upperLimit']);
-                unset($data['upperLimit']);
-            }
-            if (\array_key_exists('lowerLimit', $data)) {
-                $object->setLowerLimit($data['lowerLimit']);
-                unset($data['lowerLimit']);
-            }
-            if (\array_key_exists('message', $data)) {
-                $object->setMessage($data['message']);
-                unset($data['message']);
-            }
-            foreach ($data as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_1;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            $data['reason'] = $object->getReason();
-            if ($object->isInitialized('marketplace') && null !== $object->getMarketplace()) {
-                $data['marketplace'] = $object->getMarketplace();
-            }
-            if ($object->isInitialized('allowed') && null !== $object->getAllowed()) {
-                $values = [];
-                foreach ($object->getAllowed() as $value) {
-                    $values[] = $value;
-                }
-                $data['allowed'] = $values;
-            }
-            if ($object->isInitialized('cause') && null !== $object->getCause()) {
-                $data['cause'] = $this->normalizer->normalize($object->getCause(), 'json', $context);
-            }
-            if ($object->isInitialized('upperLimit') && null !== $object->getUpperLimit()) {
-                $data['upperLimit'] = $object->getUpperLimit();
-            }
-            if ($object->isInitialized('lowerLimit') && null !== $object->getLowerLimit()) {
-                $data['lowerLimit'] = $object->getLowerLimit();
-            }
-            $data['message'] = $object->getMessage();
-            foreach ($object as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_1;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class === $type;
     }
-} else {
-    class SponsoredProductsRangeErrorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('reason', $data)) {
-                $object->setReason($data['reason']);
-                unset($data['reason']);
-            }
-            if (\array_key_exists('marketplace', $data)) {
-                $object->setMarketplace($data['marketplace']);
-                unset($data['marketplace']);
-            }
-            if (\array_key_exists('allowed', $data)) {
-                $values = [];
-                foreach ($data['allowed'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setAllowed($values);
-                unset($data['allowed']);
-            }
-            if (\array_key_exists('cause', $data)) {
-                $object->setCause($this->denormalizer->denormalize($data['cause'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsErrorCause::class, 'json', $context));
-                unset($data['cause']);
-            }
-            if (\array_key_exists('upperLimit', $data)) {
-                $object->setUpperLimit($data['upperLimit']);
-                unset($data['upperLimit']);
-            }
-            if (\array_key_exists('lowerLimit', $data)) {
-                $object->setLowerLimit($data['lowerLimit']);
-                unset($data['lowerLimit']);
-            }
-            if (\array_key_exists('message', $data)) {
-                $object->setMessage($data['message']);
-                unset($data['message']);
-            }
-            foreach ($data as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_1;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            $data['reason'] = $object->getReason();
-            if ($object->isInitialized('marketplace') && null !== $object->getMarketplace()) {
-                $data['marketplace'] = $object->getMarketplace();
+        if (\array_key_exists('reason', $data)) {
+            $object->setReason($data['reason']);
+            unset($data['reason']);
+        }
+        if (\array_key_exists('marketplace', $data)) {
+            $object->setMarketplace($data['marketplace']);
+            unset($data['marketplace']);
+        }
+        if (\array_key_exists('allowed', $data)) {
+            $values = [];
+            foreach ($data['allowed'] as $value) {
+                $values[] = $value;
             }
-            if ($object->isInitialized('allowed') && null !== $object->getAllowed()) {
-                $values = [];
-                foreach ($object->getAllowed() as $value) {
-                    $values[] = $value;
-                }
-                $data['allowed'] = $values;
+            $object->setAllowed($values);
+            unset($data['allowed']);
+        }
+        if (\array_key_exists('cause', $data)) {
+            $object->setCause($this->denormalizer->denormalize($data['cause'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsErrorCause::class, 'json', $context));
+            unset($data['cause']);
+        }
+        if (\array_key_exists('upperLimit', $data)) {
+            $object->setUpperLimit($data['upperLimit']);
+            unset($data['upperLimit']);
+        }
+        if (\array_key_exists('lowerLimit', $data)) {
+            $object->setLowerLimit($data['lowerLimit']);
+            unset($data['lowerLimit']);
+        }
+        if (\array_key_exists('message', $data)) {
+            $object->setMessage($data['message']);
+            unset($data['message']);
+        }
+        foreach ($data as $key => $value_1) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value_1;
             }
-            if ($object->isInitialized('cause') && null !== $object->getCause()) {
-                $data['cause'] = $this->normalizer->normalize($object->getCause(), 'json', $context);
-            }
-            if ($object->isInitialized('upperLimit') && null !== $object->getUpperLimit()) {
-                $data['upperLimit'] = $object->getUpperLimit();
-            }
-            if ($object->isInitialized('lowerLimit') && null !== $object->getLowerLimit()) {
-                $data['lowerLimit'] = $object->getLowerLimit();
-            }
-            $data['message'] = $object->getMessage();
-            foreach ($object as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_1;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        $dataArray['reason'] = $data->getReason();
+        if ($data->isInitialized('marketplace') && null !== $data->getMarketplace()) {
+            $dataArray['marketplace'] = $data->getMarketplace();
         }
+        if ($data->isInitialized('allowed') && null !== $data->getAllowed()) {
+            $values = [];
+            foreach ($data->getAllowed() as $value) {
+                $values[] = $value;
+            }
+            $dataArray['allowed'] = $values;
+        }
+        if ($data->isInitialized('cause') && null !== $data->getCause()) {
+            $dataArray['cause'] = $this->normalizer->normalize($data->getCause(), 'json', $context);
+        }
+        if ($data->isInitialized('upperLimit') && null !== $data->getUpperLimit()) {
+            $dataArray['upperLimit'] = $data->getUpperLimit();
+        }
+        if ($data->isInitialized('lowerLimit') && null !== $data->getLowerLimit()) {
+            $dataArray['lowerLimit'] = $data->getLowerLimit();
+        }
+        $dataArray['message'] = $data->getMessage();
+        foreach ($data as $key => $value_1) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value_1;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class => false];
     }
 }
