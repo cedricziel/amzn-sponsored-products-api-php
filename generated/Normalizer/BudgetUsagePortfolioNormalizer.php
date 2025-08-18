@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,207 +20,102 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class BudgetUsagePortfolioNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class BudgetUsagePortfolioNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio();
-            if (\array_key_exists('budgetUsagePercent', $data) && \is_int($data['budgetUsagePercent'])) {
-                $data['budgetUsagePercent'] = (float) $data['budgetUsagePercent'];
-            }
-            if (\array_key_exists('index', $data) && \is_int($data['index'])) {
-                $data['index'] = (float) $data['index'];
-            }
-            if (\array_key_exists('budget', $data) && \is_int($data['budget'])) {
-                $data['budget'] = (float) $data['budget'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('budgetUsagePercent', $data)) {
-                $object->setBudgetUsagePercent($data['budgetUsagePercent']);
-                unset($data['budgetUsagePercent']);
-            }
-            if (\array_key_exists('portfolioId', $data)) {
-                $object->setPortfolioId($data['portfolioId']);
-                unset($data['portfolioId']);
-            }
-            if (\array_key_exists('usageUpdatedTimestamp', $data)) {
-                $object->setUsageUpdatedTimestamp(\DateTime::createFromFormat('Y-m-d\TH:i:sP', $data['usageUpdatedTimestamp']));
-                unset($data['usageUpdatedTimestamp']);
-            }
-            if (\array_key_exists('index', $data)) {
-                $object->setIndex($data['index']);
-                unset($data['index']);
-            }
-            if (\array_key_exists('budget', $data)) {
-                $object->setBudget($data['budget']);
-                unset($data['budget']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('budgetUsagePercent') && null !== $object->getBudgetUsagePercent()) {
-                $data['budgetUsagePercent'] = $object->getBudgetUsagePercent();
-            }
-            if ($object->isInitialized('portfolioId') && null !== $object->getPortfolioId()) {
-                $data['portfolioId'] = $object->getPortfolioId();
-            }
-            if ($object->isInitialized('usageUpdatedTimestamp') && null !== $object->getUsageUpdatedTimestamp()) {
-                $data['usageUpdatedTimestamp'] = $object->getUsageUpdatedTimestamp()->format('Y-m-d\TH:i:sP');
-            }
-            if ($object->isInitialized('index') && null !== $object->getIndex()) {
-                $data['index'] = $object->getIndex();
-            }
-            if ($object->isInitialized('budget') && null !== $object->getBudget()) {
-                $data['budget'] = $object->getBudget();
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio::class === $type;
     }
-} else {
-    class BudgetUsagePortfolioNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio();
-            if (\array_key_exists('budgetUsagePercent', $data) && \is_int($data['budgetUsagePercent'])) {
-                $data['budgetUsagePercent'] = (float) $data['budgetUsagePercent'];
-            }
-            if (\array_key_exists('index', $data) && \is_int($data['index'])) {
-                $data['index'] = (float) $data['index'];
-            }
-            if (\array_key_exists('budget', $data) && \is_int($data['budget'])) {
-                $data['budget'] = (float) $data['budget'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('budgetUsagePercent', $data)) {
-                $object->setBudgetUsagePercent($data['budgetUsagePercent']);
-                unset($data['budgetUsagePercent']);
-            }
-            if (\array_key_exists('portfolioId', $data)) {
-                $object->setPortfolioId($data['portfolioId']);
-                unset($data['portfolioId']);
-            }
-            if (\array_key_exists('usageUpdatedTimestamp', $data)) {
-                $object->setUsageUpdatedTimestamp(\DateTime::createFromFormat('Y-m-d\TH:i:sP', $data['usageUpdatedTimestamp']));
-                unset($data['usageUpdatedTimestamp']);
-            }
-            if (\array_key_exists('index', $data)) {
-                $object->setIndex($data['index']);
-                unset($data['index']);
-            }
-            if (\array_key_exists('budget', $data)) {
-                $object->setBudget($data['budget']);
-                unset($data['budget']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio();
+        if (\array_key_exists('budgetUsagePercent', $data) && \is_int($data['budgetUsagePercent'])) {
+            $data['budgetUsagePercent'] = (float) $data['budgetUsagePercent'];
+        }
+        if (\array_key_exists('index', $data) && \is_int($data['index'])) {
+            $data['index'] = (float) $data['index'];
+        }
+        if (\array_key_exists('budget', $data) && \is_int($data['budget'])) {
+            $data['budget'] = (float) $data['budget'];
+        }
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('budgetUsagePercent') && null !== $object->getBudgetUsagePercent()) {
-                $data['budgetUsagePercent'] = $object->getBudgetUsagePercent();
+        if (\array_key_exists('budgetUsagePercent', $data)) {
+            $object->setBudgetUsagePercent($data['budgetUsagePercent']);
+            unset($data['budgetUsagePercent']);
+        }
+        if (\array_key_exists('portfolioId', $data)) {
+            $object->setPortfolioId($data['portfolioId']);
+            unset($data['portfolioId']);
+        }
+        if (\array_key_exists('usageUpdatedTimestamp', $data)) {
+            $object->setUsageUpdatedTimestamp(\DateTime::createFromFormat('Y-m-d\TH:i:sP', $data['usageUpdatedTimestamp']));
+            unset($data['usageUpdatedTimestamp']);
+        }
+        if (\array_key_exists('index', $data)) {
+            $object->setIndex($data['index']);
+            unset($data['index']);
+        }
+        if (\array_key_exists('budget', $data)) {
+            $object->setBudget($data['budget']);
+            unset($data['budget']);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value;
             }
-            if ($object->isInitialized('portfolioId') && null !== $object->getPortfolioId()) {
-                $data['portfolioId'] = $object->getPortfolioId();
-            }
-            if ($object->isInitialized('usageUpdatedTimestamp') && null !== $object->getUsageUpdatedTimestamp()) {
-                $data['usageUpdatedTimestamp'] = $object->getUsageUpdatedTimestamp()->format('Y-m-d\TH:i:sP');
-            }
-            if ($object->isInitialized('index') && null !== $object->getIndex()) {
-                $data['index'] = $object->getIndex();
-            }
-            if ($object->isInitialized('budget') && null !== $object->getBudget()) {
-                $data['budget'] = $object->getBudget();
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('budgetUsagePercent') && null !== $data->getBudgetUsagePercent()) {
+            $dataArray['budgetUsagePercent'] = $data->getBudgetUsagePercent();
         }
+        if ($data->isInitialized('portfolioId') && null !== $data->getPortfolioId()) {
+            $dataArray['portfolioId'] = $data->getPortfolioId();
+        }
+        if ($data->isInitialized('usageUpdatedTimestamp') && null !== $data->getUsageUpdatedTimestamp()) {
+            $dataArray['usageUpdatedTimestamp'] = $data->getUsageUpdatedTimestamp()->format('Y-m-d\TH:i:sP');
+        }
+        if ($data->isInitialized('index') && null !== $data->getIndex()) {
+            $dataArray['index'] = $data->getIndex();
+        }
+        if ($data->isInitialized('budget') && null !== $data->getBudget()) {
+            $dataArray['budget'] = $data->getBudget();
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BudgetUsagePortfolio::class => false];
     }
 }

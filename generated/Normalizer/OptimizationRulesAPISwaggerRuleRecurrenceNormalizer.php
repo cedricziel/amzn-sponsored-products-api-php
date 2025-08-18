@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,199 +20,98 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class OptimizationRulesAPISwaggerRuleRecurrenceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class OptimizationRulesAPISwaggerRuleRecurrenceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('duration', $data)) {
-                $object->setDuration($this->denormalizer->denormalize($data['duration'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerDuration::class, 'json', $context));
-                unset($data['duration']);
-            }
-            if (\array_key_exists('timesOfDay', $data)) {
-                $values = [];
-                foreach ($data['timesOfDay'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrenceTimesOfDayItem::class, 'json', $context);
-                }
-                $object->setTimesOfDay($values);
-                unset($data['timesOfDay']);
-            }
-            if (\array_key_exists('type', $data)) {
-                $object->setType($data['type']);
-                unset($data['type']);
-            }
-            if (\array_key_exists('daysOfWeek', $data)) {
-                $values_1 = [];
-                foreach ($data['daysOfWeek'] as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $object->setDaysOfWeek($values_1);
-                unset($data['daysOfWeek']);
-            }
-            foreach ($data as $key => $value_2) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_2;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            $data['duration'] = $this->normalizer->normalize($object->getDuration(), 'json', $context);
-            if ($object->isInitialized('timesOfDay') && null !== $object->getTimesOfDay()) {
-                $values = [];
-                foreach ($object->getTimesOfDay() as $value) {
-                    $values[] = $this->normalizer->normalize($value, 'json', $context);
-                }
-                $data['timesOfDay'] = $values;
-            }
-            $data['type'] = $object->getType();
-            if ($object->isInitialized('daysOfWeek') && null !== $object->getDaysOfWeek()) {
-                $values_1 = [];
-                foreach ($object->getDaysOfWeek() as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $data['daysOfWeek'] = $values_1;
-            }
-            foreach ($object as $key => $value_2) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_2;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class === $type;
     }
-} else {
-    class OptimizationRulesAPISwaggerRuleRecurrenceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('duration', $data)) {
-                $object->setDuration($this->denormalizer->denormalize($data['duration'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerDuration::class, 'json', $context));
-                unset($data['duration']);
-            }
-            if (\array_key_exists('timesOfDay', $data)) {
-                $values = [];
-                foreach ($data['timesOfDay'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrenceTimesOfDayItem::class, 'json', $context);
-                }
-                $object->setTimesOfDay($values);
-                unset($data['timesOfDay']);
-            }
-            if (\array_key_exists('type', $data)) {
-                $object->setType($data['type']);
-                unset($data['type']);
-            }
-            if (\array_key_exists('daysOfWeek', $data)) {
-                $values_1 = [];
-                foreach ($data['daysOfWeek'] as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $object->setDaysOfWeek($values_1);
-                unset($data['daysOfWeek']);
-            }
-            foreach ($data as $key => $value_2) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_2;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            $data['duration'] = $this->normalizer->normalize($object->getDuration(), 'json', $context);
-            if ($object->isInitialized('timesOfDay') && null !== $object->getTimesOfDay()) {
-                $values = [];
-                foreach ($object->getTimesOfDay() as $value) {
-                    $values[] = $this->normalizer->normalize($value, 'json', $context);
-                }
-                $data['timesOfDay'] = $values;
+        if (\array_key_exists('duration', $data)) {
+            $object->setDuration($this->denormalizer->denormalize($data['duration'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerDuration::class, 'json', $context));
+            unset($data['duration']);
+        }
+        if (\array_key_exists('timesOfDay', $data)) {
+            $values = [];
+            foreach ($data['timesOfDay'] as $value) {
+                $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrenceTimesOfDayItem::class, 'json', $context);
             }
-            $data['type'] = $object->getType();
-            if ($object->isInitialized('daysOfWeek') && null !== $object->getDaysOfWeek()) {
-                $values_1 = [];
-                foreach ($object->getDaysOfWeek() as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $data['daysOfWeek'] = $values_1;
+            $object->setTimesOfDay($values);
+            unset($data['timesOfDay']);
+        }
+        if (\array_key_exists('type', $data)) {
+            $object->setType($data['type']);
+            unset($data['type']);
+        }
+        if (\array_key_exists('daysOfWeek', $data)) {
+            $values_1 = [];
+            foreach ($data['daysOfWeek'] as $value_1) {
+                $values_1[] = $value_1;
             }
-            foreach ($object as $key => $value_2) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_2;
-                }
+            $object->setDaysOfWeek($values_1);
+            unset($data['daysOfWeek']);
+        }
+        foreach ($data as $key => $value_2) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value_2;
             }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        $dataArray['duration'] = $this->normalizer->normalize($data->getDuration(), 'json', $context);
+        if ($data->isInitialized('timesOfDay') && null !== $data->getTimesOfDay()) {
+            $values = [];
+            foreach ($data->getTimesOfDay() as $value) {
+                $values[] = $this->normalizer->normalize($value, 'json', $context);
+            }
+            $dataArray['timesOfDay'] = $values;
         }
+        $dataArray['type'] = $data->getType();
+        if ($data->isInitialized('daysOfWeek') && null !== $data->getDaysOfWeek()) {
+            $values_1 = [];
+            foreach ($data->getDaysOfWeek() as $value_1) {
+                $values_1[] = $value_1;
+            }
+            $dataArray['daysOfWeek'] = $values_1;
+        }
+        foreach ($data as $key => $value_2) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value_2;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\OptimizationRulesAPISwaggerRuleRecurrence::class => false];
     }
 }
