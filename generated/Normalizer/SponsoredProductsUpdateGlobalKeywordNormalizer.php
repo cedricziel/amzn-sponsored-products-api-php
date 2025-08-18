@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,185 +20,91 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class SponsoredProductsUpdateGlobalKeywordNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class SponsoredProductsUpdateGlobalKeywordNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('keywordId', $data)) {
-                $object->setKeywordId($data['keywordId']);
-                unset($data['keywordId']);
-            }
-            if (\array_key_exists('name', $data)) {
-                $object->setName($data['name']);
-                unset($data['name']);
-            }
-            if (\array_key_exists('state', $data)) {
-                $object->setState($this->denormalizer->denormalize($data['state'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateGlobalEntityState::class, 'json', $context));
-                unset($data['state']);
-            }
-            if (\array_key_exists('bid', $data)) {
-                $object->setBid($this->denormalizer->denormalize($data['bid'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalBid::class, 'json', $context));
-                unset($data['bid']);
-            }
-            if (\array_key_exists('keywordText', $data)) {
-                $object->setKeywordText($this->denormalizer->denormalize($data['keywordText'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalKeywordText::class, 'json', $context));
-                unset($data['keywordText']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            $data['keywordId'] = $object->getKeywordId();
-            if ($object->isInitialized('name') && null !== $object->getName()) {
-                $data['name'] = $object->getName();
-            }
-            if ($object->isInitialized('state') && null !== $object->getState()) {
-                $data['state'] = $this->normalizer->normalize($object->getState(), 'json', $context);
-            }
-            if ($object->isInitialized('bid') && null !== $object->getBid()) {
-                $data['bid'] = $this->normalizer->normalize($object->getBid(), 'json', $context);
-            }
-            if ($object->isInitialized('keywordText') && null !== $object->getKeywordText()) {
-                $data['keywordText'] = $this->normalizer->normalize($object->getKeywordText(), 'json', $context);
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class === $type;
     }
-} else {
-    class SponsoredProductsUpdateGlobalKeywordNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('keywordId', $data)) {
-                $object->setKeywordId($data['keywordId']);
-                unset($data['keywordId']);
-            }
-            if (\array_key_exists('name', $data)) {
-                $object->setName($data['name']);
-                unset($data['name']);
-            }
-            if (\array_key_exists('state', $data)) {
-                $object->setState($this->denormalizer->denormalize($data['state'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateGlobalEntityState::class, 'json', $context));
-                unset($data['state']);
-            }
-            if (\array_key_exists('bid', $data)) {
-                $object->setBid($this->denormalizer->denormalize($data['bid'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalBid::class, 'json', $context));
-                unset($data['bid']);
-            }
-            if (\array_key_exists('keywordText', $data)) {
-                $object->setKeywordText($this->denormalizer->denormalize($data['keywordText'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalKeywordText::class, 'json', $context));
-                unset($data['keywordText']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            $data['keywordId'] = $object->getKeywordId();
-            if ($object->isInitialized('name') && null !== $object->getName()) {
-                $data['name'] = $object->getName();
+        if (\array_key_exists('keywordId', $data)) {
+            $object->setKeywordId($data['keywordId']);
+            unset($data['keywordId']);
+        }
+        if (\array_key_exists('name', $data)) {
+            $object->setName($data['name']);
+            unset($data['name']);
+        }
+        if (\array_key_exists('state', $data)) {
+            $object->setState($this->denormalizer->denormalize($data['state'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCreateOrUpdateGlobalEntityState::class, 'json', $context));
+            unset($data['state']);
+        }
+        if (\array_key_exists('bid', $data)) {
+            $object->setBid($this->denormalizer->denormalize($data['bid'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalBid::class, 'json', $context));
+            unset($data['bid']);
+        }
+        if (\array_key_exists('keywordText', $data)) {
+            $object->setKeywordText($this->denormalizer->denormalize($data['keywordText'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalKeywordText::class, 'json', $context));
+            unset($data['keywordText']);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value;
             }
-            if ($object->isInitialized('state') && null !== $object->getState()) {
-                $data['state'] = $this->normalizer->normalize($object->getState(), 'json', $context);
-            }
-            if ($object->isInitialized('bid') && null !== $object->getBid()) {
-                $data['bid'] = $this->normalizer->normalize($object->getBid(), 'json', $context);
-            }
-            if ($object->isInitialized('keywordText') && null !== $object->getKeywordText()) {
-                $data['keywordText'] = $this->normalizer->normalize($object->getKeywordText(), 'json', $context);
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        $dataArray['keywordId'] = $data->getKeywordId();
+        if ($data->isInitialized('name') && null !== $data->getName()) {
+            $dataArray['name'] = $data->getName();
         }
+        if ($data->isInitialized('state') && null !== $data->getState()) {
+            $dataArray['state'] = $this->normalizer->normalize($data->getState(), 'json', $context);
+        }
+        if ($data->isInitialized('bid') && null !== $data->getBid()) {
+            $dataArray['bid'] = $this->normalizer->normalize($data->getBid(), 'json', $context);
+        }
+        if ($data->isInitialized('keywordText') && null !== $data->getKeywordText()) {
+            $dataArray['keywordText'] = $this->normalizer->normalize($data->getKeywordText(), 'json', $context);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateGlobalKeyword::class => false];
     }
 }

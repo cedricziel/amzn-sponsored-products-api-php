@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,245 +20,121 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class SponsoredProductsCampaignAccessErrorSelectorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class SponsoredProductsCampaignAccessErrorSelectorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('entityNotFoundError', $data)) {
-                $object->setEntityNotFoundError($this->denormalizer->denormalize($data['entityNotFoundError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsEntityNotFoundError::class, 'json', $context));
-                unset($data['entityNotFoundError']);
-            }
-            if (\array_key_exists('missingValueError', $data)) {
-                $object->setMissingValueError($this->denormalizer->denormalize($data['missingValueError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsMissingValueError::class, 'json', $context));
-                unset($data['missingValueError']);
-            }
-            if (\array_key_exists('dateError', $data)) {
-                $object->setDateError($this->denormalizer->denormalize($data['dateError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDateError::class, 'json', $context));
-                unset($data['dateError']);
-            }
-            if (\array_key_exists('malformedValueError', $data)) {
-                $object->setMalformedValueError($this->denormalizer->denormalize($data['malformedValueError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsMalformedValueError::class, 'json', $context));
-                unset($data['malformedValueError']);
-            }
-            if (\array_key_exists('internalServerError', $data)) {
-                $object->setInternalServerError($this->denormalizer->denormalize($data['internalServerError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInternalServerError::class, 'json', $context));
-                unset($data['internalServerError']);
-            }
-            if (\array_key_exists('rangeError', $data)) {
-                $object->setRangeError($this->denormalizer->denormalize($data['rangeError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class, 'json', $context));
-                unset($data['rangeError']);
-            }
-            if (\array_key_exists('otherError', $data)) {
-                $object->setOtherError($this->denormalizer->denormalize($data['otherError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsOtherError::class, 'json', $context));
-                unset($data['otherError']);
-            }
-            if (\array_key_exists('throttledError', $data)) {
-                $object->setThrottledError($this->denormalizer->denormalize($data['throttledError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsThrottledError::class, 'json', $context));
-                unset($data['throttledError']);
-            }
-            if (\array_key_exists('invalidInputError', $data)) {
-                $object->setInvalidInputError($this->denormalizer->denormalize($data['invalidInputError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInvalidInputError::class, 'json', $context));
-                unset($data['invalidInputError']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('entityNotFoundError') && null !== $object->getEntityNotFoundError()) {
-                $data['entityNotFoundError'] = $this->normalizer->normalize($object->getEntityNotFoundError(), 'json', $context);
-            }
-            if ($object->isInitialized('missingValueError') && null !== $object->getMissingValueError()) {
-                $data['missingValueError'] = $this->normalizer->normalize($object->getMissingValueError(), 'json', $context);
-            }
-            if ($object->isInitialized('dateError') && null !== $object->getDateError()) {
-                $data['dateError'] = $this->normalizer->normalize($object->getDateError(), 'json', $context);
-            }
-            if ($object->isInitialized('malformedValueError') && null !== $object->getMalformedValueError()) {
-                $data['malformedValueError'] = $this->normalizer->normalize($object->getMalformedValueError(), 'json', $context);
-            }
-            if ($object->isInitialized('internalServerError') && null !== $object->getInternalServerError()) {
-                $data['internalServerError'] = $this->normalizer->normalize($object->getInternalServerError(), 'json', $context);
-            }
-            if ($object->isInitialized('rangeError') && null !== $object->getRangeError()) {
-                $data['rangeError'] = $this->normalizer->normalize($object->getRangeError(), 'json', $context);
-            }
-            if ($object->isInitialized('otherError') && null !== $object->getOtherError()) {
-                $data['otherError'] = $this->normalizer->normalize($object->getOtherError(), 'json', $context);
-            }
-            if ($object->isInitialized('throttledError') && null !== $object->getThrottledError()) {
-                $data['throttledError'] = $this->normalizer->normalize($object->getThrottledError(), 'json', $context);
-            }
-            if ($object->isInitialized('invalidInputError') && null !== $object->getInvalidInputError()) {
-                $data['invalidInputError'] = $this->normalizer->normalize($object->getInvalidInputError(), 'json', $context);
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class === $type;
     }
-} else {
-    class SponsoredProductsCampaignAccessErrorSelectorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('entityNotFoundError', $data)) {
-                $object->setEntityNotFoundError($this->denormalizer->denormalize($data['entityNotFoundError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsEntityNotFoundError::class, 'json', $context));
-                unset($data['entityNotFoundError']);
-            }
-            if (\array_key_exists('missingValueError', $data)) {
-                $object->setMissingValueError($this->denormalizer->denormalize($data['missingValueError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsMissingValueError::class, 'json', $context));
-                unset($data['missingValueError']);
-            }
-            if (\array_key_exists('dateError', $data)) {
-                $object->setDateError($this->denormalizer->denormalize($data['dateError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDateError::class, 'json', $context));
-                unset($data['dateError']);
-            }
-            if (\array_key_exists('malformedValueError', $data)) {
-                $object->setMalformedValueError($this->denormalizer->denormalize($data['malformedValueError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsMalformedValueError::class, 'json', $context));
-                unset($data['malformedValueError']);
-            }
-            if (\array_key_exists('internalServerError', $data)) {
-                $object->setInternalServerError($this->denormalizer->denormalize($data['internalServerError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInternalServerError::class, 'json', $context));
-                unset($data['internalServerError']);
-            }
-            if (\array_key_exists('rangeError', $data)) {
-                $object->setRangeError($this->denormalizer->denormalize($data['rangeError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class, 'json', $context));
-                unset($data['rangeError']);
-            }
-            if (\array_key_exists('otherError', $data)) {
-                $object->setOtherError($this->denormalizer->denormalize($data['otherError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsOtherError::class, 'json', $context));
-                unset($data['otherError']);
-            }
-            if (\array_key_exists('throttledError', $data)) {
-                $object->setThrottledError($this->denormalizer->denormalize($data['throttledError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsThrottledError::class, 'json', $context));
-                unset($data['throttledError']);
-            }
-            if (\array_key_exists('invalidInputError', $data)) {
-                $object->setInvalidInputError($this->denormalizer->denormalize($data['invalidInputError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInvalidInputError::class, 'json', $context));
-                unset($data['invalidInputError']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('entityNotFoundError') && null !== $object->getEntityNotFoundError()) {
-                $data['entityNotFoundError'] = $this->normalizer->normalize($object->getEntityNotFoundError(), 'json', $context);
+        if (\array_key_exists('entityNotFoundError', $data)) {
+            $object->setEntityNotFoundError($this->denormalizer->denormalize($data['entityNotFoundError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsEntityNotFoundError::class, 'json', $context));
+            unset($data['entityNotFoundError']);
+        }
+        if (\array_key_exists('missingValueError', $data)) {
+            $object->setMissingValueError($this->denormalizer->denormalize($data['missingValueError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsMissingValueError::class, 'json', $context));
+            unset($data['missingValueError']);
+        }
+        if (\array_key_exists('dateError', $data)) {
+            $object->setDateError($this->denormalizer->denormalize($data['dateError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsDateError::class, 'json', $context));
+            unset($data['dateError']);
+        }
+        if (\array_key_exists('malformedValueError', $data)) {
+            $object->setMalformedValueError($this->denormalizer->denormalize($data['malformedValueError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsMalformedValueError::class, 'json', $context));
+            unset($data['malformedValueError']);
+        }
+        if (\array_key_exists('internalServerError', $data)) {
+            $object->setInternalServerError($this->denormalizer->denormalize($data['internalServerError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInternalServerError::class, 'json', $context));
+            unset($data['internalServerError']);
+        }
+        if (\array_key_exists('rangeError', $data)) {
+            $object->setRangeError($this->denormalizer->denormalize($data['rangeError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsRangeError::class, 'json', $context));
+            unset($data['rangeError']);
+        }
+        if (\array_key_exists('otherError', $data)) {
+            $object->setOtherError($this->denormalizer->denormalize($data['otherError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsOtherError::class, 'json', $context));
+            unset($data['otherError']);
+        }
+        if (\array_key_exists('throttledError', $data)) {
+            $object->setThrottledError($this->denormalizer->denormalize($data['throttledError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsThrottledError::class, 'json', $context));
+            unset($data['throttledError']);
+        }
+        if (\array_key_exists('invalidInputError', $data)) {
+            $object->setInvalidInputError($this->denormalizer->denormalize($data['invalidInputError'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsInvalidInputError::class, 'json', $context));
+            unset($data['invalidInputError']);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value;
             }
-            if ($object->isInitialized('missingValueError') && null !== $object->getMissingValueError()) {
-                $data['missingValueError'] = $this->normalizer->normalize($object->getMissingValueError(), 'json', $context);
-            }
-            if ($object->isInitialized('dateError') && null !== $object->getDateError()) {
-                $data['dateError'] = $this->normalizer->normalize($object->getDateError(), 'json', $context);
-            }
-            if ($object->isInitialized('malformedValueError') && null !== $object->getMalformedValueError()) {
-                $data['malformedValueError'] = $this->normalizer->normalize($object->getMalformedValueError(), 'json', $context);
-            }
-            if ($object->isInitialized('internalServerError') && null !== $object->getInternalServerError()) {
-                $data['internalServerError'] = $this->normalizer->normalize($object->getInternalServerError(), 'json', $context);
-            }
-            if ($object->isInitialized('rangeError') && null !== $object->getRangeError()) {
-                $data['rangeError'] = $this->normalizer->normalize($object->getRangeError(), 'json', $context);
-            }
-            if ($object->isInitialized('otherError') && null !== $object->getOtherError()) {
-                $data['otherError'] = $this->normalizer->normalize($object->getOtherError(), 'json', $context);
-            }
-            if ($object->isInitialized('throttledError') && null !== $object->getThrottledError()) {
-                $data['throttledError'] = $this->normalizer->normalize($object->getThrottledError(), 'json', $context);
-            }
-            if ($object->isInitialized('invalidInputError') && null !== $object->getInvalidInputError()) {
-                $data['invalidInputError'] = $this->normalizer->normalize($object->getInvalidInputError(), 'json', $context);
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('entityNotFoundError') && null !== $data->getEntityNotFoundError()) {
+            $dataArray['entityNotFoundError'] = $this->normalizer->normalize($data->getEntityNotFoundError(), 'json', $context);
         }
+        if ($data->isInitialized('missingValueError') && null !== $data->getMissingValueError()) {
+            $dataArray['missingValueError'] = $this->normalizer->normalize($data->getMissingValueError(), 'json', $context);
+        }
+        if ($data->isInitialized('dateError') && null !== $data->getDateError()) {
+            $dataArray['dateError'] = $this->normalizer->normalize($data->getDateError(), 'json', $context);
+        }
+        if ($data->isInitialized('malformedValueError') && null !== $data->getMalformedValueError()) {
+            $dataArray['malformedValueError'] = $this->normalizer->normalize($data->getMalformedValueError(), 'json', $context);
+        }
+        if ($data->isInitialized('internalServerError') && null !== $data->getInternalServerError()) {
+            $dataArray['internalServerError'] = $this->normalizer->normalize($data->getInternalServerError(), 'json', $context);
+        }
+        if ($data->isInitialized('rangeError') && null !== $data->getRangeError()) {
+            $dataArray['rangeError'] = $this->normalizer->normalize($data->getRangeError(), 'json', $context);
+        }
+        if ($data->isInitialized('otherError') && null !== $data->getOtherError()) {
+            $dataArray['otherError'] = $this->normalizer->normalize($data->getOtherError(), 'json', $context);
+        }
+        if ($data->isInitialized('throttledError') && null !== $data->getThrottledError()) {
+            $dataArray['throttledError'] = $this->normalizer->normalize($data->getThrottledError(), 'json', $context);
+        }
+        if ($data->isInitialized('invalidInputError') && null !== $data->getInvalidInputError()) {
+            $dataArray['invalidInputError'] = $this->normalizer->normalize($data->getInvalidInputError(), 'json', $context);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsCampaignAccessErrorSelector::class => false];
     }
 }
