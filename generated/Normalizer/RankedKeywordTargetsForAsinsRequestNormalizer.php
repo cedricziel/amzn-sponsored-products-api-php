@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,261 +20,132 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class RankedKeywordTargetsForAsinsRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class RankedKeywordTargetsForAsinsRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest();
-            if (\array_key_exists('maxRecommendations', $data) && \is_int($data['maxRecommendations'])) {
-                $data['maxRecommendations'] = (float) $data['maxRecommendations'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('asins', $data)) {
-                $values = [];
-                foreach ($data['asins'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setAsins($values);
-                unset($data['asins']);
-            }
-            if (\array_key_exists('biddingStrategy', $data)) {
-                $object->setBiddingStrategy($data['biddingStrategy']);
-                unset($data['biddingStrategy']);
-            }
-            if (\array_key_exists('recommendationType', $data)) {
-                $object->setRecommendationType($data['recommendationType']);
-                unset($data['recommendationType']);
-            }
-            if (\array_key_exists('bidsEnabled', $data)) {
-                $object->setBidsEnabled($data['bidsEnabled']);
-                unset($data['bidsEnabled']);
-            }
-            if (\array_key_exists('targets', $data)) {
-                $values_1 = [];
-                foreach ($data['targets'] as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $object->setTargets($values_1);
-                unset($data['targets']);
-            }
-            if (\array_key_exists('maxRecommendations', $data)) {
-                $object->setMaxRecommendations($data['maxRecommendations']);
-                unset($data['maxRecommendations']);
-            }
-            if (\array_key_exists('sortDimension', $data)) {
-                $object->setSortDimension($data['sortDimension']);
-                unset($data['sortDimension']);
-            }
-            if (\array_key_exists('locale', $data)) {
-                $object->setLocale($data['locale']);
-                unset($data['locale']);
-            }
-            foreach ($data as $key => $value_2) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_2;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            $values = [];
-            foreach ($object->getAsins() as $value) {
-                $values[] = $value;
-            }
-            $data['asins'] = $values;
-            if ($object->isInitialized('biddingStrategy') && null !== $object->getBiddingStrategy()) {
-                $data['biddingStrategy'] = $object->getBiddingStrategy();
-            }
-            $data['recommendationType'] = $object->getRecommendationType();
-            if ($object->isInitialized('bidsEnabled') && null !== $object->getBidsEnabled()) {
-                $data['bidsEnabled'] = $object->getBidsEnabled();
-            }
-            if ($object->isInitialized('targets') && null !== $object->getTargets()) {
-                $values_1 = [];
-                foreach ($object->getTargets() as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $data['targets'] = $values_1;
-            }
-            if ($object->isInitialized('maxRecommendations') && null !== $object->getMaxRecommendations()) {
-                $data['maxRecommendations'] = $object->getMaxRecommendations();
-            }
-            if ($object->isInitialized('sortDimension') && null !== $object->getSortDimension()) {
-                $data['sortDimension'] = $object->getSortDimension();
-            }
-            if ($object->isInitialized('locale') && null !== $object->getLocale()) {
-                $data['locale'] = $object->getLocale();
-            }
-            foreach ($object as $key => $value_2) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_2;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest::class === $type;
     }
-} else {
-    class RankedKeywordTargetsForAsinsRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest();
-            if (\array_key_exists('maxRecommendations', $data) && \is_int($data['maxRecommendations'])) {
-                $data['maxRecommendations'] = (float) $data['maxRecommendations'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('asins', $data)) {
-                $values = [];
-                foreach ($data['asins'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setAsins($values);
-                unset($data['asins']);
-            }
-            if (\array_key_exists('biddingStrategy', $data)) {
-                $object->setBiddingStrategy($data['biddingStrategy']);
-                unset($data['biddingStrategy']);
-            }
-            if (\array_key_exists('recommendationType', $data)) {
-                $object->setRecommendationType($data['recommendationType']);
-                unset($data['recommendationType']);
-            }
-            if (\array_key_exists('bidsEnabled', $data)) {
-                $object->setBidsEnabled($data['bidsEnabled']);
-                unset($data['bidsEnabled']);
-            }
-            if (\array_key_exists('targets', $data)) {
-                $values_1 = [];
-                foreach ($data['targets'] as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $object->setTargets($values_1);
-                unset($data['targets']);
-            }
-            if (\array_key_exists('maxRecommendations', $data)) {
-                $object->setMaxRecommendations($data['maxRecommendations']);
-                unset($data['maxRecommendations']);
-            }
-            if (\array_key_exists('sortDimension', $data)) {
-                $object->setSortDimension($data['sortDimension']);
-                unset($data['sortDimension']);
-            }
-            if (\array_key_exists('locale', $data)) {
-                $object->setLocale($data['locale']);
-                unset($data['locale']);
-            }
-            foreach ($data as $key => $value_2) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_2;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest();
+        if (\array_key_exists('maxRecommendations', $data) && \is_int($data['maxRecommendations'])) {
+            $data['maxRecommendations'] = (float) $data['maxRecommendations'];
+        }
+        if (\array_key_exists('bidsEnabled', $data) && \is_int($data['bidsEnabled'])) {
+            $data['bidsEnabled'] = (bool) $data['bidsEnabled'];
+        }
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
+        if (\array_key_exists('asins', $data)) {
             $values = [];
-            foreach ($object->getAsins() as $value) {
+            foreach ($data['asins'] as $value) {
                 $values[] = $value;
             }
-            $data['asins'] = $values;
-            if ($object->isInitialized('biddingStrategy') && null !== $object->getBiddingStrategy()) {
-                $data['biddingStrategy'] = $object->getBiddingStrategy();
+            $object->setAsins($values);
+            unset($data['asins']);
+        }
+        if (\array_key_exists('biddingStrategy', $data)) {
+            $object->setBiddingStrategy($data['biddingStrategy']);
+            unset($data['biddingStrategy']);
+        }
+        if (\array_key_exists('recommendationType', $data)) {
+            $object->setRecommendationType($data['recommendationType']);
+            unset($data['recommendationType']);
+        }
+        if (\array_key_exists('bidsEnabled', $data)) {
+            $object->setBidsEnabled($data['bidsEnabled']);
+            unset($data['bidsEnabled']);
+        }
+        if (\array_key_exists('targets', $data)) {
+            $values_1 = [];
+            foreach ($data['targets'] as $value_1) {
+                $values_1[] = $value_1;
             }
-            $data['recommendationType'] = $object->getRecommendationType();
-            if ($object->isInitialized('bidsEnabled') && null !== $object->getBidsEnabled()) {
-                $data['bidsEnabled'] = $object->getBidsEnabled();
+            $object->setTargets($values_1);
+            unset($data['targets']);
+        }
+        if (\array_key_exists('maxRecommendations', $data)) {
+            $object->setMaxRecommendations($data['maxRecommendations']);
+            unset($data['maxRecommendations']);
+        }
+        if (\array_key_exists('sortDimension', $data)) {
+            $object->setSortDimension($data['sortDimension']);
+            unset($data['sortDimension']);
+        }
+        if (\array_key_exists('locale', $data)) {
+            $object->setLocale($data['locale']);
+            unset($data['locale']);
+        }
+        foreach ($data as $key => $value_2) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value_2;
             }
-            if ($object->isInitialized('targets') && null !== $object->getTargets()) {
-                $values_1 = [];
-                foreach ($object->getTargets() as $value_1) {
-                    $values_1[] = $value_1;
-                }
-                $data['targets'] = $values_1;
-            }
-            if ($object->isInitialized('maxRecommendations') && null !== $object->getMaxRecommendations()) {
-                $data['maxRecommendations'] = $object->getMaxRecommendations();
-            }
-            if ($object->isInitialized('sortDimension') && null !== $object->getSortDimension()) {
-                $data['sortDimension'] = $object->getSortDimension();
-            }
-            if ($object->isInitialized('locale') && null !== $object->getLocale()) {
-                $data['locale'] = $object->getLocale();
-            }
-            foreach ($object as $key => $value_2) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_2;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        $values = [];
+        foreach ($data->getAsins() as $value) {
+            $values[] = $value;
         }
+        $dataArray['asins'] = $values;
+        if ($data->isInitialized('biddingStrategy') && null !== $data->getBiddingStrategy()) {
+            $dataArray['biddingStrategy'] = $data->getBiddingStrategy();
+        }
+        $dataArray['recommendationType'] = $data->getRecommendationType();
+        if ($data->isInitialized('bidsEnabled') && null !== $data->getBidsEnabled()) {
+            $dataArray['bidsEnabled'] = $data->getBidsEnabled();
+        }
+        if ($data->isInitialized('targets') && null !== $data->getTargets()) {
+            $values_1 = [];
+            foreach ($data->getTargets() as $value_1) {
+                $values_1[] = $value_1;
+            }
+            $dataArray['targets'] = $values_1;
+        }
+        if ($data->isInitialized('maxRecommendations') && null !== $data->getMaxRecommendations()) {
+            $dataArray['maxRecommendations'] = $data->getMaxRecommendations();
+        }
+        if ($data->isInitialized('sortDimension') && null !== $data->getSortDimension()) {
+            $dataArray['sortDimension'] = $data->getSortDimension();
+        }
+        if ($data->isInitialized('locale') && null !== $data->getLocale()) {
+            $dataArray['locale'] = $data->getLocale();
+        }
+        foreach ($data as $key => $value_2) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value_2;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\RankedKeywordTargetsForAsinsRequest::class => false];
     }
 }

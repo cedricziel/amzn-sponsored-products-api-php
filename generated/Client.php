@@ -335,7 +335,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
      *
-     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\SearchBrandsBadRequestException
      * @throws Exception\SearchBrandsUnauthorizedException
@@ -976,7 +976,7 @@ class Client extends Runtime\Client\Client
      * @param string $fetch  Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array  $accept Accept content header application/vnd.spproducttargetingresponse.v3+json|application/json
      *
-     * @return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
+     * @return Model\Brand[]|\Psr\Http\Message\ResponseInterface|null
      *
      * @throws Exception\GetNegativeBrandsBadRequestException
      * @throws Exception\GetNegativeBrandsUnauthorizedException

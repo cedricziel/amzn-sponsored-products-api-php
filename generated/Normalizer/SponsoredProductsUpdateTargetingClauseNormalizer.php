@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,211 +20,104 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class SponsoredProductsUpdateTargetingClauseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class SponsoredProductsUpdateTargetingClauseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause();
-            if (\array_key_exists('bid', $data) && \is_int($data['bid'])) {
-                $data['bid'] = (float) $data['bid'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('expression', $data)) {
-                $values = [];
-                foreach ($data['expression'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetingExpressionPredicateWithoutOther::class, 'json', $context);
-                }
-                $object->setExpression($values);
-                unset($data['expression']);
-            }
-            if (\array_key_exists('targetId', $data)) {
-                $object->setTargetId($data['targetId']);
-                unset($data['targetId']);
-            }
-            if (\array_key_exists('expressionType', $data)) {
-                $object->setExpressionType($data['expressionType']);
-                unset($data['expressionType']);
-            }
-            if (\array_key_exists('state', $data)) {
-                $object->setState($data['state']);
-                unset($data['state']);
-            }
-            if (\array_key_exists('bid', $data) && null !== $data['bid']) {
-                $object->setBid($data['bid']);
-                unset($data['bid']);
-            } elseif (\array_key_exists('bid', $data) && null === $data['bid']) {
-                $object->setBid(null);
-            }
-            foreach ($data as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_1;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('expression') && null !== $object->getExpression()) {
-                $values = [];
-                foreach ($object->getExpression() as $value) {
-                    $values[] = $this->normalizer->normalize($value, 'json', $context);
-                }
-                $data['expression'] = $values;
-            }
-            $data['targetId'] = $object->getTargetId();
-            if ($object->isInitialized('expressionType') && null !== $object->getExpressionType()) {
-                $data['expressionType'] = $object->getExpressionType();
-            }
-            if ($object->isInitialized('state') && null !== $object->getState()) {
-                $data['state'] = $object->getState();
-            }
-            if ($object->isInitialized('bid') && null !== $object->getBid()) {
-                $data['bid'] = $object->getBid();
-            }
-            foreach ($object as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_1;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause::class === $type;
     }
-} else {
-    class SponsoredProductsUpdateTargetingClauseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause();
-            if (\array_key_exists('bid', $data) && \is_int($data['bid'])) {
-                $data['bid'] = (float) $data['bid'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('expression', $data)) {
-                $values = [];
-                foreach ($data['expression'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetingExpressionPredicateWithoutOther::class, 'json', $context);
-                }
-                $object->setExpression($values);
-                unset($data['expression']);
-            }
-            if (\array_key_exists('targetId', $data)) {
-                $object->setTargetId($data['targetId']);
-                unset($data['targetId']);
-            }
-            if (\array_key_exists('expressionType', $data)) {
-                $object->setExpressionType($data['expressionType']);
-                unset($data['expressionType']);
-            }
-            if (\array_key_exists('state', $data)) {
-                $object->setState($data['state']);
-                unset($data['state']);
-            }
-            if (\array_key_exists('bid', $data) && null !== $data['bid']) {
-                $object->setBid($data['bid']);
-                unset($data['bid']);
-            } elseif (\array_key_exists('bid', $data) && null === $data['bid']) {
-                $object->setBid(null);
-            }
-            foreach ($data as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_1;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause();
+        if (\array_key_exists('bid', $data) && \is_int($data['bid'])) {
+            $data['bid'] = (float) $data['bid'];
+        }
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('expression') && null !== $object->getExpression()) {
-                $values = [];
-                foreach ($object->getExpression() as $value) {
-                    $values[] = $this->normalizer->normalize($value, 'json', $context);
-                }
-                $data['expression'] = $values;
+        if (\array_key_exists('expression', $data)) {
+            $values = [];
+            foreach ($data['expression'] as $value) {
+                $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetingExpressionPredicateWithoutOther::class, 'json', $context);
             }
-            $data['targetId'] = $object->getTargetId();
-            if ($object->isInitialized('expressionType') && null !== $object->getExpressionType()) {
-                $data['expressionType'] = $object->getExpressionType();
+            $object->setExpression($values);
+            unset($data['expression']);
+        }
+        if (\array_key_exists('targetId', $data)) {
+            $object->setTargetId($data['targetId']);
+            unset($data['targetId']);
+        }
+        if (\array_key_exists('expressionType', $data)) {
+            $object->setExpressionType($data['expressionType']);
+            unset($data['expressionType']);
+        }
+        if (\array_key_exists('state', $data)) {
+            $object->setState($data['state']);
+            unset($data['state']);
+        }
+        if (\array_key_exists('bid', $data) && null !== $data['bid']) {
+            $object->setBid($data['bid']);
+            unset($data['bid']);
+        } elseif (\array_key_exists('bid', $data) && null === $data['bid']) {
+            $object->setBid(null);
+        }
+        foreach ($data as $key => $value_1) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value_1;
             }
-            if ($object->isInitialized('state') && null !== $object->getState()) {
-                $data['state'] = $object->getState();
-            }
-            if ($object->isInitialized('bid') && null !== $object->getBid()) {
-                $data['bid'] = $object->getBid();
-            }
-            foreach ($object as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_1;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('expression') && null !== $data->getExpression()) {
+            $values = [];
+            foreach ($data->getExpression() as $value) {
+                $values[] = $this->normalizer->normalize($value, 'json', $context);
+            }
+            $dataArray['expression'] = $values;
         }
+        $dataArray['targetId'] = $data->getTargetId();
+        if ($data->isInitialized('expressionType') && null !== $data->getExpressionType()) {
+            $dataArray['expressionType'] = $data->getExpressionType();
+        }
+        if ($data->isInitialized('state') && null !== $data->getState()) {
+            $dataArray['state'] = $data->getState();
+        }
+        if ($data->isInitialized('bid')) {
+            $dataArray['bid'] = $data->getBid();
+        }
+        foreach ($data as $key => $value_1) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value_1;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsUpdateTargetingClause::class => false];
     }
 }
