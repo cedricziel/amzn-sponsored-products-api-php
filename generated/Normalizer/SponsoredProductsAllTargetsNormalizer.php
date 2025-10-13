@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,293 +20,148 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class SponsoredProductsAllTargetsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class SponsoredProductsAllTargetsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('targetId', $data)) {
-                $object->setTargetId($data['targetId']);
-                unset($data['targetId']);
-            }
-            if (\array_key_exists('campaignId', $data)) {
-                $object->setCampaignId($data['campaignId']);
-                unset($data['campaignId']);
-            }
-            if (\array_key_exists('targetType', $data)) {
-                $object->setTargetType($data['targetType']);
-                unset($data['targetType']);
-            }
-            if (\array_key_exists('adGroupId', $data)) {
-                $object->setAdGroupId($data['adGroupId']);
-                unset($data['adGroupId']);
-            }
-            if (\array_key_exists('deliveryReasons', $data)) {
-                $values = [];
-                foreach ($data['deliveryReasons'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setDeliveryReasons($values);
-                unset($data['deliveryReasons']);
-            }
-            if (\array_key_exists('negative', $data)) {
-                $object->setNegative($data['negative']);
-                unset($data['negative']);
-            }
-            if (\array_key_exists('state', $data)) {
-                $object->setState($data['state']);
-                unset($data['state']);
-            }
-            if (\array_key_exists('lastUpdatedDateTime', $data)) {
-                $object->setLastUpdatedDateTime($data['lastUpdatedDateTime']);
-                unset($data['lastUpdatedDateTime']);
-            }
-            if (\array_key_exists('bid', $data)) {
-                $object->setBid($this->denormalizer->denormalize($data['bid'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsBid::class, 'json', $context));
-                unset($data['bid']);
-            }
-            if (\array_key_exists('targetDetails', $data)) {
-                $object->setTargetDetails($this->denormalizer->denormalize($data['targetDetails'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetDetails::class, 'json', $context));
-                unset($data['targetDetails']);
-            }
-            if (\array_key_exists('targetLevel', $data)) {
-                $object->setTargetLevel($data['targetLevel']);
-                unset($data['targetLevel']);
-            }
-            if (\array_key_exists('deliveryStatus', $data)) {
-                $object->setDeliveryStatus($data['deliveryStatus']);
-                unset($data['deliveryStatus']);
-            }
-            if (\array_key_exists('creationDateTime', $data)) {
-                $object->setCreationDateTime($data['creationDateTime']);
-                unset($data['creationDateTime']);
-            }
-            foreach ($data as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_1;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            $data['targetId'] = $object->getTargetId();
-            if ($object->isInitialized('campaignId') && null !== $object->getCampaignId()) {
-                $data['campaignId'] = $object->getCampaignId();
-            }
-            $data['targetType'] = $object->getTargetType();
-            if ($object->isInitialized('adGroupId') && null !== $object->getAdGroupId()) {
-                $data['adGroupId'] = $object->getAdGroupId();
-            }
-            if ($object->isInitialized('deliveryReasons') && null !== $object->getDeliveryReasons()) {
-                $values = [];
-                foreach ($object->getDeliveryReasons() as $value) {
-                    $values[] = $value;
-                }
-                $data['deliveryReasons'] = $values;
-            }
-            $data['negative'] = $object->getNegative();
-            $data['state'] = $object->getState();
-            if ($object->isInitialized('lastUpdatedDateTime') && null !== $object->getLastUpdatedDateTime()) {
-                $data['lastUpdatedDateTime'] = $object->getLastUpdatedDateTime();
-            }
-            if ($object->isInitialized('bid') && null !== $object->getBid()) {
-                $data['bid'] = $this->normalizer->normalize($object->getBid(), 'json', $context);
-            }
-            $data['targetDetails'] = $this->normalizer->normalize($object->getTargetDetails(), 'json', $context);
-            $data['targetLevel'] = $object->getTargetLevel();
-            if ($object->isInitialized('deliveryStatus') && null !== $object->getDeliveryStatus()) {
-                $data['deliveryStatus'] = $object->getDeliveryStatus();
-            }
-            if ($object->isInitialized('creationDateTime') && null !== $object->getCreationDateTime()) {
-                $data['creationDateTime'] = $object->getCreationDateTime();
-            }
-            foreach ($object as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_1;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets::class === $type;
     }
-} else {
-    class SponsoredProductsAllTargetsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('targetId', $data)) {
-                $object->setTargetId($data['targetId']);
-                unset($data['targetId']);
-            }
-            if (\array_key_exists('campaignId', $data)) {
-                $object->setCampaignId($data['campaignId']);
-                unset($data['campaignId']);
-            }
-            if (\array_key_exists('targetType', $data)) {
-                $object->setTargetType($data['targetType']);
-                unset($data['targetType']);
-            }
-            if (\array_key_exists('adGroupId', $data)) {
-                $object->setAdGroupId($data['adGroupId']);
-                unset($data['adGroupId']);
-            }
-            if (\array_key_exists('deliveryReasons', $data)) {
-                $values = [];
-                foreach ($data['deliveryReasons'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setDeliveryReasons($values);
-                unset($data['deliveryReasons']);
-            }
-            if (\array_key_exists('negative', $data)) {
-                $object->setNegative($data['negative']);
-                unset($data['negative']);
-            }
-            if (\array_key_exists('state', $data)) {
-                $object->setState($data['state']);
-                unset($data['state']);
-            }
-            if (\array_key_exists('lastUpdatedDateTime', $data)) {
-                $object->setLastUpdatedDateTime($data['lastUpdatedDateTime']);
-                unset($data['lastUpdatedDateTime']);
-            }
-            if (\array_key_exists('bid', $data)) {
-                $object->setBid($this->denormalizer->denormalize($data['bid'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsBid::class, 'json', $context));
-                unset($data['bid']);
-            }
-            if (\array_key_exists('targetDetails', $data)) {
-                $object->setTargetDetails($this->denormalizer->denormalize($data['targetDetails'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetDetails::class, 'json', $context));
-                unset($data['targetDetails']);
-            }
-            if (\array_key_exists('targetLevel', $data)) {
-                $object->setTargetLevel($data['targetLevel']);
-                unset($data['targetLevel']);
-            }
-            if (\array_key_exists('deliveryStatus', $data)) {
-                $object->setDeliveryStatus($data['deliveryStatus']);
-                unset($data['deliveryStatus']);
-            }
-            if (\array_key_exists('creationDateTime', $data)) {
-                $object->setCreationDateTime($data['creationDateTime']);
-                unset($data['creationDateTime']);
-            }
-            foreach ($data as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_1;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets();
+        if (\array_key_exists('negative', $data) && \is_int($data['negative'])) {
+            $data['negative'] = (bool) $data['negative'];
+        }
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            $data['targetId'] = $object->getTargetId();
-            if ($object->isInitialized('campaignId') && null !== $object->getCampaignId()) {
-                $data['campaignId'] = $object->getCampaignId();
+        if (\array_key_exists('targetId', $data)) {
+            $object->setTargetId($data['targetId']);
+            unset($data['targetId']);
+        }
+        if (\array_key_exists('campaignId', $data)) {
+            $object->setCampaignId($data['campaignId']);
+            unset($data['campaignId']);
+        }
+        if (\array_key_exists('targetType', $data)) {
+            $object->setTargetType($data['targetType']);
+            unset($data['targetType']);
+        }
+        if (\array_key_exists('adGroupId', $data)) {
+            $object->setAdGroupId($data['adGroupId']);
+            unset($data['adGroupId']);
+        }
+        if (\array_key_exists('deliveryReasons', $data)) {
+            $values = [];
+            foreach ($data['deliveryReasons'] as $value) {
+                $values[] = $value;
             }
-            $data['targetType'] = $object->getTargetType();
-            if ($object->isInitialized('adGroupId') && null !== $object->getAdGroupId()) {
-                $data['adGroupId'] = $object->getAdGroupId();
+            $object->setDeliveryReasons($values);
+            unset($data['deliveryReasons']);
+        }
+        if (\array_key_exists('negative', $data)) {
+            $object->setNegative($data['negative']);
+            unset($data['negative']);
+        }
+        if (\array_key_exists('state', $data)) {
+            $object->setState($data['state']);
+            unset($data['state']);
+        }
+        if (\array_key_exists('lastUpdatedDateTime', $data)) {
+            $object->setLastUpdatedDateTime($data['lastUpdatedDateTime']);
+            unset($data['lastUpdatedDateTime']);
+        }
+        if (\array_key_exists('bid', $data)) {
+            $object->setBid($this->denormalizer->denormalize($data['bid'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsBid::class, 'json', $context));
+            unset($data['bid']);
+        }
+        if (\array_key_exists('targetDetails', $data)) {
+            $object->setTargetDetails($this->denormalizer->denormalize($data['targetDetails'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsTargetDetails::class, 'json', $context));
+            unset($data['targetDetails']);
+        }
+        if (\array_key_exists('targetLevel', $data)) {
+            $object->setTargetLevel($data['targetLevel']);
+            unset($data['targetLevel']);
+        }
+        if (\array_key_exists('deliveryStatus', $data)) {
+            $object->setDeliveryStatus($data['deliveryStatus']);
+            unset($data['deliveryStatus']);
+        }
+        if (\array_key_exists('creationDateTime', $data)) {
+            $object->setCreationDateTime($data['creationDateTime']);
+            unset($data['creationDateTime']);
+        }
+        foreach ($data as $key => $value_1) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value_1;
             }
-            if ($object->isInitialized('deliveryReasons') && null !== $object->getDeliveryReasons()) {
-                $values = [];
-                foreach ($object->getDeliveryReasons() as $value) {
-                    $values[] = $value;
-                }
-                $data['deliveryReasons'] = $values;
-            }
-            $data['negative'] = $object->getNegative();
-            $data['state'] = $object->getState();
-            if ($object->isInitialized('lastUpdatedDateTime') && null !== $object->getLastUpdatedDateTime()) {
-                $data['lastUpdatedDateTime'] = $object->getLastUpdatedDateTime();
-            }
-            if ($object->isInitialized('bid') && null !== $object->getBid()) {
-                $data['bid'] = $this->normalizer->normalize($object->getBid(), 'json', $context);
-            }
-            $data['targetDetails'] = $this->normalizer->normalize($object->getTargetDetails(), 'json', $context);
-            $data['targetLevel'] = $object->getTargetLevel();
-            if ($object->isInitialized('deliveryStatus') && null !== $object->getDeliveryStatus()) {
-                $data['deliveryStatus'] = $object->getDeliveryStatus();
-            }
-            if ($object->isInitialized('creationDateTime') && null !== $object->getCreationDateTime()) {
-                $data['creationDateTime'] = $object->getCreationDateTime();
-            }
-            foreach ($object as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_1;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        $dataArray['targetId'] = $data->getTargetId();
+        if ($data->isInitialized('campaignId') && null !== $data->getCampaignId()) {
+            $dataArray['campaignId'] = $data->getCampaignId();
         }
+        $dataArray['targetType'] = $data->getTargetType();
+        if ($data->isInitialized('adGroupId') && null !== $data->getAdGroupId()) {
+            $dataArray['adGroupId'] = $data->getAdGroupId();
+        }
+        if ($data->isInitialized('deliveryReasons') && null !== $data->getDeliveryReasons()) {
+            $values = [];
+            foreach ($data->getDeliveryReasons() as $value) {
+                $values[] = $value;
+            }
+            $dataArray['deliveryReasons'] = $values;
+        }
+        $dataArray['negative'] = $data->getNegative();
+        $dataArray['state'] = $data->getState();
+        if ($data->isInitialized('lastUpdatedDateTime') && null !== $data->getLastUpdatedDateTime()) {
+            $dataArray['lastUpdatedDateTime'] = $data->getLastUpdatedDateTime();
+        }
+        if ($data->isInitialized('bid') && null !== $data->getBid()) {
+            $dataArray['bid'] = $this->normalizer->normalize($data->getBid(), 'json', $context);
+        }
+        $dataArray['targetDetails'] = $this->normalizer->normalize($data->getTargetDetails(), 'json', $context);
+        $dataArray['targetLevel'] = $data->getTargetLevel();
+        if ($data->isInitialized('deliveryStatus') && null !== $data->getDeliveryStatus()) {
+            $dataArray['deliveryStatus'] = $data->getDeliveryStatus();
+        }
+        if ($data->isInitialized('creationDateTime') && null !== $data->getCreationDateTime()) {
+            $dataArray['creationDateTime'] = $data->getCreationDateTime();
+        }
+        foreach ($data as $key => $value_1) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value_1;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsAllTargets::class => false];
     }
 }

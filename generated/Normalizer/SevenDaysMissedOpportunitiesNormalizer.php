@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,263 +20,130 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class SevenDaysMissedOpportunitiesNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class SevenDaysMissedOpportunitiesNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities();
-            if (\array_key_exists('estimatedMissedSalesLower', $data) && \is_int($data['estimatedMissedSalesLower'])) {
-                $data['estimatedMissedSalesLower'] = (float) $data['estimatedMissedSalesLower'];
-            }
-            if (\array_key_exists('estimatedMissedSalesUpper', $data) && \is_int($data['estimatedMissedSalesUpper'])) {
-                $data['estimatedMissedSalesUpper'] = (float) $data['estimatedMissedSalesUpper'];
-            }
-            if (\array_key_exists('percentTimeInBudget', $data) && \is_int($data['percentTimeInBudget'])) {
-                $data['percentTimeInBudget'] = (float) $data['percentTimeInBudget'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('estimatedMissedSalesLower', $data)) {
-                $object->setEstimatedMissedSalesLower($data['estimatedMissedSalesLower']);
-                unset($data['estimatedMissedSalesLower']);
-            }
-            if (\array_key_exists('estimatedMissedSalesUpper', $data)) {
-                $object->setEstimatedMissedSalesUpper($data['estimatedMissedSalesUpper']);
-                unset($data['estimatedMissedSalesUpper']);
-            }
-            if (\array_key_exists('endDate', $data)) {
-                $object->setEndDate($data['endDate']);
-                unset($data['endDate']);
-            }
-            if (\array_key_exists('estimatedMissedImpressionsLower', $data)) {
-                $object->setEstimatedMissedImpressionsLower($data['estimatedMissedImpressionsLower']);
-                unset($data['estimatedMissedImpressionsLower']);
-            }
-            if (\array_key_exists('estimatedMissedClicksLower', $data)) {
-                $object->setEstimatedMissedClicksLower($data['estimatedMissedClicksLower']);
-                unset($data['estimatedMissedClicksLower']);
-            }
-            if (\array_key_exists('estimatedMissedClicksUpper', $data)) {
-                $object->setEstimatedMissedClicksUpper($data['estimatedMissedClicksUpper']);
-                unset($data['estimatedMissedClicksUpper']);
-            }
-            if (\array_key_exists('estimatedMissedImpressionsUpper', $data)) {
-                $object->setEstimatedMissedImpressionsUpper($data['estimatedMissedImpressionsUpper']);
-                unset($data['estimatedMissedImpressionsUpper']);
-            }
-            if (\array_key_exists('startDate', $data)) {
-                $object->setStartDate($data['startDate']);
-                unset($data['startDate']);
-            }
-            if (\array_key_exists('percentTimeInBudget', $data)) {
-                $object->setPercentTimeInBudget($data['percentTimeInBudget']);
-                unset($data['percentTimeInBudget']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('estimatedMissedSalesLower') && null !== $object->getEstimatedMissedSalesLower()) {
-                $data['estimatedMissedSalesLower'] = $object->getEstimatedMissedSalesLower();
-            }
-            if ($object->isInitialized('estimatedMissedSalesUpper') && null !== $object->getEstimatedMissedSalesUpper()) {
-                $data['estimatedMissedSalesUpper'] = $object->getEstimatedMissedSalesUpper();
-            }
-            if ($object->isInitialized('endDate') && null !== $object->getEndDate()) {
-                $data['endDate'] = $object->getEndDate();
-            }
-            if ($object->isInitialized('estimatedMissedImpressionsLower') && null !== $object->getEstimatedMissedImpressionsLower()) {
-                $data['estimatedMissedImpressionsLower'] = $object->getEstimatedMissedImpressionsLower();
-            }
-            if ($object->isInitialized('estimatedMissedClicksLower') && null !== $object->getEstimatedMissedClicksLower()) {
-                $data['estimatedMissedClicksLower'] = $object->getEstimatedMissedClicksLower();
-            }
-            if ($object->isInitialized('estimatedMissedClicksUpper') && null !== $object->getEstimatedMissedClicksUpper()) {
-                $data['estimatedMissedClicksUpper'] = $object->getEstimatedMissedClicksUpper();
-            }
-            if ($object->isInitialized('estimatedMissedImpressionsUpper') && null !== $object->getEstimatedMissedImpressionsUpper()) {
-                $data['estimatedMissedImpressionsUpper'] = $object->getEstimatedMissedImpressionsUpper();
-            }
-            if ($object->isInitialized('startDate') && null !== $object->getStartDate()) {
-                $data['startDate'] = $object->getStartDate();
-            }
-            if ($object->isInitialized('percentTimeInBudget') && null !== $object->getPercentTimeInBudget()) {
-                $data['percentTimeInBudget'] = $object->getPercentTimeInBudget();
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities::class === $type;
     }
-} else {
-    class SevenDaysMissedOpportunitiesNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities();
-            if (\array_key_exists('estimatedMissedSalesLower', $data) && \is_int($data['estimatedMissedSalesLower'])) {
-                $data['estimatedMissedSalesLower'] = (float) $data['estimatedMissedSalesLower'];
-            }
-            if (\array_key_exists('estimatedMissedSalesUpper', $data) && \is_int($data['estimatedMissedSalesUpper'])) {
-                $data['estimatedMissedSalesUpper'] = (float) $data['estimatedMissedSalesUpper'];
-            }
-            if (\array_key_exists('percentTimeInBudget', $data) && \is_int($data['percentTimeInBudget'])) {
-                $data['percentTimeInBudget'] = (float) $data['percentTimeInBudget'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('estimatedMissedSalesLower', $data)) {
-                $object->setEstimatedMissedSalesLower($data['estimatedMissedSalesLower']);
-                unset($data['estimatedMissedSalesLower']);
-            }
-            if (\array_key_exists('estimatedMissedSalesUpper', $data)) {
-                $object->setEstimatedMissedSalesUpper($data['estimatedMissedSalesUpper']);
-                unset($data['estimatedMissedSalesUpper']);
-            }
-            if (\array_key_exists('endDate', $data)) {
-                $object->setEndDate($data['endDate']);
-                unset($data['endDate']);
-            }
-            if (\array_key_exists('estimatedMissedImpressionsLower', $data)) {
-                $object->setEstimatedMissedImpressionsLower($data['estimatedMissedImpressionsLower']);
-                unset($data['estimatedMissedImpressionsLower']);
-            }
-            if (\array_key_exists('estimatedMissedClicksLower', $data)) {
-                $object->setEstimatedMissedClicksLower($data['estimatedMissedClicksLower']);
-                unset($data['estimatedMissedClicksLower']);
-            }
-            if (\array_key_exists('estimatedMissedClicksUpper', $data)) {
-                $object->setEstimatedMissedClicksUpper($data['estimatedMissedClicksUpper']);
-                unset($data['estimatedMissedClicksUpper']);
-            }
-            if (\array_key_exists('estimatedMissedImpressionsUpper', $data)) {
-                $object->setEstimatedMissedImpressionsUpper($data['estimatedMissedImpressionsUpper']);
-                unset($data['estimatedMissedImpressionsUpper']);
-            }
-            if (\array_key_exists('startDate', $data)) {
-                $object->setStartDate($data['startDate']);
-                unset($data['startDate']);
-            }
-            if (\array_key_exists('percentTimeInBudget', $data)) {
-                $object->setPercentTimeInBudget($data['percentTimeInBudget']);
-                unset($data['percentTimeInBudget']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities();
+        if (\array_key_exists('estimatedMissedSalesLower', $data) && \is_int($data['estimatedMissedSalesLower'])) {
+            $data['estimatedMissedSalesLower'] = (float) $data['estimatedMissedSalesLower'];
+        }
+        if (\array_key_exists('estimatedMissedSalesUpper', $data) && \is_int($data['estimatedMissedSalesUpper'])) {
+            $data['estimatedMissedSalesUpper'] = (float) $data['estimatedMissedSalesUpper'];
+        }
+        if (\array_key_exists('percentTimeInBudget', $data) && \is_int($data['percentTimeInBudget'])) {
+            $data['percentTimeInBudget'] = (float) $data['percentTimeInBudget'];
+        }
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('estimatedMissedSalesLower') && null !== $object->getEstimatedMissedSalesLower()) {
-                $data['estimatedMissedSalesLower'] = $object->getEstimatedMissedSalesLower();
+        if (\array_key_exists('estimatedMissedSalesLower', $data)) {
+            $object->setEstimatedMissedSalesLower($data['estimatedMissedSalesLower']);
+            unset($data['estimatedMissedSalesLower']);
+        }
+        if (\array_key_exists('estimatedMissedSalesUpper', $data)) {
+            $object->setEstimatedMissedSalesUpper($data['estimatedMissedSalesUpper']);
+            unset($data['estimatedMissedSalesUpper']);
+        }
+        if (\array_key_exists('endDate', $data)) {
+            $object->setEndDate($data['endDate']);
+            unset($data['endDate']);
+        }
+        if (\array_key_exists('estimatedMissedImpressionsLower', $data)) {
+            $object->setEstimatedMissedImpressionsLower($data['estimatedMissedImpressionsLower']);
+            unset($data['estimatedMissedImpressionsLower']);
+        }
+        if (\array_key_exists('estimatedMissedClicksLower', $data)) {
+            $object->setEstimatedMissedClicksLower($data['estimatedMissedClicksLower']);
+            unset($data['estimatedMissedClicksLower']);
+        }
+        if (\array_key_exists('estimatedMissedClicksUpper', $data)) {
+            $object->setEstimatedMissedClicksUpper($data['estimatedMissedClicksUpper']);
+            unset($data['estimatedMissedClicksUpper']);
+        }
+        if (\array_key_exists('estimatedMissedImpressionsUpper', $data)) {
+            $object->setEstimatedMissedImpressionsUpper($data['estimatedMissedImpressionsUpper']);
+            unset($data['estimatedMissedImpressionsUpper']);
+        }
+        if (\array_key_exists('startDate', $data)) {
+            $object->setStartDate($data['startDate']);
+            unset($data['startDate']);
+        }
+        if (\array_key_exists('percentTimeInBudget', $data)) {
+            $object->setPercentTimeInBudget($data['percentTimeInBudget']);
+            unset($data['percentTimeInBudget']);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value;
             }
-            if ($object->isInitialized('estimatedMissedSalesUpper') && null !== $object->getEstimatedMissedSalesUpper()) {
-                $data['estimatedMissedSalesUpper'] = $object->getEstimatedMissedSalesUpper();
-            }
-            if ($object->isInitialized('endDate') && null !== $object->getEndDate()) {
-                $data['endDate'] = $object->getEndDate();
-            }
-            if ($object->isInitialized('estimatedMissedImpressionsLower') && null !== $object->getEstimatedMissedImpressionsLower()) {
-                $data['estimatedMissedImpressionsLower'] = $object->getEstimatedMissedImpressionsLower();
-            }
-            if ($object->isInitialized('estimatedMissedClicksLower') && null !== $object->getEstimatedMissedClicksLower()) {
-                $data['estimatedMissedClicksLower'] = $object->getEstimatedMissedClicksLower();
-            }
-            if ($object->isInitialized('estimatedMissedClicksUpper') && null !== $object->getEstimatedMissedClicksUpper()) {
-                $data['estimatedMissedClicksUpper'] = $object->getEstimatedMissedClicksUpper();
-            }
-            if ($object->isInitialized('estimatedMissedImpressionsUpper') && null !== $object->getEstimatedMissedImpressionsUpper()) {
-                $data['estimatedMissedImpressionsUpper'] = $object->getEstimatedMissedImpressionsUpper();
-            }
-            if ($object->isInitialized('startDate') && null !== $object->getStartDate()) {
-                $data['startDate'] = $object->getStartDate();
-            }
-            if ($object->isInitialized('percentTimeInBudget') && null !== $object->getPercentTimeInBudget()) {
-                $data['percentTimeInBudget'] = $object->getPercentTimeInBudget();
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('estimatedMissedSalesLower') && null !== $data->getEstimatedMissedSalesLower()) {
+            $dataArray['estimatedMissedSalesLower'] = $data->getEstimatedMissedSalesLower();
         }
+        if ($data->isInitialized('estimatedMissedSalesUpper') && null !== $data->getEstimatedMissedSalesUpper()) {
+            $dataArray['estimatedMissedSalesUpper'] = $data->getEstimatedMissedSalesUpper();
+        }
+        if ($data->isInitialized('endDate') && null !== $data->getEndDate()) {
+            $dataArray['endDate'] = $data->getEndDate();
+        }
+        if ($data->isInitialized('estimatedMissedImpressionsLower') && null !== $data->getEstimatedMissedImpressionsLower()) {
+            $dataArray['estimatedMissedImpressionsLower'] = $data->getEstimatedMissedImpressionsLower();
+        }
+        if ($data->isInitialized('estimatedMissedClicksLower') && null !== $data->getEstimatedMissedClicksLower()) {
+            $dataArray['estimatedMissedClicksLower'] = $data->getEstimatedMissedClicksLower();
+        }
+        if ($data->isInitialized('estimatedMissedClicksUpper') && null !== $data->getEstimatedMissedClicksUpper()) {
+            $dataArray['estimatedMissedClicksUpper'] = $data->getEstimatedMissedClicksUpper();
+        }
+        if ($data->isInitialized('estimatedMissedImpressionsUpper') && null !== $data->getEstimatedMissedImpressionsUpper()) {
+            $dataArray['estimatedMissedImpressionsUpper'] = $data->getEstimatedMissedImpressionsUpper();
+        }
+        if ($data->isInitialized('startDate') && null !== $data->getStartDate()) {
+            $dataArray['startDate'] = $data->getStartDate();
+        }
+        if ($data->isInitialized('percentTimeInBudget') && null !== $data->getPercentTimeInBudget()) {
+            $dataArray['percentTimeInBudget'] = $data->getPercentTimeInBudget();
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SevenDaysMissedOpportunities::class => false];
     }
 }

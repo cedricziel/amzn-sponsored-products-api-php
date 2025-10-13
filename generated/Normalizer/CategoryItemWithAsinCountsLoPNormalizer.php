@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,217 +20,107 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class CategoryItemWithAsinCountsLoPNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class CategoryItemWithAsinCountsLoPNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('categoryPath', $data)) {
-                $object->setCategoryPath($data['categoryPath']);
-                unset($data['categoryPath']);
-            }
-            if (\array_key_exists('name', $data)) {
-                $object->setName($data['name']);
-                unset($data['name']);
-            }
-            if (\array_key_exists('translatedCategoryPath', $data)) {
-                $object->setTranslatedCategoryPath($data['translatedCategoryPath']);
-                unset($data['translatedCategoryPath']);
-            }
-            if (\array_key_exists('asinCounts', $data)) {
-                $object->setAsinCounts($this->denormalizer->denormalize($data['asinCounts'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\IntegerRange::class, 'json', $context));
-                unset($data['asinCounts']);
-            }
-            if (\array_key_exists('parentCategoryId', $data)) {
-                $object->setParentCategoryId($data['parentCategoryId']);
-                unset($data['parentCategoryId']);
-            }
-            if (\array_key_exists('id', $data)) {
-                $object->setId($data['id']);
-                unset($data['id']);
-            }
-            if (\array_key_exists('translatedName', $data)) {
-                $object->setTranslatedName($data['translatedName']);
-                unset($data['translatedName']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('categoryPath') && null !== $object->getCategoryPath()) {
-                $data['categoryPath'] = $object->getCategoryPath();
-            }
-            if ($object->isInitialized('name') && null !== $object->getName()) {
-                $data['name'] = $object->getName();
-            }
-            if ($object->isInitialized('translatedCategoryPath') && null !== $object->getTranslatedCategoryPath()) {
-                $data['translatedCategoryPath'] = $object->getTranslatedCategoryPath();
-            }
-            if ($object->isInitialized('asinCounts') && null !== $object->getAsinCounts()) {
-                $data['asinCounts'] = $this->normalizer->normalize($object->getAsinCounts(), 'json', $context);
-            }
-            if ($object->isInitialized('parentCategoryId') && null !== $object->getParentCategoryId()) {
-                $data['parentCategoryId'] = $object->getParentCategoryId();
-            }
-            if ($object->isInitialized('id') && null !== $object->getId()) {
-                $data['id'] = $object->getId();
-            }
-            if ($object->isInitialized('translatedName') && null !== $object->getTranslatedName()) {
-                $data['translatedName'] = $object->getTranslatedName();
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP::class === $type;
     }
-} else {
-    class CategoryItemWithAsinCountsLoPNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('categoryPath', $data)) {
-                $object->setCategoryPath($data['categoryPath']);
-                unset($data['categoryPath']);
-            }
-            if (\array_key_exists('name', $data)) {
-                $object->setName($data['name']);
-                unset($data['name']);
-            }
-            if (\array_key_exists('translatedCategoryPath', $data)) {
-                $object->setTranslatedCategoryPath($data['translatedCategoryPath']);
-                unset($data['translatedCategoryPath']);
-            }
-            if (\array_key_exists('asinCounts', $data)) {
-                $object->setAsinCounts($this->denormalizer->denormalize($data['asinCounts'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\IntegerRange::class, 'json', $context));
-                unset($data['asinCounts']);
-            }
-            if (\array_key_exists('parentCategoryId', $data)) {
-                $object->setParentCategoryId($data['parentCategoryId']);
-                unset($data['parentCategoryId']);
-            }
-            if (\array_key_exists('id', $data)) {
-                $object->setId($data['id']);
-                unset($data['id']);
-            }
-            if (\array_key_exists('translatedName', $data)) {
-                $object->setTranslatedName($data['translatedName']);
-                unset($data['translatedName']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('categoryPath') && null !== $object->getCategoryPath()) {
-                $data['categoryPath'] = $object->getCategoryPath();
+        if (\array_key_exists('categoryPath', $data)) {
+            $object->setCategoryPath($data['categoryPath']);
+            unset($data['categoryPath']);
+        }
+        if (\array_key_exists('name', $data)) {
+            $object->setName($data['name']);
+            unset($data['name']);
+        }
+        if (\array_key_exists('translatedCategoryPath', $data)) {
+            $object->setTranslatedCategoryPath($data['translatedCategoryPath']);
+            unset($data['translatedCategoryPath']);
+        }
+        if (\array_key_exists('asinCounts', $data)) {
+            $object->setAsinCounts($this->denormalizer->denormalize($data['asinCounts'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\IntegerRange::class, 'json', $context));
+            unset($data['asinCounts']);
+        }
+        if (\array_key_exists('parentCategoryId', $data)) {
+            $object->setParentCategoryId($data['parentCategoryId']);
+            unset($data['parentCategoryId']);
+        }
+        if (\array_key_exists('id', $data)) {
+            $object->setId($data['id']);
+            unset($data['id']);
+        }
+        if (\array_key_exists('translatedName', $data)) {
+            $object->setTranslatedName($data['translatedName']);
+            unset($data['translatedName']);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value;
             }
-            if ($object->isInitialized('name') && null !== $object->getName()) {
-                $data['name'] = $object->getName();
-            }
-            if ($object->isInitialized('translatedCategoryPath') && null !== $object->getTranslatedCategoryPath()) {
-                $data['translatedCategoryPath'] = $object->getTranslatedCategoryPath();
-            }
-            if ($object->isInitialized('asinCounts') && null !== $object->getAsinCounts()) {
-                $data['asinCounts'] = $this->normalizer->normalize($object->getAsinCounts(), 'json', $context);
-            }
-            if ($object->isInitialized('parentCategoryId') && null !== $object->getParentCategoryId()) {
-                $data['parentCategoryId'] = $object->getParentCategoryId();
-            }
-            if ($object->isInitialized('id') && null !== $object->getId()) {
-                $data['id'] = $object->getId();
-            }
-            if ($object->isInitialized('translatedName') && null !== $object->getTranslatedName()) {
-                $data['translatedName'] = $object->getTranslatedName();
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('categoryPath') && null !== $data->getCategoryPath()) {
+            $dataArray['categoryPath'] = $data->getCategoryPath();
         }
+        if ($data->isInitialized('name') && null !== $data->getName()) {
+            $dataArray['name'] = $data->getName();
+        }
+        if ($data->isInitialized('translatedCategoryPath') && null !== $data->getTranslatedCategoryPath()) {
+            $dataArray['translatedCategoryPath'] = $data->getTranslatedCategoryPath();
+        }
+        if ($data->isInitialized('asinCounts') && null !== $data->getAsinCounts()) {
+            $dataArray['asinCounts'] = $this->normalizer->normalize($data->getAsinCounts(), 'json', $context);
+        }
+        if ($data->isInitialized('parentCategoryId') && null !== $data->getParentCategoryId()) {
+            $dataArray['parentCategoryId'] = $data->getParentCategoryId();
+        }
+        if ($data->isInitialized('id') && null !== $data->getId()) {
+            $dataArray['id'] = $data->getId();
+        }
+        if ($data->isInitialized('translatedName') && null !== $data->getTranslatedName()) {
+            $dataArray['translatedName'] = $data->getTranslatedName();
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\CategoryItemWithAsinCountsLoP::class => false];
     }
 }
