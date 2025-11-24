@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,193 +20,95 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class BidSuggestionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class BidSuggestionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion();
-            if (\array_key_exists('suggested', $data) && \is_int($data['suggested'])) {
-                $data['suggested'] = (float) $data['suggested'];
-            }
-            if (\array_key_exists('rangeStart', $data) && \is_int($data['rangeStart'])) {
-                $data['rangeStart'] = (float) $data['rangeStart'];
-            }
-            if (\array_key_exists('rangeEnd', $data) && \is_int($data['rangeEnd'])) {
-                $data['rangeEnd'] = (float) $data['rangeEnd'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('suggested', $data)) {
-                $object->setSuggested($data['suggested']);
-                unset($data['suggested']);
-            }
-            if (\array_key_exists('rangeStart', $data)) {
-                $object->setRangeStart($data['rangeStart']);
-                unset($data['rangeStart']);
-            }
-            if (\array_key_exists('bidRecId', $data)) {
-                $object->setBidRecId($data['bidRecId']);
-                unset($data['bidRecId']);
-            }
-            if (\array_key_exists('rangeEnd', $data)) {
-                $object->setRangeEnd($data['rangeEnd']);
-                unset($data['rangeEnd']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('suggested') && null !== $object->getSuggested()) {
-                $data['suggested'] = $object->getSuggested();
-            }
-            if ($object->isInitialized('rangeStart') && null !== $object->getRangeStart()) {
-                $data['rangeStart'] = $object->getRangeStart();
-            }
-            if ($object->isInitialized('bidRecId') && null !== $object->getBidRecId()) {
-                $data['bidRecId'] = $object->getBidRecId();
-            }
-            if ($object->isInitialized('rangeEnd') && null !== $object->getRangeEnd()) {
-                $data['rangeEnd'] = $object->getRangeEnd();
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion::class === $type;
     }
-} else {
-    class BidSuggestionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion();
-            if (\array_key_exists('suggested', $data) && \is_int($data['suggested'])) {
-                $data['suggested'] = (float) $data['suggested'];
-            }
-            if (\array_key_exists('rangeStart', $data) && \is_int($data['rangeStart'])) {
-                $data['rangeStart'] = (float) $data['rangeStart'];
-            }
-            if (\array_key_exists('rangeEnd', $data) && \is_int($data['rangeEnd'])) {
-                $data['rangeEnd'] = (float) $data['rangeEnd'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('suggested', $data)) {
-                $object->setSuggested($data['suggested']);
-                unset($data['suggested']);
-            }
-            if (\array_key_exists('rangeStart', $data)) {
-                $object->setRangeStart($data['rangeStart']);
-                unset($data['rangeStart']);
-            }
-            if (\array_key_exists('bidRecId', $data)) {
-                $object->setBidRecId($data['bidRecId']);
-                unset($data['bidRecId']);
-            }
-            if (\array_key_exists('rangeEnd', $data)) {
-                $object->setRangeEnd($data['rangeEnd']);
-                unset($data['rangeEnd']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion();
+        if (\array_key_exists('suggested', $data) && \is_int($data['suggested'])) {
+            $data['suggested'] = (float) $data['suggested'];
+        }
+        if (\array_key_exists('rangeStart', $data) && \is_int($data['rangeStart'])) {
+            $data['rangeStart'] = (float) $data['rangeStart'];
+        }
+        if (\array_key_exists('rangeEnd', $data) && \is_int($data['rangeEnd'])) {
+            $data['rangeEnd'] = (float) $data['rangeEnd'];
+        }
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('suggested') && null !== $object->getSuggested()) {
-                $data['suggested'] = $object->getSuggested();
+        if (\array_key_exists('suggested', $data)) {
+            $object->setSuggested($data['suggested']);
+            unset($data['suggested']);
+        }
+        if (\array_key_exists('rangeStart', $data)) {
+            $object->setRangeStart($data['rangeStart']);
+            unset($data['rangeStart']);
+        }
+        if (\array_key_exists('bidRecId', $data)) {
+            $object->setBidRecId($data['bidRecId']);
+            unset($data['bidRecId']);
+        }
+        if (\array_key_exists('rangeEnd', $data)) {
+            $object->setRangeEnd($data['rangeEnd']);
+            unset($data['rangeEnd']);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value;
             }
-            if ($object->isInitialized('rangeStart') && null !== $object->getRangeStart()) {
-                $data['rangeStart'] = $object->getRangeStart();
-            }
-            if ($object->isInitialized('bidRecId') && null !== $object->getBidRecId()) {
-                $data['bidRecId'] = $object->getBidRecId();
-            }
-            if ($object->isInitialized('rangeEnd') && null !== $object->getRangeEnd()) {
-                $data['rangeEnd'] = $object->getRangeEnd();
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('suggested') && null !== $data->getSuggested()) {
+            $dataArray['suggested'] = $data->getSuggested();
         }
+        if ($data->isInitialized('rangeStart') && null !== $data->getRangeStart()) {
+            $dataArray['rangeStart'] = $data->getRangeStart();
+        }
+        if ($data->isInitialized('bidRecId') && null !== $data->getBidRecId()) {
+            $dataArray['bidRecId'] = $data->getBidRecId();
+        }
+        if ($data->isInitialized('rangeEnd') && null !== $data->getRangeEnd()) {
+            $dataArray['rangeEnd'] = $data->getRangeEnd();
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\BidSuggestion::class => false];
     }
 }

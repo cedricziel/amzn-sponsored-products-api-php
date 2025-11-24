@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,223 +20,110 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class InitialGlobalBudgetRecommendationRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class InitialGlobalBudgetRecommendationRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('countryDailyBudgets', $data)) {
-                $values = new \ArrayObject([], \ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['countryDailyBudgets'] as $key => $value) {
-                    $values[$key] = $value;
-                }
-                $object->setCountryDailyBudgets($values);
-                unset($data['countryDailyBudgets']);
-            }
-            if (\array_key_exists('bidding', $data)) {
-                $object->setBidding($this->denormalizer->denormalize($data['bidding'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Bidding::class, 'json', $context));
-                unset($data['bidding']);
-            }
-            if (\array_key_exists('adGroups', $data)) {
-                $values_1 = [];
-                foreach ($data['adGroups'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalAdGroup::class, 'json', $context);
-                }
-                $object->setAdGroups($values_1);
-                unset($data['adGroups']);
-            }
-            if (\array_key_exists('endDate', $data)) {
-                $object->setEndDate(\DateTime::createFromFormat('Y-m-d', $data['endDate'])->setTime(0, 0, 0));
-                unset($data['endDate']);
-            }
-            if (\array_key_exists('targetingType', $data)) {
-                $object->setTargetingType($data['targetingType']);
-                unset($data['targetingType']);
-            }
-            if (\array_key_exists('startDate', $data)) {
-                $object->setStartDate(\DateTime::createFromFormat('Y-m-d', $data['startDate'])->setTime(0, 0, 0));
-                unset($data['startDate']);
-            }
-            foreach ($data as $key_1 => $value_2) {
-                if (preg_match('/.*/', (string) $key_1)) {
-                    $object[$key_1] = $value_2;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('countryDailyBudgets') && null !== $object->getCountryDailyBudgets()) {
-                $values = [];
-                foreach ($object->getCountryDailyBudgets() as $key => $value) {
-                    $values[$key] = $value;
-                }
-                $data['countryDailyBudgets'] = $values;
-            }
-            $data['bidding'] = $this->normalizer->normalize($object->getBidding(), 'json', $context);
-            $values_1 = [];
-            foreach ($object->getAdGroups() as $value_1) {
-                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
-            }
-            $data['adGroups'] = $values_1;
-            if ($object->isInitialized('endDate') && null !== $object->getEndDate()) {
-                $data['endDate'] = $object->getEndDate()->format('Y-m-d');
-            }
-            $data['targetingType'] = $object->getTargetingType();
-            if ($object->isInitialized('startDate') && null !== $object->getStartDate()) {
-                $data['startDate'] = $object->getStartDate()->format('Y-m-d');
-            }
-            foreach ($object as $key_1 => $value_2) {
-                if (preg_match('/.*/', (string) $key_1)) {
-                    $data[$key_1] = $value_2;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest::class === $type;
     }
-} else {
-    class InitialGlobalBudgetRecommendationRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('countryDailyBudgets', $data)) {
-                $values = new \ArrayObject([], \ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['countryDailyBudgets'] as $key => $value) {
-                    $values[$key] = $value;
-                }
-                $object->setCountryDailyBudgets($values);
-                unset($data['countryDailyBudgets']);
-            }
-            if (\array_key_exists('bidding', $data)) {
-                $object->setBidding($this->denormalizer->denormalize($data['bidding'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Bidding::class, 'json', $context));
-                unset($data['bidding']);
-            }
-            if (\array_key_exists('adGroups', $data)) {
-                $values_1 = [];
-                foreach ($data['adGroups'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalAdGroup::class, 'json', $context);
-                }
-                $object->setAdGroups($values_1);
-                unset($data['adGroups']);
-            }
-            if (\array_key_exists('endDate', $data)) {
-                $object->setEndDate(\DateTime::createFromFormat('Y-m-d', $data['endDate'])->setTime(0, 0, 0));
-                unset($data['endDate']);
-            }
-            if (\array_key_exists('targetingType', $data)) {
-                $object->setTargetingType($data['targetingType']);
-                unset($data['targetingType']);
-            }
-            if (\array_key_exists('startDate', $data)) {
-                $object->setStartDate(\DateTime::createFromFormat('Y-m-d', $data['startDate'])->setTime(0, 0, 0));
-                unset($data['startDate']);
-            }
-            foreach ($data as $key_1 => $value_2) {
-                if (preg_match('/.*/', (string) $key_1)) {
-                    $object[$key_1] = $value_2;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('countryDailyBudgets') && null !== $object->getCountryDailyBudgets()) {
-                $values = [];
-                foreach ($object->getCountryDailyBudgets() as $key => $value) {
-                    $values[$key] = $value;
-                }
-                $data['countryDailyBudgets'] = $values;
+        if (\array_key_exists('countryDailyBudgets', $data)) {
+            $values = new \ArrayObject([], \ArrayObject::ARRAY_AS_PROPS);
+            foreach ($data['countryDailyBudgets'] as $key => $value) {
+                $values[$key] = $value;
             }
-            $data['bidding'] = $this->normalizer->normalize($object->getBidding(), 'json', $context);
+            $object->setCountryDailyBudgets($values);
+            unset($data['countryDailyBudgets']);
+        }
+        if (\array_key_exists('bidding', $data)) {
+            $object->setBidding($this->denormalizer->denormalize($data['bidding'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Bidding::class, 'json', $context));
+            unset($data['bidding']);
+        }
+        if (\array_key_exists('adGroups', $data)) {
             $values_1 = [];
-            foreach ($object->getAdGroups() as $value_1) {
-                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
+            foreach ($data['adGroups'] as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalAdGroup::class, 'json', $context);
             }
-            $data['adGroups'] = $values_1;
-            if ($object->isInitialized('endDate') && null !== $object->getEndDate()) {
-                $data['endDate'] = $object->getEndDate()->format('Y-m-d');
+            $object->setAdGroups($values_1);
+            unset($data['adGroups']);
+        }
+        if (\array_key_exists('endDate', $data)) {
+            $object->setEndDate(\DateTime::createFromFormat('Y-m-d', $data['endDate'])->setTime(0, 0, 0));
+            unset($data['endDate']);
+        }
+        if (\array_key_exists('targetingType', $data)) {
+            $object->setTargetingType($data['targetingType']);
+            unset($data['targetingType']);
+        }
+        if (\array_key_exists('startDate', $data)) {
+            $object->setStartDate(\DateTime::createFromFormat('Y-m-d', $data['startDate'])->setTime(0, 0, 0));
+            unset($data['startDate']);
+        }
+        foreach ($data as $key_1 => $value_2) {
+            if (preg_match('/.*/', (string) $key_1)) {
+                $object[$key_1] = $value_2;
             }
-            $data['targetingType'] = $object->getTargetingType();
-            if ($object->isInitialized('startDate') && null !== $object->getStartDate()) {
-                $data['startDate'] = $object->getStartDate()->format('Y-m-d');
-            }
-            foreach ($object as $key_1 => $value_2) {
-                if (preg_match('/.*/', (string) $key_1)) {
-                    $data[$key_1] = $value_2;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('countryDailyBudgets') && null !== $data->getCountryDailyBudgets()) {
+            $values = [];
+            foreach ($data->getCountryDailyBudgets() as $key => $value) {
+                $values[$key] = $value;
+            }
+            $dataArray['countryDailyBudgets'] = $values;
         }
+        $dataArray['bidding'] = $this->normalizer->normalize($data->getBidding(), 'json', $context);
+        $values_1 = [];
+        foreach ($data->getAdGroups() as $value_1) {
+            $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
+        }
+        $dataArray['adGroups'] = $values_1;
+        if ($data->isInitialized('endDate') && null !== $data->getEndDate()) {
+            $dataArray['endDate'] = $data->getEndDate()->format('Y-m-d');
+        }
+        $dataArray['targetingType'] = $data->getTargetingType();
+        if ($data->isInitialized('startDate') && null !== $data->getStartDate()) {
+            $dataArray['startDate'] = $data->getStartDate()->format('Y-m-d');
+        }
+        foreach ($data as $key_1 => $value_2) {
+            if (preg_match('/.*/', (string) $key_1)) {
+                $dataArray[$key_1] = $value_2;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\InitialGlobalBudgetRecommendationRequest::class => false];
     }
 }
