@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,189 +20,93 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class GlobalBudgetRecommendationErrorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class GlobalBudgetRecommendationErrorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError();
-            if (\array_key_exists('errorId', $data) && \is_int($data['errorId'])) {
-                $data['errorId'] = (float) $data['errorId'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('countryCodes', $data)) {
-                $values = [];
-                foreach ($data['countryCodes'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setCountryCodes($values);
-                unset($data['countryCodes']);
-            }
-            if (\array_key_exists('errorMessage', $data)) {
-                $object->setErrorMessage($data['errorMessage']);
-                unset($data['errorMessage']);
-            }
-            if (\array_key_exists('errorCode', $data)) {
-                $object->setErrorCode($data['errorCode']);
-                unset($data['errorCode']);
-            }
-            if (\array_key_exists('errorId', $data)) {
-                $object->setErrorId($data['errorId']);
-                unset($data['errorId']);
-            }
-            foreach ($data as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_1;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('countryCodes') && null !== $object->getCountryCodes()) {
-                $values = [];
-                foreach ($object->getCountryCodes() as $value) {
-                    $values[] = $value;
-                }
-                $data['countryCodes'] = $values;
-            }
-            if ($object->isInitialized('errorMessage') && null !== $object->getErrorMessage()) {
-                $data['errorMessage'] = $object->getErrorMessage();
-            }
-            $data['errorCode'] = $object->getErrorCode();
-            $data['errorId'] = $object->getErrorId();
-            foreach ($object as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_1;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError::class === $type;
     }
-} else {
-    class GlobalBudgetRecommendationErrorNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError();
-            if (\array_key_exists('errorId', $data) && \is_int($data['errorId'])) {
-                $data['errorId'] = (float) $data['errorId'];
-            }
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('countryCodes', $data)) {
-                $values = [];
-                foreach ($data['countryCodes'] as $value) {
-                    $values[] = $value;
-                }
-                $object->setCountryCodes($values);
-                unset($data['countryCodes']);
-            }
-            if (\array_key_exists('errorMessage', $data)) {
-                $object->setErrorMessage($data['errorMessage']);
-                unset($data['errorMessage']);
-            }
-            if (\array_key_exists('errorCode', $data)) {
-                $object->setErrorCode($data['errorCode']);
-                unset($data['errorCode']);
-            }
-            if (\array_key_exists('errorId', $data)) {
-                $object->setErrorId($data['errorId']);
-                unset($data['errorId']);
-            }
-            foreach ($data as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_1;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError();
+        if (\array_key_exists('errorId', $data) && \is_int($data['errorId'])) {
+            $data['errorId'] = (float) $data['errorId'];
+        }
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('countryCodes') && null !== $object->getCountryCodes()) {
-                $values = [];
-                foreach ($object->getCountryCodes() as $value) {
-                    $values[] = $value;
-                }
-                $data['countryCodes'] = $values;
+        if (\array_key_exists('countryCodes', $data)) {
+            $values = [];
+            foreach ($data['countryCodes'] as $value) {
+                $values[] = $value;
             }
-            if ($object->isInitialized('errorMessage') && null !== $object->getErrorMessage()) {
-                $data['errorMessage'] = $object->getErrorMessage();
+            $object->setCountryCodes($values);
+            unset($data['countryCodes']);
+        }
+        if (\array_key_exists('errorMessage', $data)) {
+            $object->setErrorMessage($data['errorMessage']);
+            unset($data['errorMessage']);
+        }
+        if (\array_key_exists('errorCode', $data)) {
+            $object->setErrorCode($data['errorCode']);
+            unset($data['errorCode']);
+        }
+        if (\array_key_exists('errorId', $data)) {
+            $object->setErrorId($data['errorId']);
+            unset($data['errorId']);
+        }
+        foreach ($data as $key => $value_1) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value_1;
             }
-            $data['errorCode'] = $object->getErrorCode();
-            $data['errorId'] = $object->getErrorId();
-            foreach ($object as $key => $value_1) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_1;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('countryCodes') && null !== $data->getCountryCodes()) {
+            $values = [];
+            foreach ($data->getCountryCodes() as $value) {
+                $values[] = $value;
+            }
+            $dataArray['countryCodes'] = $values;
         }
+        if ($data->isInitialized('errorMessage') && null !== $data->getErrorMessage()) {
+            $dataArray['errorMessage'] = $data->getErrorMessage();
+        }
+        $dataArray['errorCode'] = $data->getErrorCode();
+        $dataArray['errorId'] = $data->getErrorId();
+        foreach ($data as $key => $value_1) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value_1;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalBudgetRecommendationError::class => false];
     }
 }

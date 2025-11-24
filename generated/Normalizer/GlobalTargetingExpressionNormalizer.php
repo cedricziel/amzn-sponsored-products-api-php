@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,189 +20,93 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class GlobalTargetingExpressionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class GlobalTargetingExpressionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('countryValues', $data)) {
-                $values = new \ArrayObject([], \ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['countryValues'] as $key => $value) {
-                    $values[$key] = $value;
-                }
-                $object->setCountryValues($values);
-                unset($data['countryValues']);
-            }
-            if (\array_key_exists('countryBids', $data)) {
-                $values_1 = new \ArrayObject([], \ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['countryBids'] as $key_1 => $value_1) {
-                    $values_1[$key_1] = $value_1;
-                }
-                $object->setCountryBids($values_1);
-                unset($data['countryBids']);
-            }
-            if (\array_key_exists('type', $data)) {
-                $object->setType($data['type']);
-                unset($data['type']);
-            }
-            foreach ($data as $key_2 => $value_2) {
-                if (preg_match('/.*/', (string) $key_2)) {
-                    $object[$key_2] = $value_2;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('countryValues') && null !== $object->getCountryValues()) {
-                $values = [];
-                foreach ($object->getCountryValues() as $key => $value) {
-                    $values[$key] = $value;
-                }
-                $data['countryValues'] = $values;
-            }
-            $values_1 = [];
-            foreach ($object->getCountryBids() as $key_1 => $value_1) {
-                $values_1[$key_1] = $value_1;
-            }
-            $data['countryBids'] = $values_1;
-            if ($object->isInitialized('type') && null !== $object->getType()) {
-                $data['type'] = $object->getType();
-            }
-            foreach ($object as $key_2 => $value_2) {
-                if (preg_match('/.*/', (string) $key_2)) {
-                    $data[$key_2] = $value_2;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression::class === $type;
     }
-} else {
-    class GlobalTargetingExpressionNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('countryValues', $data)) {
-                $values = new \ArrayObject([], \ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['countryValues'] as $key => $value) {
-                    $values[$key] = $value;
-                }
-                $object->setCountryValues($values);
-                unset($data['countryValues']);
-            }
-            if (\array_key_exists('countryBids', $data)) {
-                $values_1 = new \ArrayObject([], \ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['countryBids'] as $key_1 => $value_1) {
-                    $values_1[$key_1] = $value_1;
-                }
-                $object->setCountryBids($values_1);
-                unset($data['countryBids']);
-            }
-            if (\array_key_exists('type', $data)) {
-                $object->setType($data['type']);
-                unset($data['type']);
-            }
-            foreach ($data as $key_2 => $value_2) {
-                if (preg_match('/.*/', (string) $key_2)) {
-                    $object[$key_2] = $value_2;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('countryValues') && null !== $object->getCountryValues()) {
-                $values = [];
-                foreach ($object->getCountryValues() as $key => $value) {
-                    $values[$key] = $value;
-                }
-                $data['countryValues'] = $values;
+        if (\array_key_exists('countryValues', $data)) {
+            $values = new \ArrayObject([], \ArrayObject::ARRAY_AS_PROPS);
+            foreach ($data['countryValues'] as $key => $value) {
+                $values[$key] = $value;
             }
-            $values_1 = [];
-            foreach ($object->getCountryBids() as $key_1 => $value_1) {
+            $object->setCountryValues($values);
+            unset($data['countryValues']);
+        }
+        if (\array_key_exists('countryBids', $data)) {
+            $values_1 = new \ArrayObject([], \ArrayObject::ARRAY_AS_PROPS);
+            foreach ($data['countryBids'] as $key_1 => $value_1) {
                 $values_1[$key_1] = $value_1;
             }
-            $data['countryBids'] = $values_1;
-            if ($object->isInitialized('type') && null !== $object->getType()) {
-                $data['type'] = $object->getType();
+            $object->setCountryBids($values_1);
+            unset($data['countryBids']);
+        }
+        if (\array_key_exists('type', $data)) {
+            $object->setType($data['type']);
+            unset($data['type']);
+        }
+        foreach ($data as $key_2 => $value_2) {
+            if (preg_match('/.*/', (string) $key_2)) {
+                $object[$key_2] = $value_2;
             }
-            foreach ($object as $key_2 => $value_2) {
-                if (preg_match('/.*/', (string) $key_2)) {
-                    $data[$key_2] = $value_2;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('countryValues') && null !== $data->getCountryValues()) {
+            $values = [];
+            foreach ($data->getCountryValues() as $key => $value) {
+                $values[$key] = $value;
+            }
+            $dataArray['countryValues'] = $values;
         }
+        $values_1 = [];
+        foreach ($data->getCountryBids() as $key_1 => $value_1) {
+            $values_1[$key_1] = $value_1;
+        }
+        $dataArray['countryBids'] = $values_1;
+        if ($data->isInitialized('type') && null !== $data->getType()) {
+            $dataArray['type'] = $data->getType();
+        }
+        foreach ($data as $key_2 => $value_2) {
+            if (preg_match('/.*/', (string) $key_2)) {
+                $dataArray[$key_2] = $value_2;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\GlobalTargetingExpression::class => false];
     }
 }

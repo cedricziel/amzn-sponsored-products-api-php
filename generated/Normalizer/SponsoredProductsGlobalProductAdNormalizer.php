@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,229 +20,113 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class SponsoredProductsGlobalProductAdNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class SponsoredProductsGlobalProductAdNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('adId', $data)) {
-                $object->setAdId($data['adId']);
-                unset($data['adId']);
-            }
-            if (\array_key_exists('campaignId', $data)) {
-                $object->setCampaignId($data['campaignId']);
-                unset($data['campaignId']);
-            }
-            if (\array_key_exists('customText', $data)) {
-                $object->setCustomText($data['customText']);
-                unset($data['customText']);
-            }
-            if (\array_key_exists('name', $data)) {
-                $object->setName($data['name']);
-                unset($data['name']);
-            }
-            if (\array_key_exists('asin', $data)) {
-                $object->setAsin($this->denormalizer->denormalize($data['asin'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class, 'json', $context));
-                unset($data['asin']);
-            }
-            if (\array_key_exists('state', $data)) {
-                $object->setState($this->denormalizer->denormalize($data['state'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalEntityState::class, 'json', $context));
-                unset($data['state']);
-            }
-            if (\array_key_exists('sku', $data)) {
-                $object->setSku($this->denormalizer->denormalize($data['sku'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class, 'json', $context));
-                unset($data['sku']);
-            }
-            if (\array_key_exists('adGroupId', $data)) {
-                $object->setAdGroupId($data['adGroupId']);
-                unset($data['adGroupId']);
-            }
-            if (\array_key_exists('extendedData', $data)) {
-                $object->setExtendedData($this->denormalizer->denormalize($data['extendedData'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAdExtendedData::class, 'json', $context));
-                unset($data['extendedData']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            $data['adId'] = $object->getAdId();
-            $data['campaignId'] = $object->getCampaignId();
-            if ($object->isInitialized('customText') && null !== $object->getCustomText()) {
-                $data['customText'] = $object->getCustomText();
-            }
-            if ($object->isInitialized('name') && null !== $object->getName()) {
-                $data['name'] = $object->getName();
-            }
-            if ($object->isInitialized('asin') && null !== $object->getAsin()) {
-                $data['asin'] = $this->normalizer->normalize($object->getAsin(), 'json', $context);
-            }
-            $data['state'] = $this->normalizer->normalize($object->getState(), 'json', $context);
-            if ($object->isInitialized('sku') && null !== $object->getSku()) {
-                $data['sku'] = $this->normalizer->normalize($object->getSku(), 'json', $context);
-            }
-            $data['adGroupId'] = $object->getAdGroupId();
-            if ($object->isInitialized('extendedData') && null !== $object->getExtendedData()) {
-                $data['extendedData'] = $this->normalizer->normalize($object->getExtendedData(), 'json', $context);
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd::class === $type;
     }
-} else {
-    class SponsoredProductsGlobalProductAdNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('adId', $data)) {
-                $object->setAdId($data['adId']);
-                unset($data['adId']);
-            }
-            if (\array_key_exists('campaignId', $data)) {
-                $object->setCampaignId($data['campaignId']);
-                unset($data['campaignId']);
-            }
-            if (\array_key_exists('customText', $data)) {
-                $object->setCustomText($data['customText']);
-                unset($data['customText']);
-            }
-            if (\array_key_exists('name', $data)) {
-                $object->setName($data['name']);
-                unset($data['name']);
-            }
-            if (\array_key_exists('asin', $data)) {
-                $object->setAsin($this->denormalizer->denormalize($data['asin'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class, 'json', $context));
-                unset($data['asin']);
-            }
-            if (\array_key_exists('state', $data)) {
-                $object->setState($this->denormalizer->denormalize($data['state'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalEntityState::class, 'json', $context));
-                unset($data['state']);
-            }
-            if (\array_key_exists('sku', $data)) {
-                $object->setSku($this->denormalizer->denormalize($data['sku'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class, 'json', $context));
-                unset($data['sku']);
-            }
-            if (\array_key_exists('adGroupId', $data)) {
-                $object->setAdGroupId($data['adGroupId']);
-                unset($data['adGroupId']);
-            }
-            if (\array_key_exists('extendedData', $data)) {
-                $object->setExtendedData($this->denormalizer->denormalize($data['extendedData'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAdExtendedData::class, 'json', $context));
-                unset($data['extendedData']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            $data['adId'] = $object->getAdId();
-            $data['campaignId'] = $object->getCampaignId();
-            if ($object->isInitialized('customText') && null !== $object->getCustomText()) {
-                $data['customText'] = $object->getCustomText();
+        if (\array_key_exists('adId', $data)) {
+            $object->setAdId($data['adId']);
+            unset($data['adId']);
+        }
+        if (\array_key_exists('campaignId', $data)) {
+            $object->setCampaignId($data['campaignId']);
+            unset($data['campaignId']);
+        }
+        if (\array_key_exists('customText', $data)) {
+            $object->setCustomText($data['customText']);
+            unset($data['customText']);
+        }
+        if (\array_key_exists('name', $data)) {
+            $object->setName($data['name']);
+            unset($data['name']);
+        }
+        if (\array_key_exists('asin', $data)) {
+            $object->setAsin($this->denormalizer->denormalize($data['asin'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class, 'json', $context));
+            unset($data['asin']);
+        }
+        if (\array_key_exists('state', $data)) {
+            $object->setState($this->denormalizer->denormalize($data['state'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalEntityState::class, 'json', $context));
+            unset($data['state']);
+        }
+        if (\array_key_exists('sku', $data)) {
+            $object->setSku($this->denormalizer->denormalize($data['sku'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductIdentifiers::class, 'json', $context));
+            unset($data['sku']);
+        }
+        if (\array_key_exists('adGroupId', $data)) {
+            $object->setAdGroupId($data['adGroupId']);
+            unset($data['adGroupId']);
+        }
+        if (\array_key_exists('extendedData', $data)) {
+            $object->setExtendedData($this->denormalizer->denormalize($data['extendedData'], \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAdExtendedData::class, 'json', $context));
+            unset($data['extendedData']);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value;
             }
-            if ($object->isInitialized('name') && null !== $object->getName()) {
-                $data['name'] = $object->getName();
-            }
-            if ($object->isInitialized('asin') && null !== $object->getAsin()) {
-                $data['asin'] = $this->normalizer->normalize($object->getAsin(), 'json', $context);
-            }
-            $data['state'] = $this->normalizer->normalize($object->getState(), 'json', $context);
-            if ($object->isInitialized('sku') && null !== $object->getSku()) {
-                $data['sku'] = $this->normalizer->normalize($object->getSku(), 'json', $context);
-            }
-            $data['adGroupId'] = $object->getAdGroupId();
-            if ($object->isInitialized('extendedData') && null !== $object->getExtendedData()) {
-                $data['extendedData'] = $this->normalizer->normalize($object->getExtendedData(), 'json', $context);
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        $dataArray['adId'] = $data->getAdId();
+        $dataArray['campaignId'] = $data->getCampaignId();
+        if ($data->isInitialized('customText') && null !== $data->getCustomText()) {
+            $dataArray['customText'] = $data->getCustomText();
         }
+        if ($data->isInitialized('name') && null !== $data->getName()) {
+            $dataArray['name'] = $data->getName();
+        }
+        if ($data->isInitialized('asin') && null !== $data->getAsin()) {
+            $dataArray['asin'] = $this->normalizer->normalize($data->getAsin(), 'json', $context);
+        }
+        $dataArray['state'] = $this->normalizer->normalize($data->getState(), 'json', $context);
+        if ($data->isInitialized('sku') && null !== $data->getSku()) {
+            $dataArray['sku'] = $this->normalizer->normalize($data->getSku(), 'json', $context);
+        }
+        $dataArray['adGroupId'] = $data->getAdGroupId();
+        if ($data->isInitialized('extendedData') && null !== $data->getExtendedData()) {
+            $dataArray['extendedData'] = $this->normalizer->normalize($data->getExtendedData(), 'json', $context);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SponsoredProductsGlobalProductAd::class => false];
     }
 }
