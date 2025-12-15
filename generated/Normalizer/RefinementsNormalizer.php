@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,209 +20,103 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class RefinementsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class RefinementsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('ageRanges', $data)) {
-                $values = [];
-                foreach ($data['ageRanges'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\AgeRange::class, 'json', $context);
-                }
-                $object->setAgeRanges($values);
-                unset($data['ageRanges']);
-            }
-            if (\array_key_exists('brands', $data)) {
-                $values_1 = [];
-                foreach ($data['brands'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Brand::class, 'json', $context);
-                }
-                $object->setBrands($values_1);
-                unset($data['brands']);
-            }
-            if (\array_key_exists('genres', $data)) {
-                $values_2 = [];
-                foreach ($data['genres'] as $value_2) {
-                    $values_2[] = $this->denormalizer->denormalize($value_2, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Genre::class, 'json', $context);
-                }
-                $object->setGenres($values_2);
-                unset($data['genres']);
-            }
-            foreach ($data as $key => $value_3) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_3;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('ageRanges') && null !== $object->getAgeRanges()) {
-                $values = [];
-                foreach ($object->getAgeRanges() as $value) {
-                    $values[] = $this->normalizer->normalize($value, 'json', $context);
-                }
-                $data['ageRanges'] = $values;
-            }
-            if ($object->isInitialized('brands') && null !== $object->getBrands()) {
-                $values_1 = [];
-                foreach ($object->getBrands() as $value_1) {
-                    $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
-                }
-                $data['brands'] = $values_1;
-            }
-            if ($object->isInitialized('genres') && null !== $object->getGenres()) {
-                $values_2 = [];
-                foreach ($object->getGenres() as $value_2) {
-                    $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
-                }
-                $data['genres'] = $values_2;
-            }
-            foreach ($object as $key => $value_3) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_3;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements::class === $type;
     }
-} else {
-    class RefinementsNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('ageRanges', $data)) {
-                $values = [];
-                foreach ($data['ageRanges'] as $value) {
-                    $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\AgeRange::class, 'json', $context);
-                }
-                $object->setAgeRanges($values);
-                unset($data['ageRanges']);
-            }
-            if (\array_key_exists('brands', $data)) {
-                $values_1 = [];
-                foreach ($data['brands'] as $value_1) {
-                    $values_1[] = $this->denormalizer->denormalize($value_1, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Brand::class, 'json', $context);
-                }
-                $object->setBrands($values_1);
-                unset($data['brands']);
-            }
-            if (\array_key_exists('genres', $data)) {
-                $values_2 = [];
-                foreach ($data['genres'] as $value_2) {
-                    $values_2[] = $this->denormalizer->denormalize($value_2, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Genre::class, 'json', $context);
-                }
-                $object->setGenres($values_2);
-                unset($data['genres']);
-            }
-            foreach ($data as $key => $value_3) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value_3;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('ageRanges') && null !== $object->getAgeRanges()) {
-                $values = [];
-                foreach ($object->getAgeRanges() as $value) {
-                    $values[] = $this->normalizer->normalize($value, 'json', $context);
-                }
-                $data['ageRanges'] = $values;
+        if (\array_key_exists('ageRanges', $data)) {
+            $values = [];
+            foreach ($data['ageRanges'] as $value) {
+                $values[] = $this->denormalizer->denormalize($value, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\AgeRange::class, 'json', $context);
             }
-            if ($object->isInitialized('brands') && null !== $object->getBrands()) {
-                $values_1 = [];
-                foreach ($object->getBrands() as $value_1) {
-                    $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
-                }
-                $data['brands'] = $values_1;
+            $object->setAgeRanges($values);
+            unset($data['ageRanges']);
+        }
+        if (\array_key_exists('brands', $data)) {
+            $values_1 = [];
+            foreach ($data['brands'] as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Brand::class, 'json', $context);
             }
-            if ($object->isInitialized('genres') && null !== $object->getGenres()) {
-                $values_2 = [];
-                foreach ($object->getGenres() as $value_2) {
-                    $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
-                }
-                $data['genres'] = $values_2;
+            $object->setBrands($values_1);
+            unset($data['brands']);
+        }
+        if (\array_key_exists('genres', $data)) {
+            $values_2 = [];
+            foreach ($data['genres'] as $value_2) {
+                $values_2[] = $this->denormalizer->denormalize($value_2, \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Genre::class, 'json', $context);
             }
-            foreach ($object as $key => $value_3) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value_3;
-                }
+            $object->setGenres($values_2);
+            unset($data['genres']);
+        }
+        foreach ($data as $key => $value_3) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value_3;
             }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('ageRanges') && null !== $data->getAgeRanges()) {
+            $values = [];
+            foreach ($data->getAgeRanges() as $value) {
+                $values[] = $this->normalizer->normalize($value, 'json', $context);
+            }
+            $dataArray['ageRanges'] = $values;
         }
+        if ($data->isInitialized('brands') && null !== $data->getBrands()) {
+            $values_1 = [];
+            foreach ($data->getBrands() as $value_1) {
+                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
+            }
+            $dataArray['brands'] = $values_1;
+        }
+        if ($data->isInitialized('genres') && null !== $data->getGenres()) {
+            $values_2 = [];
+            foreach ($data->getGenres() as $value_2) {
+                $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
+            }
+            $dataArray['genres'] = $values_2;
+        }
+        foreach ($data as $key => $value_3) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value_3;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\Refinements::class => false];
     }
 }
