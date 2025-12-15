@@ -13,7 +13,6 @@ namespace CedricZiel\AmznSponsoredProductsApiPHP\Generated\Normalizer;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\CheckArray;
 use CedricZiel\AmznSponsoredProductsApiPHP\Generated\Runtime\Normalizer\ValidatorTrait;
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -21,175 +20,86 @@ use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR_VERSION === 6 and Kernel::MINOR_VERSION === 4)) {
-    class SPIndividualEventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class SPIndividualEventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+{
+    use DenormalizerAwareTrait;
+    use NormalizerAwareTrait;
+    use CheckArray;
+    use ValidatorTrait;
+
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
-
-        public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent::class === $type;
-        }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent::class === get_class($data);
-        }
-
-        public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('eventId', $data)) {
-                $object->setEventId($data['eventId']);
-                unset($data['eventId']);
-            }
-            if (\array_key_exists('endDate', $data)) {
-                $object->setEndDate(\DateTime::createFromFormat('Y-m-d\TH:i:sP', $data['endDate']));
-                unset($data['endDate']);
-            }
-            if (\array_key_exists('eventName', $data)) {
-                $object->setEventName($data['eventName']);
-                unset($data['eventName']);
-            }
-            if (\array_key_exists('startDate', $data)) {
-                $object->setStartDate(\DateTime::createFromFormat('Y-m-d\TH:i:sP', $data['startDate']));
-                unset($data['startDate']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
-            return $object;
-        }
-
-        public function normalize(mixed $object, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
-        {
-            $data = [];
-            if ($object->isInitialized('eventId') && null !== $object->getEventId()) {
-                $data['eventId'] = $object->getEventId();
-            }
-            if ($object->isInitialized('endDate') && null !== $object->getEndDate()) {
-                $data['endDate'] = $object->getEndDate()->format('Y-m-d\TH:i:sP');
-            }
-            if ($object->isInitialized('eventName') && null !== $object->getEventName()) {
-                $data['eventName'] = $object->getEventName();
-            }
-            if ($object->isInitialized('startDate') && null !== $object->getStartDate()) {
-                $data['startDate'] = $object->getStartDate()->format('Y-m-d\TH:i:sP');
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
-        }
-
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent::class => false];
-        }
+        return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent::class === $type;
     }
-} else {
-    class SPIndividualEventNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        use DenormalizerAwareTrait;
-        use NormalizerAwareTrait;
-        use CheckArray;
-        use ValidatorTrait;
+        return is_object($data) && \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent::class === get_class($data);
+    }
 
-        public function supportsDenormalization($data, $type, ?string $format = null, array $context = []): bool
-        {
-            return \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent::class === $type;
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
+    {
+        if (isset($data['$ref'])) {
+            return new Reference($data['$ref'], $context['document-origin']);
         }
-
-        public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
-        {
-            return is_object($data) && CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent::class === get_class($data);
+        if (isset($data['$recursiveRef'])) {
+            return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-
-        public function denormalize($data, $type, $format = null, array $context = [])
-        {
-            if (isset($data['$ref'])) {
-                return new Reference($data['$ref'], $context['document-origin']);
-            }
-            if (isset($data['$recursiveRef'])) {
-                return new Reference($data['$recursiveRef'], $context['document-origin']);
-            }
-            $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent();
-            if (null === $data || false === \is_array($data)) {
-                return $object;
-            }
-            if (\array_key_exists('eventId', $data)) {
-                $object->setEventId($data['eventId']);
-                unset($data['eventId']);
-            }
-            if (\array_key_exists('endDate', $data)) {
-                $object->setEndDate(\DateTime::createFromFormat('Y-m-d\TH:i:sP', $data['endDate']));
-                unset($data['endDate']);
-            }
-            if (\array_key_exists('eventName', $data)) {
-                $object->setEventName($data['eventName']);
-                unset($data['eventName']);
-            }
-            if (\array_key_exists('startDate', $data)) {
-                $object->setStartDate(\DateTime::createFromFormat('Y-m-d\TH:i:sP', $data['startDate']));
-                unset($data['startDate']);
-            }
-            foreach ($data as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $object[$key] = $value;
-                }
-            }
-
+        $object = new \CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent();
+        if (null === $data || false === \is_array($data)) {
             return $object;
         }
-
-        /**
-         * @return array|string|int|float|bool|\ArrayObject|null
-         */
-        public function normalize($object, $format = null, array $context = [])
-        {
-            $data = [];
-            if ($object->isInitialized('eventId') && null !== $object->getEventId()) {
-                $data['eventId'] = $object->getEventId();
+        if (\array_key_exists('eventId', $data)) {
+            $object->setEventId($data['eventId']);
+            unset($data['eventId']);
+        }
+        if (\array_key_exists('endDate', $data)) {
+            $object->setEndDate(\DateTime::createFromFormat('Y-m-d\TH:i:sP', $data['endDate']));
+            unset($data['endDate']);
+        }
+        if (\array_key_exists('eventName', $data)) {
+            $object->setEventName($data['eventName']);
+            unset($data['eventName']);
+        }
+        if (\array_key_exists('startDate', $data)) {
+            $object->setStartDate(\DateTime::createFromFormat('Y-m-d\TH:i:sP', $data['startDate']));
+            unset($data['startDate']);
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $object[$key] = $value;
             }
-            if ($object->isInitialized('endDate') && null !== $object->getEndDate()) {
-                $data['endDate'] = $object->getEndDate()->format('Y-m-d\TH:i:sP');
-            }
-            if ($object->isInitialized('eventName') && null !== $object->getEventName()) {
-                $data['eventName'] = $object->getEventName();
-            }
-            if ($object->isInitialized('startDate') && null !== $object->getStartDate()) {
-                $data['startDate'] = $object->getStartDate()->format('Y-m-d\TH:i:sP');
-            }
-            foreach ($object as $key => $value) {
-                if (preg_match('/.*/', (string) $key)) {
-                    $data[$key] = $value;
-                }
-            }
-
-            return $data;
         }
 
-        public function getSupportedTypes(?string $format = null): array
-        {
-            return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent::class => false];
+        return $object;
+    }
+
+    public function normalize(mixed $data, ?string $format = null, array $context = []): array|string|int|float|bool|\ArrayObject|null
+    {
+        $dataArray = [];
+        if ($data->isInitialized('eventId') && null !== $data->getEventId()) {
+            $dataArray['eventId'] = $data->getEventId();
         }
+        if ($data->isInitialized('endDate') && null !== $data->getEndDate()) {
+            $dataArray['endDate'] = $data->getEndDate()->format('Y-m-d\TH:i:sP');
+        }
+        if ($data->isInitialized('eventName') && null !== $data->getEventName()) {
+            $dataArray['eventName'] = $data->getEventName();
+        }
+        if ($data->isInitialized('startDate') && null !== $data->getStartDate()) {
+            $dataArray['startDate'] = $data->getStartDate()->format('Y-m-d\TH:i:sP');
+        }
+        foreach ($data as $key => $value) {
+            if (preg_match('/.*/', (string) $key)) {
+                $dataArray[$key] = $value;
+            }
+        }
+
+        return $dataArray;
+    }
+
+    public function getSupportedTypes(?string $format = null): array
+    {
+        return [\CedricZiel\AmznSponsoredProductsApiPHP\Generated\Model\SPIndividualEvent::class => false];
     }
 }
